@@ -1,0 +1,140 @@
+{%- liquid            
+  assign price = product.variants.first.price
+  assign compare_at_price = product.variants.first.compare_at_price
+  assign product_details = product.metafields.product
+
+  assign has_subscription = false
+  if product.selling_plan_groups.size > 0
+      assign has_subscription = true
+  endif
+
+  assign selling_plan_group = product.selling_plan_groups[0]
+  assign discount_percentage = 0
+  for selling_plan in selling_plan_group.selling_plans
+      if selling_plan.price_adjustments[0].value > discount_percentage
+          assign discount_percentage = selling_plan.price_adjustments[0].value
+      endif
+  endfor
+
+  assign price_times_discount = price | times: discount_percentage | divided_by: 100.0
+  assign discount_price = price | minus: price_times_discount
+  unless has_subscription
+      assign discount_price = price
+  endunless
+
+  assign shipping_unit_servings = product_details.shipping-unit__servings.value
+-%}
+<div class="coll-v2__product global-reviews {{ extra_class }}">
+
+  <a href="{{ product.url }}" class="coll-v2__product-image">
+    {% render 'product-media', media: product.featured_media %}
+  </a>
+
+  <form class="coll-v2__product-content">
+    {% assign meta_title = product.metafields.my_fields.product_title %}
+    <a href="{{ product.url }}" class="h2-headline coll-v2__product-title"><strong>
+      {%- if meta_title != blank -%}
+        {{ meta_title }}
+      {%- else -%}
+        {{ product.title }}
+      {%- endif -%}
+    </strong></a>
+
+    {% assign meta_subtitle = product.metafields.my_fields.product_subtitle %}
+    {%- if meta_subtitle != blank -%}
+      <p class="p coll-v2__product-subtitle">{{ meta_subtitle }}</p>
+    {%- endif -%}
+
+    {% render 'reviews-io-rukrating-snippet', product: product, collection: blank %}
+
+    {% assign meta_desc = product.metafields.my_fields.product_short_description %}
+    {%- if meta_desc != blank -%}
+      <p class="p coll-v2__product-desc">{{ meta_desc }}</p>
+    {%- endif -%}
+
+    <div class="input-wrapper{% if product.variants.size <= 1 or product.available == false %}{% unless has_subscription%} coll-v2_product-select--hidden{% endunless %}{% endif %}">
+      
+      {%- for option in product.options_with_values -%}
+        {%- if forloop.index == 1 -%}
+          {% assign label_name = option.name %}
+        {%- endif -%}
+      {%- endfor -%}
+
+      <select class="select" name="id" id="product-variant-{{ product.id }}" data-variant-selector>
+        <option value="" selected disabled></option>
+        {% for variant in product.variants %}
+          {% if variant.available %}
+            {% assign serving_size_size = product.metafields.product.serving-size__size.value %}
+            {% if variant.metafields.product.serving-size__size.value != blank %}
+              {% assign serving_size_size = variant.metafields.product.serving-size__size.value %}
+            {% endif %}
+            <option value="{{ variant.id }}" data-serviing-size="{{ serving_size_size }}">{{ variant.title }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+      <label class="label" for="product-variant-{{ product.id }}">{{ label_name }} wählen</label>
+      <span class="select-chevron">{% render 'icon-chevron' %}</span>
+    </div>
+
+    {% comment %}
+      {%- unless product.has_only_default_variant -%}
+        {%- for option in product.options_with_values -%}
+          {%- assign downcase_option = option.name | downcase -%}
+          <select class="select" name="id" id="product-variant-{{ product.id }}" data-variant-selector>
+            {%- for value in option.values -%}
+              {%- assign downcase_value = value | downcase -%}
+                <option value="{{ value }}">{{ value }}</option>
+            {%- endfor -%}
+          </select>
+        {%- endfor -%}
+      {%- endunless -%}
+    {% endcomment %}
+
+    <div class="coll-v2__product-price">
+      {% if product_details.shipping-unit__servings.value != blank %}
+        <span class="p">Ab</span>
+      {% endif %}
+      <div class="h2-headline"><strong>{{ discount_price | money }}</strong>
+      {% if product_details.shipping-unit__servings.value != blank %}
+        <span class="p">
+          {% assign discount_price_divided = discount_price | divided_by: product_details.shipping-unit__servings.value | divided_by: 100.00 %}
+          {% assign discount_price_divided_rounded = discount_price_divided | round: 1 %}/ <span>{{ discount_price_divided | times: 100 | money }}</span> pro Mahlzeit
+        </span>
+      {% endif %}
+    </div>
+    </div>
+
+    <div class="coll-v2__product-buttons">
+      {% if product.available %}
+        {% if has_subscription %}
+          <button class="btn {{ btn_style }}" type="button" data-show-coll-modal data-requires-variant disabled>
+            <strong>{{ btn_modal_text }}</strong>
+      	  </button>
+      	{% elsif product.variants.size > 1 %}
+      	  <button class="btn {{ btn_style }}" type="button" data-requires-variant disabled data-add-to-cart="select-id">
+            <strong>{{ btn_modal_text }}</strong>
+      	  </button>
+        {% else%}
+          {% assign variant_id = product.selected_or_first_available_variant.id %}
+          <button class="btn {{ btn_style }}" type="button" data-add-to-cart="{{ variant_id }}">
+            <span class="btn__text" data-btn-text=""><strong>{{ btn_buy_text }}</strong></span>
+            <span class="hidden btn__loader" data-loader="">
+              {% render 'icon-spinner' %}
+            </span>
+          </button>
+        {% endif %}
+      {% else %}
+        <button class="btn {{ btn_style }}" type="button" disabled><strong>{{ btn_modal_text }}</strong></button>
+      {% endif %}
+      {% if btn_more_text != blank %}
+        <a href="{{ product.url }}" class="btn btn--text">
+          {{ btn_more_text }}
+          {% render 'icon-chevron' %}
+        </a>
+      {% endif %}
+    </div>
+    {% if has_subscription %}
+      {% render 'collection-item-modal-content', product: product %}
+    {% endif %}
+  </form>
+</div>

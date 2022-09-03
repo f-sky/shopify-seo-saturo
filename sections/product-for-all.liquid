@@ -1,0 +1,103 @@
+{{ 'product-for-all.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width for-all__wrapper">
+    <section class="for-all__section1">
+      {%- if section.settings.s1_image != blank -%}
+        <img class="for-all__section-image" src="{{ section.settings.s1_image | img_url: '1310x'}}" alt="{{ section.settings.s1_image.alt }}" loading="lazy" />
+      {%- endif -%}
+      <div class="for-all__section-text--wrapper">
+        {%- if section.settings.s1_title != blank -%}
+          <h3 class="h1-headline for-all__section-text span-align-heading">
+            {{ section.settings.s1_title }}
+          </h3>
+        {%- endif -%}
+        {%- if section.settings.s1_subtitle != blank -%}
+          <h4 class="h2-headline">{{ section.settings.s1_subtitle }}</h4>
+        {%- endif -%}
+      </div>
+    </section>
+
+    <section class="for-all__section2">
+      <div class="for-all__section-text--wrapper">
+        {%- if section.settings.s2_title != blank -%}
+          <h3 class="h2-headline for-all__section-text">
+            {{ section.settings.s2_title }}
+          </h3>
+        {%- endif -%}
+      </div>
+      {%- if section.settings.s2_image != blank -%}
+        <img class="for-all__section-image" src="{{ section.settings.s2_image | img_url: '1310x'}}" alt="{{ section.settings.s2_image.alt }}" loading="lazy" />
+      {%- endif -%}
+    </section>
+
+    <section class="for-all__section3">
+      {%- if section.settings.s3_image != blank -%}
+        <img class="for-all__section-image" src="{{ section.settings.s3_image | img_url: '1310x'}}" alt="{{ section.settings.s3_image.alt }}" loading="lazy" />
+      {%- endif -%}
+      <div class="for-all__section-text--wrapper">
+        {%- if section.settings.s3_title != blank -%}
+          <h3 class="h2-headline for-all__section-text">
+            {{ section.settings.s3_title }}
+          </h3>
+        {%- endif -%}
+      </div>
+    </section>
+</section>
+
+{% schema %}
+    {
+      "name": "Product - For All",
+      "tag": "section",
+      "class": "for-all side-circle side-circle__large side-circle__top-right",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "s1_image",
+          "label": "Section 1 - Image"
+        },
+        {
+          "type": "html",
+          "id": "s1_title",
+          "label": "Section 1 - Title"
+        },
+        {
+          "type": "html",
+          "id": "s1_subtitle",
+          "label": "Section 1 - Subtitle"
+        },
+        {
+          "type": "header",
+          "content": "Section 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "s2_image",
+          "label": "Section 2 - Image"
+        },
+        {
+          "type": "html",
+          "id": "s2_title",
+          "label": "Section 2 - Title"
+        },
+        {
+          "type": "header",
+          "content": "Section 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "s3_image",
+          "label": "Section 3 - Image"
+        },
+        {
+          "type": "html",
+          "id": "s3_title",
+          "label": "Section 3 - Title"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Product - For All"
+        }
+      ]
+    }
+{% endschema %}

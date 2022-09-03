@@ -1,0 +1,44 @@
+{{ 'product-stay-zero.css' | asset_url | stylesheet_tag }}
+
+<section class="stay-zero__wrapper page-width">
+    <h3 class="h2-headline">
+        <strong>{{ section.settings.title }}</strong>
+    </h3>
+    <ul class="stay-zero__list">
+        {{ section.settings.list_items }}
+    </ul>
+    <h3 class="h00 stay-zero__zero">{{ section.settings.percentage }}</h3>
+</section>
+
+{% schema %}
+{
+    "name": "Product - Stay Zero",
+    "tag": "section",
+    "class": "stay-zero",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Und wir müssen leider draußen bleiben..."
+        },
+        {
+            "type": "html",
+            "id": "list_items",
+            "label": "List Items",
+            "default": "<li> <h4 class=\"h2-headline\">x raffinierter Zucker<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Farbstoffe<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Palmöl<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Konservierungsstoffe<\/h4> <\/li>"
+        },
+        {
+            "type": "text",
+            "id": "percentage",
+            "label": "Percentage",
+            "default": "0%"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Product - Stay Zero"
+      }
+    ]
+}
+{% endschema %}

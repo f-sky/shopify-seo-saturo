@@ -1,0 +1,513 @@
+
+{% assign quiz_products = collections['personalized'].products %}
+<script data-products-script>
+  window.shopMeta = {
+    "rate_lose_weight_kg_week": "{{ shop.metafields.personalized.rate_lose_weight_kg_week.value }}",
+    "rate_weight_gain_kg_week": "{{ shop.metafields.personalized.rate_weight_gain_kg_week.value }}",
+    "bmi_female_underweight": "{{ shop.metafields.personalized.bmi_female_underweight.value }}",
+    "bmi_male_underweight": "{{ shop.metafields.personalized.bmi_male_underweight.value }}",
+    "rate_lose_weight_kg_week_limit": "{{ shop.metafields.personalized.rate_lose_weight_kg_week_limit.value }}",
+    "rate_weight_gain_kg_week_limit": "{{ shop.metafields.personalized.rate_weight_gain_kg_week_limit.value }}",
+    "rate_weight_gain_kg_week_msg": "{{ shop.metafields.personalized.rate_weight_gain_kg_week_msg.value }}",
+    "rate_lose_weight_kg_week_msg": "{{ shop.metafields.personalized.rate_lose_weight_kg_week_msg.value }}",
+    "select_meal_replace_why_max": "{{ shop.metafields.personalized.select_meal_replace_why_max.value }}",
+    "select_sport_type_max": "{{ shop.metafields.personalized.select_sport_type_max.value }}",
+  }
+  
+  window.labelStaticTranslations = {
+    "company_name_html": '{{ "personalized_quiz_label.company_name_html" | t }}',
+    "company_address_html": '{{ "personalized_quiz_label.company_address_html" | t }}',
+    "meal_replacement_why_header_html": '{{ "personalized_quiz_label.meal_replacement_why_header_html" | t }}',
+    "meal_replace_header_html": '{{ "personalized_quiz_label.meal_replace_header_html" | t }}',
+    "special_diet_header_html": '{{ "personalized_quiz_label.special_diet_header_html" | t }}',
+    "allergy_header_html": '{{ "personalized_quiz_label.allergy_header_html" | t }}',
+    "sport_header_html": '{{ "personalized_quiz_label.sport_header_html" | t }}',
+    "preparation_intro_html": '{{ "personalized_quiz_label.preparation_intro_html" | t }}',
+    "preparation_header_html": '{{ "personalized_quiz_label.preparation_header_html" | t }}',
+    "preparation_tbl_head_meal_html": '{{ "personalized_quiz_label.preparation_tbl_head_meal_html" | t }}',
+    "preparation_tbl_head_powder_html": '{{ "personalized_quiz_label.preparation_tbl_head_powder_html" | t }}',
+    "preparation_tbl_head_water_html": '{{ "personalized_quiz_label.preparation_tbl_head_water_html" | t }}',
+    "preparation_tbl_column_breakfast_html": '{{ "personalized_quiz_label.preparation_tbl_column_breakfast_html" | t }}',
+    "preparation_tbl_column_lunch_dinner_html": '{{ "personalized_quiz_label.preparation_tbl_column_lunch_dinner_html" | t }}',
+    "preparation_tbl_column_snack_html": '{{ "personalized_quiz_label.preparation_tbl_column_snack_html" | t }}',
+    "preparation_tbl_column_other_html": '{{ "personalized_quiz_label.preparation_tbl_column_other_html" | t }}',
+    "preparation_tbl_column_per_100g_html": '{{ "personalized_quiz_label.preparation_tbl_column_per_100g_html" | t }}',
+    "preparation_tbl_column_riNrv_html": '{{ "personalized_quiz_label.preparation_tbl_column_riNrv_html" | t }}',
+    "order_number_text_html": '{{ "personalized_quiz_label.order_number_text_html" | t }}',
+    "qr_code_text_html": '{{ "personalized_quiz_label.qr_code_text_html" | t }}',
+    "icon_header_html": '{{ "personalized_quiz_label.icon_header_html" | t }}',
+    "introduction_salutation_html": '{{ "personalized_quiz_label.introduction_salutation_html" | t }}',
+    "introduction_goaltext_1_html": '{{ "personalized_quiz_label.introduction_goaltext_1_html" | t }}',
+    "introduction_goaltext_2_html": '{{ "personalized_quiz_label.introduction_goaltext_2_html" | t }}',
+    "introduction_greetings_2_html": '{{ "personalized_quiz_label.introduction_greetings_2_html" | t }}',
+    "ingredients_intro_html": '{{ "personalized_quiz_label.ingredients_intro_html" | t }}',
+    "additional_legal_info_intro_html": '{{ "personalized_quiz_label.additional_legal_info_intro_html" | t }}',
+    "additional_legal_info_text_html": '{{ "personalized_quiz_label.additional_legal_info_text_html" | t }}',
+    "filling_size_g_text_html": '{{ "personalized_quiz_label.filling_size_g_text_html" | t }}',
+    "reference_intake_html": '{{ "personalized_quiz_label.reference_intake_html" | t }}',
+    "personalized_stroke_text_html": '{{ "personalized_quiz_label.personalized_stroke_text_html" | t }}',
+    "best_before_date_text_html": '{{ "personalized_quiz_label.best_before_date_text_html" | t }}',
+    "nutritional_values_text_html": '{{ "personalized_quiz_label.nutritional_values_text_html" | t }}',
+    "scoop_size_label_html": '{{ "personalized_quiz_label.scoop_size_label_html" | t }}',
+    "portion_water_size_text_html": '{{ "personalized_quiz_label.portion_water_size_text_html" | t }}'
+  }
+
+  window.quizProducts = [
+    {% for product in quiz_products %}
+      {
+        "ProductName": "{{product.title}}",
+        "ProductId": {{product.id}},
+        "ProductHandle": "{{product.handle}}",
+        "ProductPrice": "{{product.price | money}}",
+        "ProductPriceNoCurrency": "{{product.price | money_without_currency}}",
+        "ProductPriceMetafield": [
+          {% for price in product.metafields.personalized.ab_testing_prices.value.prices %}
+            {{ price }},
+          {% endfor %}
+        ],
+        "ProductMetafields": {
+          "product_benefits": "{{ product.metafields.personalized.product_benefits.value }}",
+          "shipping_unit_servings": "{{ product.metafields.product.shipping-unit__servings.value }}",
+          "makrosplit_desc": "{{ product.metafields.personalized.makrosplit_desc }}",
+          "makrosplit_fat": "{{ product.metafields.personalized.makrosplit_fat }}",
+          "makrosplit_fibre": "{{ product.metafields.personalized.makrosplit_fibre }}",
+          "makrosplit_protein": "{{ product.metafields.personalized.makrosplit_protein }}",
+          "makrosplit_carbohydrate": "{{ product.metafields.personalized.makrosplit_carbohydrate }}",
+          "makrosplit_img": "{{ product.metafields.personalized.makrosplit_img | img_url: 'master' }}",
+          "ingredients_1_img": "{{ product.metafields.personalized.ingredients_1_img | img_url: 'master' }}",
+          "ingredients_2_img": "{{ product.metafields.personalized.ingredients_2_img | img_url: 'master' }}",
+          "ingredients_3_img": "{{ product.metafields.personalized.ingredients_3_img | img_url: 'master' }}",
+          "ingredients_4_img": "{{ product.metafields.personalized.ingredients_4_img | img_url: 'master' }}",
+          "ingredients_1_desc": '{{ product.metafields.personalized.ingredients_1_desc }}',
+          "ingredients_2_desc": '{{ product.metafields.personalized.ingredients_2_desc }}',
+          "ingredients_3_desc": '{{ product.metafields.personalized.ingredients_3_desc }}',
+          "ingredients_4_desc": '{{ product.metafields.personalized.ingredients_4_desc }}',
+          "personalized_ingredients_headline": '{{ product.metafields.personalized.ingredients_headline }}',
+          "milk": '{{ product.metafields.global.milk }}',
+          "personalized_prod_type_weight_gain": '{{ product.metafields.personalized.prod_type_weight_gain }}'.toUpperCase(),
+          "personalized_prod_type_weight_loss": '{{ product.metafields.personalized.prod_type_weight_loss }}'.toUpperCase(),
+          "personalized_prod_type_high_protein": '{{ product.metafields.personalized.prod_type_high_protein }}'.toUpperCase(),
+          "personalized_prod_type_sport": '{{ product.metafields.personalized.prod_type_sport }}'.toUpperCase(),
+          "personalized_usp_1": "{{ product.metafields.personalized.usp_1 }}",
+          "personalized_usp_2": "{{ product.metafields.personalized.usp_2 }}",
+          "personalized_usp_3": "{{ product.metafields.personalized.usp_3 }}",
+          "personalized_usp_header": "{{ product.metafields.personalized.usp_header }}"
+        },
+        "ab_testing_price": {{ product.metafields.personalized.ab_testing_prices.value.prices[0] }},
+        "ProductVariants": [
+        {% for variant in product.variants %}
+          {% assign ingredients_1_img = '' %}
+          {% if variant.metafields.personalized.ingredients_1_img != blank %}
+            {% assign ingredients_1_img = variant.metafields.personalized.ingredients_1_img | img_url: 'master' %}
+          {% endif %}
+
+          {% assign ingredients_2_img = '' %}
+          {% if variant.metafields.personalized.ingredients_2_img != blank %}
+            {% assign ingredients_2_img = variant.metafields.personalized.ingredients_2_img | img_url: 'master' %}
+          {% endif %}
+
+          {% assign ingredients_3_img = '' %}
+          {% if variant.metafields.personalized.ingredients_3_img != blank %}
+            {% assign ingredients_3_img = variant.metafields.personalized.ingredients_3_img | img_url: 'master' %}
+          {% endif %}
+
+          {% assign ingredients_4_img = '' %}
+          {% if variant.metafields.personalized.ingredients_4_img != blank %}
+            {% assign ingredients_4_img = variant.metafields.personalized.ingredients_4_img | img_url: 'master' %}
+          {% endif %}
+
+          {
+            "variantId": {{variant.id}},
+            "metafields": {
+              "product_benefits": "{{ variant.metafields.personalized.product_benefits.value }}",
+              "bg_color": "{{ variant.metafields.quiz.bg_color }}",
+              "text_color": "{{ variant.metafields.quiz.text_color }}",
+              "flavor_icon": "{{ variant.metafields.quiz.flavor_icon | img_url: 'master' }}",
+              "circle_color": "{{ variant.metafields.quiz.circle_color }}",
+              "makrosplit_img": "{{ variant.metafields.personalized.makrosplit_img | img_url: 'master' }}",
+              "ingredients_1_img": "{{ ingredients_1_img }}",
+              "ingredients_2_img": "{{ ingredients_2_img }}",
+              "ingredients_3_img": "{{ ingredients_3_img }}",
+              "ingredients_4_img": "{{ ingredients_4_img }}",
+              "ingredients_1_desc": '{{ variant.metafields.personalized.ingredients_1_desc }}',
+              "ingredients_2_desc": '{{ variant.metafields.personalized.ingredients_2_desc }}',
+              "ingredients_3_desc": '{{ variant.metafields.personalized.ingredients_3_desc }}',
+              "ingredients_4_desc": '{{ variant.metafields.personalized.ingredients_4_desc }}',
+              "personalized_ingredients_headline": '{{ variant.metafields.personalized.ingredients_headline }}',
+              "nutrition_details": '{{ variant.metafields.variant.quiz_nutrition_details }}',
+              "personalized_ingredients": '{{ variant.metafields.personalized.ingredients }}',
+              "filling_size": '{{ variant.metafields.personalized.filling_size_kcal.value }}',
+              "filling_size_g": '{{ variant.metafields.personalized.filling_size_g.value }}',
+              "portion_water_ml": '{{ variant.metafields.personalized.portion_water_ml }}',
+              "portion_g": '{{ variant.metafields.personalized.portion_g }}',
+              "ingredients": "{{ variant.metafields.personalized.ingredients }}",
+              "personalized_usp_1": "{{ variant.metafields.personalized.usp_1 }}",
+              "personalized_usp_2": "{{ variant.metafields.personalized.usp_2 }}",
+              "personalized_usp_3": "{{ variant.metafields.personalized.usp_3 }}",
+              "personalized_usp_header": "{{ variant.metafields.personalized.usp_header }}",
+              "details_best_before_date": "{% if variant.metafields.details.best_before_date != blank %}{{ variant.metafields.details.best_before_date }}{% else %}12-12-9999{% endif %}",
+              "details_product_charge": "{{ variant.metafields.details.product_charge }}",
+              "scoop_size_g": "{{ variant.metafields.details.scoop_size_g.value }}",
+              "scoop_size_g_unit": "{{ variant.metafields.details.scoop_size_g_unit.value }}"
+            },
+            "variantTitle": "{{variant.title}}",
+              "variantImg": "{{variant.image.src | img_url: '650x1000', crop: 'center'}}"
+          },
+        {% endfor %}
+      ],
+      "Carbs": {{product.metafields.global.carbs}},
+      "Protein": {{product.metafields.global.protein}},
+      "Fat": {{product.metafields.global.fat}},
+      "Fibre": {{product.metafields.global.fibre}},
+      "Soy": "{{product.metafields.global.soy}}",
+      "Gluten": "{{product.metafields.global.gluten}}",
+      "Lactose": "{{product.metafields.global.lactose}}",
+      "Milk": "{{product.metafields.global.milk}}",
+      "Peanut": "{{product.metafields.global.peanut}}",
+      "Vegan": "{{product.metafields.global.vegan}}",
+      "Vegetarian": "{{product.metafields.global.vegetarian}}",
+      "Sugarfree": "{{product.metafields.global.sugarfree}}",
+      "Keto": "{{product.metafields.global.keto}}",
+      "Nutritionalvalues": `{{product.metafields.global.nutritionalvalues}}`,
+      "Faq": {{product.metafields.global.faq}}
+    },
+  {% endfor %}
+  ]
+</script>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelector('meta[name="viewport"]').setAttribute("content", "width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0");
+  document.body.classList.add('quiz-result');
+});
+</script>
+
+{% comment %}
+---------------- quiz-product-header SNIPPET
+{% endcomment %}
+
+{{ 'product-header.css' | asset_url | stylesheet_tag }}
+{{ 'quiz-personalized.css' | asset_url | stylesheet_tag }}
+
+{% assign bg_color = section.settings.bg_color %}
+<section class="product__header side-circle" data-product-bg-color>
+  <section class="page-width product__header-grid side-circle side-circle__top-right side-circle__medium {{ section.settings.content_side }} {{ section.settings.mobile_content_position }}">
+    <div class="product__header--content">
+
+      <h2 class="h5-headline"><strong>Alles, was du brauchst</strong></h2>
+      <h2 class="h1-headline product__header-heading span-align-heading">
+        <span class="align-left"><span data-quiz-user-name></span>'s<span class="heading-line"></span></span>
+        <span class="align-left">Personalized</span>
+        <span class="align-left">Saturo</span>
+      </h2>
+      <div class="product__header--content-icons" data-quiz-result-icons>
+        {% render 'icon-quiz-muscule' %}
+        {% render 'icon-quiz-ausdauersport' %}
+        {% render 'icon-quiz-football' %}
+        {% render 'icon-quiz-schwimmen' %}
+        {% render 'icon-quiz-walking' %}
+        {% render 'icon-quiz-radfahren' %}
+        {% render 'icon-quiz-crossfit' %}
+        {% render 'icon-quiz-yoga' %}
+      </div>
+      
+      <div class="product__header--content-image">
+        <img src= "" alt="" data-product-image>
+        <div class="btn--typo product__header--content-image--label">
+          Für <strong>dich</strong> gemacht.
+        </div>
+      </div>
+    </div>
+
+    <div class="product__header--image">
+      <img class="product__header--image-flavor" data-flavor-icon src="" alt="" />
+
+      <div class="product__header--image-meta">
+
+        <div class="product__header--quantity-wrapper">
+          
+          <div class="btn--typo">Geschmack</div>
+          <div class="btn--typo" data-product-flavor>Geschmack</div>
+        </div>
+
+        <div class="product__header--quantity-wrapper">
+          <div class="btn--typo">Menge</div>
+          <div class="product__header--quantity">
+            <button class="btn--text" data-quiz-qty="minus">{% render 'icon-quantity-minus' %}</button>
+            <input class="product__header--quantity-input navigation" type="text" value="1" disabled data-quiz-qty-number />
+            <button class="btn--text" data-quiz-qty="plus">{% render 'icon-quantity-plus' %}</button>
+          </div>
+        </div>
+
+        <div class="product-price">
+          <div class="product-price-delivery-text">
+            {% render 'icon-delivery' %} <p><strong>Lieferbar in <br>2-3 Tagen.</strong></p>
+          </div>
+          <div class="product-price__inner">
+            <div class="price">
+              <div><s data-price-compare class="was-price">{{ product.variants[0].compare_at_price | money }}</s></div>
+              <strong class="h2-headline color-turquoise" data-price>
+                {{ product.variants[0].price | money }}
+              </strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="product__header--quantity-wrapper">
+          <div class="btn-large-details__text-details product__pro-dose-value">Pro Dose:<br><span data-filling-size-g></span></div>
+          <div class="btn-large-details__text-details product-form__shipping-tax-notes">
+            <div><span data-original-price-per-100g></span>/ 100g</div>
+            inkl. MwSt., zzgl. <a href="/pages/versand-und-bezahlung" title="">Versandkosten</a>
+          </div>
+        </div>
+        
+        <button class="btn product__header-btn" type="button" data-quiz-add-to-cart>Bestelle deinen Shake</button>
+      </div>
+    </div>
+  </section>
+</section>
+
+{% render 'reviews-io-rukrating-snippet-end', color_review_star: '--color-black-grey-title', mode: "extended", link: "TRUE" %}
+
+<style>
+  {% if section.settings.text_color != blank %}
+    #shopify-section-{{ section.id }} .product__header .product__header--info .h2-headline,
+    #shopify-section-{{ section.id }} .product__header .product__header--info .p,
+    #shopify-section-{{ section.id }} .product__header .product__header-heading span,
+    #shopify-section-{{ section.id }} .product__header .global-reviews .ruk_rating_snippet .ruk-rating-snippet-count {
+      color: var({{ section.settings.text_color }});
+    }
+
+    #shopify-section-{{ section.id }} .product__header .product__header-heading.span-align-heading span.heading-line,
+    #shopify-section-{{ section.id }} .product__header .product__header-heading.span-align-heading span.heading-line-left {
+      background-color: var({{ section.settings.text_color }});
+    }
+
+    #shopify-section-{{ section.id }} .product__header .product__header--info .ruk_rating_snippet i {
+      color: var(--color-banana-pastel);
+    }
+  {% endif %}
+
+  {% if section.settings.hide_circle != blank %}
+    #shopify-section-{{ section.id }} .product__header:after {
+      content: none;
+    }
+  {% endif %}
+
+  {% assign custom_header_color = section.settings.custom_header_color %}
+  {% if custom_header_color != blank %}
+    .mega-menu-header {
+      color: var({{ custom_header_color }});
+    }
+
+    .mega-menu-header .icon>path,
+    .mega-menu-header svg.icon {
+      fill: var({{ custom_header_color }});
+    }
+  {% endif %}
+
+  {% assign bg_image_desktop = section.settings.bg_image_desktop %}
+  {% if bg_image_desktop != blank %}
+    #shopify-section-{{ section.id }} .product__header {
+      background-image: url({{ bg_image_desktop | img_url: '1440x' }});
+    }
+  {% endif %}
+
+  {% assign bg_image_wide = section.settings.bg_image_wide %}
+  {% if bg_image_wide != blank %}
+    @media screen and (min-width: 1441px) {
+      #shopify-section-{{ section.id }} .product__header {
+        background-image: url({{ bg_image_wide | img_url: '3000x' }});
+      }
+    }
+  {% endif %}
+
+  {% assign bg_image_tablet = section.settings.bg_image_tablet %}
+  {% if bg_image_tablet != blank %}
+    @media screen and (max-width: 1024px) {
+      #shopify-section-{{ section.id }} .product__header {
+        background-image: url({{ bg_image_tablet | img_url: '1024x' }});
+      }
+    }
+  {% endif %}
+
+  {% assign bg_image_mobile = section.settings.bg_image_mobile %}
+  {% if bg_image_mobile != blank %}
+    @media screen and (max-width: 767px) {
+      #shopify-section-{{ section.id }} .product__header {
+        background-image: url({{ bg_image_mobile | img_url: '767x' }});
+      }
+    }
+  {% endif %}
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    $(".quiz-result [data-quiz-qty='plus']").click(function() {
+            var quantity = $(this).siblings("input");
+            quantityCount = (parseInt(quantity.val()) || 0) + 1;
+            quantity.val(quantityCount);
+        });
+
+    $(".quiz-result [data-quiz-qty='minus']").click(function() {
+        var quantity = $(this).siblings("input");
+        quantityCount = Math.max((parseInt(quantity.val()) || 0) - 1, 1);
+        quantity.val(quantityCount);
+    });
+  });
+</script>
+
+{% comment %}
+  ---------------- quiz-product-header SNIPPET END
+{% endcomment %}
+
+<div class="container d-none">
+  {% include 'judgeme_all_reviews' %}
+</div>
+
+<style>
+  .quiz-result .price-field.price-field-1,
+  .quiz-result .price-field.price-field-2 {
+    display : none;
+  }
+</style>
+
+<div class="quiz-product-header__sticky-bar">
+  <div class="page-width quiz-product-header__sticky-bar-wrapper">    
+    <div class="quiz-product-header__sticky-bar--left">
+      <img class="quiz-product-header__sticky-bar--image" src="" alt="" data-product-image>
+      <p class="p">
+        <strong><span data-quiz-user-name>Luisa</span>'s Saturo</strong>
+        Speziell für dich gemacht!
+      </p>
+    </div>
+    <div class="quiz-product-header__sticky-bar--right">
+      <div class="quiz-product-header__sticky-bar--result-icons" data-quiz-result-icons>
+        {% render 'icon-quiz-muscule' %}
+        {% render 'icon-quiz-ausdauersport' %}
+        {% render 'icon-quiz-football' %}
+        {% render 'icon-quiz-schwimmen' %}
+        {% render 'icon-quiz-walking' %}
+        {% render 'icon-quiz-radfahren' %}
+        {% render 'icon-quiz-crossfit' %}
+        {% render 'icon-quiz-yoga' %}
+      </div>
+      <button class="btn btn--primary product__header-btn" type="button" data-quiz-add-to-cart>Bestelle deinen Shake</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const $productHeaderMeta = document.querySelector('.product__header--image-meta .product__header-btn');
+  if ($productHeaderMeta) {
+      const bodyClass = "quiz-sticky__visible"
+      const iObserver = new IntersectionObserver(items => {
+          if (items[0].isIntersecting) {
+              document.body.classList.remove(bodyClass);
+          } else {
+              document.body.classList.add(bodyClass);
+          }
+      });
+
+      iObserver.observe($productHeaderMeta);
+  }
+</script>
+
+<div class="coll-v2__modal" data-coll-modal>
+  <div class="coll-v2__modal--bg" data-close-coll-modal></div>
+  <div class="coll-v2__modal--content">
+    <button class="coll-v2__modal--close" data-close-coll-modal>{% render 'icon-close' %}</button>
+    
+    <h4 class="h2-headline">{{ section.settings.modal_headline }}</h4>
+    <p class="p coll-v2__modal--content-subtitle">{{ section.settings.modal_text }}</p>
+    <style>
+      html[lang="de"] .klaviyo-form-VuUnKD,
+      html[lang="en"] .klaviyo-form-UAXaNe {
+        display: none;
+      }
+    </style>
+    <div class="klaviyo-form-UAXaNe"></div>
+    <div class="klaviyo-form-VuUnKD"></div>
+    <!-- <form action="" class="quiz-email-signup-form">
+      <div class="input-wrapper">
+        <input class="input" type="text" id="quiz-modal-email-address" data-quiz-user-email>
+        <label class="label" for="quiz-modal-email-address">{{ section.settings.modal_label }}</label>
+      </div>
+      <button class="btn btn--primary" type="submit">{{ section.settings.modal_button_text }}</button>
+    </form> -->
+  </div>
+</div>
+
+<div class="quiz-item__loader" data-personalized-quiz-loader>
+  {% render 'saturo-logo' %}
+</div>
+
+{% javascript %}
+window.addEventListener('DOMContentLoaded', () => {
+
+  $('.quiz-email-signup-form').submit(function(e) {
+    e.preventDefault();
+    $('body').removeClass('coll-modal-opened');
+
+    const product = $('[data-coll-modal]').attr('data-product');
+    const price = $('.quiz-result .price .price-field:visible').text();
+
+    _learnq.push(['identify', {
+      userInterested: `${product} - Price: ${price}`
+    }]);
+    //_learnq.push(["trackViewedItem", {
+    //  "Title": item.ProductName,
+    //  "ItemId": item.ProductID,
+    //  "Categories": item.Categories,
+    //  "ImageUrl": item.ImageURL,
+    //  "Url": item.URL
+    //  }
+    //}])
+
+  });
+});
+{% endjavascript %}
+
+
+{% schema %}
+{
+  "name": "Quiz Product",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Modal"
+    },
+    {
+      "type": "text",
+      "id": "modal_headline",
+      "label": "Headline",
+      "default": "Saturo Personalized ist bald verfügbar - jetzt eintragen"
+    },
+    {
+      "type": "text",
+      "id": "modal_text",
+      "label": "Text",
+      "default": "Saturo Personalized ist aktuell noch nicht verfügbar. Trage dich ein, um als Erste:r zu erfahren, sobald es verfügbar ist und sichere dir deinen exklusiven Rabatt."
+    },
+    {
+      "type": "text",
+      "id": "modal_label",
+      "label": "Label",
+      "default": "E-Mail-Adresse"
+    },
+    {
+      "type": "text",
+      "id": "modal_button_text",
+      "label": "Button Text",
+      "default": "Jetzt eintragen"
+    },
+    {
+      "type": "text",
+      "id": "custom_header_color",
+      "label": "Custom Header Color",
+      "info": "CSS Variable"
+    }
+  ]
+}
+{% endschema %}

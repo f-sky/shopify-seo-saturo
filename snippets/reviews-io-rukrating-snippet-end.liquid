@@ -1,0 +1,47 @@
+{% comment %} {% if link == "TRUE" %}
+  <script src="https://widget.reviews.io/product/dist.js"></script>
+{% endif %}
+
+<script src="https://widget.reviews.io/rating-snippet/dist.js"></script> {% endcomment %}
+<link rel="stylesheet" href="https://widget.reviews.io/rating-snippet/dist.css" media="print" onload="this.media='all'"/>
+
+<script>
+  window.addEventListener("load", function (event) {
+    var script_1 = document.createElement("script");
+    script_1.src = "https://widget.reviews.io/rating-snippet/dist.js";
+    document.head.appendChild(script_1);
+    
+    {% if link == "TRUE" %}
+      var script_2 = document.createElement("script");
+      script_2.onload = function () {
+        if (typeof window.ratingSnippet == 'undefined') {
+          script_1.onload = function () {
+            ratingSnippet("ruk_rating_snippet",{
+              store: "saturo.com",
+              linebreak: false,
+              color: 'var({{ color_review_star }})',
+              {% if mode == "extended" %}
+                usePolaris: true,
+                mode: 'extended',
+              {%- endif -%}
+            });
+          };
+        } else {
+          ratingSnippet("ruk_rating_snippet",{
+          store: "saturo.com",
+          linebreak: false,
+          color: 'var({{ color_review_star }})',
+          {% if mode == "extended" %}
+          usePolaris: true,
+          mode: 'extended',
+          {%- endif -%}
+          });
+        }
+      };
+      script_2.src = "https://widget.reviews.io/product/dist.js";
+      document.head.appendChild(script_2);
+    {% endif %}
+
+  });
+
+</script>

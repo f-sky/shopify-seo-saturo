@@ -1,0 +1,341 @@
+{
+  "sections": {
+    "166049765245df829e": {
+      "type": "content",
+      "blocks": {
+        "79dab669-2303-4a1c-b81c-b25f6306468d": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "text_first",
+            "title": "Dein Saturo Coach",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "<p>Nimm's persönlich — baue dein Wissen rund um das Thema der Ernährung auf<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "ba360dc0-f77a-4861-a768-33b946135a50": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Herzlich willkommen beim Saturo Coach. Bist du motiviert, einen gesunden und sportlichen Lebensstil zu leben? Perfekt, dann bist du hier genau richtig. Für eine <strong>erfolgreiche Umstellung deiner Gewohnheiten<\/strong> ist eine <strong>fundierte Wissensbasis<\/strong> unabdingbar. Der Saturo Coach erklärt dir alles, was du über personalisierte, gesunde Ernährung, Fitness und einen gesunden Lebensstil wissen musst.<\/p><p><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "79dab669-2303-4a1c-b81c-b25f6306468d",
+        "ba360dc0-f77a-4861-a768-33b946135a50"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "16605098575e09663e": {
+      "type": "content",
+      "blocks": {
+        "c9df964b-8618-4e4f-8bde-ec6782e39a86": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "text_first",
+            "title": "Personalisierte Ernährung",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "<p>Kein Mensch isst wie der andere. Finde deine passende Ernährung.<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "bbb492e8-c63a-4527-b4f1-5f90dfe2964a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir sind alle verschieden und unsere DNA ist einzigartig. Daher sollten auch die Ernährungsempfehlungen personalisiert werden, anstatt für alle die gleichen Empfehlungen auszusprechen. <strong>Durch <\/strong><a href=\"\/pages\/personalisierte-ernaehrung\" title=\"Personalisierte Ernährung: So individuell wie du!\"><strong>personalisierte Ernährung <\/strong><\/a><strong>können individuelle Ziele erreicht<\/strong> und besser auf die Bedürfnisse eingegangen werden.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "c9df964b-8618-4e4f-8bde-ec6782e39a86",
+        "bbb492e8-c63a-4527-b4f1-5f90dfe2964a"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "1660509970bcfb0a1f": {
+      "type": "image-with-text",
+      "blocks": {
+        "7e8df042-ad76-424b-98e4-3689ea3a5160": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Personalisierte Ernährung ist die beste Art, um sicherzustellen, dass dein Körper alle Nährstoffe bekommt, die er braucht. Basierend auf der <strong>Nutrigenomik<\/strong>, (Epi)genetik, körperlichen Aktivitäten, <strong>Ernährungsverhalten<\/strong> oder Stoffwechsel wird eine <strong>maßgeschneiderte Ernährung<\/strong> für dich zusammengestellt.<br\/><\/p>",
+            "text_align": ""
+          }
+        },
+        "dc8dad8c-a6e8-49b6-8b39-18f6ddecebf3": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Mehr zu Personalisierter Ernährung",
+            "btn_url": "shopify:\/\/pages\/personalisierte-ernaehrung",
+            "btn_style": ""
+          }
+        }
+      },
+      "block_order": [
+        "7e8df042-ad76-424b-98e4-3689ea3a5160",
+        "dc8dad8c-a6e8-49b6-8b39-18f6ddecebf3"
+      ],
+      "settings": {
+        "bg_color": "",
+        "image_fullscreen": false,
+        "desktop_layout": "image_left",
+        "mobile_layout": "image_first",
+        "padding_top": false,
+        "padding_bottom": true,
+        "image": "shopify:\/\/shop_images\/saturo-mann-shake-mixen.jpg",
+        "section_id": ""
+      }
+    },
+    "16605093128337ac94": {
+      "type": "content",
+      "blocks": {
+        "d94a1555-8790-4533-b823-5334271b0f6e": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_right",
+            "mobile_layout": "image_first",
+            "title": "Ernährungscoach",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "<p>Führe einen gesunden Lebensstil mit einer bewussten Ernährung.<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "6f36cd42-ab86-4cac-90b3-1e686c9f3df8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du bist auf der Suche nach einer <strong>Ernährungsumstellung<\/strong> und weißt nicht, wo du anfangen sollst? Dann ist unserer <a href=\"\/pages\/ernaehrungscoach\" title=\"Ernährungscoach\">online Ernährungscoach<\/a> genau das Richtige für dich! Wir unterstützen dich dabei, dein <strong>eigenes Essverhalten zu bewerten<\/strong> und aus den Ergebnissen konkrete Handlungsempfehlungen abzuleiten. So kannst du <strong>langfristig gesund und ausgewogen essen<\/strong>.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "5294b1b0-b81e-4a76-9e58-000cb9cf5df7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Welche Nährstoffe brauchen wir überhaupt<\/strong> und in welchen Mengen? Hier erfährst du alles über <strong>Makro<\/strong>nährstoffe (Eiweiß, Kohlenhydrate, Fette und Ballaststoffe) sowie Vitamine & Mineralstoffe (<strong>Mikro<\/strong>nährstoffe). Zudem gehen wir darauf ein, was passiert, wenn du eine Unterversorgung mit verschiedenen Nährstoffen hast und wie du diesen <strong>Mangel<\/strong> frühzeitig erkennen kannst.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "d94a1555-8790-4533-b823-5334271b0f6e",
+        "6f36cd42-ab86-4cac-90b3-1e686c9f3df8",
+        "5294b1b0-b81e-4a76-9e58-000cb9cf5df7"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "16605094400b156501": {
+      "type": "image-with-text",
+      "blocks": {
+        "ae061985-df4e-451c-b846-9896e65e300a": {
+          "type": "description",
+          "settings": {
+            "description": "<p><strong>Ausgewogene Ernährung<\/strong> ist wichtig, um unseren Körper mit allen Nährstoffen zu versorgen, die er braucht. Eine ausgewogene Ernährung sorgt dafür, dass wir uns gut fühlen und unsere Organe richtig funktionieren. Wenn wir <strong>Junk-Food vermeiden<\/strong>, können wir unseren Körper vor gesundheitlichen Problemen bewahren. Auch die <strong>Fettverbrennung<\/strong> kann durch eine ausgewogene Ernährung angekurbelt werden. <strong>Vegane Ernährung<\/strong> ist ebenfalls eine Möglichkeit, auf die wir achten können, um unseren Körper optimal zu ernähren.<\/p>",
+            "text_align": ""
+          }
+        },
+        "f5050eaa-03fc-4aee-b1ba-8b17bc4de5af": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Mehr zu Ernährungscoach",
+            "btn_url": "shopify:\/\/pages\/ernaehrungscoach",
+            "btn_style": ""
+          }
+        }
+      },
+      "block_order": [
+        "ae061985-df4e-451c-b846-9896e65e300a",
+        "f5050eaa-03fc-4aee-b1ba-8b17bc4de5af"
+      ],
+      "settings": {
+        "bg_color": "",
+        "image_fullscreen": false,
+        "desktop_layout": "image_right",
+        "mobile_layout": "image_first",
+        "padding_top": false,
+        "padding_bottom": true,
+        "image": "shopify:\/\/shop_images\/saturo-fruechte-nusse-gemuse-auf-tisch.jpg",
+        "section_id": ""
+      }
+    },
+    "166051003020d4ae63": {
+      "type": "content",
+      "blocks": {
+        "e38ae30d-c817-43c3-8d29-ff2aab7fe757": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Gesundheit",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "<p>Gesund sein heißt, sich rundum wohlfühlen.<\/p>",
+            "description_style": "h2-headline"
+          }
+        }
+      },
+      "block_order": [
+        "e38ae30d-c817-43c3-8d29-ff2aab7fe757"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "1660540376fe3e2cae": {
+      "type": "image-with-text",
+      "blocks": {
+        "09d4705f-0650-4586-976b-f09bd61fa732": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Wie hält man den Körper fit und die Seele im <strong>Gleichgewicht<\/strong>, um sich gesund zu sein? Mit einfachen Gewohnheiten kannst du ein <strong>Immunsystem<\/strong> stärken.<\/p><p>Welche Rolle spielt eine ausgewogene Ernährung und was ist bei Krankheiten zu beachten? Wir zeigen dir, wie es geht!<\/p>",
+            "text_align": ""
+          }
+        },
+        "b3c544d7-ae1a-4836-b4ad-4856054aa651": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Mehr zu Gesundheit",
+            "btn_url": "shopify:\/\/pages\/gesundheit",
+            "btn_style": ""
+          }
+        }
+      },
+      "block_order": [
+        "09d4705f-0650-4586-976b-f09bd61fa732",
+        "b3c544d7-ae1a-4836-b4ad-4856054aa651"
+      ],
+      "settings": {
+        "bg_color": "",
+        "image_fullscreen": false,
+        "desktop_layout": "image_right",
+        "mobile_layout": "image_first",
+        "padding_top": false,
+        "padding_bottom": true,
+        "image": "shopify:\/\/shop_images\/saturo-frau-trinkt-shake.jpg",
+        "section_id": ""
+      }
+    },
+    "1660510080e1106c62": {
+      "type": "content",
+      "blocks": {
+        "a5b515d3-e84c-423a-9abd-380c5b46851a": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Selbstoptimierung",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "<p>1% besser werden—jeden Tag<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "9b4be852-bb93-41db-9f5c-4bc3ee170b16": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"\/pages\/selbstoptimierung\" title=\"Selbstoptimierung - Jeden Tag 1 % besser!\">Selbstoptimierung<\/a> liegt voll im Trend. Viele Menschen möchten mehr aus sich machen und suchen nach Möglichkeiten, sich <strong>selbst zu verbessern<\/strong>. Es gibt unzählige Tipps und Tricks, mit denen man seine Leistung steigern oder sein Wohlbefinden verbessern kann. <strong>Morgenroutine<\/strong>, gesunder <strong>Schlaf<\/strong>, <strong>Biohacking<\/strong> und die Steigerung der <strong>Konzentration<\/strong> sind hierbei nur einige Beispiele.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "a5b515d3-e84c-423a-9abd-380c5b46851a",
+        "9b4be852-bb93-41db-9f5c-4bc3ee170b16"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "1660541395c520bdf4": {
+      "type": "image-with-text",
+      "blocks": {
+        "d851e80c-f980-4314-a69f-26af98865272": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Welche Methode der <a href=\"\/pages\/selbstoptimierung\" title=\"Selbstoptimierung - Jeden Tag 1 % besser!\"><strong>Selbstoptimierung<\/strong><\/a> ist für dich die Richtige? In diesem Artikel stellen wir dir die verschiedenen Möglichkeiten vor und gebe dir Hinweise, worauf du bei der Auswahl achten solltest.<\/p>",
+            "text_align": ""
+          }
+        },
+        "0262b206-a8f1-4e19-961c-55a60d06df4e": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Mehr zu Selbstoptimierung",
+            "btn_url": "shopify:\/\/pages\/selbstoptimierung",
+            "btn_style": ""
+          }
+        }
+      },
+      "block_order": [
+        "d851e80c-f980-4314-a69f-26af98865272",
+        "0262b206-a8f1-4e19-961c-55a60d06df4e"
+      ],
+      "settings": {
+        "bg_color": "",
+        "image_fullscreen": false,
+        "desktop_layout": "image_left",
+        "mobile_layout": "image_first",
+        "padding_top": false,
+        "padding_bottom": true,
+        "image": "shopify:\/\/shop_images\/mann-uhr-laufen.jpg",
+        "section_id": ""
+      }
+    }
+  },
+  "order": [
+    "166049765245df829e",
+    "16605098575e09663e",
+    "1660509970bcfb0a1f",
+    "16605093128337ac94",
+    "16605094400b156501",
+    "166051003020d4ae63",
+    "1660540376fe3e2cae",
+    "1660510080e1106c62",
+    "1660541395c520bdf4"
+  ]
+}

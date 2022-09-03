@@ -1,0 +1,218 @@
+.image-with-text {
+  padding: 11.5rem 0;
+  line-height: 1.4;
+}
+
+@media only screen and (max-width: 1024px) {
+  .image-with-text {
+    padding: 7rem 0;
+  }
+}
+
+.image-with-text .grid {
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.image-with-text__grid {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 750px) {
+  .image-with-text__grid--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.image-with-text__media {
+  background-color: transparent;
+  min-height: 100%;
+  line-height: 0;
+}
+
+.image-with-text__media--small {
+  height: 19.4rem;
+}
+
+.image-with-text__media--large {
+  height: 43.5rem;
+}
+
+.image-with-text__media > img {
+  height: auto!important;
+}
+
+.image-with-text__media.image-with-text__media-relative {
+  text-align: center;  
+}
+
+.image-with-text__media.image-with-text__media-relative > img {
+  position: relative!important;
+  width: auto!important;
+  display: inline-block!important;
+}
+
+@media screen and (min-width: 750px) {
+  .image-with-text__media--small {
+    height: 31.4rem;
+  }
+
+  .image-with-text__media--large {
+    height: 69.5rem;
+  }
+}
+
+.image-with-text__media--placeholder {
+  background-color: rgba(var(--color-foreground), 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-with-text__media--placeholder.image-with-text__media--adapt {
+  height: 20rem;
+}
+
+@media screen and (min-width: 750px) {
+  .image-with-text__media--placeholder.image-with-text__media--adapt {
+    height: 30rem;
+  }
+}
+
+.image-with-text__media--placeholder > svg {
+  position: absolute;
+  left: 50%;
+  max-width: 80rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  fill: currentColor;
+}
+
+.image-with-text__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: center;
+  padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
+}
+
+.grid--2-col-tablet .image-with-text__content {
+  max-width: calc(var(--page-width) / 2); 
+}
+
+@media screen and (min-width: 750px) {
+  .image-with-text__grid--reverse .image-with-text__content {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .image-with-text__content {
+    padding: 6rem 7rem 7rem;
+  }
+  
+  .image-with-text__image-right .grid__item:nth-child(1),
+  .image-with-text__image-last .grid__item:nth-child(1) {
+    order: 2;
+  }
+  
+  .image-with-text__image-right .grid__item:nth-child(2),
+  .image-with-text__image-last .grid__item:nth-child(2) {
+    order: 1;
+  }
+
+  .image-with-text__image-right .grid__item:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.image-with-text__content > * + * {
+  margin-top: 2rem;
+}
+
+.image-with-text__content > .image-with-text__text:empty ~ a {
+  margin-top: 2rem;
+}
+
+.image-with-text__content > :first-child:is(.image-with-text__heading) {
+  margin-top: 0;
+}
+
+.image-with-text__content :last-child:is(.image-with-text__heading) {
+  margin-bottom: 0;
+}
+
+.image-with-text__content .button + .image-with-text__text {
+  margin-top: 2rem;
+}
+
+.image-with-text__content .image-with-text__text + .button {
+  margin-top: 3rem;
+}
+
+.image-with-text__heading {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.image-with-text__text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.image-with-text__list-item {
+  display: flex;
+  list-style: none;
+}
+
+.image-with-text__list-item--number {
+  border-style: solid;
+  border-color: var(--color-grey-title);
+  border-width: 0.1rem;
+  border-radius: 50%;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  font-weight: bold;
+  margin-right: 1rem;
+  line-height: 2.9rem;
+}
+
+.image-with-text__list-item--title {
+  font-weight: bold;
+}
+
+.image-with-text__bg-image {
+  width: 100%;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vw;
+}
+
+.image-with-text__mobile-text-first .grid__item:nth-child(1) {
+  order: 2;
+}
+
+.image-with-text__mobile-text-first .grid__item:nth-child(2) {
+  order: 1;
+}
+
+@media screen and (min-width: 750px) {
+  .image-with-text__bg-image {
+    height: 100%;
+  }
+}
+
+.image-with-text--margin-top-0 {
+  margin-top: 0!important;
+}
+
+.image-with-text--margin-bottom-0 {
+  margin-bottom: 0!important;
+}

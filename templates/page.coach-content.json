@@ -1,0 +1,696 @@
+{
+  "sections": {
+    "165990492469e39fa6": {
+      "type": "headline",
+      "settings": {
+        "title": "<span class=\"align-center\">Vergleichssieger  <\/span>\n  <span class=\"align-center\">Astronautennahrung:<\/span>\n  <span class=\"align-center\">die beste<span class=\"heading-line\"><\/span><\/span>\n  <span class=\"align-center\">Astronautenkost<\/span>",
+        "heading_style": "h1-headline",
+        "heading_tag": "h1"
+      }
+    },
+    "1659903120843b0b4a": {
+      "type": "image-with-text",
+      "blocks": {
+        "8b00fe68-2ae6-4cfc-aabf-39f84554bfae": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Was ist Astronautennahrung? Eine komprimierte, ausgewogene Mahlzeit, die Ernährung unter erschwerten <a href=\"#references\" title=\"#references\">[1]<\/a> Bedingungen einfach macht. Der Vergleichssieger von SATURO unterstützt dich bei deinen Zielen.<\/p>",
+            "text_align": "right"
+          }
+        },
+        "6b12c49f-164b-4475-a589-7b59f904a2b5": {
+          "type": "list",
+          "settings": {
+            "list_title": "Item",
+            "list_description": "<p>Desc<\/p>",
+            "list_number": "1"
+          }
+        }
+      },
+      "block_order": [
+        "8b00fe68-2ae6-4cfc-aabf-39f84554bfae",
+        "6b12c49f-164b-4475-a589-7b59f904a2b5"
+      ],
+      "settings": {
+        "bg_color": "",
+        "image_fullscreen": false,
+        "desktop_layout": "image_right",
+        "mobile_layout": "image_first",
+        "padding_top": false,
+        "padding_bottom": false,
+        "image": "shopify:\/\/shop_images\/image_11.jpg",
+        "section_id": ""
+      }
+    },
+    "165990556816173a6b": {
+      "type": "author",
+      "settings": {
+        "written_by_image": "shopify:\/\/shop_images\/Mask_Group_4bd8f7d9-df46-487e-ad4d-ce552204aa8b.png",
+        "written_by_text": "Geschrieben von:",
+        "written_by_name": "Eva Klampfer",
+        "written_by_title": "Coach für Integrative Ernährung"
+      }
+    },
+    "165989340333c5dea9": {
+      "type": "table-contents",
+      "blocks": {
+        "2d602a25-88eb-4097-bfc4-a27335efb879": {
+          "type": "link",
+          "settings": {
+            "link_text": "Sources",
+            "link": "#references"
+          }
+        },
+        "0122c420-f736-453c-8a27-9f42ea1f8530": {
+          "type": "link",
+          "settings": {
+            "link_text": "Related",
+            "link": "#related"
+          }
+        }
+      },
+      "block_order": [
+        "2d602a25-88eb-4097-bfc4-a27335efb879",
+        "0122c420-f736-453c-8a27-9f42ea1f8530"
+      ],
+      "settings": {
+        "bg_color": "",
+        "margin_top": false,
+        "margin_bottom": true
+      }
+    },
+    "main": {
+      "type": "page-coach-content",
+      "blocks": {
+        "41916aac-eacf-4bc3-8048-f6ca100d2ad9": {
+          "type": "section_1",
+          "settings": {
+            "desc": "Astronautennahrung liefert als verzehrfertige Trinknahrung, Pulver zum Anrühren oder Riegel eine Vielzahl an Vorteilen für dich als Konsumenten. Flüssignahrung ist eine wertvolle Ergänzung im Alltag, beim Sport und unterwegs.",
+            "title": "<span class=\"align-right\">1. Vorteile<\/span>\n<span class=\"align-right\"><span class=\"heading-line-left\"><\/span>von  <\/span>\n<span class=\"align-center\">Astro-<\/span><span class=\"align-right\">nauten-<\/span><span class=\"align-center\">nahrung<\/span>",
+            "link_title": "",
+            "bg_color_variable": "--color-vanilla-light",
+            "s1_image": "shopify:\/\/shop_images\/end-hunger-image1.jpg",
+            "s1_title": "Welche Nährstoffe sind drin?",
+            "s1_desc": "<p class=\"p\">In Astronautenkost sind sämtliche lebensnotwendigen Nährstoffe enthalten. Ein ausgewogenes Verhältnis zwischen Eiweiß, Fetten und Kohlenhydraten sowie essentielle Vitamine, Mineralstoffe und Spurenelemente ergeben eine vollständige Mahlzeit, die deinen Körper mit allem versorgt, was er braucht und dich für mehrere Stunden satt hält.<\/p><br>\n<p class=\"p\">Bei der Auswahl der Astronautenkost deiner Wahl empfehlen wir, nicht nur auf die Art und Menge, sondern auch die Qualität der Inhaltsstoffe zu achten. Milcheiweiß, Laktose und künstliche Zusatzstoffe werden von manchen Personen nicht gut vertragen. Insbesondere bei kritischem gesundheitlichem Zustand sollte man darauf achten, diese soweit wie möglich zu vermeiden und auf pflanzliche und möglichst natürliche Produkte setzen.<\/p>",
+            "s2_title": "Die wesentlichen Vorteile sind:",
+            "s2_desc": "<ul>\n<li class=\"p\">Optimal ausgewogenes Nährstoff-Verhältnis<\/li>\n<li class=\"p\">Keine bzw. minimale Zubereitungszeit<\/li>\n<li class=\"p\">Praktisch auch für unterwegs<\/li>\n<li class=\"p\">Lange haltbar<\/li>\n<li class=\"p\">Ausgeglichenes Verhältnis zwischen Eiweiß, Fetten und Kohlenhydraten<\/li>\n<li class=\"p\">Enthält hochwertiges Eiweiß zum Aufbau von Muskeln<\/li>\n<li class=\"p\">Fette von idealer Qualität für optimale Energieversorgung und Nährstoffaufnahme<\/li>\n<li class=\"p\">Einfache und komplexe Kohlenhydrate liefern Energie und halten satt<\/li>\n<li class=\"p\">Reich an Vitaminen und Mineralstoffen<\/li>\n<\/ul>",
+            "s2_image": "shopify:\/\/shop_images\/end-hunger-image2.jpg"
+          }
+        },
+        "470f06eb-5839-4109-9eeb-8c0f0cee546a": {
+          "type": "section_2",
+          "settings": {
+            "title": "<span class=\"align-right\">2. Formen<\/span>\n<span class=\"align-center\"><span class=\"heading-line-left\"><\/span>der<\/span>\n<span class=\"align-center\">Astro-<\/span>\n<span class=\"align-right\">nauten-<\/span>\n<span class=\"align-center\">kost<\/span>",
+            "link_title": "",
+            "desc": "Astronautennahrung gibt es mittlerweile in verschiedenen Formen, je nach Anwendungsgebiet und Zweck.",
+            "bg_color_variable": "",
+            "richtext": "<p><span style=\"text-decoration:underline\"><strong>Verzehrfertige Trinknahrung:<\/strong><\/span> vor allem unterwegs besonders praktisch und zeitsparend.<\/p><p><span style=\"text-decoration:underline\"><strong>Trinknahrung-Pulver<\/strong><\/span> zum Anrühren: einfach zu dosieren und je nach Geschmack und Präferenz in Smoothies, Shakes, Müsli & Co zu verarbeiten.<\/p><p><span style=\"text-decoration:underline\"><strong>Riegel:<\/strong><\/span> ideal für unterwegs, vor oder nach dem Sport und als Zwischenmahlzeit geeignet.<\/p><p><span style=\"text-decoration:underline\"><strong>Gelier- und Andickungsmittel:<\/strong><\/span> zur Bindung und Aufwertung der Nährwerte von Saucen, Suppen, etc.<\/p>",
+            "item1_title": "Der Shake zum selbst Mixen",
+            "item1_subtitle": "Das Saturo Pulver",
+            "item1_collection": "pulver",
+            "item1_product": "",
+            "item2_title": "Deine schnelle & ausgewogene Mahlzeit",
+            "item2_subtitle": "Die Saturo Trinkmahlzeit",
+            "item2_collection": "trinkmahlzeit",
+            "item2_product": "",
+            "item3_title": "Der ideale Snack für Zwischendurch",
+            "item3_subtitle": "Der Saturo Riegel",
+            "item3_collection": "",
+            "item3_product": "saturo-riegel"
+          }
+        },
+        "f7bf94e2-0413-4aa6-a892-9b22e0faa267": {
+          "type": "section_3",
+          "settings": {
+            "title": "<span class=\"align-right\">3. Der   <\/span>\n<span class=\"align-right\">Vergleichs-<\/span>\n<span class=\"align-center\"><span class=\"heading-line-left\"><\/span>sieger<\/span><span class=\"align-right\">SATURO<\/span>",
+            "link_title": "",
+            "image": "shopify:\/\/shop_images\/vergleichssiegar.jpg",
+            "richtext": "<p>SATURO ist <span style=\"text-decoration:underline\"><strong>Testsieger unter den verglichenen Astronautenkostprodukten<\/strong><\/span> und wurde <strong>als einziges Produkt in diesem Segment mit “sehr gut” bewertet<\/strong> Verglichen wurden  Inhaltsstoffe und Eigenschaften diverser Produkte aus den Bereichen medizinischer Mahlzeitenersatz (z.B. Fresubin Energy Drink, Nutrica Fortimel, Nestlé Resource) oder Lifestyle-Trinknahrungen (z. B. Saturo).<\/p><p>Wir produzieren in Österreich und Deutschland. Sämtliche Produkte sind glutenfrei und laktosefrei. Eine ausgefeilte Rezeptur mit einer extra Portion (Pflanzen-)Protein und 26 Vitaminen und Mineralstoffen machen unsere Produkte zu dem, was sie sind: Hochwertige, schmackhafte und ausgewogene Mahlzeiten in Sekundenschnelle und zu einem fairen Preis. <\/p>",
+            "bg_color_variable": "--color-cappuccino-light",
+            "row1_title": "Wir haben die Besonderheiten von SATURO auf einen Blick für dich zusammengefasst:",
+            "row1_desc": "<ul>\n<li>Hochwertige Zutaten<\/li>\n<li>Alle 26 Vitamine und Mineralstoffe<\/li>\n<li>Ausgewogenes Nährstoffverhältnis<\/li>\n<li>Proteinreich<\/li>\n<li>Produziert in Österreich und Deutschland<\/li>\n<li>In vielen leckeren Geschmacksrichtungen erhältlich<\/li>\n<li>Vergleichssieger bei vergleich.org - Testurteil <strong>\"SEHR GUT\"<\/strong>\n<\/li>\n<li>Astronautenkost laktosefrei &amp; glutenfrei<\/li>\n<li>Auf den Geschmack gekommen? Bestelle jetzt!<\/li>\n<\/ul>",
+            "row1_image": "shopify:\/\/shop_images\/image_10.jpg",
+            "row2_product": "saturo-balanced-pulver-vegan"
+          }
+        },
+        "b6f9981f-7155-496d-9f1a-77c3e3d09ce7": {
+          "type": "section_4",
+          "settings": {
+            "title": "<span class=\"align-left\">4. Astronauten-<\/span>\n<span class=\"align-left\">nahrung<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-left\">im Alltag<\/span>",
+            "link_title": "",
+            "desc": "Das primäre Ziel bei der Herstellung von Astronautennahrung war ursprünglich, ein Maximum an Nährstoffen in ein Minimum an Masse zu packen.",
+            "text": "Dieses Credo gilt nach wie vor. Außerdem wird bei modernen Produkten auf möglichst geringe Zubereitungszeit und optimale Verwertbarkeit der Inhaltsstoffe geachtet. Diese Eigenschaften sind für viele Anwendungsbereiche und Personengruppen enorm wertvoll.",
+            "bg_color_variable": "",
+            "row1_title": "Astronautennahrung bei wenig Zeit und für Unterwegs",
+            "row1_desc": "<p>Es sind aber schon längst nicht mehr Ausnahmesituationen, in denen Astronautennahrung Anwendung findet. Immer mehr Menschen finden für ihr alltägliches Leben Gefallen an Astronautenkost.<\/p>",
+            "row1_image": "shopify:\/\/shop_images\/coach-content-s4-row1-image.jpg",
+            "row2_image": "shopify:\/\/shop_images\/coach-content-s4-row2-image.jpg",
+            "row2_title": "Ausgewogene Ernährung im hektischen Alltag",
+            "row2_desc": "<p>Du kennst das wahrscheinlich: Keine Zeit, selbst zu kochen. Den ganzen Tag unterwegs. Gegessen wird zwischendurch und nebenbei das, was gerade verfügbar ist. Für viele von uns ist das Alltag. Wir sind immer beschäftigt oder gar gestresst, haben kaum eine ruhige Minute und schon gar nicht die nötige Zeit, uns in Ruhe hinzusetzen und eine ausgewogene Mahlzeit zu uns zu nehmen. Astronautennahrung bietet eine praktische und leistbare Lösung für dieses Problem. <\/p><p>Dadurch ist neben der guten Relation aus<span style=\"text-decoration:underline\"><strong> Eiweiß, Fett und Kohlenhydraten<\/strong><\/span> auch die Versorgung mit allen notwendigen <span style=\"text-decoration:underline\"><strong>Vitaminen<\/strong><\/span> und <span style=\"text-decoration:underline\"><strong>Mineralstoffen<\/strong><\/span> sicher gestellt. Verschiedene Geschmacksrichtungen sorgen für Abwechslung auf dem Speiseplan. Astronautennahrung macht ausgewogene Ernährung im hektischen Alltag nicht nur möglich, sondern ebenso einfach, kostengünstig und schmackhaft.<\/p>",
+            "row2_subtitle": "Sie erfordert keine oder minimale Zubereitung, kann einfach überall hin mitgenommen und verzehrt werden.",
+            "row3_image1": "shopify:\/\/shop_images\/coach-content-s4-row3-image1.jpg",
+            "row3_image2": "shopify:\/\/shop_images\/coach-content-s4-row3-image2.jpg",
+            "row3_image3": "shopify:\/\/shop_images\/coach-content-s4-row3-image3.jpg",
+            "row3_desc": "<p>Wenn du für mehrere Tage oder sogar Wochen in der Natur unterwegs bist, ist die Versorgung mit Lebensmitteln natürlich eine Herausforderung. Mit Trinknahrung bist du aber bei diversen Outdoor-Abenteuern gut versorgt. Denn sie liefert maximale Nährstoffe bei minimalem Gewicht und ist ungekühlt haltbar. Somit ist Astronautenkost der optimale Reiseproviant, wenn du viel Energie benötigst, gleichzeitig aber dein Gepäck leicht halten möchtest.<\/p>",
+            "row4_title": "Extra Energie für Sport und Muskelaufbau",
+            "row4_desc": "<p>Sportler und Bodybuilder setzen vermehrt auf Astronautennahrung. Mit dem ausgeglichenen Nährstoff-Verhältnis und der einfachen Dosierbarkeit ist Flüssignahrung nämlich der ideale Begleiter am Weg zu deinen sportlichen Zielen. Sie versorgt dich mit leicht aufnehmbarer Energie für dein Training und zeichnet sich durch einen hohen Proteingehalt aus. Weiterhin kann es einfach mitgenommen und somit unmittelbar vor oder nach dem Sport konsumiert werden.<\/p>",
+            "row4_image": "shopify:\/\/shop_images\/coach-content-s4-row4-image.jpg"
+          }
+        },
+        "6b4c7120-842a-43fb-bf09-48c61d3c6112": {
+          "type": "section_5",
+          "settings": {
+            "title": "<span class=\"align-center\">5. der<\/span>\n<span class=\"align-center\"><span class=\"heading-line-left\"><\/span>Ursprung<\/span>\n<span class=\"align-center\">der Astro-<\/span>\n<span class=\"align-right\">nautenkost<\/span>",
+            "link_title": "",
+            "image": "shopify:\/\/shop_images\/taste-different-image-1.png",
+            "bg_color_variable": "--color-banana-light",
+            "row1_title": "Die Trinknahrung hat ihren Ursprung in der Raumfahrt. Bereits in den 60ern wurde die erste Astronautenkost in Form von kleinen gepressten Würfeln entwickelt .",
+            "row1_desc": "<p>Ziel war es, Platz und Gewicht zu sparen und die Astronauten optimal mit allen notwendigen Nährstoffen zu versorgen. Gut verwertbar sollte die Weltall-Nahrung sein, ausgeglichen und effizient.<\/p><p>Über die Jahre hat man festgestellt, dass diese Eigenschaften für Mahlzeiten auf der Erde ebenso erstrebenswert sind. So haben sich aus den Weltraum-Würfeln diverse Produkte entwickelt, die heute längst nicht mehr nur Raumfahrern vorbehalten sind. <\/p><p>Nicht zu verwechseln sind Lifestyle-Trinknahrungen mit medizinischen Mahlzeitenersatzen, die bei Krankheiten eingesetzt werden. Falls das für dich zutrifft, spreche dich mit deiner Ärztin ab, insbesondere, wenn du einen längeren EInsatz in Betracht ziehst. Saturo richtet sich eher an Leute, die weniger gern kochen und zum Beispiel ihr Frühstücksmüsli ersetzen wollen.<\/p>",
+            "row1_image": "shopify:\/\/shop_images\/coach-content-s4-row3-image3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "41916aac-eacf-4bc3-8048-f6ca100d2ad9",
+        "470f06eb-5839-4109-9eeb-8c0f0cee546a",
+        "f7bf94e2-0413-4aa6-a892-9b22e0faa267",
+        "b6f9981f-7155-496d-9f1a-77c3e3d09ce7",
+        "6b4c7120-842a-43fb-bf09-48c61d3c6112"
+      ],
+      "settings": {
+      }
+    },
+    "1659966978813516a6": {
+      "type": "accordion",
+      "blocks": {
+        "231a06f5-fdd0-419b-ab77-4519c299d38a": {
+          "type": "question",
+          "settings": {
+            "title": "Question 1",
+            "answer": "<p>Answer 1<\/p>"
+          }
+        },
+        "0bdfc687-de46-49a5-be16-3c61a0106598": {
+          "type": "question",
+          "settings": {
+            "title": "This is a question",
+            "answer": "<p>This is an anwser<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "231a06f5-fdd0-419b-ab77-4519c299d38a",
+        "0bdfc687-de46-49a5-be16-3c61a0106598"
+      ],
+      "settings": {
+        "bg_color_variable": "--color-banana-light",
+        "html_heading": "<h3 class=\"h2-headline\" style=\"grid-column: 1\/13; margin-bottom: 3rem;\">\n<strong>Astronautennahrung im Überblick - die wichtigsten Fragen kompakt beantwortet<\/strong>\n    <\/h3>",
+        "description": "<p>Astronautennahrung im Überblick - die wichtigsten Fragen kompakt beantwortet<\/p>",
+        "id": "accordion",
+        "google_structured_data": true,
+        "padding_top": true,
+        "padding_bottom": true
+      }
+    },
+    "1659967640dba115b8": {
+      "type": "accordion",
+      "blocks": {
+        "e07a0fe8-8de8-4f76-8325-1626418b3b3b": {
+          "type": "question",
+          "settings": {
+            "title": "Quellen",
+            "answer": "<p>1. Text<br\/>2. Text<br\/>3. Text<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e07a0fe8-8de8-4f76-8325-1626418b3b3b"
+      ],
+      "settings": {
+        "bg_color_variable": "",
+        "html_heading": "",
+        "description": "",
+        "id": "references",
+        "google_structured_data": false,
+        "padding_top": true,
+        "padding_bottom": true
+      }
+    },
+    "165963131984628141": {
+      "type": "related",
+      "blocks": {
+        "e77d1454-ddc0-4559-8cfe-276b3be9e22a": {
+          "type": "page",
+          "settings": {
+            "page": "konzentration-steigern"
+          }
+        },
+        "45a5383b-5472-41f2-ba41-16adf6da3945": {
+          "type": "article",
+          "settings": {
+            "article": "ernaehrung\/makronaehrstoffe"
+          }
+        },
+        "b14784eb-0041-4d83-a5f9-6fc8a92fa533": {
+          "type": "article",
+          "settings": {
+            "article": "news\/aldi-nord-sued-und-hofer"
+          }
+        },
+        "c92f3828-d71d-4808-8218-45e17c84850f": {
+          "type": "article",
+          "settings": {
+            "article": "rezepte\/tropisch-lecker-unser-neuestes-smoothie-rezept"
+          }
+        }
+      },
+      "block_order": [
+        "e77d1454-ddc0-4559-8cfe-276b3be9e22a",
+        "45a5383b-5472-41f2-ba41-16adf6da3945",
+        "b14784eb-0041-4d83-a5f9-6fc8a92fa533",
+        "c92f3828-d71d-4808-8218-45e17c84850f"
+      ],
+      "settings": {
+        "more_articles_title": "Related",
+        "more_articles_subtitle": "Subtitle",
+        "section_id": "section_2"
+      }
+    },
+    "1660127568b302545b": {
+      "type": "content",
+      "blocks": {
+        "d262c2ba-caac-4c38-85d4-426f9bdb3dbe": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_right",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"align-right\">1. Vorteile<\/span>\n<span class=\"align-right\"><span class=\"heading-line-left\"><\/span>von  <\/span>\n<span class=\"align-center\">Astro-<\/span><span class=\"align-right\">nauten-<\/span><span class=\"align-center\">nahrung<\/span>",
+            "heading_style": "h1-headline",
+            "heading_tag": "h3",
+            "description": "<p>Astronautennahrung liefert als verzehrfertige Trinknahrung, Pulver zum Anrühren oder Riegel eine Vielzahl an Vorteilen für dich als Konsumenten. Flüssignahrung ist eine wertvolle Ergänzung im Alltag, beim Sport und unterwegs.<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "be115a4c-feff-45cf-9c17-735699dead71": {
+          "type": "image_with_text",
+          "settings": {
+            "left_c_image_1": "shopify:\/\/shop_images\/end-hunger-image1.jpg",
+            "left_c_image_1_style": "style-2",
+            "left_c_title": "",
+            "left_c_title_style": "h2-headline bold",
+            "left_c_description": "",
+            "left_c_description_html": "",
+            "left_c_title_position": "",
+            "right_c_image_1_style": "style-1",
+            "right_c_title": "Welche Nährstoffe sind drin?",
+            "right_c_title_style": "h2-headline bold",
+            "right_c_description": "<p>In Astronautenkost sind sämtliche lebensnotwendigen Nährstoffe enthalten. Ein ausgewogenes Verhältnis zwischen Eiweiß, Fetten und Kohlenhydraten sowie essentielle Vitamine, Mineralstoffe und Spurenelemente ergeben eine vollständige Mahlzeit, die deinen Körper mit allem versorgt, was er braucht und dich für mehrere Stunden satt hält.<\/p><p>Bei der Auswahl der Astronautenkost deiner Wahl empfehlen wir, nicht nur auf die Art und Menge, sondern auch die Qualität der Inhaltsstoffe zu achten. Milcheiweiß, Laktose und künstliche Zusatzstoffe werden von manchen Personen nicht gut vertragen. Insbesondere bei kritischem gesundheitlichem Zustand sollte man darauf achten, diese soweit wie möglich zu vermeiden und auf pflanzliche und möglichst natürliche Produkte setzen.<\/p>",
+            "right_c_title_position": ""
+          }
+        },
+        "89d99f2d-2a01-4f9f-ba0f-4a1708b9d783": {
+          "type": "image_with_text",
+          "settings": {
+            "left_c_image_1_style": "style-1",
+            "left_c_title": "Die wesentlichen Vorteile sind:",
+            "left_c_title_style": "h2-headline bold",
+            "left_c_description": "<p>- Optimal ausgewogenes Nährstoff-VerhältnisKeine bzw. minimale ZubereitungszeitPraktisch auch für unterwegsLange haltbarAusgeglichenes Verhältnis zwischen Eiweiß, Fetten und KohlenhydratenEnthält hochwertiges Eiweiß zum Aufbau von MuskelnFette von idealer Qualität für optimale Energieversorgung und NährstoffaufnahmeEinfache und komplexe Kohlenhydrate liefern Energie und halten sattReich an Vitaminen und Mineralstoffen<\/p>",
+            "left_c_description_html": "",
+            "left_c_title_position": "",
+            "right_c_image_1": "shopify:\/\/shop_images\/image_10.jpg",
+            "right_c_image_1_style": "style-3",
+            "right_c_title": "",
+            "right_c_title_style": "",
+            "right_c_description": "",
+            "right_c_title_position": ""
+          }
+        }
+      },
+      "block_order": [
+        "d262c2ba-caac-4c38-85d4-426f9bdb3dbe",
+        "be115a4c-feff-45cf-9c17-735699dead71",
+        "89d99f2d-2a01-4f9f-ba0f-4a1708b9d783"
+      ],
+      "settings": {
+        "bg_color": "--color-vanilla-light",
+        "circle_bg_color": "--color-cocoa-light",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": "Section 1"
+      }
+    },
+    "1660237599e749a301": {
+      "type": "multicolumn",
+      "blocks": {
+        "16602375994568fb4b-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/coach-content-s4-row3-image3_2400x_74d119ed-1284-4434-866e-7203bfdbc240.webp",
+            "title": "Der Shake zum selbst Mixen",
+            "heading_style": "h2-headline bold",
+            "text": "<p>Das Saturo Pulver<\/p>",
+            "link_label": "More info",
+            "link": "",
+            "link_style": ""
+          }
+        },
+        "16602375994568fb4b-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "heading_style": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "link_style": ""
+          }
+        },
+        "16602375994568fb4b-2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "heading_style": "",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": "",
+            "link_style": ""
+          }
+        }
+      },
+      "block_order": [
+        "16602375994568fb4b-0",
+        "16602375994568fb4b-1",
+        "16602375994568fb4b-2"
+      ],
+      "settings": {
+        "bg_color": "",
+        "heading_before": "",
+        "heading_before_style": "h5-headline",
+        "heading_before_tag": "h2",
+        "title": "",
+        "heading_style": "h2-headline",
+        "heading_tag": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "btn_style": "",
+        "padding_top": false,
+        "padding_bottom": false,
+        "swipe_on_mobile": false,
+        "section_id": ""
+      }
+    },
+    "1660196988fc35f57a": {
+      "type": "content",
+      "blocks": {
+        "da617341-d8bd-4eff-8264-08c4bac144b0": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"align-right\">2. Formen<\/span>\n<span class=\"align-center\"><span class=\"heading-line-left\"><\/span>der<\/span>\n<span class=\"align-center\">Astro-<\/span>\n<span class=\"align-right\">nauten-<\/span>\n<span class=\"align-center\">kost<\/span>",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "<p>Astronautennahrung gibt es mittlerweile in verschiedenen Formen, je nach Anwendungsgebiet und Zweck.<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "4325772d-abea-4a9e-946c-99927a7d54fa": {
+          "type": "text",
+          "settings": {
+            "text": "<p><span style=\"text-decoration:underline\"><strong>Verzehrfertige Trinknahrung:<\/strong><\/span> vor allem unterwegs besonders praktisch und zeitsparend.<\/p><p><span style=\"text-decoration:underline\"><strong>Trinknahrung-Pulver<\/strong><\/span> zum Anrühren: einfach zu dosieren und je nach Geschmack und Präferenz in Smoothies, Shakes, Müsli & Co zu verarbeiten.<\/p><p><span style=\"text-decoration:underline\"><strong>Riegel:<\/strong><\/span> ideal für unterwegs, vor oder nach dem Sport und als Zwischenmahlzeit geeignet.<\/p><p><span style=\"text-decoration:underline\"><strong>Gelier- und Andickungsmittel:<\/strong><\/span> zur Bindung und Aufwertung der Nährwerte von Saucen, Suppen, etc.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "da617341-d8bd-4eff-8264-08c4bac144b0",
+        "4325772d-abea-4a9e-946c-99927a7d54fa"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": ""
+      }
+    },
+    "1660197063e5b9f117": {
+      "type": "content",
+      "blocks": {
+        "6f03d94c-8a91-4aa1-a12d-4827e44bd482": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "3. Der    Vergleichs- sieger SATURO",
+            "heading_style": "",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "4e06c9ee-b5d4-4bb0-ba6d-420f0d451ac2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SATURO ist <span style=\"text-decoration:underline\"><strong>Testsieger unter den verglichenen Astronautenkostprodukten<\/strong><\/span> und wurde <strong>als einziges Produkt in diesem Segment mit “sehr gut” bewertet<\/strong> Verglichen wurden Inhaltsstoffe und Eigenschaften diverser Produkte aus den Bereichen medizinischer Mahlzeitenersatz (z.B. Fresubin Energy Drink, Nutrica Fortimel, Nestlé Resource) oder Lifestyle-Trinknahrungen (z. B. Saturo).<\/p><p>Wir produzieren in Österreich und Deutschland. Sämtliche Produkte sind glutenfrei und laktosefrei. Eine ausgefeilte Rezeptur mit einer extra Portion (Pflanzen-)Protein und 26 Vitaminen und Mineralstoffen machen unsere Produkte zu dem, was sie sind: Hochwertige, schmackhafte und ausgewogene Mahlzeiten in Sekundenschnelle und zu einem fairen Preis.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "6d42001e-f2ab-4d86-b3fb-e78c06207644": {
+          "type": "image_with_text",
+          "settings": {
+            "left_c_image_1_style": "style-1",
+            "left_c_title": "Wir haben die Besonderheiten von SATURO auf einen Blick für dich zusammengefasst:",
+            "left_c_title_style": "h2-headline bold",
+            "left_c_description": "<p>Hochwertige ZutatenAlle 26 Vitamine und MineralstoffeAusgewogenes NährstoffverhältnisProteinreichProduziert in Österreich und DeutschlandIn vielen leckeren Geschmacksrichtungen erhältlichVergleichssieger bei vergleich.org - Testurteil<strong>\"SEHR GUT\"<\/strong>Astronautenkost laktosefrei & glutenfreiAuf den Geschmack gekommen? Bestelle jetzt!<\/p>",
+            "left_c_description_html": "",
+            "left_c_title_position": "below-images",
+            "right_c_image_1": "shopify:\/\/shop_images\/image_10.jpg",
+            "right_c_image_1_style": "style-1",
+            "right_c_title": "",
+            "right_c_title_style": "",
+            "right_c_description": "",
+            "right_c_title_position": "below-images"
+          }
+        }
+      },
+      "block_order": [
+        "6f03d94c-8a91-4aa1-a12d-4827e44bd482",
+        "4e06c9ee-b5d4-4bb0-ba6d-420f0d451ac2",
+        "6d42001e-f2ab-4d86-b3fb-e78c06207644"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": ""
+      }
+    },
+    "166012943351481736": {
+      "type": "content",
+      "blocks": {
+        "ac10cb75-a3b1-4d66-906a-9b25f0426c46": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "4. Astronauten- nahrung im Alltag",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "<p>Das primäre Ziel bei der Herstellung von Astronautennahrung war ursprünglich, ein Maximum an Nährstoffen in ein Minimum an Masse zu packen.<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "7372e78d-0bf7-4dfe-9bb3-551123cd2203": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dieses Credo gilt nach wie vor. Außerdem wird bei modernen Produkten auf möglichst geringe Zubereitungszeit und optimale Verwertbarkeit der Inhaltsstoffe geachtet. Diese Eigenschaften sind für viele Anwendungsbereiche und Personengruppen enorm wertvoll.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "922f0f9c-be3a-4d81-9883-11b8be6de0f9": {
+          "type": "image_with_text",
+          "settings": {
+            "left_c_image_1": "shopify:\/\/shop_images\/coach-content-s4-row3-image3_2400x_74d119ed-1284-4434-866e-7203bfdbc240.webp",
+            "left_c_image_1_style": "style-1",
+            "left_c_title": "Astronautennahrung bei wenig Zeit und für Unterwegs",
+            "left_c_title_style": "h2-headline bold",
+            "left_c_description": "<p>Es sind aber schon längst nicht mehr Ausnahmesituationen, in denen Astronautennahrung Anwendung findet. Immer mehr Menschen finden für ihr alltägliches Leben Gefallen an Astronautenkost.<\/p>",
+            "left_c_description_html": "<p class=\"p\">Es sind aber schon längst nicht mehr Ausnahmesituationen, in denen Astronautennahrung Anwendung findet. Immer mehr Menschen finden für ihr alltägliches Leben Gefallen an Astronautenkost.<\/p>\n<ul>\n<li>Item<\/li>\n<li>Item 2<\/li>\n<li>Item 3<\/li>\n<\/ul>",
+            "left_c_title_position": "",
+            "right_c_image_1": "shopify:\/\/shop_images\/Saturo-ingredients-coconut-mct.jpg",
+            "right_c_image_1_style": "style-3",
+            "right_c_title": "Title on top",
+            "right_c_title_style": "h2-headline",
+            "right_c_description": "<p>Ziel war es, Platz und Gewicht zu sparen und die Astronauten optimal mit allen notwendigen Nährstoffen zu versorgen. Gut verwertbar sollte die Weltall-Nahrung sein, ausgeglichen und effizient.<\/p><p>Über die Jahre hat man festgestellt, dass diese Eigenschaften für Mahlzeiten auf der Erde ebenso erstrebenswert sind. So haben sich aus den Weltraum-Würfeln diverse Produkte entwickelt, die heute längst nicht mehr nur Raumfahrern vorbehalten sind.<\/p><p>Nicht zu verwechseln sind Lifestyle-Trinknahrungen mit medizinischen Mahlzeitenersatzen, die bei Krankheiten eingesetzt werden. Falls das für dich zutrifft, spreche dich mit deiner Ärztin ab, insbesondere, wenn du einen längeren EInsatz in Betracht ziehst. Saturo richtet sich eher an Leute, die weniger gern kochen und zum Beispiel ihr Frühstücksmüsli ersetzen wollen.<\/p>",
+            "right_c_title_position": "below_images"
+          }
+        },
+        "2980a370-3945-4e14-94d2-306656dddddb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dieses Credo gilt nach wie vor. Außerdem wird bei modernen Produkten auf möglichst geringe Zubereitungszeit und optimale Verwertbarkeit der Inhaltsstoffe geachtet. Diese Eigenschaften sind für viele Anwendungsbereiche und Personengruppen enorm wertvoll.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "3f3898db-d431-418e-9b24-0c2ea7bea049": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sie erfordert keine oder minimale Zubereitung, kann einfach überall hin mitgenommen und verzehrt werden.<\/p>",
+            "text_style": "h2-headline bold",
+            "text_2": "<p>Dadurch ist neben der guten Relation aus<span style=\"text-decoration:underline\"><strong> Eiweiß, Fett und Kohlenhydraten<\/strong><\/span> auch die Versorgung mit allen notwendigen <span style=\"text-decoration:underline\"><strong>Vitaminen<\/strong><\/span> und <span style=\"text-decoration:underline\"><strong>Mineralstoffen<\/strong><\/span> sicher gestellt. Verschiedene Geschmacksrichtungen sorgen für Abwechslung auf dem Speiseplan. Astronautennahrung macht ausgewogene Ernährung im hektischen Alltag nicht nur möglich, sondern ebenso einfach, kostengünstig und schmackhaft.<\/p>",
+            "text_2_style": "p"
+          }
+        },
+        "ad3d9776-8a3d-49c6-933c-484891571564": {
+          "type": "text",
+          "settings": {
+            "text": "<p>fasdfasdfsa asdf asdf asdf asdfasdf asdf asd fadsf adsf as<\/p>",
+            "text_style": "h2-headline bold",
+            "text_2": "",
+            "text_2_style": "h1-headline"
+          }
+        },
+        "1b19422f-6d74-4bcc-b0af-a94d3044008e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20211120ingredientsflaxseedoil3500x2318px--edited-1654635093309.webp",
+            "image_align": "justify-end"
+          }
+        }
+      },
+      "block_order": [
+        "ac10cb75-a3b1-4d66-906a-9b25f0426c46",
+        "7372e78d-0bf7-4dfe-9bb3-551123cd2203",
+        "922f0f9c-be3a-4d81-9883-11b8be6de0f9",
+        "2980a370-3945-4e14-94d2-306656dddddb",
+        "3f3898db-d431-418e-9b24-0c2ea7bea049",
+        "ad3d9776-8a3d-49c6-933c-484891571564",
+        "1b19422f-6d74-4bcc-b0af-a94d3044008e"
+      ],
+      "settings": {
+        "bg_color": "--color-lemon-cheesecake-pastel",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": ""
+      }
+    },
+    "16602406986694544c": {
+      "type": "product",
+      "settings": {
+        "bg_color": "--color-black",
+        "product": "saturo-balanced-pulver-vegan",
+        "btn_style": "",
+        "btn_modal_text": "Auswählen",
+        "btn_buy_text": "Hinzufügen",
+        "btn_more_text": "Weitere Infos",
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": ""
+      }
+    },
+    "1660302713dba03fe8": {
+      "type": "content",
+      "blocks": {
+        "2863e016-ab71-47bf-9114-2a39e8f47eaf": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"align-right\">3. Der   <\/span>\n<span class=\"align-right\">Vergleichs-<\/span>\n<span class=\"align-center\"><span class=\"heading-line-left\"><\/span>sieger<\/span><span class=\"align-right\">SATURO<\/span>",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "<p>Das primäre Ziel bei der Herstellung von Astronautennahrung war ursprünglich, ein Maximum an Nährstoffen in ein Minimum an Masse zu packen.<\/p>",
+            "description_style": "h2-headline",
+            "image": "shopify:\/\/shop_images\/vergleichssiegar.jpg"
+          }
+        },
+        "eb2cd08d-361e-41ef-a1bc-41e336fcdd4d": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_only",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"align-center\">5. der<\/span>\n<span class=\"align-center\"><span class=\"heading-line-left\"><\/span>Ursprung<\/span>\n<span class=\"align-center\">der Astro-<\/span>\n<span class=\"align-right\">nautenkost<\/span>",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "5aee1532-74e4-47d0-8dea-896ac23521d5": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"align-right\">2. Formen<\/span>\n<span class=\"align-center\"><span class=\"heading-line-left\"><\/span>der<\/span>\n<span class=\"align-center\">Astro-<\/span>\n<span class=\"align-right\">nauten-<\/span>\n<span class=\"align-center\">kost<\/span>",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "<p>Astronautennahrung gibt es mittlerweile in verschiedenen Formen, je nach Anwendungsgebiet und Zweck.<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "f4cee709-03ff-4dbf-9b73-b0c965c87d13": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_right",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"align-right\">1. Vorteile<\/span>\n<span class=\"align-right\"><span class=\"heading-line-left\"><\/span>von  <\/span>\n<span class=\"align-center\">Astro-<\/span><span class=\"align-right\">nauten-<\/span><span class=\"align-center\">nahrung<\/span>",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "<p>Astronautennahrung liefert als verzehrfertige Trinknahrung, Pulver zum Anrühren oder Riegel eine Vielzahl an Vorteilen für dich als Konsumenten. Flüssignahrung ist eine wertvolle Ergänzung im Alltag, beim Sport und unterwegs.<\/p>",
+            "description_style": "h2-headline"
+          }
+        }
+      },
+      "block_order": [
+        "2863e016-ab71-47bf-9114-2a39e8f47eaf",
+        "eb2cd08d-361e-41ef-a1bc-41e336fcdd4d",
+        "5aee1532-74e4-47d0-8dea-896ac23521d5",
+        "f4cee709-03ff-4dbf-9b73-b0c965c87d13"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": ""
+      }
+    }
+  },
+  "order": [
+    "165990492469e39fa6",
+    "1659903120843b0b4a",
+    "165990556816173a6b",
+    "165989340333c5dea9",
+    "main",
+    "1659966978813516a6",
+    "1659967640dba115b8",
+    "165963131984628141",
+    "1660127568b302545b",
+    "1660237599e749a301",
+    "1660196988fc35f57a",
+    "1660197063e5b9f117",
+    "166012943351481736",
+    "16602406986694544c",
+    "1660302713dba03fe8"
+  ]
+}

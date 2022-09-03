@@ -1,0 +1,66 @@
+{{ 'home-hero-banner.css' | asset_url | stylesheet_tag }}
+
+{% assign product = all_products[section.settings.product] %}
+<section class="page-width product__header-grid">
+  <div class="product__header--content">
+    <h2 class="h1-headline product__header-heading span-align-heading">
+      {{ section.settings.title }}
+      <span class="align-left">Ausgewogene</span>
+      <span class="align-right">Ernährung?</span>
+      <span class="align-left">Mischen<span class="heading-line"></span></span>
+      <span class="align-center">Possible.</span>
+    </h2>
+
+    <div class="product__header--image product__header--image-mobile">
+      {% render 'product-media', media: product.featured_media, loading_type: 'eager' %}
+    </div>
+
+    <div class="product__header--info global-reviews">
+      {% assign meta_title = product.metafields.my_fields.product_title %}
+      <h3 class="h2-headline"><strong>
+        {%- if meta_title != blank -%}
+          {{ meta_title }}
+        {%- else -%}
+          {{ product.title }}
+        {%- endif -%}
+      </strong></h3>
+      {% assign meta_subtitle = product.metafields.my_fields.product_subtitle %}
+      {%- if meta_subtitle != blank -%}
+        <p class="p">{{ meta_subtitle }}</p>
+      {%- endif -%}
+      <a href="{{ product.url }}#product-reviews" class="product__header--reviews-link">
+        {% render 'reviews-io-rukrating-snippet', product: product %}
+      </a>
+
+      <a href="{{ product.url }}" class="btn"><strong>Kaufen</strong></a>
+    </div>
+  </div>
+  <a href="{{ product.url }}" class="product__header--image">
+    {% render 'product-media', media: product.featured_media, loading_type: 'eager' %}
+  </a>
+</section>
+
+{% schema %}
+{
+  "name": "Home - Hero Banner",
+  "tag": "section",
+  "class": "product__header",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home - Hero Banner"
+    }
+  ]
+}
+{% endschema %}

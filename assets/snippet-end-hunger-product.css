@@ -1,0 +1,38 @@
+.end-hunger__row-content .h2-headline {
+  line-height: 3.4rem;
+}
+
+.end-hunger__row-content .end-hunger__coll-image {
+  max-width: 23rem;
+  object-fit: contain;
+}
+
+.end-hunger__row-content .end-hunger__row-title {
+  margin-bottom: 1.5rem;
+}
+
+.end-hunger__coll-reviews {
+  margin: 4.5rem 0 6rem;
+  pointer-events: none;
+}
+
+.end-hunger__coll-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.end-hunger__coll-buttons .btn ~ .btn {
+  margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .end-hunger__row-content .h2-headline {
+    text-align: center;
+  }
+
+  .end-hunger__coll-reviews {
+    margin: 3rem 0 4.5rem;
+    text-align: center;
+  }
+}

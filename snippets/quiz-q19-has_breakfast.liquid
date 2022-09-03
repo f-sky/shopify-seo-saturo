@@ -1,0 +1,32 @@
+<!-- q19: has_breakfast -->
+<div class="quiz-item quiz-q19 is-hidden" data-quiz-item="q19" data-quiz-item-handle="hasBreakfast">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.has_breakfast.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q19">{% render 'icon-quiz-info' %}</a></h2>
+    <p class="quiz-item__subtitle">{{ "personalized_quiz.has_breakfast.subtitle" | t }}</p>
+    <div class="quiz-options">
+      <div class="quiz-option">
+        <input id="quiz-has_breakfast-Ja" type="radio" name="has_breakfast" value="true" data-quiz-answer>
+        <label for="quiz-has_breakfast-Ja">{{ "personalized_quiz.has_breakfast.option_yes" | t }}</label>
+      </div>
+      <div class="quiz-option">
+        <input id="quiz-has_breakfast-Nein" type="radio" name="has_breakfast" value="false" data-quiz-answer>
+        <label for="quiz-has_breakfast-Nein">{{ "personalized_quiz.has_breakfast.option_no" | t }}</label>
+      </div>
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.has_breakfast.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q19">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.has_breakfast.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.has_breakfast.popup_subtitle_html" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q19 -->

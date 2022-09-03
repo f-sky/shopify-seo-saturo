@@ -1,0 +1,121 @@
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width faq-section__wrapper" id="accordion">
+  {% assign html_heading = section.settings.html_heading %}
+
+  {%- if html_heading != blank -%}
+    {{ html_heading }}
+  {%- else -%}
+    <h3 class="h2-headline">
+      <strong>Falls du dich das jetzt auch fragst:</strong>
+    </h3>
+  {%- endif -%}
+
+  {% if section.settings.description != blank %}
+    <div class="description p">{{ section.settings.description }}</div>
+  {% endif %}
+  
+  <dl class="faq__items js-faq-items">
+    {% for block in section.blocks %}
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <dt>
+          <button class="faq__item-button p" type="button" aria-controls="panel-{{ block.id }}" data-button-id="{{ block.id }}" aria-expanded="true">
+            <strong itemprop="name">{{ block.settings.question }}</strong>
+            {% render 'icon-cross' %}
+          </button>
+        </dt>
+        <dd class="faq__item-content p" data-content-id="{{ block.id }}" aria-hidden="true" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">{{ block.settings.answer }}</div>
+        </dd>
+      </div>
+    {% endfor %}
+  </dl>
+
+</section>
+
+{% if section.settings.bg_color_variable != blank %}
+<style>
+  .faq-section {
+    background-color: var({{ section.settings.bg_color_variable }});
+  }
+</style>
+{% endif %}
+
+{% javascript %}
+const buttons = document.querySelectorAll('.js-faq-items button[aria-controls]');
+
+buttons.forEach(button => {
+	button.addEventListener('click', function(){
+		var id = button.dataset.buttonId;
+		var $content = document.querySelector('[data-content-id="' + id + '"]');	
+		
+		if ($content.classList.contains('show')) {
+			$content.classList.remove('show');
+			button.classList.remove('active');
+			$content.setAttribute('aria-hidden', 'true');
+		} else {
+			$content.classList.add('show');
+			button.classList.add('active');
+			$content.setAttribute('aria-hidden', 'false');
+		}
+  });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('html').setAttribute("itemtype", "https://schema.org/FAQPage");
+  document.querySelector('html').setAttribute("itemscope", "");
+});
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "FAQ",
+  "tag": "section",
+  "class": "faq-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "bg_color_variable",
+      "label": "Background Color CSS Variable Name"
+    },
+    {
+      "type": "html",
+      "id": "html_heading",
+      "label": "Heading Html"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Tab content",
+      "type": "question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,81 @@
+{{ 'section-page-versand.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width page-versand__wrapper">
+  <h1 class="h1-headline page-versand__title span-align-heading">
+    {% assign title_html = section.settings.title %}
+    {% if title_html != blank %}
+      {{ title_html }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+  </h1>
+
+  <div class="page-versand__desc">
+    <div class="p">{{ section.settings.desc }}</div>
+
+    {% assign image = section.settings.image %}
+    {% if image != blank %}
+      <img src="{{ image | img_url: '1100x' }}" alt="{{ image.alt }}" class="page-versand__desc-image" />
+    {% endif %}
+  </div>
+
+  <div class="page-versand__items">
+    {% for block in section.blocks %}
+      <div class="page-versand__item">
+        <h4 class="h2-headline page-versand__item--title">
+          <strong>{{ block.settings.title }}</strong>
+        </h4>
+        <div class="page-versand__item--content p">{{ block.settings.content }}</div>
+      </div>
+    {% endfor %}
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Page Versand",
+  "tag": "section",
+  "class": "page-versand side-circle side-circle__large side-circle__top-right",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "List Item",
+      "type": "list_item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "liquid",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Versand"
+    }
+  ]
+}
+{% endschema %}

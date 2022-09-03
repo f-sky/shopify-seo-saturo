@@ -1,0 +1,93 @@
+<!-- q10: diet_allergy -->
+<div class="quiz-item quiz-q10 is-hidden" data-quiz-item="q10" data-allergy-question data-quiz-item-handle="allergy">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.diet_allergy.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q10">{% render 'icon-quiz-info' %}</a></h2>
+    <p class="quiz-item__subtitle p">{{ "personalized_quiz.diet_allergy.subtitle" | t }}</p>
+    <input type="hidden" name="diet_allergy" checked value="null" data-quiz-answer>
+    <div class="quiz-options quiz-options--inline justify-content-center">
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Gluten" type="checkbox" name="diet_allergy" value="Gluten" data-quiz-answer>
+        <label for="quiz-Gluten">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-gluten.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_allergy.option_gluten" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Laktose" type="checkbox" name="diet_allergy" value="Lactose" data-quiz-answer>
+        <label for="quiz-Laktose">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-laktose.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_allergy.option_lactose" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Soja" type="checkbox" name="diet_allergy" value="Soy" data-quiz-answer>
+        <label for="quiz-Soja">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-soja.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_allergy.option_soy" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Erdnuss" type="checkbox" name="diet_allergy" value="Peanut" data-quiz-answer>
+        <label for="quiz-Erdnuss">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-erdnuss.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_allergy.option_peanut" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Keine" type="checkbox" name="diet_allergy" value="Keine" data-quiz-answer>
+        <label for="quiz-Keine">
+          <div class="quiz-option__circle">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_allergy.option_none" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Andere5" type="checkbox" name="diet_allergy" value="Andere" data-quiz-answer>
+        <label for="quiz-Andere5">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-andereDots.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_allergy.option_other" | t }}</span>
+        </label>
+      </div>
+      <div class="quiz-option input-wrapper input-wrapper-extra-msg">
+        <p class="p quiz-option-extra-msg-text">{{ "personalized_quiz.diet_allergy.option_other_warning_text" | t }}</p>
+        <div class="quiz-option-extra-msg-input">
+          <input id="quiz-q10-diet-allergy" type="text" class="input m-underline" name="diet_allergy_input" placeholder="Sonstige" data-quiz-answer-andere data-quiz-answer>
+          <label for="quiz-q10-diet-allergy" class="label">{{ "personalized_quiz.diet_allergy.option_other" | t }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="bg-color-general-contrast details alert-danger d-none" data-allergy-callout>
+      {{ "personalized_quiz.diet_allergy.error_message_no_product" | t }}
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn">{{ "personalized_quiz.diet_allergy.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q10">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.diet_allergy.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.diet_allergy.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q10 -->

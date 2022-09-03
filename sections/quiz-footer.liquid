@@ -1,0 +1,29 @@
+{% comment %}
+<div class="quiz-footer" data-quizresultfooter>
+  <div class="container">
+    <div class="quiz-footer__content">
+      <div class="image"><img data-product-image src="{{ quiz_products.first[0] | img_url: '500x' }}" alt=""></div>
+      <div class="heading">
+        <h1 class="title"><span data-product-username></span>'s SATURO</h1>
+        <h3 class="subtitle">Speziell für dich gemacht!</h3>
+      </div>
+      <div data-quiz-result-icons class="icon-list">
+        <i class="icon-muscule"></i>
+        <i class="icon-run"></i>
+        <i class="icon-ball"></i>
+        <i class="icon-swimming"></i>
+        <i class="icon-weight"></i>
+      </div>
+      <button type="button" class="btn m-primary m-rounded" data-quiz-next>BESTELLE JETZT DEINEN SHAKE!</button>
+    </div>
+  </div>
+</div> <!-- /.quiz-product -->
+{% endcomment %}
+
+{% schema %}
+{ 
+  "name": "Quiz Footer",
+  "class": "section",
+  "tag": "section"
+}
+{% endschema %}

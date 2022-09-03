@@ -1,0 +1,33 @@
+<!-- q8a: meal_replacement_per_day -->
+<div class="quiz-item quiz-q8a is-hidden" data-quiz-item="q8a" data-quiz-item-handle="mealReplacementPerDay">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">Wie viele (Zwischen-) Mahlzeiten isst du am Tag? <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q8">{% render 'icon-quiz-info' %}</a></h2>
+    <div class="quiz-options">
+      <div class="quiz-option quiz-option--range" data-range>
+        <div class="range-label"><span>Hauptmahlzeiten (außer Frühstück) pro Tag</span> <span class="ml-auto" data-range-value></span></div>
+        <input type="range" name="main_meal" data-quiz-answer min="1" max="7" step="1" value="2" data-orientation="horizontal">
+      </div>
+      <div class="quiz-option quiz-option--range" data-range>
+        <div class="range-label"><span>Zwischenmahlzeiten pro Tag</span> <span class="ml-auto" data-range-value></span></div>
+        <input type="range" name="in_between_meal" data-quiz-answer min="0" max="7" step="1" value="2" data-orientation="horizontal">
+      </div>
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn">WEITER</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q8">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">Wie viele (Zwischen-) Mahlzeiten isst du am Tag?</h4>
+        <p>
+Die Anzahl an Mahlzeiten hat Einfluss auf die empfohlene Kalorienmenge, die du mit jedem Shake zu dir nehmen solltest.
+        </p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q8a -->

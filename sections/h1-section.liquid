@@ -1,0 +1,30 @@
+{{ 'h1-section.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width h1-section__wrapper">
+  <h1 class="h1-headline page__title span-align-heading">
+    {% assign title_html = section.settings.title %}
+    {% if title_html != blank %}
+      {{ title_html }}
+    {% endif %}
+  </h1>
+</section>
+
+{% schema %}
+{
+  "name": "H1 Section",
+  "tag": "section",
+  "class": "h1-section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    }
+  ],
+  "presets": [
+    {
+      "name": "H1 Section"
+    }
+  ]
+}
+{% endschema %}

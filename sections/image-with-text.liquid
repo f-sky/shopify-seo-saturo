@@ -1,0 +1,351 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+{% assign desktop_layout = 'grid--1-col grid--2-col-tablet image-with-text__image-left' %}
+{% if section.settings.desktop_layout  == 'image_first' %}
+  {% assign desktop_layout = 'grid--1-col' %}
+{% elsif section.settings.desktop_layout  == 'image_last' %}
+  {% assign desktop_layout = 'grid--1-col image-with-text__image-last' %}
+{% elsif section.settings.desktop_layout  == 'image_right' %}
+  {% assign desktop_layout = 'grid--1-col grid--2-col-tablet image-with-text__image-right' %}
+{% endif %}
+
+{% assign mobile_layout = 'image-with-text__mobile-image-first' %}
+{% if section.settings.mobile_layout == 'text_first' %}
+  {% assign mobile_layout = 'image-with-text__mobile-text-first' %} 
+{% endif %}
+
+<div id="{{ section.settings.section_id }}" class="image-with-text {% if section.settings.image_fullscreen %}image-with-text--full-width{% else %}page-width{% endif %} {% unless section.settings.padding_top %}pt-0{% endunless %} {% unless section.settings.padding_bottom %}pb-0{% endunless %} color-scheme-{{ section.settings.color_scheme }}">
+
+  <div class="image-with-text__grid color-{{ section.settings.color_scheme }} grid grid--gapless {{ desktop_layout }} {{ mobile_layout }}">
+    <div class="grid__item">
+      {% if section.settings.image_fullscreen %}
+        <div class="image-with-text__bg-image" style="background-image: url({{ section.settings.image | img_url: '1070x' }})"> </div>
+      {% else %}
+        <div class="image-with-text__media {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} {% unless section.settings.desktop_layout == 'image_right' or section.settings.desktop_layout == 'image_left' %}image-with-text__media-relative{% endunless %}"
+          {% if section.settings.image != blank %}
+            {% if section.settings.desktop_layout == 'image_right' or section.settings.desktop_layout == 'image_left' %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
+          {% endif %}
+        >
+          {%- if section.settings.image != blank -%}
+            <img
+              srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | img_url: '535x' }} 535w,{%- endif -%}
+                {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+                {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | img_url: '1070x' }} 1070w,{%- endif -%}
+                {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+                {{ section.settings.image | img_url: 'master' }} {{ section.settings.image.width }}w"
+              src="{{ section.settings.image | img_url: '1500x' }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+              alt="{{ section.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.image.width }}"
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+      {% endif %}      
+    </div>
+    <div class="grid__item">
+      <div class="image-with-text__content {% unless section.settings.desktop_layout == 'image_right' or section.settings.desktop_layout == 'image_left' %}center{% endunless %}">
+        {%- for block in section.blocks -%}
+          {% case block.type %}
+            {%- when 'title' -%}
+              {% assign heading_tag = block.settings.heading_tag %}
+              <{{ heading_tag }} class="image-with-text__heading {{ block.settings.heading_style }} {{ block.settings.text_align }}" {{ block.shopify_attributes }}>
+                {{ block.settings.title_text | escape }}
+              </{{ heading_tag }}>
+            {%- when 'description' -%}
+              <div class="image-with-text__text rte {{ block.settings.text_align }}" {{ block.shopify_attributes }}>{{ block.settings.description }}</div>
+            {%- when 'list' -%}
+              <ul class="image-with-text__list-item">
+                <p class="image-with-text__list-item--number">{{ block.settings.list_number }}</p>
+                <li class="image-with-text__list-item--content">
+                  <div class="image-with-text__list-item--title">{{ block.settings.list_title }}</div>
+                  <div class="image-with-text__list-item--description">{{ block.settings.list_description }}</div>
+                </li>
+              </ul>
+            {%- when 'button' -%}
+              {%- if block.settings.btn_text != blank -%}
+                <a href="{{ block.settings.btn_url }}" class="btn {{ block.settings.btn_style }}"><strong>{{ block.settings.btn_text }}</strong></a>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if section.settings.bg_color != blank %}
+  <style>
+      #shopify-section-{{ section.id }}.image-with-text__section {
+        background-color: var({{ section.settings.bg_color }});
+      }
+  </style>
+{% endif %}
+  
+{% schema %}
+{
+  "name": "t:sections.image-with-text.name",
+  "class": "spaced-section spaced-section--full-width image-with-text__section",
+  "settings": [
+    {
+        "type": "text",
+        "id": "bg_color",
+        "label": "Background Color",
+        "info": "CSS Variable name eg. --color-white"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_fullscreen",
+      "label": "Full-screen",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "Desktop Layout",
+      "options": [
+        {
+          "value": "image_left",
+          "label": "Image left"
+        },
+        {
+          "value": "image_right",
+          "label": "Image right"
+        },
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "image_last",
+          "label": "Image last"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile Layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "Image first"
+        },
+        {
+          "value": "text_first",
+          "label": "Text first"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "padding_top",
+      "label": "Padding-top",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "padding_bottom",
+      "label": "Padding-bottom",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title_text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "heading_style",
+          "label": "Style",
+          "info": "Define what class this element should get",
+          "options": [
+            {
+              "value": "",
+              "label": "None"
+            },
+            {
+              "value": "h1-headline",
+              "label": "H1"
+            },
+            {
+              "value": "h2-headline",
+              "label": "H2"
+            },
+            {
+              "value": "h2-headline bold",
+              "label": "H2 bold"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "HTML-Tag",
+          "info": "Decide which HTML tag this Element should get",
+          "options": [
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text alignment",
+          "options": [
+            {
+              "value": "",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Description",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "label": "Text alignment",
+          "options": [
+            {
+              "value": "",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "name": "List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "list_title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "list_description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "list_number",
+          "label": "Number"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.image-with-text.blocks.button.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "btn_style",
+          "label": "Button Style",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn--primary",
+              "label": "Primary"
+            },
+            {
+              "value": "btn--secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "btn--tertiary",
+              "label": "Tertiary"
+            },
+            {
+              "value": "btn--text",
+              "label": "Text"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image-with-text.presets.name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,69 @@
+{{ 'product-better-food.css' | asset_url | stylesheet_tag }}
+
+{% assign image = section.settings.image %}
+{% if image != blank %}
+  <div class="better-food__image-bg" style="background-image: url('{{ image | img_url: '1500x' }}');"></div>
+{% endif %}
+
+<div class="better-food__color-bg"></div>
+<section class="page-width better-food__grid">
+  <div class="better-food__content">
+    {%- if section.settings.nutriscore_image != blank -%}
+      <style>
+        .better-food__subtitle:last-child::before {
+          background-image: url({{ section.settings.nutriscore_image | img_url: 'master' }});
+        };
+      </style>
+    {%- endif -%}
+
+    <h3 class="h2-headline better-food__subtitle">{{ section.settings.uppertitle }}</h3>
+      
+    <h3 class="h1-headline better-food__title">{{ section.settings.title }}</h3>
+    
+    <h3 class="h2-headline better-food__subtitle">{{ section.settings.subtitle }}</h3>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Product - Better Food",
+  "tag": "section",
+  "class": "better-food",
+  "settings": [
+    {
+      "type": "html",
+      "id": "uppertitle",
+      "label": "Uppertitle HTML",
+      "default": "Ausgewogene Ernährung leicht gemacht. Im Handumdrehen hast du eine <strong>komplette Mahlzeit<\/strong> parat mit allem, was dein Körper braucht."
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML",
+      "default": "Besser essen, ohne dich zu stressen."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "html",
+      "id": "subtitle",
+      "label": "Subtitle HTML",
+      "default": "<strong>30g Protein,<\/strong> komplexe Kohlenhydrate, alle <strong>26 essentielle Vitamine &amp; Mineralien<\/strong> und sättigt bis zu <strong>5 Stunden<\/strong>. Natürlich <strong>vegan<\/strong>."
+    },
+    {
+      "type": "image_picker",
+      "id": "nutriscore_image",
+      "label": "Nutriscore Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product - Better Food"
+    }
+  ]
+}
+{% endschema %}

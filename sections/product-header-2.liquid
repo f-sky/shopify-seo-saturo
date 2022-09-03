@@ -1,0 +1,501 @@
+{{ 'product-header.css' | asset_url | stylesheet_tag }}
+
+{% assign product = product %}
+{% if section.settings.assigned_product != blank %}
+  {% assign product = section.settings.assigned_product %}
+{% endif %}
+
+{%- liquid
+  assign show_product_image = false
+  if section.settings.bg_image_wide == blank and section.settings.bg_image_desktop == blank and section.settings.bg_image_tablet == blank and section.settings.bg_image_mobile == blank
+    assign show_product_image = true
+  endif
+  -%}
+
+{% assign bg_color = section.settings.bg_color %}
+<section class="product__header" {% if bg_color != blank %}style="background-color: {{ bg_color }}"{% endif %}>
+  
+  {%- assign widest_breakpoint_mobile = 767 -%}
+  {%- assign widest_breakpoint_tablet = 1024 -%}
+  {%- assign widest_breakpoint_desktop = 1440 -%}
+  {%- assign widest_breakpoint_wide = 3840 -%}
+  
+  <picture>
+
+
+    {%- assign step = 50 -%}
+    {%- assign res = 500 -%}
+
+    {%- if section.settings.bg_image_mobile -%}
+      {% assign mobileCount = widest_breakpoint_mobile | minus: res | divided_by: step | floor | minus: 1 %}
+    {%- endif -%}
+    
+    {%- if section.settings.bg_image_tablet -%}
+        {% assign tabletCount = widest_breakpoint_tablet | minus: widest_breakpoint_mobile | divided_by: step | minus: 1 %}
+    {%- endif -%}
+    
+    {%- if section.settings.bg_image_desktop -%}
+        {% assign desktopCount = widest_breakpoint_desktop | minus: widest_breakpoint_tablet | divided_by: step | minus: 1 %}
+    {%- endif -%}
+    
+    {%- if section.settings.bg_image_wide -%}
+      {% assign wideCount = widest_breakpoint_wide | minus: widest_breakpoint_desktop | divided_by: step | minus: 1 %}
+    {%- endif -%}
+  
+    {%- if section.settings.bg_image_mobile -%}
+    <source srcset="
+      {% for index in (0..mobileCount) %}
+        {% assign res = res | plus: step %}
+        {% capture url_res_1x %}{{ res }}x{% endcapture %}
+        {{ section.settings.bg_image_mobile | image_url: width: url_res_1x }} {{ res }}w,
+      {% endfor %}
+      {% assign temp = widest_breakpoint_mobile | minus: res | modulo: step %}
+      {%- unless temp == 0 -%}
+        {% assign res = widest_breakpoint_mobile %}
+        {% capture url_res_1x %}{{ res }}x{% endcapture %}
+        {{ section.settings.bg_image_mobile | image_url: width: url_res_1x }} {{ res }}w
+      {%- endunless -%}
+      "
+      sizes="100vw"
+      width="{{ res | plus: step }}" 
+      height="{{ res | plus: step | divided_by: section.settings.bg_image_mobile.aspect_ratio }}" 
+      loading="eager"
+      media="(max-width: {{ widest_breakpoint_mobile }}px)"
+    >
+    {%- endif -%}
+    
+    {%- if section.settings.bg_image_tablet -%}
+      <source srcset="
+        {% for index in (0..tabletCount) %}
+          {% assign res = res | plus: step %}
+          {% capture url_res_1x %}{{ res }}x{% endcapture %}
+          {{ section.settings.bg_image_tablet | image_url: width: url_res_1x }} {{ res }}w,
+        {% endfor %}
+        {% assign temp = widest_breakpoint_tablet | minus: widest_breakpoint_mobile | modulo: step %}
+        {%- unless temp == 0 -%}
+          {% assign res = widest_breakpoint_tablet %}
+          {% capture url_res_1x %}{{ res }}x{% endcapture %}
+          {{ section.settings.bg_image_tablet | image_url: width: url_res_1x }} {{ res }}w
+        {%- endunless -%}
+        "
+        sizes="100vw"
+        media="(max-width: {{ widest_breakpoint_tablet }}px)"
+        width="{{ widest_breakpoint_mobile | plus: step }}" 
+        height="{{ widest_breakpoint_mobile | plus: step | divided_by: section.settings.bg_image_tablet.aspect_ratio }}" 
+        loading="eager"
+      >
+      {%- endif -%}
+      
+      {%- if section.settings.bg_image_desktop -%}
+        <source srcset="
+          {% for index in (0..desktopCount) %}
+            {% assign res = res | plus: step %}
+            {% capture url_res_1x %}{{ res }}x{% endcapture %}
+            {{ section.settings.bg_image_desktop | image_url: width: url_res_1x }} {{ res }}w,
+          {% endfor %}
+          {% assign temp = widest_breakpoint_desktop | minus: widest_breakpoint_tablet | modulo: step %}
+          {%- unless temp == 0 -%}
+            {% assign res = widest_breakpoint_desktop %}
+            {% capture url_res_1x %}{{ res }}x{% endcapture %}
+            {{ section.settings.bg_image_desktop | image_url: width: url_res_1x }} {{ res }}w
+          {%- endunless -%}
+        "
+        sizes="100vw"
+        media="(max-width: {{ widest_breakpoint_desktop }}px)"
+        width="{{ widest_breakpoint_tablet | plus: step }}" 
+        height="{{ widest_breakpoint_tablet | plus: step | divided_by: section.settings.bg_image_desktop.aspect_ratio }}" 
+        loading="eager"
+      >
+    {%- endif -%}
+
+    {%- if section.settings.bg_image_wide -%}
+      <source srcset="
+        {% for index in (0..wideCount) %}
+          {% assign res = res | plus: step %}
+          {% capture url_res_1x %}{{ res }}x{% endcapture %}
+          {{ section.settings.bg_image_wide | image_url: width: url_res_1x }} {{ res }}w,
+        {% endfor %}
+        {% assign temp = widest_breakpoint_wide | minus: widest_breakpoint_desktop | modulo: step %}
+        {%- unless temp == 0 -%}
+          {% assign res = widest_breakpoint_wide %}
+          {% capture url_res_1x %}{{ res }}x{% endcapture %}
+          {{ section.settings.bg_image_wide | image_url: width: url_res_1x }} {{ res }}w
+        {%- endunless -%}
+        "
+        sizes="100vw"
+        media="(max-width: {{ widest_breakpoint_wide }}px)"
+        width="{{ widest_breakpoint_desktop | plus: step }}" 
+        height="{{ widest_breakpoint_desktop | plus: step | divided_by: section.settings.bg_image_wide.aspect_ratio }}" 
+        loading="eager"
+      >
+    {%- endif -%}
+    
+    {% assign res = res | plus: 1 %}
+    {% capture url_res_1x %}{{ res }}x{% endcapture %}
+    <source srcset="{{ section.settings.bg_image_wide | image_url: width: url_res_1x }}" media="(min-width: {{ res }}px)"  width="{{ res }}" height="{{ res | divided_by: section.settings.bg_image_wide.aspect_ratio }}"  loading="eager">
+
+    <img src="{{ section.settings.bg_image_wide | image_url: width: "3000x" }}" class="product__header--heroImage"  width="3000" height="{{ 3000 | divided_by: section.settings.bg_image_wide.aspect_ratio }}" loading="eager" fetchpriority="high">
+  </picture>
+  
+  <section class="product__header-grid--wrapper">
+    <div class="page-width product__header-grid {{ section.settings.content_side }} {{ section.settings.mobile_content_position }}">
+      <div class="product__header--content">
+        <h2 class="h1-headline product__header-heading span-align-heading {% if section.settings.title_small_margin %}product__header-heading--mb-s{% endif %}">
+          {{ section.settings.title }}
+        </h2>
+
+        {% if show_product_image %}
+          <div class="product__header--heroImage product__header--heroImage-mobile">
+            {% render 'product-media', media: product.featured_media %}
+          </div>
+        {% endif %}
+
+        <div class="product__header--info global-reviews">
+          {% assign meta_title = product.metafields.my_fields.product_title %}
+          <h3 class="{{ section.settings.heading_2_style }}">
+            {%- if section.settings.heading_2 != blank -%}
+              {{ section.settings.heading_2 }}
+            {%- elsif meta_title != blank -%}
+              {{ meta_title }}
+            {%- else -%}
+              {{ product.title }}
+            {%- endif -%}
+          </h3>
+          {% assign meta_subtitle = product.metafields.my_fields.product_subtitle %}
+          <p class="p">
+            {%- if section.settings.subtitle != blank -%}
+              {{ section.settings.subtitle }}
+            {%- elsif meta_subtitle != blank -%}
+              {{ meta_subtitle }}
+            {%- endif -%}
+          </p>
+          {% render 'reviews-io-rukrating-snippet', product: product %}
+
+          
+          {% assign button_color = section.settings.button_color %}
+          {% assign button_bg_color = section.settings.button_bg_color %}
+
+          {% capture button_style %}
+            {%- if button_color != blank -%}
+                color: var({{ button_color }});
+            {%- endif -%}
+            {%- if button_bg_color != blank -%}
+                background-color: var({{ button_bg_color }});
+                border-color: var({{ button_bg_color }});
+            {%- endif -%}
+          {% endcapture %}
+        
+        {% if section.settings.quiz_button %}
+          <div class="product__header--quiz-buttons">
+            <a href="/pages/quiz" class="btn {{ section.settings.btn_style }}" data-product-header-quiz-main-btn><strong>Jetzt probieren</strong></a>
+            <a href="/pages/quiz?reset=true" class="btn btn--text hidden" data-product-header-quiz-secondary-btn>
+              Quiz wiederholen 
+              {% render 'icon-chevron' %}
+            </a>
+          </div>
+        {% else %}
+          {% if section.settings.btn_text != blank %}
+            {% if template.name == 'product' %}
+              {% if section.settings.assigned_product == blank and section.settings.btn_url == blank %}
+                <button class="btn {{ section.settings.btn_style }}" data-scroll-to-product><strong>{{ section.settings.btn_text }}</strong></button>
+              {% else %}
+                {% assign btn_url = product.url %}
+                {% if section.settings.assigned_product != blank %}
+                  {% assign btn_url = section.settings.assigned_product.url %}
+                {% elsif section.settings.btn_url != blank %}
+                  {% assign btn_url = section.settings.btn_url %}
+                {% endif %}
+                <a href="{{ btn_url }}" class="btn {{ section.settings.btn_style }}"><strong>{{ section.settings.btn_text }}</strong></a>
+              {% endif %}
+            {% else %}
+              {% assign btn_url = product.url %}
+              {% if section.settings.btn_url != blank %}
+                {% assign btn_url = section.settings.btn_url %}
+              {% endif %}
+              <a href="{{ btn_url }}" class="btn {{ section.settings.btn_style }}"><strong>{{ section.settings.btn_text }}</strong></a>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+
+        </div>
+      </div>
+      {% if show_product_image %}
+        <div class="product__header--heroImage">
+          {% assign product_image = section.settings.product_image %}
+          {% if product_image != blank %}
+            <img src="{{ product_image | img_url: '2000x' }}" alt="{{ product_image.alt }}" loading="lazy" />
+          {% else %}
+            {% render 'product-media', media: product.featured_media %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+</section>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const $quizMainBtn = document.querySelector('[data-product-header-quiz-main-btn]');
+    if ($quizMainBtn) {
+      if (localStorage.getItem('uid')) {
+        let url = `/pages/quiz?uid=${localStorage.getItem('uid')}`;
+        let mainBtnText = 'Weiter im Quiz';
+        if (localStorage.getItem('quiz-status') === 'quiz-completed') {
+          url = `/pages/my-personalized?uid=${localStorage.getItem('uid')}`;
+          mainBtnText = 'Jetzt bestellen';
+          const $quizSecBtn = document.querySelector('[data-product-header-quiz-secondary-btn]');
+          if ($quizSecBtn) {
+            $quizSecBtn.classList.remove('hidden');
+          }
+        }
+        $quizMainBtn.href = url;
+        $quizMainBtn.innerHTML = `<strong>${mainBtnText}</strong>`;
+      }
+    }
+  });
+</script>
+
+<style>
+  {% if section.settings.text_color != blank %}
+    #shopify-section-{{ section.id }} .product__header .product__header--info .h2-headline,
+    #shopify-section-{{ section.id }} .product__header .product__header--info .p,
+    #shopify-section-{{ section.id }} .product__header .product__header-heading span,
+    #shopify-section-{{ section.id }} .product__header .global-reviews .ruk_rating_snippet .ruk-rating-snippet-count {
+      color: var({{ section.settings.text_color }});
+    }
+
+    #shopify-section-{{ section.id }} .product__header .product__header-heading.span-align-heading span.heading-line,
+    #shopify-section-{{ section.id }} .product__header .product__header-heading.span-align-heading span.heading-line-left {
+      background-color: var({{ section.settings.text_color }});
+    }
+
+    #shopify-section-{{ section.id }} .product__header .product__header--info .ruk_rating_snippet i {
+      color: var(--color-banana-pastel);
+    }
+  {% endif %}
+
+  {% if section.settings.hide_circle != blank %}
+  #shopify-section-{{ section.id }} .product__header:after {
+      content: none;
+    }
+  {% endif %}
+
+  {% assign custom_header_color = section.settings.custom_header_color %}
+  {% if custom_header_color != blank %}
+    .mega-menu-header {
+      color: var({{ custom_header_color }});
+    }
+
+    .mega-menu-header .icon>path,
+    .mega-menu-header svg.icon {
+      fill: var({{ custom_header_color }});
+    }
+  
+    .mega-menu-header__button {
+      background-color: var({{ custom_header_color }});
+    }
+  {% endif %}
+</style>
+
+{% render 'reviews-io-rukrating-snippet-end', color_review_star: '--color-black-grey-title', mode: "extended", link: "TRUE" %}
+
+{% schema %}
+{
+  "name": "Product Header 2",
+  "tag": "section",
+  "class": "product-header",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading 2"
+    },
+    {
+      "type": "select",
+      "id": "heading_2_style",
+      "label": "Style",
+      "info": "Define what class this element should get",
+      "options": [
+        {
+          "value": "",
+          "label": "None"
+        },
+        {
+          "value": "h1-headline",
+          "label": "H1"
+        },
+        {
+          "value": "h2-headline",
+          "label": "H2"
+        },
+        {
+          "value": "h2-headline bold",
+          "label": "H2 bold"
+        }
+      ],
+      "default": "h2-headline bold"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Kaufen"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "btn--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "btn--tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "btn--text",
+          "label": "Text"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "product",
+      "id": "assigned_product",
+      "label": "Assign a product"
+    },
+    {
+      "type": "header",
+      "content": "Background Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_wide",
+      "label": "Background Image - Wide",
+      "info": "Visible after 1441px width"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_desktop",
+      "label": "Background Image - Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_tablet",
+      "label": "Background Image - Tablet"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_mobile",
+      "label": "Background Image - Mobile"
+    },
+    {
+      "type": "header",
+      "content": "Styling Options"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "text_color",
+      "label": "Text Color Variable"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_circle",
+      "label": "Hide Circle"
+    },
+    {
+      "type": "select",
+      "id": "content_side",
+      "label": "Content Side",
+      "options": [
+        {
+          "value": "content-left",
+          "label": "Left"
+        },
+        {
+          "value": "content-right",
+          "label": "Right"
+        }
+      ],
+      "default": "content-left"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_position",
+      "label": "Content Position on Mobile",
+      "options": [
+        {
+          "value": "content-top__mobile",
+          "label": "Space Between"
+        },
+        {
+          "value": "content-bottom__mobile",
+          "label": "Bottom"
+        },
+        {
+          "value": "content-all-top__mobile",
+          "label": "Top"
+        }
+      ],
+      "default": "content-bottom__mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "title_small_margin",
+      "label": "Less margin on title",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_header_color",
+      "label": "Custom Header Color",
+      "info": "CSS Variable"
+    },
+    {
+      "type": "checkbox",
+      "id": "quiz_button",
+      "label": "Show Dynamic Quiz Buttons"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Header 2"
+    }
+  ]
+}
+{% endschema %}

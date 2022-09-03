@@ -1,0 +1,22 @@
+<!-- q0: name -->
+<div class="quiz-item quiz-q0" data-quiz-item="q0" data-quiz-item-handle="firstName">
+  <div class="quiz-item__inner ta-left">
+    <div class="quiz-item__options">
+      <p>
+        <div class="field m-row align-items-center">
+          {{ "personalized_quiz.name.headline" | t }}
+          <div class="input-wrapper input-wrapper-name">
+            <input id="quiz-q0-name" type="text" class="input" data-quiz-answer name="name" placeholder="{{ "personalized_quiz.name.input_label" | t }}" data-auto-focus>
+            <label for="quiz-q0-name" class="label">{{ "personalized_quiz.name.input_label" | t }}</label>
+          </div>
+        </div>
+      </p>
+      {{ "personalized_quiz.name.subtitle_html" | t }}
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.name.button_next_text" | t }}</button>
+    </div> 
+  </div>
+</div>
+
+<!-- / q0 -->

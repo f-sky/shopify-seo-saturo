@@ -1,0 +1,162 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-product-grid-saturo",
+      "blocks": {
+        "012f6594-247f-428e-a736-8055273b3625": {
+          "type": "collection",
+          "settings": {
+            "collection": "pulver"
+          }
+        },
+        "45aa122f-5a4d-402a-8dcd-b74c15db735f": {
+          "type": "collection",
+          "settings": {
+            "collection": "trinkmahlzeit"
+          }
+        },
+        "c6801267-6c3b-42e8-9ace-bc82821bdd9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "riegel"
+          }
+        },
+        "7c7c4b95-280f-4d7f-8b2a-4360f881ea3b": {
+          "type": "collection",
+          "settings": {
+            "collection": "merchandise"
+          }
+        }
+      },
+      "block_order": [
+        "012f6594-247f-428e-a736-8055273b3625",
+        "45aa122f-5a4d-402a-8dcd-b74c15db735f",
+        "c6801267-6c3b-42e8-9ace-bc82821bdd9f",
+        "7c7c4b95-280f-4d7f-8b2a-4360f881ea3b"
+      ],
+      "settings": {
+        "hide_circle": false,
+        "circle_bg_color": ""
+      }
+    },
+    "1644347206079a975c": {
+      "type": "faq",
+      "blocks": {
+        "d8ef085c-1661-484e-99d0-559461cd9f06": {
+          "type": "question",
+          "settings": {
+            "question": "Was ist eine Trinkmahlzeit",
+            "answer": "<p>Eine Trinkmahlzeit ist eine vollwertige und ausgewogene Mahlzeit für Erwachsene in flüssiger Form - nicht zu verwechseln mit den gängigen Trinkmahlzeiten für Babies. Wenn du gerade unterwegs bist oder keine Zeit zum Kochen hast, eignen sich Trinkmahlzeiten als perfekter Mahlzeitenersatz to-go. Die Mahlzeiten enthalten einen balancierten Mix aus gesunden Fetten, Kohlenhydraten und reichlich Protein, um dich satt zu machen. Gleichzeitig sind alle <a href=\"https:\/\/saturo.com\/pages\/vitamin-mangel-symptome\" target=\"_self\">essentiellen Vitamine<\/a> & <a href=\"https:\/\/saturo.com\/pages\/mineralstoffe\" target=\"_self\">Mineralstoffe<\/a> und Ballaststoffe für eine gute Verdauung enthalten. Kurz gesagt: Alles, was dein Körper braucht, um optimal zu funktionieren. <\/p>"
+          }
+        },
+        "ec9d25ff-35ab-457e-b5f4-b6f598dcde7b": {
+          "type": "question",
+          "settings": {
+            "question": "Was sind die Vorteile der Trinkmahlzeit?",
+            "answer": "<p>Zum einen die hohe Zeitersparnis. Sich eine vollwertige Mahlzeit zu kochen, kann gerne mal eine Stunde in Anspruch nehmen. Bei Saturos Trinkmahlzeiten musst du hingegen nur einmal kräftig schütteln und kannst genießen. Zum anderen sind die niedrigen Kosten pro Mahlzeit ein weiterer Vorteil. Ein <a href=\"https:\/\/saturo.com\/products\/saturo-drink-500ml\" target=\"_self\">500 ml Tetra Pak der Trinkmahlzeit hält dich bis zu 5 Stunden satt<\/a> und kostet weniger als 3,50 Euro pro Mahlzeit. Liquide Mahlzeiten sind oft die gesündere Alternative zu ungesundem Fastfood und <a href=\"https:\/\/saturo.com\/pages\/weniger-koerperfett\" target=\"_self\">hilft dir beim Abnehmen<\/a>. Mit <a href=\"https:\/\/saturo.com\/pages\/astronautennahrung\" target=\"_self\">Astronautennahrung<\/a> sparst du Zeit und Geld und hast gleichzeitig eine <a href=\"https:\/\/saturo.com\/pages\/junkfood-das-musst-du-wissen\" target=\"_self\">attraktive Alternative zu Junkfood<\/a>.<\/p>"
+          }
+        },
+        "b12cbea8-c15a-4c3e-986f-dcb90f552fec": {
+          "type": "question",
+          "settings": {
+            "question": "Wie lange hält die Trinkmahlzeit satt?",
+            "answer": "<p>Die kleinen Mahlzeiten in den 330 ml Flaschen halten bis zu 3 Stunden lang satt. Bei den großen Flaschen bist du sogar bis zu 5 Stunden lang gut gesättigt. Zum besseren Verständnis: 100 Milliliter von Trinknahrung enthalten 100 kcal. Selbstverständlich kommt es auf deine jeweilige Situation an, wie lange du tatsächlich keinen Hunger nach der Einnahme verspürst.<\/p>"
+          }
+        },
+        "33429dcb-1b53-494a-80ef-9c443ef1557b": {
+          "type": "question",
+          "settings": {
+            "question": "Wann soll ich Trinknahrung trinken?",
+            "answer": "<p>Es gibt keinen idealen Zeitpunkt, wann du eine Trinkmahlzeit zu dir nehmen solltest. Wann immer du dich hungrig fühlst oder einen Energieschub benötigst. In der Mittagspause im Büro, vor oder nach dem Sport oder gleich als Frühstücksersatz. Je nachdem, ob es nur ein Snack zwischendurch oder eine Hauptmahlzeit sein soll, greifst du entweder auf die kleinen oder die großen 500 ml Flaschen zurück. <\/p>"
+          }
+        },
+        "c5808902-1e49-43af-8a6e-6b3672947ad7": {
+          "type": "question",
+          "settings": {
+            "question": "Für wen ist die trinkbare Mahlzeit geeignet?",
+            "answer": "<p>Trinkmahlzeiten sind für jeden geeignet, der im Alltag keine Zeit oder Lust hat, sich etwas zu kochen, aber gleichzeitig <a href=\"https:\/\/saturo.com\/pages\/junkfood-das-musst-du-wissen\" target=\"_self\">nicht auf ungesundes Junkfood zurückgreifen möchte<\/a>. Darüber hinaus lässt sich mithilfe der flüssigen Nahrung hervorragend die Kalorienzufuhr steuern. Das kann dir beim <a href=\"https:\/\/saturo.com\/pages\/weniger-koerperfett\" target=\"_self\">Abnehmen<\/a> oder beim <a href=\"https:\/\/saturo.com\/pages\/astronautenkost\" target=\"_self\">Zunehmen<\/a> helfen - je nachdem, was für deine Situation gerade richtig ist. Nicht zu vernachlässigen sind Trinkmahlzeiten für Personen, die aus <a href=\"https:\/\/saturo.com\/pages\/astronautennahrung\" target=\"_self\">medizinischen und gesundheitlichen Gründen darauf angewiesen sind<\/a>, z. B. <a href=\"https:\/\/saturo.com\/pages\/weisheitszahn-op\" target=\"_self\">nach einer Weisheitszahn OP<\/a>, wenn nicht richtig gegessen werden kann, aber trotzdem alle Nährstoffe aufgenommern werden müssen.<\/p>"
+          }
+        },
+        "11dab855-ad79-4ddb-ae1d-ff94e50b2559": {
+          "type": "question",
+          "settings": {
+            "question": "Vergleich zwischen Pulver und Fertiggetränk",
+            "answer": "<p>Neben den trinkfertigen Shakes bieten wir noch <a href=\"https:\/\/saturo.com\/collections\/pulver\" target=\"_self\">Pulver zum selbst Mischen<\/a> an. Dieses gibt es entweder in Schoko- oder Vanillegeschmack. Darüber hinaus hast du bei die Möglichkeit, dich zwischen <a href=\"https:\/\/saturo.com\/products\/saturo-pulver-vegan\" target=\"_self\">pflanzlichen Pulver<\/a> oder <a href=\"https:\/\/saturo.com\/products\/saturo-pulver-molke\" target=\"_self\">Pulver auf Molkebasis<\/a> zu entscheiden. Im Gegensatz zu den fertigen Shakes ist das Pulver, auf die einzelne Mahlzeit heruntergerechnet, günstiger. Das <a href=\"https:\/\/saturo.com\/products\/saturo-pulver-vegan\" target=\"_self\">vegane Pulver gibt es schon ab nur 1 Euro pro Mahlzeit<\/a>! Die Nachteile des Pulvers gegenüber den Shakes: Du musst es dir in einem Shaker selber mixen und hast nicht so eine große Auswahl an unterschiedlichen Geschmacksrichtungen.<\/p>"
+          }
+        },
+        "17dfe24e-0a22-4f10-86de-55b25fc53571": {
+          "type": "question",
+          "settings": {
+            "question": "Wie ist der Geschmack der Trinkmahlzeit?",
+            "answer": "<p>Von der Konsistenz her kannst du die fertigen Shakes von SATURO mit Proteinshakes oder mit klassischen Milchshakes vergleichen - nur sind wir wesentlich gesünder als überzuckerte Milchshakes. Das Rezept der <a href=\"https:\/\/saturo.com\/products\/saturo-drink-500ml\" target=\"_self\">500 ml Trinkmahlzeit<\/a> ist leicht anders, sodass diese etwas dickflüssiger ist als die kleinen Einheiten. Der Geschmack selbst hängt von der jeweiligen Geschmacksrichtung ab. So hat Schokolade ein angenehmes Kakao-Aroma, während Kaffee nach Kaffee schmeckt. Übrigens: Die Geschmacksrichtung \"Original\" wird von unseren Kunden als \"perfekte Mischung zwischen salzig und süß\" beschrieben.<\/p>"
+          }
+        },
+        "ecfd0e02-70c3-4995-b65f-2112a8c88799": {
+          "type": "question",
+          "settings": {
+            "question": "Wo gibt es Trinkmahlzeiten zu kaufen?",
+            "answer": "<p>Entweder du kaufst die Astronautenkost direkt in unserem Webshop - hier hast du immer die größte Auswahl und alle Produkte verfügbar. <a href=\"https:\/\/saturo.com\/pages\/abo\" target=\"_self\">Mit dem praktischen Abonnement sparst du<\/a> dir zudem nicht nur Zeit - weil du nicht immer wieder nachbestellen musst - du bezahlst auch noch weniger Geld pro einzelner Mahlzeit. Ein doppelter Gewinn für dich! Oder du nutzt den praktischen <a href=\"https:\/\/saturo.com\/pages\/store-finder\" target=\"_self\">Laden Finder<\/a>. Dort kannst du in Sekundenschnelle checken, welcher Supermarkt bei dir in der Nähe unsere Produkte zum Verkauf anbietet. Einziger Nachteil dabei ist, dass nicht immer alle unserer Produkte in allen Filialen gelistet sind. Frage direkt beim Marktleiter danach.<\/p>"
+          }
+        },
+        "d58be76d-cfad-43e4-9910-d135529eb691": {
+          "type": "question",
+          "settings": {
+            "question": "Welche Geschmacksrichtungen gibt es bei den Mahlzeiten?",
+            "answer": "<p>Es gibt mehrere Sorten zur Auswahl: Die 500 ml Tetra Paks gibt es in drei Geschmacksvariationen:<br\/><a href=\"https:\/\/saturo.com\/products\/saturo-drink-500ml\" target=\"_self\">Original, Schokolade und Vanille<\/a>. Bei den 330 ml Mahlzeiten stehen vier Geschmäcker zur Auswahl:<br\/><a href=\"https:\/\/saturo.com\/products\/saturo-drink-330ml\" target=\"_self\">Schokolade, Vanille, Erdbeere <\/a><\/p>"
+          }
+        },
+        "3cebc538-7788-4fa8-af60-0c930e257587": {
+          "type": "question",
+          "settings": {
+            "question": "Können die Trinkmahlzeiten bei Intoleranzen verspeist werden?",
+            "answer": "<p>Die trinkfertigen Shakes sind sowohl laktosefrei, wie auch glutenfrei.  Bei einer Soja-Unverträglichkeit bzw. Allergie ist das auf <a href=\"https:\/\/saturo.com\/products\/saturo-pulver-molke\" target=\"_self\">Molke basierende Pulver<\/a> die optimale Lösung für dich.<br\/>Wir nutzen glutenfreie Haferfaser als Quelle für Ballaststoffe und Isomaltulose statt herkömmlichem Zucker (welcher bei Fruktoseintoleranz nicht verträglich wäre). Isomaltulose hat des Weiteren den Vorteil, dass der Blutzuckerspiegel nach dem Konsum nicht zu stark in die Höhe schießt. <\/p>"
+          }
+        },
+        "9c9e5e08-1c83-433f-8fc0-6206c53f9ff5": {
+          "type": "question",
+          "settings": {
+            "question": "Wie gesund sind Trinkmahlzeiten wirklich?",
+            "answer": "<p>In unseren flüssigen Mahlzeiten sind alle Nährstoffe und <a href=\"https:\/\/saturo.com\/pages\/vitamin-mangel-symptome\" target=\"_self\">Vitamine<\/a> enthalten, die der menschliche Körper braucht. Im Vergleich mit Burger, Pizza und ähnlichem Junkfood sind Trinkmahlzeiten die bessere Alternative.<br\/>Eine ausgewogene und abwechslungsreiche Ernährung sowie eine gesunde Lebensweise sind aber immer noch wichtig. Daher solltest du regelmäßig Obst und Gemüse essen. Zudem erfüllt Essen noch eine soziale Komponente neben der reinen Nährstoffaufnahme.<\/p>"
+          }
+        },
+        "b81e71b8-0c2c-49dc-9f85-a8da8b889173": {
+          "type": "question",
+          "settings": {
+            "question": "Nachteile der Trinkmahlzeit",
+            "answer": "<p>Bei SATURO bemühen wir uns darum unser Produkt stetig zu verbessern. Im Moment fehlen der Trinkmahlzeit noch bestimmte sekundäre Pflanzenstoffe (z.B. Flavonoide), die gut für das Immunsystem sind. Es wäre nicht ganz richtig, Trinkmahlzeiten als ausschließlichen Ersatz zu einer natürlichen pflanzenbasierten Ernährung zu betrachten. Stattdessen greifst du am besten immer dann auf SATURO Trinkmahlzeiten zurück, wenn du ein ungesundes Gericht ersetzen willst oder keine Lust hast, noch großartig zu kochen.<\/p>"
+          }
+        },
+        "b46239f2-ea28-4abf-aa6d-cb16e4778eac": {
+          "type": "question",
+          "settings": {
+            "question": "Warum die Trinkmahlzeit bei Saturo kaufen?",
+            "answer": "<p>Es gibt verschiedene Gründe, die Saturo von unseren Mitbewerbern unterscheidet. Zum Beispiel setzen wir keinen Zucker in unseren Trinkmahlzeiten zu, damit sie den Blutzuckerspiegel nicht in die Höhe schnellen lassen. Nachhaltigkeit liegt uns besonders am Herzen. Darum nutzen wir bei Saturo ausschließlich Zutaten, die nicht nur gut für deinen Körper, sondern auch gut für die Umwelt sind. Darüber hinaus bieten wir mit der Geschmacksrichtung <a href=\"https:\/\/saturo.com\/products\/saturo-drink-500ml\" target=\"_self\">\"Original\" in den 500 ml Tetra Paks ein neutrales Geschmackserlebnis, welches ohne Süßungsmitteln auskommt<\/a>. Weil wir wissen, dass nicht jeder auf Schokolade, Vanille und Co. steht. Damit stehen wir am Markt noch ziemlich alleine dar, weil sämtliche Konkurrenz nur große Shakes mit zugesetzten Aromen anbietet.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d8ef085c-1661-484e-99d0-559461cd9f06",
+        "ec9d25ff-35ab-457e-b5f4-b6f598dcde7b",
+        "b12cbea8-c15a-4c3e-986f-dcb90f552fec",
+        "33429dcb-1b53-494a-80ef-9c443ef1557b",
+        "c5808902-1e49-43af-8a6e-6b3672947ad7",
+        "11dab855-ad79-4ddb-ae1d-ff94e50b2559",
+        "17dfe24e-0a22-4f10-86de-55b25fc53571",
+        "ecfd0e02-70c3-4995-b65f-2112a8c88799",
+        "d58be76d-cfad-43e4-9910-d135529eb691",
+        "3cebc538-7788-4fa8-af60-0c930e257587",
+        "9c9e5e08-1c83-433f-8fc0-6206c53f9ff5",
+        "b81e71b8-0c2c-49dc-9f85-a8da8b889173",
+        "b46239f2-ea28-4abf-aa6d-cb16e4778eac"
+      ],
+      "settings": {
+        "bg_color_variable": "--color-vanilla-light",
+        "html_heading": "<h2 class=\"h1-headline faq--heading span-align-heading\">\n<span class=\"align-left\">Fragen<\/span>\n  <span class=\"align-left\"><span class=\"heading-line-left\"><\/span>zu den<\/span>\n<span class=\"align-left\">Trinkmahlzeiten<\/span>\n<\/h2>"
+      }
+    }
+  },
+  "order": [
+    "product-grid",
+    "1644347206079a975c"
+  ]
+}

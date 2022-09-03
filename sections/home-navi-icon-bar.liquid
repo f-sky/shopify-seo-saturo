@@ -1,0 +1,109 @@
+{{ 'home-navi-icon-bar.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.bg_color_variable != blank %}
+<style>
+  .navi-icon-bar {
+    background-color: var({{ section.settings.bg_color_variable }});
+  }
+  
+  {% if section.settings.hide_products_below %}
+  	@media only screen and (max-width: 767px) {
+      .end-hunger__wrapper .end-hunger__row-content,
+      .end-hunger__wrapper .end-hunger__row1-image,
+      .end-hunger__wrapper .end-hunger__row2-image,
+      .end-hunger__wrapper .end-hunger__row3-image {
+        display: none;
+      }
+
+      .end-hunger__desc {
+        margin-bottom: 0!important;
+      }
+    }
+  {% endif %}
+</style>
+{% endif %}
+
+<section class="page-width navi-icon-bar__wrapper">
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.url }}" class="navi-icon-bar__block">
+      {% if block.settings.img != blank %}
+          <div class="navi-icon-bar__block-image" style="background-image: url({{ block.settings.img | img_url: '200x' }});"></div>
+      {% endif %}
+      {% if block.settings.text != blank %}
+      	{% if section.settings.color_variable != blank %}
+          <style>
+            #shopify-section-{{ section.id }} .navi-icon-bar__block-link {
+              color: var({{ section.settings.color_variable }});
+            }
+
+            #shopify-section-{{ section.id }} .navi-icon-bar__block-link svg path {
+              fill: var({{ section.settings.color_variable }});
+            }
+          </style>
+      	{% endif %}
+      	<p class="navi-icon-bar__block-link btn--text"><strong>{{ block.settings.text }}</strong>{% render 'icon-chevron' %}</p>
+      {% endif %}
+    </a>
+  {% endfor %}
+</section>
+
+{% schema %}
+  {
+    "name": "Home - Navi Icon Bar",
+  	"class": "navi-icon-bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bg_color_variable",
+        "label": "Background Color CSS Variable Name",
+		"info": "eg. --color-general-pastel"
+      },
+      {
+        "type": "text",
+        "id": "color_variable",
+        "label": "Link Color CSS Variable Name",
+        "info": "eg. --color-black"
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_products_below",
+        "label": "Hide products on End Hunger section",
+        "info": "(Mobile Only)"
+      }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home - Navi Icon Bar"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

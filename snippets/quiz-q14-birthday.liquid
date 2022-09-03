@@ -1,0 +1,42 @@
+<!-- q14: birthday -->
+<div class="quiz-item quiz-q14 is-hidden" data-quiz-item="q14" data-quiz-item-handle="birthday">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.birthday.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q14">{% render 'icon-quiz-info' %}</a></h2>
+    <div class="quiz-options quiz-options--inline justify-content-center">
+      <div class="col-3 px-1 input-wrapper">
+        <input 
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          id="q14-birthday_d" type="number" class="input m-underline ta-center" min="1" max="31" data-quiz-answer name="birthday_d" placeholder="{{ "personalized_quiz.birthday.option_day_label" | t }}" maxlength="2" inputmode="numeric" data-auto-focus>
+        <label for="q14-birthday_d" class="label">{{ "personalized_quiz.birthday.option_day_label" | t }}</label>
+      </div>
+      <div class="col-3 px-1 input-wrapper">
+        <input 
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          id="q14-birthday_m" type="number" class="input m-underline ta-center" min="1" max="12" data-quiz-answer name="birthday_m" placeholder="{{ "personalized_quiz.birthday.option_month_label" | t }}" maxlength="2" inputmode="numeric">
+        <label for="q14-birthday_m" class="label">{{ "personalized_quiz.birthday.option_month_label" | t }}</label>
+      </div>
+      <div class="col-3 px-1 input-wrapper">
+        <input 
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          id="q14-birthday_y" type="number" class="input m-underline ta-center" min="1912" max="2030" data-quiz-answer name="birthday_y" placeholder="{{ "personalized_quiz.birthday.option_year_label" | t }}" maxlength="4" inputmode="numeric">
+        <label for="q14-birthday_y" class="label">{{ "personalized_quiz.birthday.option_year_label" | t }}</label>
+      </div>
+    </div>
+    <div class="bg-color-general-contrast alert-danger d-none" data-birthday-invalid>{{ "personalized_quiz.birthday.error_message" | t }}</div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.birthday.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q14">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.birthday.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.birthday.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q14 -->

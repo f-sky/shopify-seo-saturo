@@ -1,0 +1,30 @@
+<section class="coach-content__section coach-content__section5" data-scroll-section="{{ block.id }}">
+  <div class="page-width coach-content__section-wrapper">
+
+    <h3 class="h1-headline span-align-heading coach-content__section-title coach-content__section5-title">{{ block.settings.title }}</h3>
+    
+    {% assign image = block.settings.image %}
+    {% if image != blank %}
+      <img src="{{ image | img_url: '2400x' }}" alt="{{ image.alt }}" class="coach-content__section5--image" loading="lazy" />
+    {% endif %}
+    
+    <div class="coach-content__section5-row1--content">
+      <div class="h2-headline"><strong>{{ block.settings.row1_title }}</strong></div>
+      {% assign row1_image = block.settings.row1_image %}
+      {% if row1_image != blank %}
+        <img src="{{ row1_image | img_url: '2400x' }}" alt="{{ row1_image.alt }}" class="coach-content__section5-row1--image" loading="lazy" />
+      {% endif %}
+    </div>
+    
+    <div class="p coach-content__section5-row1--desc">{{ block.settings.row1_desc }}</div>
+    
+  </div>
+</section>
+
+{% if block.settings.bg_color_variable != blank %}
+  <style>
+    .coach-content__section5 {
+      background-color: var({{ block.settings.bg_color_variable }});
+    }
+  </style>
+{% endif %}

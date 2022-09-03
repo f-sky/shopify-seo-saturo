@@ -1,0 +1,53 @@
+<!-- q18: whey -->
+<div class="quiz-item quiz-q18 is-hidden" data-quiz-item="q18" data-whey-question data-quiz-item-handle="preferenceMilk">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.whey.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q10">{% render 'icon-quiz-info' %}</a></h2>
+    <input type="hidden" name="whey" checked value="null" data-quiz-answer>
+    <div class="quiz-options quiz-options--inline justify-content-center">
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Milch" type="checkbox" name="whey" value="Milch" data-quiz-answer>
+        <label for="quiz-Milch">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-laktose.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.whey.option_milk" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Vegane-Drinks" type="checkbox" name="whey" value="Vegane Drinks" data-quiz-answer>
+        <label for="quiz-Vegane-Drinks">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-vegan.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.whey.option_vegan" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Keine_whey" type="checkbox" name="whey" value="Keine" data-quiz-answer>
+        <label for="quiz-Keine_whey">
+          <div class="quiz-option__circle">
+          </div>
+          <span class="details">{{ "personalized_quiz.whey.option_none" | t }}</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.whey.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q10">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.whey.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.whey.popup_subtitle_html" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q10 -->

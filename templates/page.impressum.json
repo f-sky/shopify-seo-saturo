@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "title": "<span class=\"align-right\"><span class=\"heading-line-left\"><\/span>Impressum<\/span>"
+      }
+    },
+    "16443525762881ae8f": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<span class=\"align-right\"><span class=\"heading-line-left\"><\/span>Impressum<\/span>"
+      }
+    },
+    "16443530449ebe5098": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<h2>Lieferadresse und rechtliche Firmenanschrift<\/h2>\n<p>Saturo Foods GmbH<br>Mariahilfer Str. 101\/3\/45<br>1060 Wien<br>Österreich<br><br>Tel:&nbsp;<a href=\"tel:+431395079400\" aria-describedby=\"a11y-external-message\">+43 1 395 079 400<\/a><br>E-mail: <a href=\"mailto:contact@saturo.com\" aria-describedby=\"a11y-external-message\">contact@saturo.com<\/a><\/p>\n<p>Unternehmensgegenstand: Entwicklung, Produktion und Vertrieb von Lebensmitteln<br><br>Geschäftsführer: DI Hannes Feistenauer; Joerg Hauke<br>Firmenbuchgericht: Wien<br>Firmenbuchnummer: FN 469340 g<br>UID: ATU72141167<br><br>Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplatform der EU zu richten: <a class=\"external-link\" href=\"http:\/\/ec.europa.eu\/consumers\/odr\/\" rel=\"nofollow\" aria-describedby=\"a11y-external-message\">http:\/\/ec.europa.eu\/consumers\/odr<\/a>. Sie können allfällige Beschwerden auf an die oben angegebene E-Mail-Adresse richten.<\/p>\n<p>Gefördert durch die Wirtschaftsagentur Wien. Ein Fonds der Stadt Wien.<\/p>\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0328\/1826\/6249\/files\/Wirtschaftsagentur_Stadt_Wien_PantoneC_160x160.jpg?v=1634880809\" alt=\"Wirtschaftsagentur Wien\">"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16443525762881ae8f",
+    "16443530449ebe5098"
+  ]
+}

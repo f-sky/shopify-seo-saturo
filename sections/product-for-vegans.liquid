@@ -1,0 +1,171 @@
+{{ 'product-for-vegans.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width for-vegans__wrapper">
+  <div class="for-vegans__row for-vegans__row1">
+
+      {% assign title_html = section.settings.title %}
+      <h3 class="h1-headline for-vegans__title span-align-heading">
+        {{ title_html }}
+      </h3>
+      {% assign subtitle = section.settings.subtitle %}
+      <h4 class="h2-headline">{{ subtitle }}</h4>
+  </div>
+
+  {% assign s1_title = section.settings.s1_title %}
+  {% assign s1_text = section.settings.s1_text %}
+  <div class="for-vegans__row2-text">
+    <h4 class="h2-headline"><strong>{{ s1_title}}</strong></h4>
+    {{ s1_text }}
+  </div>
+  {% assign s1_image = section.settings.s1_image %}
+  {% if s1_image != blank %}
+    <img src="{{ s1_image | img_url: '1100x' }}" alt="{{ s1_image.alt }}" class="for-vegans__row2-image" loading="lazy" />
+  {% endif %}
+
+  {% assign s2_title = section.settings.s2_title %}
+  {% assign s2_text = section.settings.s2_text %}
+  {% assign s2_image = section.settings.s2_image %}
+  {% if s2_image != blank %}
+    <img src="{{ s2_image | img_url: '1100x' }}" alt="{{ s2_image.alt }}" class="for-vegans__row3-image" loading="lazy" />
+  {% endif %}
+  <div class="for-vegans__row3">
+    <div class="for-vegans__row3-text1">
+      <h4 class="h2-headline"><strong>{{ s2_title }}</strong></h4>
+      {{ s2_text }}
+    </div>
+
+    {% assign s3_title = section.settings.s3_title %}
+    {% assign s3_text = section.settings.s3_text %}
+    {% assign s3_image = section.settings.s3_image %}
+    <div class="for-vegans__row3-text2">
+      <h4 class="h2-headline"><strong>{{ s3_title }}</strong></h4>
+      {{ s3_text }}
+    </div>
+  </div>
+  {% if s3_image != blank %}
+  <img src="{{ s3_image | img_url: '1500x' }}" alt="{{ s3_image.alt }}" class="for-vegans__row4-image" loading="lazy" />
+  {% endif %}
+
+  {% assign s4_title = section.settings.s4_title %}
+  {% assign s4_text = section.settings.s4_text %}
+  {% assign s4_image = section.settings.s4_image %}
+  <div class="for-vegans__row5-text">
+    <h4 class="h2-headline"><strong>{{ s4_title }}</strong></h4>
+    {{ s4_text }}
+  </div>
+  
+  {% if s4_image != blank %}
+    <img src="{{ s4_image | img_url: '1100x'}}" alt="{{ s4_image.alt }}" class="for-vegans__row5-image" loading="lazy" />
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Product - For Vegans",
+  "tag": "section",
+  "class": "for-vegans",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML",
+      "default": "<span class=\"align-left\">Für vegane<\/span>\n        <span class=\"align-center\">Ernährung<\/span>\n        <span class=\"align-left\">geeignet.<span class=\"heading-line\"><\/span><\/span>\n        <span class=\"align-right\">Mit besten<\/span>\n        <span class=\"align-left\">Pflanzenproteinen<\/span>"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Wir lassen Zutaten sprechen."
+    },
+    {
+      "type": "header",
+      "content": "Section 1"
+    },
+    {
+      "type": "text",
+      "id": "s1_title",
+      "label": "Title",
+      "default": "Hochwertiger Hafer: Der Healthy Held vom Feld."
+    },
+    {
+      "type": "html",
+      "id": "s1_text",
+      "label": "Text",
+      "default": "<p class=\"h2-headline\">Reich an Ballaststoffen<\/p>\n    <p class=\"h2-headline\">Fördert eine gesunde Verdauung<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "s1_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 2"
+    },
+    {
+      "type": "text",
+      "id": "s2_title",
+      "label": "Title",
+      "default": "Erbsenprotein: Das All-In-One-Protein."
+    },
+    {
+      "type": "html",
+      "id": "s2_text",
+      "label": "Text",
+      "default": "<p class=\"h2-headline\">Reich an BCAA (Branched Chain Amino Acids)<\/p>\n      <p class=\"h2-headline\">Enthält essentielle Amionsäuren<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "s2_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 3"
+    },
+    {
+      "type": "text",
+      "id": "s3_title",
+      "label": "Title",
+      "default": "Reisprotein: Ein echtes Muskel-Have."
+    },
+    {
+      "type": "html",
+      "id": "s3_text",
+      "label": "Text",
+      "default": "<p class=\"h2-headline\">Hoher Anteil an essentiellen Aminosäuren<\/p>\n      <p class=\"h2-headline\">Reich an wertvollen Vitaminen und Mineralstoffen<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "s3_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 4"
+    },
+    {
+      "type": "text",
+      "id": "s4_title",
+      "label": "Title",
+      "default": "Leinsamen: Die Saat, die mehr als satt macht."
+    },
+    {
+      "type": "html",
+      "id": "s4_text",
+      "label": "Text",
+      "default": "<p class=\"h2-headline\">Reich an gesunden Omega-3-Fettsäuren<\/p>\n    <p class=\"h2-headline\">Wirken sättigend und fördert die Verdauung<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "s4_image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product - For Vegans"
+    }
+  ]
+}
+{% endschema %}

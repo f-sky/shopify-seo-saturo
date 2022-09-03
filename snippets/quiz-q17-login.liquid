@@ -1,0 +1,40 @@
+<!-- q18: login -->
+<div class="quiz-item quiz-q18 is-hidden" data-quiz-login data-quiz-item="q17" data-quiz-item-handle="email">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.login.headline" | t }} &nbsp;<span data-product-username></span>!</h2>
+    <p class="mt-3 quiz-item__subtitle fw-300 p">{{ "personalized_quiz.login.subtitle" | t }}</p>
+    <div class="quiz-options">
+      <div class="quiz-form">
+        <div class="field input-wrapper">
+          <input id="quiz-q18-email" type="email" name="email" class="input" placeholder="{{ "personalized_quiz.login.input_label" | t }}" data-answer data-quiz-answer data-auto-focus>
+          <label for="quiz-q18-email" class="label">{{ "personalized_quiz.login.input_label" | t }}</label>
+        </div>
+        <div class="field d-none"><input type="phone" class="input m-full m-underline" placeholder="Phone number ( XXX-XXX-XXXX)" data-answer></div>
+        <div class="field">
+          <div class="checkbox">
+            <input id="quiz_marketing" type="checkbox" name="quiz_marketing_accept" checked data-quiz-answer>
+            <label for="quiz_marketing" class="label">{{ "personalized_quiz.login.accept_emails_label" | t }}</label>
+          </div>
+        </div>
+        
+        <div class="quiz-item__buttons quiz-item__buttons-floating">
+          <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+          <button type="button" data-quiz-next class="btn m-large" disabled="disabled" data-quiz-next-login>
+            <span class="product-form__cart-submit__text" data-btn-text><strong>{{ "personalized_quiz.login.button_next_text" | t }}</strong></span>
+            <span class="hidden product-form__cart-submit__loader" data-loader>
+              {% render 'icon-spinner' %}
+            </span>
+          </button>
+
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="quiz-item__loader">
+    {% render 'saturo-logo' %}
+  </div>
+</div>
+<!-- / q18 -->

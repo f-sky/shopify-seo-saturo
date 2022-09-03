@@ -1,0 +1,142 @@
+{% assign product = quiz_products.first %}
+
+{% render 'quiz-product-header' %}
+
+<div class="container d-none">
+  {% include 'judgeme_all_reviews' %}
+</div>
+
+<style>
+  .quiz-result .price-field.price-field-1,
+  .quiz-result .price-field.price-field-2 {
+    display : none;
+  }
+</style>
+
+<div class="quiz-product-header__sticky-bar">
+  <div class="page-width quiz-product-header__sticky-bar-wrapper">    
+    <div class="quiz-product-header__sticky-bar--left">
+      <img class="quiz-product-header__sticky-bar--image" src="" alt="" data-product-image>
+      <p class="p">
+        <strong><span data-quiz-user-name>Luisa</span>'s Saturo</strong>
+        Speziell für dich gemacht!
+      </p>
+    </div>
+    <div class="quiz-product-header__sticky-bar--right">
+      <div class="quiz-product-header__sticky-bar--result-icons" data-quiz-result-icons=""></div>
+      <button class="btn btn--primary product__header-btn" type="button" data-only-show-coll-modal>Bestelle deinen Shake</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const $productHeaderMeta = document.querySelector('.product__header--image-meta .product__header-btn');
+  if ($productHeaderMeta) {
+      const bodyClass = "quiz-sticky__visible"
+      const iObserver = new IntersectionObserver(items => {
+          if (items[0].isIntersecting) {
+              document.body.classList.remove(bodyClass);
+          } else {
+              document.body.classList.add(bodyClass);
+          }
+      });
+
+      iObserver.observe($productHeaderMeta);
+  }
+</script>
+
+<div class="coll-v2__modal" data-coll-modal>
+  <div class="coll-v2__modal--bg" data-close-coll-modal></div>
+  <div class="coll-v2__modal--content">
+    <button class="coll-v2__modal--close" data-close-coll-modal>{% render 'icon-close' %}</button>
+    
+    <h4 class="h2-headline">{{ section.settings.modal_headline }}</h4>
+    <p class="p coll-v2__modal--content-subtitle">{{ section.settings.modal_text }}</p>
+    <style>
+      html[lang="de"] .klaviyo-form-VuUnKD,
+      html[lang="en"] .klaviyo-form-UAXaNe {
+        display: none;
+      }
+    </style>
+    <div class="klaviyo-form-UAXaNe"></div>
+    <div class="klaviyo-form-VuUnKD"></div>
+    <!-- <form action="" class="quiz-email-signup-form">
+      <div class="input-wrapper">
+        <input class="input" type="text" id="quiz-modal-email-address" data-quiz-user-email>
+        <label class="label" for="quiz-modal-email-address">{{ section.settings.modal_label }}</label>
+      </div>
+      <button class="btn btn--primary" type="submit">{{ section.settings.modal_button_text }}</button>
+    </form> -->
+  </div>
+</div>
+
+{% javascript %}
+window.addEventListener('DOMContentLoaded', () => {
+
+  $('.quiz-email-signup-form').submit(function(e) {
+    e.preventDefault();
+    $('body').removeClass('coll-modal-opened');
+
+    const product = $('[data-coll-modal]').attr('data-product');
+    const price = $('.quiz-result .price .price-field:visible').text();
+
+    _learnq.push(['identify', {
+      userInterested: `${product} - Price: ${price}`
+    }]);
+    //_learnq.push(["trackViewedItem", {
+    //  "Title": item.ProductName,
+    //  "ItemId": item.ProductID,
+    //  "Categories": item.Categories,
+    //  "ImageUrl": item.ImageURL,
+    //  "Url": item.URL
+    //  }
+    //}])
+
+  });
+});
+{% endjavascript %}
+
+
+{% schema %}
+{
+  "name": "Quiz Product",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Modal"
+    },
+    {
+      "type": "text",
+      "id": "modal_headline",
+      "label": "Headline",
+      "default": "Saturo Personalized ist bald verfügbar - jetzt eintragen"
+    },
+    {
+      "type": "text",
+      "id": "modal_text",
+      "label": "Text",
+      "default": "Saturo Personalized ist aktuell noch nicht verfügbar. Trage dich ein, um als Erste:r zu erfahren, sobald es verfügbar ist und sichere dir deinen exklusiven Rabatt."
+    },
+    {
+      "type": "text",
+      "id": "modal_label",
+      "label": "Label",
+      "default": "E-Mail-Adresse"
+    },
+    {
+      "type": "text",
+      "id": "modal_button_text",
+      "label": "Button Text",
+      "default": "Jetzt eintragen"
+    },
+    {
+      "type": "text",
+      "id": "custom_header_color",
+      "label": "Custom Header Color",
+      "info": "CSS Variable"
+    }
+  ]
+}
+{% endschema %}

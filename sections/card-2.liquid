@@ -1,0 +1,331 @@
+{{ 'card-2.css' | asset_url | stylesheet_tag }}
+
+<section id="{{ section.settings.section_id }}" class="card-two__wrapper page-width {% unless section.settings.padding_top %}pt-0{% endunless %} {% unless section.settings.padding_bottom %}pb-0{% endunless %}">
+  
+  {% comment %}
+    <h3 class="card-two__title h2-headline">{{ section.settings.title }}</h3>
+    
+    <div class="card-two__table">
+        
+        <div class="card-two__table-row">
+            <p class="p">Empfohlene Kalorienzufuhr pro Tag (kcal)</p>
+            <p class="p">2800</p>
+
+            <dl class="faq__items js-faq-items">
+              <dt>
+                <button class="faq__item-button p" type="button" aria-controls="panel-Berechnung" data-button-id="Berechnung" aria-expanded="true">Berechnung</button>
+              </dt>
+              <dd class="faq__item-content p" data-content-id="Berechnung" aria-hidden="true">
+                <div class="card-two__inner-table">
+                  <div class="card-two__inner-table-row">
+                    <div class="details">Grundumsatz</div>
+                    <div class="details">2500</div>
+                  </div>
+                  <div class="card-two__inner-table-row">
+                    <div class="details">Leistungsumsatz</div>
+                    <div class="details">+500</div>
+                  </div>
+                  <div class="card-two__inner-table-row">
+                    <div class="details">-Defizit/ +Übermaß</div>
+                    <div class="details">-200</div>
+                  </div>
+                  <div class="card-two__inner-table-row">
+                    <div class="details"><strong>Empfohlene Kalorienzufuhr pro Tag (kcal)</strong></div>
+                    <div class="details"><strong>2800</strong></div>
+                  </div>
+                </div>
+              </dd>
+            </dl>
+            
+        </div>
+    </div>
+    {% endcomment %}
+
+    <div class="card__s2-titles">
+        {% assign heading_tag = section.settings.heading_tag %}
+        <{{ heading_tag }} class="card__subtitle span-align-heading {{ section.settings.heading_style }}">{{ section.settings.title }}
+        </{{ heading_tag }}>
+          
+        <div class="card__subtext p">{{ section.settings.subtitle }}</div>
+    </div>
+  
+    <div class="card-two__cards js-card-two__cards">
+      {% for block in section.blocks %}
+        <div class="card-two__item">
+          {% assign card_image = block.settings.card_image %}
+          {% if card_image != blank %}
+            <div class="card-two__item-image" style="background-image: url('{{ card_image | img_url: '800x' }}');"></div>
+          {% endif %}
+          <div class="card-two__item-content">
+            <h4 class="card-two__item-title h5-headline">
+              <strong>{{ block.settings.card_title }}</strong>
+            </h4>
+  
+            <div class="card-two__item-text p">{{ block.settings.card_text }}</div>
+            {% if block.settings.card_btn_text != blank %}
+              <a class="btn {{ block.settings.card_btn_style }}" href="{{ block.settings.card_btn_url }}">{{ block.settings.card_btn_text }}</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor  %}
+    </div>
+
+    {% if section.settings.card_btn_text != blank %}
+      <div class="card__btn-wrapper">
+        <a class="card__btn btn {{ section.settings.card_btn_style }}" href="{{ section.settings.card_btn_url }}">{{ section.settings.card_btn_text }}</a>
+      </div>
+    {% endif %}
+
+    {% if section.settings.details != blank %}
+      <p class="card__details details">{{ section.settings.details }}</p>
+    {% endif %}
+</section>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const $cards = document.querySelector('.js-card-two__cards');
+      if ($cards) {
+        new Glider(document.querySelector('.js-card-two__cards'), {
+        slidesToShow: "auto",
+        slidesToScroll: 1,
+        draggable: true,
+        itemWidth: 315,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3
+            },
+          },
+        ],
+      });
+      }
+  
+    });
+  </script>
+
+  {% if section.settings.bg_color != blank %}
+    <style>
+      #shopify-section-{{ section.id }}.card-two {
+          background-color: var({{ section.settings.bg_color }});
+      }
+    </style>
+  {% endif %}
+  
+  {% if section.settings.cards_bg_color != blank %}
+    <style>
+      #shopify-section-{{ section.id }} .card-two__item {
+        background-color: var({{ section.settings.cards_bg_color }});
+      }
+    </style>
+  {% endif %}
+
+{% schema %}
+{
+    "name": "Card 2",
+    "tag": "section",
+    "class": "card-two",
+    "settings": [
+        {
+            "type": "text",
+            "id": "bg_color",
+            "label": "Background Color",
+            "info": "CSS Variable name eg. --color-white"
+        },
+        {
+            "type": "html",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+          "type": "select",
+          "id": "heading_style",
+          "label": "Style",
+          "info": "Define what class this element should get",
+          "options": [
+            {
+              "value": "",
+              "label": "None"
+            },
+            {
+              "value": "h1-headline",
+              "label": "H1"
+            },
+            {
+              "value": "h2-headline",
+              "label": "H2"
+            },
+            {
+              "value": "h2-headline bold",
+              "label": "H2 bold"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "HTML-Tag",
+          "info": "Decide which HTML tag this Element should get",
+          "options": [
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            },
+            {
+              "value": "h6",
+              "label": "H6"
+            }
+          ]
+        },
+        {
+            "type": "richtext",
+            "id": "subtitle",
+            "label": "Subtitle"
+        },
+        {
+          "type": "checkbox",
+          "id": "padding_top",
+          "label": "Padding-top",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "padding_bottom",
+          "label": "Padding-bottom",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "card_btn_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "card_btn_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "card_btn_style",
+          "label": "Button Style",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn--primary",
+              "label": "Primary"
+            },
+            {
+              "value": "btn--secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "btn--tertiary",
+              "label": "Tertiary"
+            },
+            {
+              "value": "btn--text",
+              "label": "Text"
+            }
+          ],
+          "default": "btn--text"
+        },
+        {
+            "type": "text",
+            "id": "details",
+            "label": "Details"
+        },
+        {
+            "type": "text",
+            "id": "cards_bg_color",
+            "label": "Cards Background Color",
+            "info": "CSS Variable name eg. --color-white"
+        },
+        {
+          "type": "text",
+          "id": "section_id",
+          "label": "Section ID"
+        }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "card_title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "card_text",
+            "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "card_btn_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "card_btn_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "select",
+          "id": "card_btn_style",
+          "label": "Button Style",
+          "options": [
+            {
+              "value": "",
+              "label": "Default"
+            },
+            {
+              "value": "btn--primary",
+              "label": "Primary"
+            },
+            {
+              "value": "btn--secondary",
+              "label": "Secondary"
+            },
+            {
+              "value": "btn--tertiary",
+              "label": "Tertiary"
+            },
+            {
+              "value": "btn--text",
+              "label": "Text"
+            }
+          ],
+          "default": "btn--text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card 2"
+    }
+  ]
+}
+{% endschema %}

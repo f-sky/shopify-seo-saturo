@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="Group_46" data-name="Group 46" transform="translate(-50 -25.039)">
+    <path id="Path_161" data-name="Path 161" d="M13,26A13,13,0,1,1,26,13,13.014,13.014,0,0,1,13,26ZM13,1.664A11.336,11.336,0,1,0,24.34,13,11.349,11.349,0,0,0,13,1.664Z" transform="translate(49.996 25.039)"/>
+    <text id="KE" transform="translate(63 37.039)" font-size="8" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-4.725" y="0">KE</tspan></text>
+    <text id="TO" transform="translate(63 45.039)" font-size="8" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-5.229" y="0">TO</tspan></text>
+  </g>
+</svg>

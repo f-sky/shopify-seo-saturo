@@ -1,0 +1,27 @@
+<!-- q4b: sport_duration -->
+<div class="quiz-item quiz-q4b is-hidden" data-quiz-item="q4b" data-quiz-item-handle="sportDuration">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.sport_duration.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q4b">{% render 'icon-quiz-info' %}</a></h2>
+    <div class="quiz-options">
+      <div class="quiz-option quiz-option--range" data-range>
+        <div class="range-label"><span>{{ "personalized_quiz.sport_duration.option_label" | t }}</span> <span class="ml-auto" data-range-value></span></div>
+        <input type="range" name="sport_duration" data-quiz-answer min="5" max="180" step="5" value="30" data-orientation="horizontal">
+      </div>
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn">{{ "personalized_quiz.sport_duration.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q4b">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.sport_duration.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.sport_duration.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q4b -->

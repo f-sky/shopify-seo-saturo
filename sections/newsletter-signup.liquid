@@ -1,0 +1,77 @@
+{{ 'section-newsletter-signup.css' | asset_url | stylesheet_tag }}
+
+<div class="newsletter-signup__grid page-width" {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %}>
+    <div class="newsletter-signup__row">
+        <h3 class="h1-headline">{{ section.settings.title }}</h3>
+        <h4 class="h2-headline">{{ section.settings.subtitle }}</h4>
+    </div>
+
+    <div class="newsletter-signup__row">
+      	{% if section.settings.custom_form_html != blank %}
+        	{{ section.settings.custom_form_html }}
+        {% else %}
+          <div class="klaviyo-form-R3H7dc"></div>
+          <div class="klaviyo-form-WMb3di"></div>
+        {% endif %}
+        <div class="details">{{ section.settings.details_text | replace: '<p>', '' | replace: '</p>', ''}}</div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Newsletter Signup",
+  "tag": "section",
+  "class": "newsletter-signup",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "€5 sparen"
+    },
+    {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "und Newsletter abonnieren!*"
+    },
+    {
+        "type": "richtext",
+        "id": "details_text",
+        "label": "Details",
+        "default": "<p>Unser Newsletter ist kostenfrei und gibt dir exklusive Einblicke und einen €5 Rabatt auf deinen nächsten Einkauf.  Unsere Datenschutzerklärung kannst du <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">hier<\/a> einsehen.<\/p>"
+    },
+    {
+        "type": "header",
+        "content": "Form"
+    },
+    {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text",
+        "default": "senden"
+    },
+    {
+        "type": "text",
+        "id": "input_placeholder",
+        "label": "Input Placeholder",
+        "default": "name@mail.com"
+    },
+    {
+        "type": "html",
+        "id": "custom_form_html",
+        "label": "Custom Form HTML"
+	},
+    {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom HTML ID"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter Signup"
+    }
+  ]
+}
+{% endschema %}

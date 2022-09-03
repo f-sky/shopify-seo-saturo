@@ -1,0 +1,65 @@
+{{ 'quiz-header.css' | asset_url | stylesheet_tag }}
+
+<header class="quiz-header {{ section.settings.class }}">
+  <div class="quiz-header__row-logo">
+    <a class="quiz-header__logo" href="/">
+      <h1 class="quiz-header__heading">
+        {% render 'icon-logo' %}
+      </h1>
+    </a>
+  </div>
+  <div class="quiz-header__row-steps">
+    <div class="quiz-header__steps">
+      <div class="quiz-header__step done">
+        {% render 'icon-check-step' %}
+        <span class="quiz-header__step-text">1</span>
+      </div>
+      <button class="quiz-header__step active" type="button" data-quiz-results-go-to="product" data-back-quiz-results>
+        {% render 'icon-check-step' %}
+        <span class="quiz-header__step-text">2</span>
+      </button>
+      <button class="quiz-header__step" type="button" data-quiz-results-go-to="upsell" data-quiz-add-to-cart="">
+        {% render 'icon-check-step' %}
+        <span class="quiz-header__step-text">3</span>
+      </button>
+    </div>
+  </div>
+  <div class="quiz-header__row-buttons">
+    <a class="button quiz-header__close-btn" href="/">{% render 'icon-close' %}</a>
+    <a href="{{ routes.cart_url }}" class="header__icon header__icon-cart link focus-inset" id="cart-icon-bubble">
+        {% render 'icon-cart' %}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+      </a>
+  </div>
+  <div class="quiz-header__progress">
+    <div class="quiz-header__progress-bar" data-quiz-progress-bar></div>
+  </div>
+</header>
+
+{% schema %}
+  {
+    "name": "Quiz Header",
+    "class": "quiz-header__section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "class",
+        "label": "CSS Class"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

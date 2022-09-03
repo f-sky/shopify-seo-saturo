@@ -1,0 +1,108 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-product-grid-saturo",
+      "blocks": {
+        "45aa122f-5a4d-402a-8dcd-b74c15db735f": {
+          "type": "collection",
+          "settings": {
+            "collection": "trinkmahlzeit"
+          }
+        },
+        "012f6594-247f-428e-a736-8055273b3625": {
+          "type": "collection",
+          "settings": {
+            "collection": "pulver"
+          }
+        },
+        "c6801267-6c3b-42e8-9ace-bc82821bdd9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "riegel"
+          }
+        },
+        "7c7c4b95-280f-4d7f-8b2a-4360f881ea3b": {
+          "type": "collection",
+          "settings": {
+            "collection": "merchandise"
+          }
+        }
+      },
+      "block_order": [
+        "45aa122f-5a4d-402a-8dcd-b74c15db735f",
+        "012f6594-247f-428e-a736-8055273b3625",
+        "c6801267-6c3b-42e8-9ace-bc82821bdd9f",
+        "7c7c4b95-280f-4d7f-8b2a-4360f881ea3b"
+      ],
+      "settings": {
+        "hide_circle": false,
+        "circle_bg_color": "",
+        "btn_style": "",
+        "btn_modal_text": "In den Warenkorb",
+        "btn_buy_text": "In den Warenkorb",
+        "btn_more_text": "Mehr Details"
+      }
+    },
+    "165054264770e87184": {
+      "type": "home-body-needs",
+      "settings": {
+        "title": "<span class=\"align-left\">Alles was<\/span>\n    <span class=\"align-right\"><span class=\"heading-line-left\"><\/span>dein<\/span>\n    <span class=\"align-left\">Körper<\/span>\n    <span class=\"align-center\">braucht<\/span>",
+        "desc": "<p>Ausgewogene Ernährung leicht gemacht. Im Handumdrehen hast du eine <strong>komplette Mahlzeit <\/strong>parat mit allem, was dein Körper braucht.<\/p>",
+        "feat_image": "shopify:\/\/shop_images\/Saturo-Drink-330ml-Vanilla.jpg",
+        "text_1": "Komplette Mahlzeit",
+        "text_2": "Alle 26 Vitamine & Mineralien",
+        "text_3": "Sättigend bis zu 5 Stunden",
+        "text_4": "Bis zu 25 g Protein pro Mahlzeit"
+      }
+    },
+    "1650544064b6775d97": {
+      "type": "product-for-vegans",
+      "settings": {
+        "title": "<span class=\"align-left\">Für vegane<\/span>\n        <span class=\"align-center\">Ernährung<\/span>\n        <span class=\"align-left\">geeignet.<span class=\"heading-line\"><\/span><\/span>\n        <span class=\"align-right\">Mit besten<\/span>\n        <span class=\"align-left\">Pflanzenproteinen<\/span>",
+        "subtitle": "Wir lassen Zutaten sprechen.",
+        "s1_title": "Hochwertiger Hafer: Der Healthy Held vom Feld.",
+        "s1_text": "<p class=\"h2-headline\">Reich an Ballaststoffen<\/p>\n    <p class=\"h2-headline\">Fördert eine gesunde Verdauung<\/p>",
+        "s1_image": "shopify:\/\/shop_images\/Saturo-hafer-2.jpg",
+        "s2_title": "Erbsenprotein: Das All-In-One-Protein.",
+        "s2_text": "<p class=\"h2-headline\">Reich an BCAA (Branched Chain Amino Acids)<\/p>\n      <p class=\"h2-headline\">Enthält essentielle Amionsäuren<\/p>",
+        "s2_image": "shopify:\/\/shop_images\/Saturo-zutaten-erbsen.jpg",
+        "s3_title": "Reisprotein: Ein echtes Muskel-Have.",
+        "s3_text": "<p class=\"h2-headline\">Hoher Anteil an essentiellen Aminosäuren<\/p>\n      <p class=\"h2-headline\">Reich an wertvollen Vitaminen und Mineralstoffen<\/p>",
+        "s3_image": "shopify:\/\/shop_images\/Saturo-zutaten-reis.jpg",
+        "s4_title": "Leinsamen: Die Saat, die mehr als satt macht.",
+        "s4_text": "<p class=\"h2-headline\">Reich an gesunden Omega-3-Fettsäuren<\/p>\n    <p class=\"h2-headline\">Wirken sättigend und fördert die Verdauung<\/p>",
+        "s4_image": "shopify:\/\/shop_images\/Saturo-zutaten-leinsamen-p.jpg"
+      }
+    },
+    "1650543974eeb8b1e2": {
+      "type": "product-stay-zero",
+      "settings": {
+        "title": "Und wir müssen leider draußen bleiben...",
+        "list_items": "<li> <h4 class=\"h2-headline\">x raffinierter Zucker<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Farbstoffe<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Palmöl<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Konservierungsstoffe<\/h4> <\/li>",
+        "percentage": "0%"
+      }
+    },
+    "16505434528d4f67e6": {
+      "type": "home-trust-reviews",
+      "settings": {
+        "title": "<span class=\"align-left\"> Vertraue<\/span>\n    <span class=\"align-right\">auf über <\/span>\n    <span class=\"align-left\">3+ mio.<span class=\"heading-line\"><\/span><\/span>\n    <span class=\"align-left\"> verkaufte<\/span>\n    <span class=\"align-left\">Mahlzeiten<\/span>",
+        "row1_name": "Robert Gardos (42)",
+        "row1_title": "Tischtennis-Europameister im Doppel",
+        "row1_desc": "\"Da ich als Leistungssportler viel unterwegs bin, spielt eine schnelle, aber auch ausgewogene Ernährung eine große Rolle für mich. Saturo bietet mir die Möglichkeit überall meinem Körper alle Nährstoffe zu geben, die er braucht. Somit bin ich auch während den Sätzen  perfekt versorgt und kann mich, ohne lästiges Völlegefühl, auf das Spiel konzentrieren.\"",
+        "row1_image1": "shopify:\/\/shop_images\/trust_reviews_s1_image1.jpg",
+        "row2_name": "Janine Flock (32)",
+        "row2_title": "Mehrfach mit Gold ausgezeichnete <br> Skeletonpilotin",
+        "row2_desc": "\"Es ist schwierig, sich in den Trainingslagern sowie in den Weltcupwochen ausgewogen zu ernähren, da oft die Zeit dazu fehlt. Zudem decken die Mahlzeiten in manchen Unterkünften nicht den ganzen Nährstoffbedarf. Da ich hohen Wert auf Qualität und Nachhaltigkeit lege, habe ich mich für Saturo entschieden, um ernährungstechnisch immer gut vorbereitet zu sein.\"",
+        "row2_image1": "shopify:\/\/shop_images\/trust_reviews_s2_image1.jpg",
+        "images_as_bg": false
+      }
+    }
+  },
+  "order": [
+    "product-grid",
+    "165054264770e87184",
+    "1650544064b6775d97",
+    "1650543974eeb8b1e2",
+    "16505434528d4f67e6"
+  ]
+}

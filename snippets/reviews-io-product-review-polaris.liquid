@@ -1,0 +1,383 @@
+{% comment %} <script src='https://widget.reviews.io/polaris/build.js'></script> {% endcomment %}
+{% assign data_sku = '' %}
+{% if collection != blank %}
+	{% if collection.metafields.reviews.show_sku != blank %}
+		{% assign data_sku = collection.metafields.reviews.show_sku %}
+	{% else %}
+		{% assign product = collection.products | first %}
+		
+		{% if product.metafields.reviews.show_sku != blank %}
+			{% assign data_sku = product.metafields.reviews.show_sku %}
+		{% elsif product.variants.size > 1 %}
+			{% assign data_sku = '' %}
+			{% for variant in product.variants %}
+              {% if forloop.first %}
+                  {% assign data_sku = variant.sku %}
+              {% else %}
+                  {% assign data_sku = data_sku | append: ";" | append: variant.sku %}
+              {% endif %}
+			{% endfor %}
+		{% else %}
+			{% assign data_sku = product.selected_or_first_available_variant.sku %}
+		{% endif %}
+
+	{% endif %}
+{% endif %}
+
+{% if collection == blank and product != blank %}
+	{% if product.metafields.reviews.show_sku != blank %}
+		{% assign data_sku = product.metafields.reviews.show_sku %}
+	{% elsif product.variants.size > 1 %}
+		{% assign data_sku = '' %}
+		{% for variant in product.variants %}
+			{% if forloop.first %}
+				{% assign data_sku = variant.sku %}
+			{% else %}
+				{% assign data_sku = data_sku | append: ";" | append: variant.sku %}
+			{% endif %}			
+
+		{% endfor %}
+	{% else %}
+		{% assign data_sku = product.selected_or_first_available_variant.sku %}
+	{% endif %}
+{% endif %}
+
+{%- liquid
+  if product.selected_or_first_available_variant.featured_media
+    assign seo_media = product.selected_or_first_available_variant.featured_media
+  else
+    assign seo_media = product.featured_media
+  endif
+-%}
+
+{%- comment -%} Get subscription price {%- endcomment -%}
+{%- liquid
+    assign price = product.variants.first.price
+    assign has_subscription = false
+   
+    if product.selling_plan_groups.size > 0
+        assign has_subscription = true
+    endif
+
+    assign selling_plan_group = product.selling_plan_groups[0]
+    assign discount_percentage = 0
+    for selling_plan in selling_plan_group.selling_plans
+        if selling_plan.price_adjustments[0].value > discount_percentage
+            assign discount_percentage = selling_plan.price_adjustments[0].value
+        endif
+    endfor    
+    assign discount_percentage_1 = 100 | minus: discount_percentage | divided_by: 100.0
+    assign item_price = price | times: discount_percentage_1 
+    unless has_subscription
+        assign item_price = price
+    endunless
+-%}
+<div id='ReviewsWidget'></div>
+<script>
+    function asyncLoadBuildReviewsIO() {
+        var script = document.createElement('script');
+        script.onload = function () {
+            new ReviewsWidget('#ReviewsWidget', {
+                //Your REVIEWS.io account ID and widget type:
+                store: 'saturo.com',
+                widget: 'polaris',                       
+
+                //Content settings (store_review,product_review,questions). Choose what to display in this widget:
+                options: {
+                    types: 'product_review',
+                    lang: 'de',
+                    //Possible layout options: bordered, large and reverse.
+                    layout: '',
+                    //How many reviews & questions to show per page?
+                    per_page: 10,
+                    //Product specific settings. Provide product SKU for which reviews should be displayed:
+                    product_review:{
+                        //Display product reviews - include multiple product SKUs seperated by Semi-Colons (Main Indentifer in your product catalog )
+                        sku: "{{ data_sku }}",
+                        hide_if_no_results: false,
+                       structured_data: {                         
+                         {%- assign nr_variants = product.variants.size -%}
+                         {%- if product.metafields.seo.struc_data_title -%}
+                           name: {{ product.metafields.seo.struc_data_title | json }},
+                         {% else %}
+                         name: {{ product.title | json }},
+                         {%- endif %}
+                         sku: {{ product.selected_or_first_available_variant.sku | json }},
+                           mpn: {{ product.selected_or_first_available_variant.sku | json }},
+                         {% if nr_variants == 1 -%}
+                           {%- if product.selected_or_first_available_variant.barcode != blank -%}
+                                  gtin: "{{ product.selected_or_first_available_variant.barcode }}",
+                              {%- endif %}
+                              {%- if product.selected_or_first_available_variant.barcode.size == 12 -%}
+                                gtin12: "{{ product.selected_or_first_available_variant.barcode }}",
+                              {%- endif %}
+                              {%- if product.selected_or_first_available_variant.barcode.size == 13 -%}
+                                gtin13: "{{ product.selected_or_first_available_variant.barcode }}",
+                              {%- endif %}
+                              {%- if product.selected_or_first_available_variant.barcode.size == 14 -%}
+                                gtin14: "{{ product.selected_or_first_available_variant.barcode }}",
+                              {%- endif %}                           
+                           {%- endif %}
+                          productID: "{{ product.id | json }}",
+                         url: {{ request.origin | append: product.url | json }},
+                         {% if product.metafields.seo.struc_data_img -%}
+                          image: [{%- for product_image in product.metafields.seo.struc_data_img.value -%}
+                              {{ product_image | image_url | split:'?' | first | prepend: "https:" | json}}{%- unless forloop.last %},{% endunless %}
+                          {%- endfor -%}],
+                         {%- else -%}
+                           image: {{ product.featured_image | image_url | split:'?' | first | prepend: "https:" | json }},
+                         {%- endif %}
+                         {%- if product.metafields.seo.struc_data_desc -%}
+                           description: {{ product.metafields.seo.struc_data_desc | json }},
+                         {%- else -%}
+                         description: {{ product.description | strip_html | json }},
+                         {%- endif %}
+                         {%- if product.metafields.seo.struc_data_cat -%}
+                           category: {{ product.metafields.seo.struc_data_cat | json }},
+                         {%- endif -%}
+                         offers: [
+                           {%- for variant in product.variants -%}
+                            {
+                              "@type" : "Offer",
+                              {% if variant.metafields.seo.v_struc_data_title -%}
+                               "name": {{ variant.metafields.seo.v_struc_data_title | json }},
+                             {% elsif product.metafields.seo.struc_data_title and nr_variants > 1 %}
+                               "name": {{ product.metafields.seo.struc_data_title | append:" - " | append: variant.title | json }},
+                              {% elsif product.metafields.seo.struc_data_title and nr_variants == 1%}
+                               "name": {{ product.metafields.seo.struc_data_title | json }},
+                              {% elsif nr_variants > 1 %}
+                                "name": {{ product.title | append:" - " | append: variant.title | json }},                      
+                           {%- else -%}         
+                             "name": {{ product.title | json }},
+                           {%- endif %}                             
+                             {%- if variant.metafields.seo.v_struc_data_desc -%}
+                               "description": {{ variant.metafields.seo.v_struc_data_desc | json }},
+                             {% elsif product.metafields.seo.struc_data_desc %}
+                             "description": {{ product.metafields.seo.struc_data_desc | json }},
+                           {%- else -%}
+                               "description": {{ product.description | strip_html | json }},                               
+                           {%- endif %}                               
+                              "identifier": "{{ variant.id | json }}",
+                              "itemCondition": "http://schema.org/NewCondition",
+                              {%- if variant.sku != blank -%}
+                                "sku": {{ variant.sku | json }},
+                                "mpn": {{ variant.sku | json }},
+                              {%- endif %}
+                              {%- if variant.barcode != blank -%}
+                                  "gtin": "{{ variant.barcode }}",
+                              {%- endif %}
+                              {%- if variant.barcode.size == 12 -%}
+                                "gtin12": "{{ variant.barcode }}",
+                              {%- endif %}
+                              {%- if variant.barcode.size == 13 -%}
+                                "gtin13": "{{ variant.barcode }}",
+                              {%- endif %}
+                              {%- if variant.barcode.size == 14 -%}
+                                "gtin14": "{{ variant.barcode }}",
+                              {%- endif %}
+                              "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+                              "price" : {{ item_price | divided_by: 100.0 | round: 2 | json}},
+                              "priceCurrency" : {{ cart.currency.iso_code | json }},
+                             "priceValidUntil" : "{{ "now" | date: "%Y-%m-%d" }}",
+                              "url" : {{ request.origin | append: variant.url | json }},
+                              {% if variant.metafields.seo.v_struc_data_img -%}
+                          "image": [{%- for variant_image in variant.metafields.seo.v_struc_data_img.value -%}
+                              {{ variant_image | image_url | split:'?' | first | prepend: "https:" | json}}{%- unless forloop.last %},{% endunless %}
+                          {%- endfor -%}]
+                                {%- elsif nr_variants == 1 -%}
+                         {%- else -%}
+                           "image": {{ variant.featured_image | image_url | split:'?' | first | prepend: "https:" | json }}
+                         {%- endif %}
+                            }{% unless forloop.last %},{% endunless %}
+                          {%- endfor -%}
+                                             ],
+                        brand: {
+                          "@type": "Brand",                          
+                          name: {{ product.vendor | json }},                
+                          logo: {
+                            "@type": "ImageObject",
+                            "url" : {{ shop.metafields.seo.struc_data_logo.value.url | split:'?' | first | json }},
+                          }
+                        },
+                    },
+                   
+                    },
+                    //Questions settings:
+                    questions:{
+                        hide_if_no_results: false,
+                        enable_ask_question: true,
+                        show_dates: true,
+                        //Display group questions by providing a grouping variable, new questions will be assigned to this group.
+                        grouping:'[Group questions by providing a grouping variable here or a specific product SKU]'
+                    },
+
+                    //Header settings:
+                    header:{
+                        enable_summary: true, //Show overall rating & review count
+                        enable_ratings: true,
+                        enable_attributes: true,
+                        enable_image_gallery: true, //Show photo & video gallery
+                        enable_percent_recommended: true, //Show what percentage of reviewers recommend it
+                        enable_write_review: false, //Show 'Write Review' button
+                        enable_ask_question: false, //Show 'Ask Question' button
+                        enable_sub_header: true, //Show subheader
+                    },
+
+                    //Filtering settings:
+                    filtering:{
+                        enable: true, //Show filtering options
+                        enable_text_search: false, //Show search field
+                        enable_sorting: true, //Show sorting options (most recent, most popular)
+                        enable_overall_rating_filter: true, //Show overall rating breakdown filter
+                        enable_ratings_filters: true, //Show product attributes filter
+                        enable_attributes_filters: false, //Show author attributes filter
+                    },
+
+                    //Review settings:
+                    reviews:{
+                        enable_avatar: true, //Show author avatar
+                        enable_reviewer_name:  true, //Show author name
+                        enable_reviewer_address:  true, //Show author location
+                        reviewer_address_format: 'city, country', //Author location display format
+                        enable_verified_badge: true, //Show 'Verified Customer' badge
+                        enable_reviewer_recommends: true, //Show 'I recommend it' badge
+                        enable_attributes: true, //Show author attributes
+                        enable_product_name: false, //Show display product name
+                        enable_review_title: false, //Show review title
+                        enable_replies: true, //Show review replies
+                        enable_images: true, //Show display review photos
+                        enable_ratings: true, //Show product attributes (additional ratings)
+                        enable_share: false, //Show share buttons
+                        enable_helpful_vote: false, //Show 'was this helpful?' section
+                        enable_helpful_display: false, //Show how many times times review upvoted
+                        enable_report: false, //Show report button
+                        enable_date: true, //Show when review was published
+                    },
+                },
+                //Translation settings
+                translations: {
+                    'Verified Customer': 'Verifizierter Kauf'
+                },
+                //Style settings:
+                styles: {
+                    //Base font size is a reference size for all text elements. When base value gets changed, all TextHeading and TexBody elements get proportionally adjusted.
+                    '--base-font-size': '14px',
+
+                    //Button styles (shared between buttons):
+                    '--common-button-font-family': 'inherit',
+                    '--common-button-font-size':'16px',
+                    '--common-button-font-weight':'500',
+                    '--common-button-letter-spacing':'0',
+                    '--common-button-text-transform':'none',
+                    '--common-button-vertical-padding':'10px',
+                    '--common-button-horizontal-padding':'20px',
+                    '--common-button-border-width':'2px',
+                    '--common-button-border-radius':'0px',
+
+                    //Primary button styles:
+                    '--primary-button-bg-color': '#0E1311',
+                    '--primary-button-border-color': '#0E1311',
+                    '--primary-button-text-color': '#ffffff',
+
+                    //Secondary button styles:
+                    '--secondary-button-bg-color': 'transparent',
+                    '--secondary-button-border-color': '#0E1311',
+                    '--secondary-button-text-color': '#0E1311',
+
+                    //Star styles:
+                    '--common-star-color': '#ffdc0f',
+                    '--common-star-disabled-color': '#ffffff',
+                    '--medium-star-size': '22px',
+                    '--small-star-size': '19px',
+
+                    //Heading styles:
+                    '--heading-text-color': '#0E1311',
+                    '--heading-text-font-weight': '600',
+                    '--heading-text-font-family': 'inherit',
+                    '--heading-text-line-height': '1.4',
+                    '--heading-text-letter-spacing': '0',
+                    '--heading-text-transform': 'none',
+
+                    //Body text styles:
+                    '--body-text-color': '#0E1311',
+                    '--body-text-font-weight': '400',
+                    '--body-text-font-family': 'inherit',
+                    '--body-text-line-height': '1.4',
+                    '--body-text-letter-spacing': '0',
+                    '--body-text-transform': 'none',
+
+                    //Input field styles:
+                    '--inputfield-text-font-family': 'inherit',
+                    '--input-text-font-size': '14px',
+                    '--inputfield-text-font-weight': '400',
+                    '--inputfield-text-color': '#0E1311',
+                    '--inputfield-border-color': 'rgba(0,0,0,0.2)',
+                    '--inputfield-background-color': 'transparent',
+                    '--inputfield-border-width': '1px',
+                    '--inputfield-border-radius': '0px',
+
+                    '--common-border-color': 'rgba(0,0,0,0.15)',
+                    '--common-border-width': '1px',
+                    '--common-sidebar-width': '190px',
+
+                    //Slider indicator (for attributes) styles:
+                    '--slider-indicator-bg-color': 'rgba(0,0,0,0.1)',
+                    '--slider-indicator-button-color': '#0E1311',
+                    '--slider-indicator-width': '190px',
+
+                    //Badge styles:
+                    '--badge-icon-color': '#0E1311',
+                    '--badge-icon-font-size': 'inherit',
+                    '--badge-text-color': '#0E1311',
+                    '--badge-text-font-size': 'inherit',
+                    '--badge-text-letter-spacing': 'inherit',
+                    '--badge-text-transform': 'inherit',
+
+                    //Author styles:
+                    '--author-font-size': 'inherit',
+                    '--author-text-transform': 'none',
+
+                    //Author avatar styles:
+                    '--avatar-thumbnail-size': '60px',
+                    '--avatar-thumbnail-border-radius': '100px',
+                    '--avatar-thumbnail-text-color': '#0E1311',
+                    '--avatar-thumbnail-bg-color': 'rgba(0,0,0,0.1)',
+
+                    //Product photo or review photo styles:
+                    '--photo-video-thumbnail-size': '80px',
+                    '--photo-video-thumbnail-border-radius': '0px',
+
+                    //Media (photo & video) slider styles:
+                    '--mediaslider-scroll-button-icon-color': '#0E1311',
+                    '--mediaslider-scroll-button-bg-color': 'rgba(255, 255, 255, 0.85)',
+                    '--mediaslider-overlay-text-color': '#ffffff',
+                    '--mediaslider-overlay-bg-color': 'rgba(0, 0, 0, 0.8))',
+                    '--mediaslider-item-size': '110px',
+
+                    //Pagination & tabs styles (normal):
+                    '--pagination-tab-text-color': '#0E1311',
+                    '--pagination-tab-text-transform': 'none',
+                    '--pagination-tab-text-letter-spacing': '0',
+                    '--pagination-tab-text-font-size': '14px',
+                    '--pagination-tab-text-font-weight': '600',
+
+                    //Pagination & tabs styles (active):
+                    '--pagination-tab-active-text-color': '#0E1311',
+                    '--pagination-tab-active-text-font-weight': '600',
+                    '--pagination-tab-active-border-color': '#0E1311',
+                    '--pagination-tab-border-width': '3px',
+                },
+            });
+            var snippet = document.querySelectorAll('.ruk_rating_snippet');
+            snippet[0].onclick = function(event) {
+                $('html, body').animate({
+                    scrollTop: $('#ReviewsWidget').offset().top-50
+                }, 0);
+            };
+        };
+        script.src = 'https://widget.reviews.io/polaris/build.js';
+        document.head.appendChild(script);
+    }
+    asyncLoadBuildReviewsIO();
+    //window.addEventListener('load', asyncLoadBuildReviewsIO);
+</script>

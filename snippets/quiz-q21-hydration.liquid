@@ -1,0 +1,102 @@
+<!-- q21: hydration -->
+<div class="quiz-item quiz-q21 is-hidden" data-hydration-questions data-quiz-item="q21"  data-quiz-item-handle="hydration">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.hydration.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q21">{% render 'icon-quiz-info' %}</a></h2>
+    <div class="quiz-options quiz-options--inline justify-content-center">
+
+      <div class="quiz-input__large-label">
+        <label for="hydration_l_water" tabindex="-1" class="label">{{ "personalized_quiz.hydration.option_water" | t }}</label>
+        <div class="input-wrapper">
+          <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+          <input id="hydration_l_water" type="text" class="input input-align-right" data-quiz-answer value="0,0" name="hydration_l_water" data-label="{{ "personalized_quiz.hydration.option_water" | t }}" inputmode="numeric" data-hydration-calc-value data-auto-focus>
+        </div>
+      </div>
+
+      <div class="quiz-input__large-label">
+        <label for="hydration_l_kcal_reduced" tabindex="-1" class="label">{{ "personalized_quiz.hydration.option_low_calories_drinks" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q21a" tabindex="-1">{% render 'icon-quiz-info' %}</a></label>
+        <div class="input-wrapper">
+          <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+          <input id="hydration_l_kcal_reduced" type="text" class="input input-align-right" data-quiz-answer value="0,0" name="hydration_l_kcal_reduced" data-label="{{ "personalized_quiz.hydration.option_low_calories_drinks" | t }}" inputmode="numeric" data-hydration-calc-value>
+        </div>
+      </div>
+
+      <div class="quiz-input__large-label">
+        <label for="hydration_l_softdrink_fruit" tabindex="-1" class="label">{{ "personalized_quiz.hydration.option_soft_drinks" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q21b" tabindex="-1">{% render 'icon-quiz-info' %}</a></label>
+        <div class="input-wrapper">
+          <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+          <input id="hydration_l_softdrink_fruit" type="text" class="input input-align-right" data-quiz-answer value="0,0" name="hydration_l_softdrink_fruit" data-label="{{ "personalized_quiz.hydration.option_soft_drinks" | t }}" inputmode="numeric" data-hydration-calc-value>
+        </div>
+      </div>
+
+      <div class="quiz-input__large-label quiz-input__large-label--last">
+        <div class="input-wrapper input-wrapper-full">
+          <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+          <input id="hydration_other" type="text" class="input" data-quiz-answer name="hydration_other" placeholder="{{ "personalized_quiz.hydration.option_other" | t }}">
+          <label for="hydration_other" tabindex="-1" class="label">{{ "personalized_quiz.hydration.option_other" | t }}</label>
+        </div>
+        <div class="input-wrapper">
+          <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+          <input id="hydration_l_other" type="text" class="input input-align-right" data-quiz-answer placeholder="0,0" name="hydration_l_other" inputmode="numeric" data-hydration-calc-value>
+        </div>
+      </div>
+
+      <div class="quiz-input__large-label quiz-input__large-label--text">
+        <label class="label"><strong>{{ "personalized_quiz.hydration.option_total_drinks" | t }}</strong></label>
+        <div class="input-wrapper">
+          <input id="hydration_l_total" type="text" class="input" value="0,0" data-quiz-answer name="hydration_l_total">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bg-color-general-contrast alert-danger d-none" data-hydration-result-callout>{{ "personalized_quiz.hydration.error_message_daily_limit" | t: hydration_max_limit: shop.metafields.personalized.hydration_max_limit.value }}</div>
+
+    <div data-quiz-errors>
+    </div>
+    <div data-quiz-warnings>
+    </div>
+
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img
+          src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn">{{ "personalized_quiz.hydration.button_next_text" | t }}</button>
+    </div>
+  </div>
+
+
+  <div class="popup quiz-popup is-hidden" data-popup="q21">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.hydration.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.hydration.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+
+  <div class="popup quiz-popup is-hidden" data-popup="q21a">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.hydration.option_low_calories_drinks" | t }}</h4>
+        <p>{{ "personalized_quiz.hydration.option_low_calories_drinks_popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+
+  <div class="popup quiz-popup is-hidden" data-popup="q21b">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.hydration.option_soft_drinks" | t }}</h4>
+        <p>{{ "personalized_quiz.hydration.option_soft_drinks_popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+
+
+</div>
+<!-- / q21 -->

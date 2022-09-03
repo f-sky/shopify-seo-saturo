@@ -1,0 +1,162 @@
+{{ 'product-header.css' | asset_url | stylesheet_tag }}
+
+{% assign bg_color = section.settings.bg_color %}
+<section class="product__header side-circle" data-product-bg-color>
+  <section class="page-width product__header-grid side-circle side-circle__top-right side-circle__medium {{ section.settings.content_side }} {{ section.settings.mobile_content_position }}">
+    <div class="product__header--content">
+
+      <h2 class="h5-headline"><strong>Alles, was du brauchst</strong></h2>
+      <h2 class="h1-headline product__header-heading span-align-heading">
+        <span class="align-left"><span data-quiz-user-name>Luisa</span>'s<span class="heading-line"></span></span>
+        <span class="align-left">Personalized</span>
+        <span class="align-left">Saturo</span>
+      </h2>
+      <div class="product__header--content-icons" data-quiz-result-icons></div>
+      
+      <div class="product__header--content-image">
+        <img data-product-image src="" alt="">
+        <div class="btn--typo product__header--content-image--label">
+          Für <strong>dich</strong> gemacht.
+        </div>
+      </div>
+    </div>
+
+    <div class="product__header--image">
+      <img class="product__header--image-flavor" data-flavor-icon src="" alt="" />
+
+      <div class="product__header--image-meta">
+
+        <div class="product__header--quantity-wrapper">
+          <div class="btn--typo">Geschmack</div>
+          <div class="btn--typo" data-product-flavor>Geschmack</div>
+        </div>
+
+        <div class="product__header--quantity-wrapper">
+          <div class="btn--typo">Menge</div>
+          <div class="product__header--quantity">
+            <button class="btn--text" data-quiz-qty="minus">{% render 'icon-quantity-minus' %}</button>
+            <input class="product__header--quantity-input navigation" type="text" value="1" disabled />
+            <button class="btn--text" data-quiz-qty="plus">{% render 'icon-quantity-plus' %}</button>
+          </div>
+        </div>
+
+        <div class="product-price">
+          <div class="product-price-delivery-text">
+            {% render 'icon-delivery' %} <p><strong>Sofort lieferbar.</strong></p>
+          </div>
+          <div class="product-price__inner">
+            <div class="price">
+              <div><s data-price-compare class="was-price">{{ product.variants[0].compare_at_price | money }}</s></div>
+              <strong class="h2-headline" data-price>
+                {{ product.variants[0].price | money }}
+              </strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="product__header--quantity-wrapper">
+          <div class="btn-large-details__text-details product__pro-dose-value">Pro Dose:<br><span data-filling-size-g></span></div>
+          <div class="btn-large-details__text-details product-form__shipping-tax-notes">
+            <div><span data-original-price-per-100g></span>/ 100g</div>
+            inkl. MwSt., zzgl. <a href="/pages/versand-und-bezahlung" title="">Versandkosten</a>
+          </div>
+        </div>
+
+
+        
+        <button class="btn product__header-btn" type="button" data-only-show-coll-modal>Bestelle deinen Shake</button>
+
+      </div>
+    </div>
+  </section>
+</section>
+
+{% render 'reviews-io-rukrating-snippet-end', color_review_star: '--color-black-grey-title', mode: "extended", link: "TRUE" %}
+
+<style>
+  {% if section.settings.text_color != blank %}
+    #shopify-section-{{ section.id }} .product__header .product__header--info .h2-headline,
+    #shopify-section-{{ section.id }} .product__header .product__header--info .p,
+    #shopify-section-{{ section.id }} .product__header .product__header-heading span,
+    #shopify-section-{{ section.id }} .product__header .global-reviews .ruk_rating_snippet .ruk-rating-snippet-count {
+      color: var({{ section.settings.text_color }});
+    }
+
+    #shopify-section-{{ section.id }} .product__header .product__header-heading.span-align-heading span.heading-line,
+    #shopify-section-{{ section.id }} .product__header .product__header-heading.span-align-heading span.heading-line-left {
+      background-color: var({{ section.settings.text_color }});
+    }
+
+    #shopify-section-{{ section.id }} .product__header .product__header--info .ruk_rating_snippet i {
+      color: var(--color-banana-pastel);
+    }
+  {% endif %}
+
+  {% if section.settings.hide_circle != blank %}
+    #shopify-section-{{ section.id }} .product__header:after {
+      content: none;
+    }
+  {% endif %}
+
+  {% assign custom_header_color = section.settings.custom_header_color %}
+  {% if custom_header_color != blank %}
+    .mega-menu-header {
+      color: var({{ custom_header_color }});
+    }
+
+    .mega-menu-header .icon>path,
+    .mega-menu-header svg.icon {
+      fill: var({{ custom_header_color }});
+    }
+  {% endif %}
+
+  {% assign bg_image_desktop = section.settings.bg_image_desktop %}
+  {% if bg_image_desktop != blank %}
+    #shopify-section-{{ section.id }} .product__header {
+      background-image: url({{ bg_image_desktop | img_url: '1440x' }});
+    }
+  {% endif %}
+
+  {% assign bg_image_wide = section.settings.bg_image_wide %}
+  {% if bg_image_wide != blank %}
+    @media screen and (min-width: 1441px) {
+      #shopify-section-{{ section.id }} .product__header {
+        background-image: url({{ bg_image_wide | img_url: '3000x' }});
+      }
+    }
+  {% endif %}
+
+  {% assign bg_image_tablet = section.settings.bg_image_tablet %}
+  {% if bg_image_tablet != blank %}
+    @media screen and (max-width: 1024px) {
+      #shopify-section-{{ section.id }} .product__header {
+        background-image: url({{ bg_image_tablet | img_url: '1024x' }});
+      }
+    }
+  {% endif %}
+
+  {% assign bg_image_mobile = section.settings.bg_image_mobile %}
+  {% if bg_image_mobile != blank %}
+    @media screen and (max-width: 767px) {
+      #shopify-section-{{ section.id }} .product__header {
+        background-image: url({{ bg_image_mobile | img_url: '767x' }});
+      }
+    }
+  {% endif %}
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    $(".quiz-result [data-quiz-qty='plus']").click(function() {
+            var quantity = $(this).siblings("input");
+            quantityCount = (parseInt(quantity.val()) || 0) + 1;
+            quantity.val(quantityCount);
+        });
+
+    $(".quiz-result [data-quiz-qty='minus']").click(function() {
+        var quantity = $(this).siblings("input");
+        quantityCount = Math.max((parseInt(quantity.val()) || 0) - 1, 1);
+        quantity.val(quantityCount);
+    });
+  });
+</script>

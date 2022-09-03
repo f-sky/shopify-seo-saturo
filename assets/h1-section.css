@@ -1,0 +1,22 @@
+.h1-section {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.h1-section__title {
+  font-family: var(--font-family-two);
+  color: var(--color-black-grey-title);
+  line-height: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .h1-section__wrapper {
+    padding: 0 7rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .h1-section__wrapper {
+    padding: 0 3rem;
+  }
+}

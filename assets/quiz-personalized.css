@@ -1,0 +1,613 @@
+
+.quiz-result .product__header--content .h1-headline,
+.quiz-result .product__header--content .h5-headline,
+.quiz-result__checklist-title {
+  color: var(--color-white);
+  margin-bottom: 2.5rem;
+}
+
+.quiz-result .product__header--content .heading-line {
+  background-color: var(--color-white);
+}
+
+.product__header--content-icons {
+  margin-bottom: 3rem;
+}
+
+.quiz-result .product__header--content-icons > svg,
+.quiz-result .product__header--content-icons > img {
+  width: 3.6rem!important;
+  height: 3.6rem!important;
+  margin-right: 2.4rem!important;
+  display: none;
+}
+.quiz-result .product__header--content-icons > svg[data-keep],
+.quiz-result .product__header--content-icons > img[data-keep] {
+  display: inline-block;
+}
+
+.quiz-result .product__header-grid.side-circle:before {
+  height: 35rem;
+  width: 35rem;
+  left: auto;
+  left: unset;
+  right: -11.5rem;
+}
+
+.quiz-result .product__header,
+.quiz-result .product__header-grid {
+  height: 100%;
+  min-height: 115rem;
+  overflow: hidden;
+}
+
+.quiz-result .product__header--content-image {
+  position: relative;
+}
+
+.quiz-result .product__header--content-image > img {
+  width: 26.5rem;
+  position: relative;
+  z-index: 3;
+}
+
+.quiz-result .product__header--content-image--label {
+  color: var(--color-white);
+  font-weight: normal;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: -34.8rem;
+  overflow: visible;
+  width: 18.5rem;
+  height: 8rem;
+  padding: 1.8rem 1.3rem;
+  text-align: left;
+  display: block;
+  border: 0.1rem solid var(--color-black-grey-title);
+  border-left: none;
+  border-radius: 0 2.3rem 2.3rem 0;
+}
+
+.quiz-result .product__header--image {
+  position: relative;
+  height: auto;
+  padding-bottom: 7rem;
+}
+
+.quiz-result .product__header--image-flavor {
+  position: absolute;
+  right: 0;
+  top: 28rem;
+  max-width: 28rem;
+  left: 0;
+  margin: auto;
+}
+
+.quiz-result .product__free-shipping {
+  margin-bottom: 0.5rem;
+}
+
+.quiz-result .product__header--image-meta {
+  width: 100%;
+}
+
+.quiz-result .product__header--image-meta > .btn--typo {
+  color: var(--color-white);
+  text-align: right;
+  margin-bottom: 3rem;
+}
+
+.quiz-result .product-price__inner .price .h2-headline {
+  font-weight: bold;
+}
+
+.quiz-result .product-form__shipping-tax-notes,
+.quiz-result .product-form__shipping-tax-notes a {
+  color: var(--color-white);
+}
+
+.quiz-result .product-form__shipping-tax-notes a {
+  text-decoration: underline;
+}
+
+.quiz-result .product-form__shipping-tax-notes {
+  width: 100%;
+  max-width: 100%;
+  text-align: right;
+  margin-bottom: 1.6rem;
+}
+
+.quiz-result .product__header--image-meta .product-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.quiz-result .product-price-delivery-text {
+  display: flex;
+  align-items: center;
+}
+
+.quiz-result .product-price-delivery-text p {
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.quiz-result .product-price-delivery-text svg {
+  margin-right: 0.7rem;
+}
+
+.quiz-result .product-price-delivery-text svg path {
+  fill: var(--color-white);
+}
+
+.quiz-result .product__header-btn {
+  width: 100%;
+  background-color: var(--color-turquoise);
+  border-color: var(--color-turquoise);
+}
+
+.quiz-result .product__header--quantity-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.quiz-result .product__header--quantity-wrapper .btn--typo {
+  color: var(--color-white);
+}
+
+.product__header--quantity {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border: 0.1rem solid var(--color-black-grey-light-2);
+  background-color: var(--color-white);
+  border-radius: 2.3rem;
+}
+
+.quiz-result .product__header--quantity .btn--text {
+  cursor: pointer;
+}
+
+.quiz-result .product__header--quantity .btn--text > svg {
+  width: 1.5rem;
+}
+
+.quiz-result .product__header--quantity .btn--text svg path {
+  fill: var(--color-black-grey-title);
+}
+
+.quiz-result .product__header--quantity-input {
+  width: 3rem;
+  margin: 0 6.7rem;
+  border: none;
+  background-color: var(--color-black-grey-light-3);
+  font-family: var(--font-body-family);
+  border-radius: 2.3rem;
+  text-align: center;
+}
+
+.quiz-result .mix-easier .mix-easier__wrapper {
+  grid-template-areas: ". . . title title title title title title title title title"
+  "row1-image row1-image row1-image row1-image row1-image row1-image row1-image row1-text row1-text row1-text row1-text row1-text"
+  "row2-image row2-image row2-image row2-image row2-image row2-image row2-content row2-content row2-content row2-content row2-content row2-content";
+}
+
+.quiz-result .mix-easier__title.span-align-heading span.heading-line {
+  margin: 0 0 0 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .quiz-result .product__header--content-image > img {
+    width: 17rem;
+  }
+
+  .quiz-result .product__header--content-image--label {
+    right: -29rem;
+  }
+
+  .quiz-result .product__header--content .h5-headline {
+    margin-bottom: 0.5rem;
+  }
+
+  .quiz-result .product__header--content {
+    padding: 0;
+    justify-content: center;
+    padding-top: 8rem;
+    position: relative;
+    z-index: 5;
+  }
+
+  .quiz-result .product__header--content-icons > img {
+    width: 3.6rem!important;
+    height: 3.6rem!important;
+    margin-right: 2.5rem!important;
+  }
+
+  .quiz-result .product__header--image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 2.5rem;
+  }
+
+  .quiz-result .product__header-grid {
+    grid-template-areas: "content content content content"
+    "image image image image";
+    width: 100%;
+  }
+
+  .quiz-result .product__header--image-flavor {
+    right: unset;
+    right: auto;
+    left: 26rem;
+    top: -13rem;
+    max-width: 13rem;
+  }
+
+  .quiz-result .product__header-grid {
+    min-height: auto;
+  }
+
+  .quiz-result .product__header {
+    min-height: auto;
+    max-height: none;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .quiz-result .product__header--image-meta > .btn--typo {
+    margin-bottom: 1rem;
+  }
+
+  .quiz-result [data-product-bg-color] .product__header-grid:before {
+    display: none;
+  }
+
+  .quiz-result .product__header--content-image {
+    transform: translateX(-3rem);
+  }
+
+  .quiz-result .product__header--quantity-input {
+    margin: 0 2.1rem;
+  }
+
+  .product__header--content-icons > svg {
+    object-fit: contain;
+    width: 34px!important;
+    height: 31px!important;
+  }
+}
+
+.quiz-result__checklist {
+  padding: 11.5rem 0;
+}
+
+.quiz-result__checklist-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem 0;
+}
+
+.quiz-result__checklist-title {
+  font-family: var(--font-family-two);
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 10rem;
+  grid-row: 1/2;
+  grid-column: 1/13;
+}
+
+.quiz-result__checklist-box {
+  grid-row: 2/3;
+  grid-column: 3/11;
+  background-color: var(--color-white);
+  padding: 4.5rem;
+  border-radius: 2.3rem;
+}
+
+.quiz-result__checklist-text {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quiz-result__checklist-text--item {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.quiz-result__checklist-text--item > svg {
+  margin-right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+}
+
+.quiz-result__checklist-icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-result__checklist-icons--item {
+  text-align: center;
+  max-width: 16rem;
+}
+
+.quiz-result__checklist-icons--item ~ .quiz-result__checklist-icons--item {
+  margin-left: 2rem;
+}
+
+.quiz-result__checklist-icons--item > img {
+  margin-bottom: 1rem;
+  width: 7.2rem;
+  object-fit: contain;
+}
+
+.quiz-result__checklist-icons--item .p {
+  line-height: 1;
+}
+
+.quiz-product-review__title {
+  margin-bottom: 1rem;
+}
+
+.quiz-result .macro-tables.single-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-result .macro-tables.single-item .macro-table {
+  margin-right: 0;
+}
+
+.quiz-result .macro-tables__title {
+  text-align: center;
+  grid-column: 1/13;
+}
+
+.quiz-email-signup-form .input {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .quiz-product-review,
+  .quiz-result__checklist-wrapper {
+    padding: 0 7rem;
+  }
+
+  .quiz-result__checklist-box {
+    grid-column: 2/12;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .quiz-product-review {
+    padding: 0 3rem;
+  }
+
+  .quiz-result__checklist-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 3rem;
+  }
+
+  .quiz-result__checklist-box {
+    grid-column: 1/5;
+    padding: 3rem 1rem;
+  }
+
+  .quiz-result .macro-tables .macro-table {
+    /* margin: 0 auto; */
+    max-width: 48rem;
+    width: auto!important;
+  }
+
+  .quiz-result .macro-tables__title {
+    grid-column: 1/5;
+  }
+
+  .quiz-result__checklist-text--item {
+    margin-bottom: 2rem;
+  }
+
+  .quiz-result__checklist-title {
+    margin-bottom: 6rem;
+  }
+
+  .quiz-result__checklist-icons--item > img {
+    width: 5rem;
+  }
+
+  .quiz-result__checklist-icons--item {
+    word-break: break-all;
+  }
+
+  .quiz-result__checklist {
+    padding: 6rem 0;
+  }
+}
+
+#preview-bar-iframe {
+  display: none;
+}
+
+.quiz-product-header__sticky-bar {
+  width: 100%;
+  height: 5.6rem;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-white);
+  transform: translateY(200%);
+  transition: all 0.3s ease-in-out;
+}
+
+body.quiz-sticky__visible .quiz-product-header__sticky-bar {
+  transform: translateY(0%);
+}
+
+.quiz-product-header__sticky-bar-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem 0;
+  height: 100%;
+}
+
+.quiz-product-header__sticky-bar--left {
+  grid-row: 1/2;
+  grid-column: 1/7;
+  display: flex;
+  position: relative;
+  padding-left: 8rem;
+}
+
+.quiz-product-header__sticky-bar--left .p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.quiz-product-header__sticky-bar--right {
+  grid-row: 1/2;
+  grid-column: 7/13;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.quiz-product-header__sticky-bar--result-icons {
+  display: flex;
+  margin-right: 3rem;
+}
+
+.quiz-product-header__sticky-bar--result-icons > svg,
+.quiz-product-header__sticky-bar--result-icons > img {
+  display: none;
+}
+
+.quiz-product-header__sticky-bar--result-icons > svg[data-keep]:nth-child(1),
+.quiz-product-header__sticky-bar--result-icons > svg[data-keep]:nth-child(2),
+.quiz-product-header__sticky-bar--result-icons > img[data-keep]:nth-child(1),
+.quiz-product-header__sticky-bar--result-icons > img[data-keep]:nth-child(2) {
+  display: block;
+  width: 3.5rem!important;
+  height: 3.5rem!important;
+  margin-right: 0!important;
+}
+
+.quiz-product-header__sticky-bar--result-icons > svg ~ svg,
+.quiz-product-header__sticky-bar--result-icons > img ~ img {
+  margin-left: 2.5rem;
+}
+
+.quiz-product-header__sticky-bar--image {
+  width: 7rem;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0;
+}
+
+.quiz-result .quiz-product-header__sticky-bar--right .product__header-btn {
+  width: auto;
+}
+
+.quiz-result .product__pro-dose-value {
+  width: 10rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1024px) {
+  .quiz-product-header__sticky-bar {
+    padding: 0 1.5rem;
+  }
+
+  .quiz-product-header__sticky-bar--result-icons {
+    display: none;
+  }
+
+  .quiz-result  .btn-large-details__text-details {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .quiz-product-header__sticky-bar--left {
+    display: none;
+  }
+
+  .quiz-product-header__sticky-bar-wrapper {
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .quiz-product-header__sticky-bar--right {
+    grid-column: 1/5;
+    justify-content: center;
+  }
+}
+
+body.loading {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+  background-color: rgb(248, 238, 230);
+}
+
+body.loading main#MainContent,
+body.loading #shopify-section-custom-footer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.loading .mega-menu-header {
+  background-color: transparent!important;
+  border-bottom: none!important;
+}
+
+.quiz-item__loader > svg {
+  width: 100%;
+}
+
+.quiz-item__loader {
+  position: fixed;
+  top: 38.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 9999999;
+  display: block;
+  width: 16rem;
+  animation: animateLogo 3s infinite ease-in-out;
+}
+
+@keyframes animateLogo {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

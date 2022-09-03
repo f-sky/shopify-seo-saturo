@@ -1,0 +1,428 @@
+{
+  "sections": {
+    "1660916011ca7315a1": {
+      "type": "content",
+      "blocks": {
+        "f73fb198-b5da-4f5a-9b22-dd037efc9a9e": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Personalisierte Ernährung: So individuell wie du!",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "<p>Menschen sind verschieden. Nicht nur die DNA unterscheidet uns, sondern auch persönliche Ziele und mehr.<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "69c0d42d-4a94-4842-b905-9731897ac27f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wieso also gibt es für alle die gleichen Ernährungsempfehlungen? Wir finden, das soll geändert werden. Personalisierte Ernährung macht es möglich.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "f73fb198-b5da-4f5a-9b22-dd037efc9a9e",
+        "69c0d42d-4a94-4842-b905-9731897ac27f"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "1660917830015286a3": {
+      "type": "content",
+      "blocks": {
+        "ad55ec7a-1977-4838-84fb-29ed9519a7fa": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Was ist eine personalisierte Ernährung?",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "56535441-8f97-48d9-b332-8e5f1176edc2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Von Turnschuhen über Kaffeebecher bis hin zur Werbung, alles wird personalisiert. Doch beim Essen ist dein individueller Einfluss begrenzt auf Nudeln oder Reis in der Asia Box. Auf deine Bedürfnisse und Schutz deiner Gesundheit ist das nicht angepasst. Dabei ist individuelle Ernährung gar keine neue Erfindung. Im Prinzip ist jede individuelle Ernährungsberatung eine Art von personalisierter Ernährung. Doch bisher wird eine solche Beratung hauptsächlich von Menschen mit Krankheiten, Allergien, Unverträglichkeiten oder zur Gewichtsreduktion genutzt. Zur Prävention oder gar für einen vitaleren Körper gibt es nur wenige professionelle Angebote. Mit dem heutigen Verständnis einer personalisierten Ernährung wird deshalb auch etwas anderes verbunden. Durch das Abfragen verschiedener Faktoren oder Analysieren von Genabschnitten und Blutwerten wird eine individuelle Ernährung zusammengestellt. Eine künstliche Intelligenz oder andere technische Hilfsmittel kommen dabei immer häufiger zum Einsatz. Ziele sind die Vermeidung von ernährungsbedingten Erkrankungen, zum Teil eine Gewichtsreduktion oder Gewichtszunahme und eine verbesserte Leistungsfähigkeit.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "203c4ff4-ee16-4a4d-a28b-9fbd46bda328": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Kurz gesagt<\/strong>: Personalisierte Ernährung ist perfekt auf die Bedürfnisse von deinem Körper und deinen Lebensumständen abgestimmt. Ein maßgeschneidertes Konzept, welches deine Gesundheit sicherstellen soll.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "20b180d3-77c5-4953-b837-95f7709b5677": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Welche Faktoren sind zu berücksichtigen?",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "31e23ee9-635a-49c0-97eb-e4719d929058": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei der Erstellung deiner personalisierten Ernährung spielen verschiedene Aspekte eine Rolle. Je mehr du über dich und deinen Körper weißt, desto genauer kann die Ernährung auf dich abgestimmt werden.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "b018f94d-1e09-4eb2-9782-959621baa08b": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Einflussfaktor auf personalisierte Ernährung<\/strong><a href=\"#references\" title=\"#references\">[1]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "27d44195-a21f-4fa4-9eed-6a78cabb1641": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Genetik<\/strong>: Vererbte Veranlagung, interessant sind kleine funktionelle Unterschiede in der DNA<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "d42fb2da-7cf3-40dc-a690-9295816ef72f": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Epigenetik:<\/strong> Bindeglied zwischen Genetik und Umwelt, beeinflusst, welche Gene an- und welche abgeschaltet sind<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "58c921d5-0a41-49d4-928f-c9892d360f6f": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Darmflora\/ Mikrobiom: <\/strong>Alle Mikroorganismen, die den menschlichen Darm besiedeln, hauptsächlich Darmbakterien<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "c4171f2e-d908-4c30-a24e-061c62ed1053": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Körperliche Aktivität: <\/strong>Bewegung im Beruf, Alltagsbewegung, sportliche Aktivität<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "36aeebb7-0485-4252-85c5-6190b4c5eebd": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Ernährungsverhalten: <\/strong>Anzahl der Mahlzeiten, persönlicher Geschmack und Vorlieben, Verzicht auf bestimmte Lebensmittel<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "0f0ff8a2-afdd-4003-bc10-7717a5f358be": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Stoffwechsel: <\/strong>Individuelle Aufnahme und Verarbeitung der Nahrung, verschiedene Stoffwechseltypen können unterschiedlich gut Kohlenhydrate, Fette und Eiweiße verarbeiten<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "47479f08-857f-4612-b111-2a51e6e4f4e9": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Nutrigenomik: <\/strong>Funktionelle Wechselwirkungen zwischen Nahrungsmitteln und Erbgut<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "ad55ec7a-1977-4838-84fb-29ed9519a7fa",
+        "56535441-8f97-48d9-b332-8e5f1176edc2",
+        "203c4ff4-ee16-4a4d-a28b-9fbd46bda328",
+        "20b180d3-77c5-4953-b837-95f7709b5677",
+        "31e23ee9-635a-49c0-97eb-e4719d929058",
+        "b018f94d-1e09-4eb2-9782-959621baa08b",
+        "27d44195-a21f-4fa4-9eed-6a78cabb1641",
+        "d42fb2da-7cf3-40dc-a690-9295816ef72f",
+        "58c921d5-0a41-49d4-928f-c9892d360f6f",
+        "c4171f2e-d908-4c30-a24e-061c62ed1053",
+        "36aeebb7-0485-4252-85c5-6190b4c5eebd",
+        "0f0ff8a2-afdd-4003-bc10-7717a5f358be",
+        "47479f08-857f-4612-b111-2a51e6e4f4e9"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": false,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "1660918228f8549897": {
+      "type": "content",
+      "blocks": {
+        "7d4246b8-6b97-441e-bc51-183aba05bc37": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Warum ist personalisierte Ernährung sinnvoll?",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "6a6acec3-028a-4cbd-80ed-fe0d5acc4906": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kein Mensch is(s)t wie der andere. Selbst bei Zwillingen gibt es Unterschiede. Beispielsweise können die angestrebten Ziele oder die antrainierten Essgewohnheiten verschieden sein. Ein nicht gerade offensichtlicher Unterschied zwischen Menschen sind funktionelle Genvarianten, die den Stoffwechsel beeinflussen.<a href=\"#references\" title=\"#references\">[2]<\/a> Wieso sollte es also für alle die gleiche Antwort auf die Frage ‘Was ist die perfekte Ernährung?' geben? Dass dies nicht unbedingt funktioniert, zeigt die Vielzahl an Diäten, die es gibt. Die einen kommen mit Low Carb zurecht, andere mit Low Fat und für wieder andere ist Intervallfasten der Schlüssel zum Erfolg. Das Problem: Bevor du eine solche Diät ausprobiert hast, weißt du nicht, wie dein Körper darauf reagieren wird. Bei personalisierter Ernährung ist dies anders. Du musst dich nicht durch verschiedene Diäten testen, um eventuell die für dich richtige zu finden, sondern es wird zuerst analysiert und dann umgesetzt.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "c25793c2-059e-41ad-9b56-465aef89610a": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Was sind die Vorteile von personalisiertem Essen?",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "cce7075b-ea38-4a88-99aa-4c65e39a1669": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Misserfolge bei einer Diät oder Ernährungsumstellung können ganz schön frusten und sogar auf lange Sicht schädlich sein. Denn mit der ständigen Kalorienreduktion nimmst du auch weniger Vitamine und Mineralstoffe auf. Das kann zu einem Mangel führen. Mit personalisierter Ernährung bleibt dir das erspart. Doch es gibt noch mehr Vorteile:<\/p><p>-gesteigerte mentale Performance<\/p><p>- mehr Wohlbefinden<\/p><p>- sportliche Ziele schneller erreichen<\/p><p>es ist leichter, diese auf dich abgestimmte Umstellung auch langfristig beizubehalten<\/p><p>In einer wissenschaftlichen Untersuchung fanden Forschende heraus, dass personalisierte Ernährung im Vergleich zur konventionellen Ernährungsberatung eher zu einem gesunden Essverhalten beiträgt.<a href=\"#references\" title=\"#references\">[3]<\/a> Auch dies ist ein Vorteil, denn es zeigt, dass die personalisierte Diät langfristig umsetzbar und erfolgversprechend ist.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "7d4246b8-6b97-441e-bc51-183aba05bc37",
+        "6a6acec3-028a-4cbd-80ed-fe0d5acc4906",
+        "c25793c2-059e-41ad-9b56-465aef89610a",
+        "cce7075b-ea38-4a88-99aa-4c65e39a1669"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "16609191957e4ad1ea": {
+      "type": "content",
+      "blocks": {
+        "8ada88c2-7cca-4c40-b093-3c06c6e7b343": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Wie findest du heraus, was dein Körper benötigt?",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "3ac65cef-bce7-4de9-8b6e-65839a677885": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Leider fehlt dem menschlichen Körper die Funktion, spezifischen Hunger zu äußern. Somit können deine Zellen dir nicht kommunizieren, welche Vitamine, Mineralstoffe oder Makros gerade fehlen. Die einzigen Signale, die dein Körper senden kann, sind Hunger und Durst. Erst wenn ein Mangel besteht, sind weitere Signale sichtbar, doch soweit soll es erst gar nicht kommen. Zur Analyse deiner Ernährungssituation stehen mehrere Methoden zur Verfügung:<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "adceaa3a-c53f-4047-8094-3e6aed188bda": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. Befragung<\/strong>: Durch ausgewählte Fragen zu deinem bisherigen Lebensstil, deinen Zielen, Unverträglichkeiten, individuellen Vorlieben und Körpermaßen kann eine personalisierte Ernährung zusammengestellt werden. Diese Methode ist zwar einfach, dennoch liefert sie detaillierte Aufschlüsse zu deiner Ernährung. Du möchtest wissen, wie so ein Test aussieht? Dann <a href=\"\/pages\/quiz\" title=\"Personalisiere dein Saturo - Quiz\">starte unser Quiz für die Berechnung einer Complete Food Mahlzeit<\/a>, die auf dich zugeschnitten ist. <\/p><p><strong>2. Bluttest<\/strong>: Dein Blut sagt einiges über dich und deine Ernährung aus. Es gibt beispielsweise Bluttests, die deinen Stoffwechseltyp bestimmen. Auch auf die Versorgung mit Vitaminen und Mineralstoffen kann durch eine Blutanalyse geschlossen werden. Weitere Biomarker geben Aufschluss über deine individuelle Ernährung und können für einen personalisierten Ernährungsplan verwendet werden.<\/p><p><strong>3. Gentest<\/strong>: Hierbei wird nicht deine gesamte DNA analysiert, sondern nur kleine Abschnitte, die Auskunft über deinen Stoffwechseltyp geben können. Beispielsweise wird der sogenannte FTO-Lokus mit der Gesamtenergieaufnahme in Zusammenhang gebracht.<a href=\"#references\" title=\"#references\">[4]<\/a><\/p><p><strong>4. Stuhlprobe<\/strong>: Ein Labor kann so dein Mikrobiom analysieren. Auch auf diesem Weg soll eine Aussage zu deinem Stoffwechsel möglich sein. Ein Bakterien-Verhältnis zwischen Firmicutes und Bacteroidetes zu Gunsten von Firmicutes Bakterien wird beispielsweise mit einem höheren Risiko für Übergewicht verbunden.<a href=\"#references\" title=\"#references\">[5]<\/a><\/p><p>Die letzten beiden Testmöglichkeiten werden bisher noch kritisch gesehen. Denn es ist nicht leicht, von der DNA oder den Darmbakterien direkt auf personalisiertes Essen zu schließen.<a href=\"#references\" title=\"#references\">[6]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "0cd4286e-a7e5-4bf9-a3b9-90d42daa5c38": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Was sind typische Symptome einer ungünstigen Ernährung?",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "792f8ae3-db73-4dec-bd97-f62e5ae7cfbc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Indirekt kannst du über Anzeichen einer falschen Ernährung herausfinden, was dein Körper benötigt bzw. ob du etwas ändern solltest. Dies können typische Anzeichen von einem Vitamin- oder Mineralstoffdefizit sein. Dazu zählen Symptome wie:<\/p><p>- blasse Haut, stumpfe Haare und Nägel<\/p><p>- häufige Infekte<\/p><p>- schnelle Erschöpfung<\/p><p>- vermehrte Müdigkeit<\/p><p>- Konzentrationsschwierigkeiten<\/p><p>- eingerissene Mundwinkel<\/p><p>Stimmt die Nährstoffzusammensetzung nicht, kann dies zur Entstehung von Übergewicht beitragen. Durch eine ungünstige Ernährung kann auch dein Schlaf beeinträchtigt werden. Isst du beispielsweise sehr fettige Mahlzeiten vor dem Schlafengehen, dann fällt dir das Einschlafen schwerer. Weitere typische Anzeichen sind Heißhunger, Darmbeschwerden sowie Blähungen und Hautunreinheiten. Nicht optimale Ernährung ist nicht die einzige Ursache für diese Symptome. Es können auch Unverträglichkeiten, Krankheiten, Stress und mehr dahinterstecken. Sollten deine Beschwerden über längere Zeit anhalten und auch durch personalisierte Lebensmittel nicht besser werden, dann solltest du dich medizinisch untersuchen lassen.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "8ada88c2-7cca-4c40-b093-3c06c6e7b343",
+        "3ac65cef-bce7-4de9-8b6e-65839a677885",
+        "adceaa3a-c53f-4047-8094-3e6aed188bda",
+        "0cd4286e-a7e5-4bf9-a3b9-90d42daa5c38",
+        "792f8ae3-db73-4dec-bd97-f62e5ae7cfbc"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "16609194562866b750": {
+      "type": "content",
+      "blocks": {
+        "376a7a46-e8b9-47bc-bacd-1d88f11423a8": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Wie personalisiert du deine Nahrung?",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "4b6ce61b-5b9c-48fc-8869-895dc795f800": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du fragst dich, wie du dein Essen personalisieren kannst? Wir haben einen Leitfaden für dich zusammengestellt:<\/p><p>Schritt 1:<strong> Fasse einen Entschluss<\/strong>. Dein Kühlschrank füllt sich nicht über Nacht mit personalisierten Lebensmitteln, sondern du musst dich aktiv für diesen Weg entscheiden. Verdeutliche dir, was deine Motivation ist.<\/p><p>Schritt 2:<strong> Personalisierte Ernährung Test<\/strong>: Wähle eine oder mehrere der Testmöglichkeiten. Eine detaillierte Befragung ist eine einfache, aber effektive Methode, die ideal mit einer Blutanalyse kombiniert werden kann. <\/p><p>Schritt 3:<strong> Bewertung der Ergebnisse<\/strong>. Schau dir deine gesammelten Daten an. Bei einigen Stoffwechseltest sind bereits Handlungsempfehlungen enthalten, andere Ergebnisse kannst du in einer Ernährungsberatung, mit deinem Arzt oder Heilpraktiker gemeinsam bewerten. Am Ende sollte dir klar sein, welche Lebensmittel zu deiner individuellen Ernährung passen und welche eher weniger.<\/p><p>Schritt 4: <strong>Jetzt geht es an die Umsetzung<\/strong>. Sortierte deinen Vorratsschrank neu. Teste neue Rezepte. Gerade zu Beginn können personalisierte Ernährungspläne sinnvoll sein. Später weißt du selbst, wie deine individuelle Ernährung auszusehen hat.<\/p><p>Schritt 5:<strong> Prüfen, ob sich etwas verändert hat<\/strong>. Wenn du bereits die ersten Erfolge gefeiert hast, dann ist es Zeit, deine Selbstanalyse zu überdenken. Eventuell sind neue oder andere Ziele hinzugekommen, Lebensbedingungen haben sich geändert oder du hast einen Mangel ausgeglichen. In einer individuellen Ernährungsberatung sollte dies nach einigen Wochen zur Sprache kommen. Gemeinsam könnt ihr nun kleine Veränderungen an deinen neuen Essgewohnheiten vornehmen.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "6113de08-7ad7-4dbf-aeae-6986e939a94b": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Wie hilft dir personalisiertes Complete Food bei der Umsetzung?",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "db273e8f-277e-4a88-b198-6f62f35a037d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Klar, die Umsetzung ist beim personalisierten Ernährungsprogramm am schwierigsten, besonders in der Anfangszeit. Doch wir haben da eine Unterstützung für dich: Personalized Complete Food. Unter Complete Food wird ein Mahlzeitenersatz verstanden, der alles enthält, was dein Körper benötigt. Sprich, ein ausgewogenes Verhältnis zwischen Eiweiß, Kohlenhydraten und Fetten sowie alle Vitamine und Mineralstoffe in entsprechenden Mengen. Bisher wurden die Inhaltsstoffe an die Empfehlungen von Fachgesellschaften auf den durchschnittlichen Erwachsenen optimiert. Wir haben das geändert. Mit <a href=\"\/pages\/quiz\" title=\"Personalisiere dein Saturo - Quiz\">unserem Quiz analysieren wir deine Ernährung sowie Ziele und stellen dir ein auf dich zugeschnittenes Saturo Produkt zur Verfügung<\/a>. <\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "5f931ce3-4ee5-4906-98dc-9e4fb02eb043": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Mit deinem personalisierten Complete Food hast du immer eine schnelle und gesunde Mahlzeit griffbereit, die perfekt zu dir passt. Es ist eine tolle Kombination aus personalisierter Nahrungsergänzung und vollwertiger Mahlzeit, die wirklich alles enthält, was dein Körper benötigt. Das Pulver ist im Nu zu einem leckeren Drink zubereitet und ideal zum Mitnehmen. Du kannst es z. B. als gesundes Mittagessen mit zur Arbeit nehmen. So bleibt dir in deiner Pause noch ausreichend Zeit für ein wenig Bewegung.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "376a7a46-e8b9-47bc-bacd-1d88f11423a8",
+        "4b6ce61b-5b9c-48fc-8869-895dc795f800",
+        "6113de08-7ad7-4dbf-aeae-6986e939a94b",
+        "db273e8f-277e-4a88-b198-6f62f35a037d",
+        "5f931ce3-4ee5-4906-98dc-9e4fb02eb043"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": ""
+      }
+    },
+    "1660920913a74b3a80": {
+      "type": "accordion",
+      "blocks": {
+        "e25aa9ed-3ac6-4449-8e55-f27f287fa118": {
+          "type": "question",
+          "settings": {
+            "title": "Quellen",
+            "answer": "<p>1. Verma, M., Hontecillas, R., Tubau-Juni, N., Abedi, V. & Bassaganya-Riera, J. (2018). Challenges in Personalized Nutrition and Health. Front. Nutr. 5, 117.<\/p><p>2. Zeisel, S. H. (2020). Precision (Personalized) Nutrition: Understanding Metabolic Heterogeneity. Annual Reviews 11 (1), 71-92.<\/p><p>3. Celis-Morales, C., Livingstone, K. M., Marsaux, C. FM, Macready, A. L., Fallaize, R.,O’Donovan, C. B., Woolhead, C., Forster, H., Walsh, M. C., Navas-Carretero, S., San-Cristobal, R., Tsirigoti,L., Lambrinou, C. P., Mavrogianni, C., Moschonis, G., Kolossa, S.,<\/p><p>Hallmann,J., Godlewska, M., Surwiłło,A., Traczyk,I., Drevon,C. A., Bouwman, J., van Ommen, B., Grimaldi,K., Parnell, L. D., Matthews,J. NS., Manios, Y., Daniel, H., Martinez, A. J., Lovegrove,J. A., Gibney, E. R., Brennan, L., Saris,W. HM., Gibney M. & Mathers, J. C. (2017) Effect of personalized nutrition on health-related behaviour change: evidence from the Food4Me European randomized controlled trial, International Journal of Epidemiology, 46 (2) 578–588.<\/p><p>4. Drabsch, T., Gatzemeier, J., Pfadenhauer, L., Hauner, H. & Holzapfel, C. (2018) Associations between Single Nucleotide Polymorphisms and Total Energy, Carbohydrate, and Fat Intakes: A Systematic Review, American Society for Nutrition, 9, 425-453.<\/p><p>5. Koliada, A., Syzenko, G., Moseiko, V., Budovska, L., Puchkov, K., Perederiy,V.,Gavalko, Y., Dorofeyev, A., Romanenko, M., Tkach, S. Sineok, L., Lushckak & O. Vaiserman, A. (2017) Association between body mass index and Firmicutes\/Bacteroidetes ratio in an adult Ukrainian population, BMC Microbiol 17, 120.<\/p><p>6. Verbraucherzentrale, Von Stoffwechsel-Diäten bis Trennkost: Erfolgsaussichten und Gefahren, Abgerufen am 28.07.2022, von <a href=\"https:\/\/www.verbraucherzentrale.de\/wissen\/lebensmittel\/schlankheitsmittel-und-diaeten\/von-stoffwechseldiaeten-bis-trennkost-erfolgsaussichten-und-gefahren-6555\"><span style=\"text-decoration:underline\">https:\/\/www.verbraucherzentrale.de\/wissen\/lebensmittel\/schlankheitsmittel-und-diaeten\/von-stoffwechseldiaeten-bis-trennkost-erfolgsaussichten-und-gefahren-6555<\/span><\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e25aa9ed-3ac6-4449-8e55-f27f287fa118"
+      ],
+      "settings": {
+        "bg_color_variable": "",
+        "html_heading": "",
+        "description": "",
+        "id": "references",
+        "google_structured_data": false,
+        "padding_top": false,
+        "padding_bottom": true
+      }
+    }
+  },
+  "order": [
+    "1660916011ca7315a1",
+    "1660917830015286a3",
+    "1660918228f8549897",
+    "16609191957e4ad1ea",
+    "16609194562866b750",
+    "1660920913a74b3a80"
+  ]
+}

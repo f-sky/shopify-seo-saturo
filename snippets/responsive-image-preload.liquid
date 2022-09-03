@@ -1,0 +1,111 @@
+{% comment %} 
+
+Required Inputs:
+- wide_img
+- widest_breakpoint_wide
+
+Optional Inputs:
+- smallest_breakpoint [Default: 550]
+- step [Default: 550]
+
+- desktop_img (needs: widest_breakpoint_tablet)
+- widest_breakpoint_desktop
+
+- tablet_img (needs: widest_breakpoint_tablet, destkop_img, widest_breakpoint_destkop)
+- widest_breakpoint_tablet
+
+- mobile_img (needs: widest_breakpoint_mobile, destkop_img, widest_breakpoint_destkop, tablet_img, widest_breakpoint_tablet)
+- widest_breakpoint_mobile
+
+{% endcomment %}
+
+{%- unless step -%}
+    {% assign step = 50 %}
+{%- endunless -%}
+{%- unless smallest_breakpoint -%}
+    {% assign smallest_breakpoint = 550 | minus: step %}
+{%- else -%}
+    {% assign smallest_breakpoint = smallest_breakpoint | minus: step %}
+{%- endunless -%}
+
+{%- assign cur_res = smallest_breakpoint -%}
+
+{%- if mobile_img and widest_breakpoint_mobile -%}
+    {% assign mobileCount = widest_breakpoint_mobile | minus: smallest_breakpoint | divided_by: step | floor | minus: 1 %}
+{%- else -%}
+    {% assign widest_breakpoint_mobile = smallest_breakpoint %}
+{%- endif -%}
+
+{%- if tablet_img and widest_breakpoint_tablet -%}
+    {% assign tabletCount = widest_breakpoint_tablet | minus: widest_breakpoint_mobile | divided_by: step | floor | minus: 1 %}
+{%- else -%}
+    {% assign widest_breakpoint_tablet = smallest_breakpoint %}
+{%- endif -%}
+
+{%- if desktop_img and widest_breakpoint_desktop -%}
+    {% assign desktopCount = widest_breakpoint_desktop | minus: widest_breakpoint_tablet | divided_by: step | floor | minus: 1 %}
+{%- else -%}
+    {% assign widest_breakpoint_desktop = smallest_breakpoint %}
+{%- endif -%}
+
+{% assign wideCount = widest_breakpoint_wide | minus: widest_breakpoint_desktop | divided_by: step | floor | minus: 1 %}
+
+{% capture url_res %}{{ widest_breakpoint_desktop }}x{% endcapture %}
+{%- if mobile_img and widest_breakpoint_mobile -%}
+    <link rel="preload" as="image" media="(max-width: {{ widest_breakpoint_mobile }}px)" href="{{ mobile_img | image_url: width: url_res }}" imagesizes="100vw" imagesrcset="
+    {%- for i in (0..mobileCount) -%}
+        {%- assign cur_res = cur_res | plus: step -%}
+        {%- capture url_res_1x -%}{{ cur_res }}x{%- endcapture -%}
+        {{ mobile_img | image_url: width: url_res_1x }} {{ cur_res }}w, 
+    {%- endfor -%}
+    {% assign temp = widest_breakpoint_mobile | minus: smallest_breakpoint | modulo: step %}
+    {%- unless temp == 0 -%}
+        {% assign cur_res = widest_breakpoint_mobile %}
+        {% capture url_res_1x %}{{ cur_res }}x{% endcapture %}
+        {{ mobile_img | image_url: width: url_res_1x }} {{ cur_res }}w
+    {%- endunless -%}
+    ">
+{%- endif -%}
+{%- if tablet_img and widest_breakpoint_tablet -%}
+<link rel="preload" as="image" media="({% if widest_breakpoint_mobile and mobile_img %}min-width: {{ widest_breakpoint_mobile }}.1px and {% endif %}max-width: {{ widest_breakpoint_tablet }}px)" href="{{ tablet_img | image_url: width: url_res }}" imagesizes="100vw" imagesrcset="
+    {%- for i in (0..tabletCount) -%}
+        {%- assign cur_res = cur_res | plus: step -%}
+        {%- capture url_res -%}{{ cur_res }}x{%- endcapture -%}
+        {{ tablet_img | image_url: width: url_res }} {{ cur_res }}w, 
+    {%- endfor -%}
+    {% assign temp = widest_breakpoint_tablet | minus: widest_breakpoint_mobile | modulo: step %}
+    {%- unless temp == 0 -%}
+        {% assign cur_res = widest_breakpoint_tablet %}
+        {% capture url_res_1x %}{{ cur_res }}x{% endcapture %}
+        {{ tablet_img | image_url: width: url_res_1x }} {{ cur_res }}w
+    {%- endunless -%}
+    ">
+{%- endif -%}
+{%- if desktop_img and widest_breakpoint_desktop -%}
+<link rel="preload" as="image" media="({% if widest_breakpoint_tablet and tablet_img %}min-width: {{ widest_breakpoint_tablet }}.1px and {% endif %}max-width: {{ widest_breakpoint_desktop }}px)" href="{{ desktop_img | image_url: width: url_res }}" imagesizes="100vw" imagesrcset="
+    {%- for i in (0..desktopCount) -%}
+        {%- assign cur_res = cur_res | plus: step -%}
+        {%- capture url_res -%}{{ cur_res }}x{%- endcapture -%}
+        {{ desktop_img | image_url: width: url_res }} {{ cur_res }}w, 
+    {%- endfor -%}
+    {% assign temp = widest_breakpoint_desktop | minus: widest_breakpoint_tablet | modulo: step %}
+    {%- unless temp == 0 -%}
+        {% assign cur_res = widest_breakpoint_desktop %}
+        {% capture url_res_1x %}{{ cur_res }}x{% endcapture %}
+        {{ desktop_img | image_url: width: url_res_1x }} {{ cur_res }}w
+    {%- endunless -%}
+    ">
+{%- endif -%}
+<link rel="preload" as="image" {% if widest_breakpoint_desktop and desktop_img %}media="(min-width: {{ widest_breakpoint_desktop }}.1px)"{% endif %} href="{{ wide_img | image_url: width: url_res }}" imagesizes="100vw" imagesrcset="
+{%- for i in (0..wideCount) -%}
+    {%- assign cur_res = cur_res | plus: step -%}
+    {%- capture url_res -%}{{ cur_res }}x{%- endcapture -%}
+    {{ wide_img | image_url: width: url_res }} {{ cur_res }}w, 
+{%- endfor -%}
+{% assign temp = widest_breakpoint_wide | minus: widest_breakpoint_desktop | modulo: step %}
+{%- unless temp == 0 -%}
+    {% assign cur_res = widest_breakpoint_wide %}
+    {% capture url_res_1x %}{{ cur_res }}x{% endcapture %}
+    {{ wide_img | image_url: width: url_res_1x }} {{ cur_res }}w
+{%- endunless -%}
+">

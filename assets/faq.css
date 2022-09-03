@@ -1,0 +1,149 @@
+.faq-section {
+  padding: 11.5rem 0;
+  position: relative;
+}
+
+.faq-section__wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 1.5rem;
+}
+
+.faq--heading {
+  grid-column: 3/11;
+  font-family: var(--font-family-two);
+  color: var(--color-black-grey-title);
+  line-height: 1;
+  margin-bottom: 7.5rem;
+}
+
+.faq-section .h2-headline {
+  grid-column: 1/5;
+  grid-row: 1/2;
+}
+
+.faq-section .description {
+  grid-column: 1/13;
+  grid-row: 2/3;
+}
+
+.faq__items {
+  grid-column: 1/13;
+  grid-row: 3/4;
+  margin: 3rem 0 0;
+}
+
+.faq__items dd {
+  border-bottom: 0.1rem solid var(--color-black-grey-light-2);
+}
+
+.faq__items > div:first-child dt {
+  border-top: 0.1rem solid var(--color-black-grey-light-2);
+}
+
+.faq__item-button {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  background: transparent;
+  font-family: var(--font-body-family);
+  color: var(--color-black-grey-title);
+  padding: 1.5rem 1.5rem 1rem;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__item-button .icon {
+  flex-shrink: 0;
+  transition: all 0.1s ease-in-out;
+  transform: rotate(45deg);
+}
+
+.faq__item-button.active .icon {
+  transform: rotate(0deg);
+}
+
+.faq__item-content[aria-hidden=true] p,
+.faq__item-content[aria-hidden=true] div {
+  display: none;
+}
+
+.faq__item-content p {
+  padding: 0 4.5rem 1.5rem 4.5rem;
+  line-height: 2.8rem;
+}
+
+.faq__item-content {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .faq-section {
+    padding: 15rem 0 11.5rem;
+  }
+  
+  .faq-section__wrapper {
+    padding: 0 7rem;
+  }
+
+  .faq-section .h2-headline {
+    grid-column: 1/6;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .faq-section {
+    padding: 6rem 0;
+  }
+  
+  .faq-section__wrapper {
+    padding: 0 3rem;
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .faq-section .h2-headline {
+    grid-column: 1/5;
+  }
+
+  .faq--heading {
+    grid-column: 1/5;
+    margin-bottom: 3rem;
+  }
+
+  .faq__items {
+    grid-column: 1/5;
+  }
+}
+
+/* FAQ Stacked Sections */
+
+
+.faq-section + .faq-section {
+  padding-top: 0;
+  margin-top: -11.5rem;
+}
+
+.faq-section + .faq-section .h2-headline {
+  display: none;
+}
+
+.faq-section + .faq-section .faq__items {
+  margin-top: 0;
+}
+
+.faq-section + .faq-section .faq__items > div:first-child {
+  border-top: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .faq-section + .faq-section {
+    margin-top: -6rem;
+  }
+}

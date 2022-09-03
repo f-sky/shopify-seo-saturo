@@ -1,0 +1,100 @@
+{{ 'section-headline.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.title != blank %}
+  {% assign heading_tag = section.settings.heading_tag %}
+  <{{ heading_tag }} class="headline__title span-align-heading {{ section.settings.heading_style }} {% unless section.settings.padding_top %}pt-0{% endunless %} {% unless section.settings.padding_bottom %}pb-0{% endunless %}">{{ section.settings.title }}
+  </{{ heading_tag }}>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Headline",
+    "class": "page-width",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "select",
+        "id": "heading_style",
+        "label": "Style",
+        "info": "Define what class this element should get",
+        "options": [
+          {
+            "value": "",
+            "label": "None"
+          },
+          {
+            "value": "h1-headline",
+            "label": "H1"
+          },
+          {
+            "value": "h2-headline",
+            "label": "H2"
+          },
+          {
+            "value": "h2-headline bold",
+            "label": "H2 bold"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "label": "HTML-Tag",
+        "info": "Decide which HTML tag this Element should get",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          },
+          {
+            "value": "h4",
+            "label": "H4"
+          },
+          {
+            "value": "h5",
+            "label": "H5"
+          },
+          {
+            "value": "h6",
+            "label": "H6"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "padding_top",
+        "label": "Padding-top",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "padding_bottom",
+        "label": "Padding-bottom",
+        "default": true
+      }
+    ],
+    "presets": [
+      {
+        "name": "Headline"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

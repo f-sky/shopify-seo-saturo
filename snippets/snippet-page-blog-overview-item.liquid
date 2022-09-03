@@ -1,0 +1,33 @@
+{% assign item = blank %}
+{% if block.type == 'page' %}
+  {% assign item = pages[block.settings.page.handle] %}
+{% elsif block.type == 'article' %}
+  {% assign item = articles[block.settings.article.handle] %}
+{% endif %}
+{% assign image = '' %}
+{% if block.type == 'article' %}
+  {% assign image = item.image %}
+{% endif %}
+{% if item.metafields.overview.image != blank %}
+  {% assign image = item.metafields.overview.image %}
+{% endif %}
+
+<div class="page-blog-overview__item" data-page-blog-overview-item>
+  {% if image != blank %}
+    <a href="{{ item.url }}">
+      <img class="page-blog-overview__item-image" src="{{ image | img_url: '700x'}}" alt="{{ image.alt }}" />
+    </a>
+  {% endif %}
+  <a href="{{ item.url }}">
+    <h2 class="h2-headline">
+      <strong>
+      {% if item.metafields.overview.title != blank %}
+        {{ item.metafields.overview.title }}
+      {% else %}
+        {{ item.title }}
+      {% endif %}
+      </strong>
+    </h2>
+  </a>
+  <a class="btn btn--text" href="{{ item.url }}">Mehr erfahren{% render 'icon-chevron' %}</a>
+</div>

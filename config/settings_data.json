@@ -1,0 +1,476 @@
+{
+  "current": {
+    "colors_solid_button_labels": "#FFFFFF",
+    "colors_accent_1": "#121212",
+    "colors_accent_2": "#334FB4",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#FFFFFF",
+    "colors_background_2": "#F3F3F3",
+    "type_header_font": "assistant_n4",
+    "type_body_font": "assistant_n4",
+    "type_alt1_font": "avenir_next_n8",
+    "page_width": "980",
+    "social_facebook_link": "https:\/\/www.facebook.com\/saturofoods\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/saturofoods\/",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@saturofoods",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCh2Gko2kdb4PLXR9hdDkrJA",
+    "favicon": "shopify:\/\/shop_images\/20210913_saturo_S-Logo_white_circle_background_500x500px.png",
+    "index_image_wide": "shopify:\/\/shop_images\/20220530-satuor-personalized-hero_3841x2732px.jpg",
+    "index_image_desktop": "shopify:\/\/shop_images\/202200601-saturo-personalized-hero_desktop_3841x2732px.jpg",
+    "index_image_tablet": "shopify:\/\/shop_images\/202200601-saturo-personalized-hero_desktop_3841x2732px.jpg",
+    "index_image_mobile": "shopify:\/\/shop_images\/20220530-Hero-Header-mobile_25.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/20210913_saturo_Logo_2021_2000x500px.png",
+    "checkout_logo_size": "small",
+    "checkout_sidebar_background_color": "#fffaf0",
+    "checkout_heading_font": "Open Sans",
+    "checkout_body_font": "Open Sans",
+    "checkout_accent_color": "#7ebbb6",
+    "checkout_button_color": "#363330",
+    "index_image_wide_breakpoint": 3000,
+    "index_image_tablet_breakpoint": 1102,
+    "index_image_mobile_breakpoint": 800,
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "e17462e7-2ef3-47d9-9b20-f46d590ada88": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Wartungsarbeiten - Es kann zu kurzfristigen Störungen kommen.",
+              "color_scheme": "background-2",
+              "link": ""
+            }
+          },
+          "b08fc245-3353-46ee-885d-9e89b7a1d911": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Nur noch bis zum 22. Juli in Saturo investieren. Nicht verpassen!",
+              "color_scheme": "background-1",
+              "link": "shopify:\/\/pages\/crowdinvestment"
+            }
+          },
+          "f4b624dd-0352-4def-8eb5-a31a55c0f35e": {
+            "type": "announcement",
+            "settings": {
+              "text": "Jetzt neu! Personalisiere dein Saturo",
+              "color_scheme": "background-1",
+              "link": "shopify:\/\/pages\/quiz"
+            }
+          }
+        },
+        "block_order": [
+          "e17462e7-2ef3-47d9-9b20-f46d590ada88",
+          "b08fc245-3353-46ee-885d-9e89b7a1d911",
+          "f4b624dd-0352-4def-8eb5-a31a55c0f35e"
+        ],
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "815461ad-5786-44d1-bcc0-1b3637068467": {
+            "type": "mega_menu_banner",
+            "settings": {
+              "title": "produkte",
+              "image": "shopify:\/\/shop_images\/Saturo-balanced-pulver-woman-mega-menu.jpg",
+              "image_tablet": "shopify:\/\/shop_images\/Saturo-balanced-pulver-woman-mega-menu-widescreen.jpg",
+              "desc": "Probiere unser neues Balanced Pulver. 30 g Protein, alle Vitamine & Mineralien. Zuckerfrei.",
+              "url": "shopify:\/\/collections\/pulver",
+              "url_text": "Balanced Pulver >"
+            }
+          },
+          "8a84a321-bbf2-41ab-8001-892014f658d5": {
+            "type": "mega_menu_banner",
+            "settings": {
+              "title": "Coach",
+              "image": "shopify:\/\/shop_images\/Rectangle_8.jpg",
+              "image_tablet": "shopify:\/\/shop_images\/mega_menu_side_tablet.jpg",
+              "desc": "Coach Banner",
+              "url": "#",
+              "url_text": "Zum Coach >"
+            }
+          },
+          "88d59469-64d9-4d4c-9ebb-46d81a0ea56d": {
+            "type": "mega_menu_banner",
+            "settings": {
+              "title": "info",
+              "image": "shopify:\/\/shop_images\/Saturo-faq.jpg",
+              "image_tablet": "shopify:\/\/shop_images\/Saturo-faq-widescreen.jpg",
+              "desc": "Du hast Fragen zur Bestellung oder zu unseren Produkten? Schaue in unserem Hilfe-Center vorbei",
+              "url": "https:\/\/saturo.com\/apps\/hilfe-center",
+              "url_text": "Hilfe-Center >"
+            }
+          }
+        },
+        "block_order": [
+          "815461ad-5786-44d1-bcc0-1b3637068467",
+          "8a84a321-bbf2-41ab-8001-892014f658d5",
+          "88d59469-64d9-4d4c-9ebb-46d81a0ea56d"
+        ],
+        "settings": {
+          "logo_svg": true,
+          "logo_width": 11,
+          "menu": "main-menu-dawn-0-1",
+          "menu_footer_link_text": "Kontakt",
+          "menu_footer_link": "shopify:\/\/pages\/kontakt",
+          "btn_text": "Jetzt bestellen",
+          "btn_style": "btn--primary"
+        }
+      },
+      "custom-footer": {
+        "type": "custom-footer",
+        "blocks": {
+          "5d17d4c6-29ba-457e-a673-17f818043414": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-menu-1-dawn"
+            }
+          },
+          "acda68d1-681c-4ebf-8150-d685463cbfc8": {
+            "type": "link_list",
+            "settings": {
+              "menu": "footer-menu-2-dawn-0-1"
+            }
+          }
+        },
+        "block_order": [
+          "5d17d4c6-29ba-457e-a673-17f818043414",
+          "acda68d1-681c-4ebf-8150-d685463cbfc8"
+        ],
+        "settings": {
+          "title": "Wir sind für dich da!",
+          "contact_text": "<p class=\"p\">Du erreichst uns Montag-Freitag <br>von 9 - 18 Uhr.<\/p><p class=\"p\"><a class=\"p-link\" href=\"tel:+431395079400\" title=\"+43 1 395 079 400\"><strong>+43 1 395 079 400<\/strong><\/a><a class=\"p-link\" href=\"mailto:support@saturo.com\" title=\"mailto:support@saturo.com\"><strong>support@saturo.com<\/strong><\/a><\/p><p class=\"p\"><a class=\"p-link\" href=\"\/pages\/kontakt\" title=\"Kontakt\"><strong>Kontakt<\/strong><\/a><\/p>",
+          "legal_menu": "footer-menu-3-dawn-0-1"
+        }
+      },
+      "quiz-questions": {
+        "type": "quiz-questions",
+        "settings": {
+        }
+      },
+      "quiz-product": {
+        "type": "quiz-product",
+        "settings": {
+          "modal_headline": "Saturo Personalized ist bald verfügbar - jetzt eintragen",
+          "modal_text": "Saturo Personalized ist aktuell noch nicht verfügbar. Trage dich ein, um als Erste:r zu erfahren, sobald es verfügbar ist und sichere dir deinen exklusiven Rabatt.",
+          "modal_label": "E-Mail-Adresse",
+          "modal_button_text": "Jetzt eintragen",
+          "custom_header_color": "--color-black-grey-title"
+        }
+      },
+      "product-for-vegans": {
+        "type": "product-for-vegans",
+        "settings": {
+          "title": "<span class=\"align-left\">     Erbsen- und<\/span>\n<span class=\"align-left\"> Reisprotein,<\/span>\n<span class=\"align-center\">Hafer<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-left\"> Tapioka und<\/span>\n<span class=\"align-center\">Leinöl<\/span>",
+          "subtitle": "Wir lassen Zutaten sprechen.",
+          "s1_title": "Hochwertiger Hafer: Der Healthy Held vom Feld.",
+          "s1_text": "<p class=\"h2-headline\">Reich an Ballaststoffen<\/p>\n    <p class=\"h2-headline\">Fördert eine gesunde Verdauung<\/p>",
+          "s2_title": "Erbsenprotein: Das All-In-One-Protein.",
+          "s2_text": "<p class=\"h2-headline\">Reich an BCAA (Branched Chain Amino Acids)<\/p>\n      <p class=\"h2-headline\">Enthält essentielle Amionsäuren<\/p>",
+          "s3_title": "Reisprotein: Ein echtes Muskel-Have.",
+          "s3_text": "<p class=\"h2-headline\">Hoher Anteil an essentiellen Aminosäuren<\/p>\n      <p class=\"h2-headline\">Reich an wertvollen Vitaminen und Mineralstoffen<\/p>",
+          "s4_title": "Leinsamen: Die Saat, die mehr als satt macht.",
+          "s4_text": "<p class=\"h2-headline\">Reich an gesunden Omega-3-Fettsäuren<\/p>\n    <p class=\"h2-headline\">Wirken sättigend und fördert die Verdauung<\/p>"
+        }
+      },
+      "product-macrosplit": {
+        "type": "product-macrosplit",
+        "settings": {
+          "title": "Makrosplit",
+          "subtitle": "Unsere Pulver liefert dir ein ausgewogenes Makronährstoffverhältnis (XX% der Energie stammen aus Kohlenhydraten, XX% aus Proteinen, X% aus Fett, X% aus Ballaststoffe) und zudem alle 26 essentielle Vitamine und Mineralstoffe. Alles drin, was du brauchst.",
+          "tables_title": "Nährwerttabelle und Zutaten",
+          "meta_name": ""
+        }
+      },
+      "faq": {
+        "type": "faq",
+        "settings": {
+          "bg_color_variable": "",
+          "html_heading": ""
+        }
+      },
+      "quiz-footer": {
+        "type": "quiz-footer",
+        "settings": {
+        }
+      },
+      "quiz-flavours": {
+        "type": "quiz-flavours",
+        "settings": {
+        }
+      },
+      "quiz-upsell": {
+        "type": "quiz-upsell",
+        "settings": {
+        }
+      },
+      "quiz-product-sections": {
+        "type": "quiz-product-sections",
+        "blocks": {
+          "f8e2e1f3-bbd2-48b5-ae53-8b45666b238e": {
+            "type": "question",
+            "settings": {
+              "question": "Was ist neu am Saturo Balanced Pulver v5.0?",
+              "answer": "<p>Unsere Produktentwickler:innen arbeiten kontinuierlich daran die Zusammensetzung sowie den Geschmack zu verbessern.<br\/>Aktuell gibt es das Pulver in folgenden Sorten:<br\/>Natur: Das natürlichste Saturo. Ohne jegliches Aroma oder Süßstoff. Rein wie die Natur.<br\/><br\/>Schokolade: Voller Schokoladengeschmack.<br\/>Banane: Frischer und natürlicher Bananengeschmack dank echtem Fruchtpulver.<\/p>"
+            }
+          },
+          "fac56646-f2f7-40bb-86fd-c7de67b8efbf": {
+            "type": "question",
+            "settings": {
+              "question": "Was ist das Saturo Balanced Pulver?",
+              "answer": "<p>Unsere Produktentwickler:innen arbeiten kontinuierlich daran die Zusammensetzung sowie den Geschmack zu verbessern.<br\/>Aktuell gibt es das Pulver in folgenden Sorten:<br\/>Natur: Das natürlichste Saturo. Ohne jegliches Aroma oder Süßstoff. Rein wie die Natur.<br\/><br\/>Schokolade: Voller Schokoladengeschmack.<br\/>Banane: Frischer und natürlicher Bananengeschmack dank echtem Fruchtpulver.<\/p>"
+            }
+          },
+          "447061c9-9b18-4001-826d-7c95c6aa94fb": {
+            "type": "question",
+            "settings": {
+              "question": "Wie schmeckt das Saturo Balanced Pulver?",
+              "answer": "<p>Unsere Produktentwickler:innen arbeiten kontinuierlich daran die Zusammensetzung sowie den Geschmack zu verbessern.<br\/>Aktuell gibt es das Pulver in folgenden Sorten:<br\/>Natur: Das natürlichste Saturo. Ohne jegliches Aroma oder Süßstoff. Rein wie die Natur.<br\/><br\/>Schokolade: Voller Schokoladengeschmack.<br\/>Banane: Frischer und natürlicher Bananengeschmack dank echtem Fruchtpulver.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "f8e2e1f3-bbd2-48b5-ae53-8b45666b238e",
+          "fac56646-f2f7-40bb-86fd-c7de67b8efbf",
+          "447061c9-9b18-4001-826d-7c95c6aa94fb"
+        ],
+        "settings": {
+          "single_high_title": "Das bist du ...",
+          "s1_desktop_grid": 2,
+          "s1_tablet_grid": 2,
+          "s1_mobile_grid": 2,
+          "s1_a_icon": "",
+          "s1_a_highlight": "180",
+          "s1_a_text": "<p>Körpergröße (cm)<\/p>",
+          "s1_b_icon": "",
+          "s1_b_highlight": "73",
+          "s1_b_text": "<p>Aktuelles Körpergewicht (kg)<\/p>",
+          "single_high_subtitle": "Dein Lieblingssport",
+          "s2_desktop_grid": 3,
+          "s2_tablet_grid": 3,
+          "s2_mobile_grid": 2,
+          "s2_a_icon": "",
+          "s2_a_highlight": "",
+          "s2_a_text": "<p>Krafttraining<\/p>",
+          "s2_b_icon": "",
+          "s2_b_highlight": "",
+          "s2_b_text": "<p>Fußball<\/p>",
+          "s2_c_icon": "",
+          "s2_c_highlight": "",
+          "s2_c_text": "<p>Laufen<\/p>",
+          "card_bg_color": "--color-black-grey-light-3",
+          "card_title": "Das sind deine Ziele ...",
+          "card_s1_a_icon": "",
+          "card_s1_a_highlight": "73",
+          "card_s1_a_text": "<p>Ziel-Körpergewicht (kg)<\/p>",
+          "card_s1_b_icon": "",
+          "card_s1_b_highlight": "3",
+          "card_s1_b_text": "<p>Zielgewicht in Wochen<\/p>",
+          "card_subtitle": "Athletisch",
+          "subtext": "Deine Wunschfigur",
+          "card1_title": "Wohlfühlgewicht erreichen",
+          "card1_text": "<p>Gemeinsam mit Ernährungsexperten haben wir ein Produkt entwickelt, um dich nicht nur satt, sondern sich deinen Bedürfnissen und Zielen anpasst und dich auf deinem Weg zum Wohlfühlgewicht begleitet.<\/p>",
+          "card1_bg_image": "shopify:\/\/shop_images\/Background_image.png",
+          "card1_bg_image_women": "shopify:\/\/shop_images\/20220528-woman-jump-rope.jpg",
+          "card1_id": "Abnehmen",
+          "card2_title": "Gewicht zunehmen",
+          "card2_text": "<p>Unsere Motivation heißt Innovation: Du hast dir als Ziel gesetzt Gewicht zuzunehmen und dabei wollen wir dich unterstützen. Wir haben für dich das passende Produkt entwickelt, welches dich schneller an dein Ziel bringt.<\/p>",
+          "card2_bg_image": "shopify:\/\/shop_images\/Zunehmen_bg.png",
+          "card2_bg_image_women": "shopify:\/\/shop_images\/20220528-woman-running-concrete.jpg",
+          "card2_id": "Zunehmen",
+          "card3_title": "Muskeln aufbauen",
+          "card3_text": "<p>Wir wollen Ernährung nicht nur weiterdenken, sondern dich damit auch weiterbringen. Mit personalisierter Ernährung wird jede Mahlzeit zu genau dem Treibstoff, der dich deinen Zielen näher bringt – und darüber hinaus.<\/p>",
+          "card3_bg_image": "shopify:\/\/shop_images\/Muskelaufbau_bg.png",
+          "card3_bg_image_women": "shopify:\/\/shop_images\/20220528-woman-workout-beach.jpg",
+          "card3_id": "Muskelaufbauen",
+          "card4_title": "Muskeln erhalten",
+          "card4_text": "<p>Ernährung sollte so vielfältig sein wie wir: Saturo liefert dir genau die Menge an Nährstoffen, damit du deine Muskelmasse halten kannst. Damit du genau das bekommst, was dein Körper braucht.<\/p>",
+          "card4_bg_image": "shopify:\/\/shop_images\/Muskeln_erhalten_bg_2d7a5a08-42c7-400f-92fc-05429f32a1fc.png",
+          "card4_bg_image_women": "shopify:\/\/shop_images\/20220528-woman-squat.jpg",
+          "card4_id": "Muskelnerhalten",
+          "card5_title": "Besser regenerieren",
+          "card5_text": "<p>Gesunde Ernährung hat in jedem Alltag Platz: Dein personalisiertes Produkt versorgt dich auch ohne viel Zeit mit gesunder Energie und allen wichtigen Nährstoffen, die dir dabei helfen besser zu regenerieren.<\/p>",
+          "card5_bg_image": "shopify:\/\/shop_images\/Workout_recovery_bg.png",
+          "card5_bg_image_women": "shopify:\/\/shop_images\/20220527-woman-recovery-resting.jpg",
+          "card5_id": "Recovery nach dem Workout",
+          "card6_title": "Leistung steigern",
+          "card6_text": "<p>Um dein Bestes zu geben, musst du auch bestmöglich versorgt sein. Saturo Personalized wird für dich angepasst, damit du genau das bekommst, was dein Körper braucht.<\/p>",
+          "card6_bg_image": "shopify:\/\/shop_images\/Sportliche_Leistung_bg.png",
+          "card6_bg_image_women": "shopify:\/\/shop_images\/20220528-woman-streching.jpg",
+          "card6_id": "Sportliche Leistung",
+          "card7_title": "Kalorienaufnahme erhöhen",
+          "card7_text": "<p>Wir bieten dir gesunde Ernährung, die nicht nur zu deinen Zielen passt, sondern auch mit ihnen wächst. Durch Personalisierung kannst du deine Ernährung jederzeit anpassen und so Schritt für Schritt deinen neuen Lebensstil etablieren.<\/p>",
+          "card7_bg_image": "shopify:\/\/shop_images\/Kalorienaufnahme_erhohen_bg.png",
+          "card7_bg_image_women": "shopify:\/\/shop_images\/20220528-woman-shaker.jpg",
+          "card7_id": "Kalorienaufnahme erhöhen",
+          "card8_title": "Gut versorgt sein",
+          "card8_text": "<p>Das Schönste ist, sich im eigenen Körper wohlzufühlen: dein personalisiertes Produkt begleitet dich mit den richtigen Nährstoffen ganz einfach durch den Alltag und passt sich deinen Bedürfnissen an.<\/p>",
+          "card8_bg_image": "shopify:\/\/shop_images\/Alle_Vitamine_Mineralien_aufnehmen_bg.png",
+          "card8_bg_image_women": "shopify:\/\/shop_images\/20220528-woman-smoothie.jpg",
+          "card8_id": "Alle Vitamine & Mineralien aufnehmen",
+          "card_square_bg_color": "--color-cappuccino-light",
+          "card_square_title": "So erreichst du deine Ziele mit Saturo ...",
+          "card_square_subtitle": "Deine Personalized Saturo Mahlzeiten",
+          "card_square_card1_title": "Frühstück",
+          "card_square_card1_text": "<p>Dein personalisiertes Frühstück hat <strong>500<\/strong> kcal.<\/p>",
+          "card_square_card1_btn_text": "Nährwertangaben",
+          "card_square_card1_btn_url": "#macrotables",
+          "card_square_card1_btn_style": "btn--text",
+          "card_square_card2_title": "Mittagessen",
+          "card_square_card2_text": "<p>Dein personalisiertes Mittagessen hat <strong>500<\/strong> kcal.<\/p>",
+          "card_square_card2_btn_text": "Nährwertangaben",
+          "card_square_card2_btn_url": "#macrotables",
+          "card_square_card2_btn_style": "btn--text",
+          "card_square_card3_title": "Abendessen",
+          "card_square_card3_text": "<p>Dein personalisiertes Abendessen hat <strong>500<\/strong> kcal.<\/p>",
+          "card_square_card3_btn_text": "Nährwertangaben",
+          "card_square_card3_btn_url": "#macrotables",
+          "card_square_card3_btn_style": "btn--text",
+          "card_square_card4_title": "Snack",
+          "card_square_card4_text": "<p>Dein personalisierter Snack hat <strong>200<\/strong> kcal.<\/p>",
+          "card_square_card4_btn_text": "Nährwertangaben",
+          "card_square_card4_btn_url": "#macrotables",
+          "card_square_card4_btn_style": "btn--text",
+          "for_vegans_title": "<span class=\"align-left\">     Erbsen- und<\/span>\n<span class=\"align-left\"> Reisprotein,<\/span>\n<span class=\"align-center\">Hafer<\/span>\n<span class=\"align-left\">  Tapioka und<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-center\">Leinöl<\/span>",
+          "for_vegans_subtitle": "Die Zutaten deines personalisierten Shakes",
+          "s1_title": "Hochwertiger Hafer: Der Healthy Held vom Feld.",
+          "for_vegans_s1_text": "<p class=\"h2-headline\">Reich an Ballaststoffen<\/p>\n    <p class=\"h2-headline\">Fördert eine gesunde Verdauung<\/p>",
+          "for_vegans_s2_title": "Erbsenprotein: Das All-In-One-Protein.",
+          "for_vegans_s2_text": "<p class=\"h2-headline\">Reich an BCAA (Branched Chain Amino Acids)<\/p>\n      <p class=\"h2-headline\">Enthält essentielle Amionsäuren<\/p>",
+          "for_vegans_s3_title": "Reisprotein: Ein echtes Muskel-Have.",
+          "for_vegans_s3_text": "<p class=\"h2-headline\">Hoher Anteil an essentiellen Aminosäuren<\/p>\n      <p class=\"h2-headline\">Reich an wertvollen Vitaminen und Mineralstoffen<\/p>",
+          "for_vegans_s4_title": "Leinsamen: Die Saat, die mehr als satt macht.",
+          "for_vegans_s4_text": "<p class=\"h2-headline\">Reich an gesunden Omega-3-Fettsäuren<\/p>\n    <p class=\"h2-headline\">Wirken sättigend und fördert die Verdauung<\/p>",
+          "table_breakfast_title": "Frühstück",
+          "table_lunch_title": "Mittagessen",
+          "table_dinner_title": "Abendessen",
+          "table_snack_title": "Snack",
+          "macrosplit_title": "Makrosplit",
+          "macrosplit_subtitle": "Unsere Pulver liefert dir ein ausgewogenes Makronährstoffverhältnis (XX% der Energie stammen aus Kohlenhydraten, XX% aus Proteinen, X% aus Fett, X% aus Ballaststoffe) und zudem alle 26 essentielle Vitamine und Mineralstoffe. Alles drin, was du brauchst.",
+          "tables_title": "Nährwerttabelle und Zutaten",
+          "meta_name": "",
+          "mix_easier_title": "<span class=\"align-left\">    Einfach deine<\/span>\n<span class=\"align-left\">personalisierte<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-left\">       Mahlzeit<\/span>\n<span class=\"align-center\">zubereiten.<\/span>",
+          "s1_text": "<p class=\"p\">500ml Wasser in den Shaker füllen<\/p><p class=\"p\">Drei gestrichene Löffel Saturo Balanced Pulver dazugeben<\/p><p class=\"p\">Gut durchmischen<\/p>",
+          "s2_image1": "shopify:\/\/shop_images\/mix-easier_image1.png",
+          "s2_image2": "shopify:\/\/shop_images\/shaker-mobile.jpg",
+          "s2_image3": "shopify:\/\/shop_images\/shaker-mobile.jpg",
+          "s2_text": "<p class=\"p\">Schritt 1: <span data-water-ml>500ml<\/span> Wasser in den Shaker füllen<\/p><p class=\"p\">Schritt 2: <span data-spoons-number>1<\/span> Löffel Saturo Personalized dazugeben<\/p><p class=\"p\">Schritt 3: Kräftig schütteln bis sich das Pulver vollständig auflöst.<\/p>",
+          "s2_text2": "<p class=\"p\">Ausgewogen ernähren mit allen Nährstoffen, die du brauchst.<\/p><p class=\"p\">Nach Lust und Laune genießen.<\/p>",
+          "bg_color_variable": "",
+          "html_heading": ""
+        }
+      },
+      "quiz-header": {
+        "type": "quiz-header",
+        "settings": {
+          "class": ""
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#FFFFFF",
+      "colors_accent_1": "#121212",
+      "colors_accent_2": "#334FB4",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#FFFFFF",
+      "colors_background_2": "#F3F3F3",
+      "type_header_font": "assistant_n4",
+      "type_body_font": "assistant_n4",
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "color_scheme": "background-1"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {
+          }
+        }
+      }
+    },
+    "Craft": {
+      "colors_solid_button_labels": "#EFECEC",
+      "colors_accent_1": "#2A332F",
+      "colors_accent_2": "#476154",
+      "colors_text": "#1C1A1A",
+      "colors_outline_button_labels": "#7B8382",
+      "colors_background_1": "#EFECEC",
+      "colors_background_2": "#C1BCAE",
+      "type_header_font": "americana_n4",
+      "type_body_font": "quattrocento_sans_n4",
+      "sections": {
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "menu": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "menu",
+            "text"
+          ],
+          "settings": {
+            "color_scheme": "accent-1"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{{ 'normal-text-section.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width normal-text-section__wrapper">
+  {{ section.settings.content }}
+</section>
+
+{% schema %}
+{
+  "name": "Normal Text Section",
+  "tag": "section",
+  "class": "normal-text-section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "content",
+      "label": "Content (HTML)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Normal Text Section"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,907 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Saturo Theme (Dawn 2.4.0)",
+    "theme_version": "w2.3.1-q1.6.1-t2.4.0",
+    "theme_author": "Saturo",
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes\/os20\/themes-by-shopify\/dawn",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
+  },
+  {
+    "name": "t:settings_schema.colors.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors.settings.header__1.content"
+      },
+      {
+        "type": "color",
+        "id": "colors_solid_button_labels",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
+        "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_accent_1",
+        "default": "#121212",
+        "label": "t:settings_schema.colors.settings.colors_accent_1.label",
+        "info": "t:settings_schema.colors.settings.colors_accent_1.info"
+      },
+      {
+        "id": "gradient_accent_1",
+        "type": "color_background",
+        "label": "t:settings_schema.colors.settings.gradient_accent_1.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_accent_2",
+        "default": "#334FB4",
+        "label": "t:settings_schema.colors.settings.colors_accent_2.label"
+      },
+      {
+        "id": "gradient_accent_2",
+        "type": "color_background",
+        "label": "t:settings_schema.colors.settings.gradient_accent_2.label"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors.settings.header__2.content"
+      },
+      {
+        "type": "color",
+        "id": "colors_text",
+        "default": "#121212",
+        "label": "t:settings_schema.colors.settings.colors_text.label",
+        "info": "t:settings_schema.colors.settings.colors_text.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_outline_button_labels",
+        "default": "#121212",
+        "label": "t:settings_schema.colors.settings.colors_outline_button_labels.label",
+        "info": "t:settings_schema.colors.settings.colors_outline_button_labels.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_background_1",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_background_1.label"
+      },
+      {
+        "id": "gradient_background_1",
+        "type": "color_background",
+        "label": "t:settings_schema.colors.settings.gradient_background_1.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_background_2",
+        "default": "#F3F3F3",
+        "label": "t:settings_schema.colors.settings.colors_background_2.label"
+      },
+      {
+        "id": "gradient_background_2",
+        "type": "color_background",
+        "label": "t:settings_schema.colors.settings.gradient_background_2.label"
+      },
+      {
+        "type": "header",
+        "content": {
+          "cs": "Tlačítka",
+          "da": "Knapper",
+          "de": "Buttons",
+          "en": "Buttons",
+          "es": "Botones",
+          "fi": "Painikkeet",
+          "fr": "Boutons",
+          "it": "Pulsanti",
+          "ja": "ボタン",
+          "ko": "버튼",
+          "nb": "Knapper",
+          "nl": "Knoppen",
+          "pl": "Przyciski",
+          "pt-BR": "Botões",
+          "pt-PT": "Botões",
+          "sv": "Knappar",
+          "th": "ปุ่ม",
+          "tr": "Düğmeler",
+          "vi": "Nút",
+          "zh-CN": "按钮",
+          "zh-TW": "按鈕"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_button",
+        "label": {
+          "cs": "Primární tlačítka",
+          "da": "Primære knapper",
+          "de": "Primäre Buttons",
+          "en": "Primary buttons",
+          "es": "Botones primarios",
+          "fi": "Ensisijaiset painikkeet",
+          "fr": "Boutons primaires",
+          "it": "Pulsanti primari",
+          "ja": "主なボタン",
+          "ko": "기본 버튼",
+          "nb": "Primærknapper",
+          "nl": "Primaire knoppen",
+          "pl": "Przyciski główne",
+          "pt-BR": "Botões primários",
+          "pt-PT": "Botões principais",
+          "sv": "Primära knappar",
+          "th": "ปุ่มหลัก",
+          "tr": "Birincil düğmeler",
+          "vi": "Nút chính",
+          "zh-CN": "主要按钮",
+          "zh-TW": "主要按鈕"
+        },
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "color_button_text",
+        "label": {
+          "cs": "Primární popisky",
+          "da": "Primære labels",
+          "de": "Primäre Beschriftung",
+          "en": "Primary labels",
+          "es": "Etiquetas principales",
+          "fi": "Ensisijaiset tarrat",
+          "fr": "Étiquettes primaires",
+          "it": "Etichette primarie",
+          "ja": "一次ラベル",
+          "ko": "기본 레이블",
+          "nb": "Primære etiketter",
+          "nl": "Primaire labels",
+          "pl": "Etykiety główne",
+          "pt-BR": "Rótulos primários",
+          "pt-PT": "Etiquetas principais",
+          "sv": "Primär etiketter",
+          "th": "ป้ายกำกับหลัก",
+          "tr": "Birincil etiketler",
+          "vi": "Nhãn chính",
+          "zh-CN": "主要标签",
+          "zh-TW": "主要標籤"
+        },
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_small_button_text_border",
+        "label": {
+          "cs": "Sekundární popisky a ohraničení",
+          "da": "Sekundære labels og kanter",
+          "de": "Sekundäre Labels und Ränder",
+          "en": "Secondary labels and borders",
+          "es": "Etiquetas secundarias y bordes",
+          "fi": "Toissijaiset tarrat ja reunukset",
+          "fr": "Étiquettes secondaires et bordures",
+          "it": "Etichette e bordi secondari",
+          "ja": "二次ラベルと罫線",
+          "ko": "보조 레이블 및 테두리",
+          "nb": "Sekundære etiketter og rammer",
+          "nl": "Secundaire labels en randen",
+          "pl": "Etykiety dodatkowe i obramowania",
+          "pt-BR": "Rótulos e bordas secundárias",
+          "pt-PT": "Limites e etiquetas secundárias",
+          "sv": "Sekundära etiketter och gränser",
+          "th": "ป้ายกำกับรองและขอบ",
+          "tr": "İkincil etiketler ve kenarlıklar",
+          "vi": "Nhãn và đường viền phụ",
+          "zh-CN": "次要标签和边框",
+          "zh-TW": "次要標籤和邊框"
+        },
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "color_button_secondary",
+        "label": {
+          "de": "Secondary buttons",
+          "en": "Secondary buttons"
+        },
+        "default": "#77bc1f"
+      },
+      {
+        "type": "color",
+        "id": "color_button_secondary_text",
+        "label": {
+          "de": "Secondary buttons text",
+          "en": "Secondary buttons text"
+        },
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_button_tertiary",
+        "label": {
+          "de": "Tertiary buttons",
+          "en": "Tertiary buttons"
+        },
+        "default": "#E30513"
+      },
+      {
+        "type": "color",
+        "id": "color_button_tertiary_text",
+        "label": {
+          "de": "Tertiary buttons text",
+          "en": "Tertiary buttons text"
+        },
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_button_white_accent_text",
+        "label": {
+          "de": "White accent buttons text",
+          "en": "White accent buttons text"
+        },
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_button_highlight",
+        "label": {
+          "de": "Highlight buttons",
+          "en": "Highlight buttons"
+        },
+        "default": "#77bc1f"
+      },
+      {
+        "type": "header",
+        "content": {
+          "cs": "Pole formuláře",
+          "da": "Formularfelter",
+          "de": "Formularfelder",
+          "en": "Form fields",
+          "es": "Campos de formulario",
+          "fi": "Lomakekentät",
+          "fr": "Champs de formulaire",
+          "it": "Campi modulo",
+          "ja": "フォームフィールド",
+          "ko": "양식 필드",
+          "nb": "Skjemafelt",
+          "nl": "Formuliervelden",
+          "pl": "Pola formularza",
+          "pt-BR": "Campos de formulário",
+          "pt-PT": "Campos de formulário",
+          "sv": "Formulärfält",
+          "th": "ช่องข้อมูลของแบบฟอร์ม",
+          "tr": "Form alanları",
+          "vi": "Trường biểu mẫu",
+          "zh-CN": "表单字段",
+          "zh-TW": "表單欄位"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_text_field_text",
+        "label": {
+          "cs": "Text",
+          "da": "Tekst",
+          "de": "Text",
+          "en": "Text",
+          "es": "Texto",
+          "fi": "Teksti",
+          "fr": "Texte",
+          "it": "Testo",
+          "ja": "テキスト",
+          "ko": "텍스트",
+          "nb": "Tekst",
+          "nl": "Tekst",
+          "pl": "Tekst",
+          "pt-BR": "Texto",
+          "pt-PT": "Texto",
+          "sv": "Text",
+          "th": "ข้อความ",
+          "tr": "Metin",
+          "vi": "Văn bản",
+          "zh-CN": "文本",
+          "zh-TW": "文字"
+        },
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "color_text_field_border",
+        "label": {
+          "cs": "Ohraničení",
+          "da": "Kanter",
+          "de": "Ränder",
+          "en": "Borders",
+          "es": "Bordes",
+          "fi": "Reunukset",
+          "fr": "Bordures",
+          "it": "Bordi",
+          "ja": "境界線",
+          "ko": "테두리",
+          "nb": "Rammer",
+          "nl": "Grenzen",
+          "pl": "Obramowania",
+          "pt-BR": "Bordas",
+          "pt-PT": "Limites",
+          "sv": "Gränser",
+          "th": "ขอบ",
+          "tr": "Kenarlıklar",
+          "vi": "Đường viền",
+          "zh-CN": "边框",
+          "zh-TW": "邊框"
+        },
+        "default": "#cccccc"
+      },
+      {
+        "type": "color",
+        "id": "color_text_field",
+        "label": {
+          "cs": "Pozadí",
+          "da": "Baggrund",
+          "de": "Hintergrund",
+          "en": "Background",
+          "es": "Fondo",
+          "fi": "Tausta",
+          "fr": "Couleur de fond",
+          "it": "Sfondo",
+          "ja": "背景",
+          "ko": "배경",
+          "nb": "Bakgrunn",
+          "nl": "Achtergrond",
+          "pl": "Tło",
+          "pt-BR": "Plano de fundo",
+          "pt-PT": "Fundo",
+          "sv": "Bakgrund",
+          "th": "พื้นหลัง",
+          "tr": "Arka plan",
+          "vi": "Nền",
+          "zh-CN": "背景",
+          "zh-TW": "背景"
+        },
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": {
+          "cs": "Překryvy obrázku",
+          "da": "Overlejring af billeder",
+          "de": "Text auf Fotos",
+          "en": "Image overlays",
+          "es": "Superposiciones de imágenes",
+          "fi": "Kuvan peitto",
+          "fr": "Superpositions d'images",
+          "it": "Sovrapposizioni di immagine",
+          "ja": "画像のオーバーレイ",
+          "ko": "이미지 오버레이",
+          "nb": "Bildeoverlegg",
+          "nl": "Beeld-overlays",
+          "pl": "Nakładki obrazu",
+          "pt-BR": "Sobreposições de imagens",
+          "pt-PT": "Sobreposições de imagens",
+          "sv": "Bildöverlagring",
+          "th": "การวางซ้อนรูปภาพ",
+          "tr": "Görsel yer paylaşımları",
+          "vi": "Lớp phủ hình ảnh",
+          "zh-CN": "图片叠加",
+          "zh-TW": "圖片疊加層"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_image_overlay_text",
+        "label": {
+          "cs": "Text",
+          "da": "Tekst",
+          "de": "Text",
+          "en": "Text",
+          "es": "Texto",
+          "fi": "Teksti",
+          "fr": "Texte",
+          "it": "Testo",
+          "ja": "テキスト",
+          "ko": "텍스트",
+          "nb": "Tekst",
+          "nl": "Tekst",
+          "pl": "Tekst",
+          "pt-BR": "Texto",
+          "pt-PT": "Texto",
+          "sv": "Text",
+          "th": "ข้อความ",
+          "tr": "Metin",
+          "vi": "Văn bản",
+          "zh-CN": "文本",
+          "zh-TW": "文字"
+        },
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "color_image_overlay",
+        "label": {
+          "cs": "Pozadí",
+          "da": "Baggrund",
+          "de": "Hintergrund",
+          "en": "Background",
+          "es": "Fondo",
+          "fi": "Tausta",
+          "fr": "Couleur de fond",
+          "it": "Sfondo",
+          "ja": "背景",
+          "ko": "배경",
+          "nb": "Bakgrunn",
+          "nl": "Achtergrond",
+          "pl": "Tło",
+          "pt-BR": "Plano de fundo",
+          "pt-PT": "Fundo",
+          "sv": "Bakgrund",
+          "th": "พื้นหลัง",
+          "tr": "Arka plan",
+          "vi": "Nền",
+          "zh-CN": "背景",
+          "zh-TW": "背景"
+        },
+        "default": "#685858"
+      },
+      {
+        "type": "range",
+        "id": "image_overlay_opacity",
+        "label": {
+          "cs": "Neprůhlednost",
+          "da": "Uigennemsigtighed",
+          "de": "Opazität",
+          "en": "Opacity",
+          "es": "Opacidad",
+          "fi": "Sameus",
+          "fr": "Opacité",
+          "it": "Opacità",
+          "ja": "不透過率",
+          "ko": "불투명도",
+          "nb": "Gjennomsiktighet",
+          "nl": "Doorschijnendheid",
+          "pl": "Nieprzezroczystość",
+          "pt-BR": "Opacidade",
+          "pt-PT": "Opacidade",
+          "sv": "Opacitet",
+          "th": "ความทึบ",
+          "tr": "Opaklık",
+          "vi": "Độ chắn sáng",
+          "zh-CN": "不透明度",
+          "zh-TW": "透明度"
+        },
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": {
+          "cs": "%",
+          "da": "%",
+          "de": "%",
+          "en": "%",
+          "es": "%",
+          "fi": "%",
+          "fr": "%",
+          "it": "%",
+          "ja": "%",
+          "ko": "%",
+          "nb": "%",
+          "nl": "%",
+          "pl": "%",
+          "pt-BR": "%",
+          "pt-PT": "%",
+          "sv": "%",
+          "th": "%",
+          "tr": "%",
+          "vi": "%",
+          "zh-CN": "%",
+          "zh-TW": "%"
+        },
+        "default": 40
+      },
+      {
+        "type": "header",
+        "content": {
+          "cs": "Stránka",
+          "da": "Side",
+          "de": "Seite",
+          "en": "Page",
+          "es": "Página",
+          "fi": "Sivu",
+          "fr": "Page",
+          "it": "Pagina",
+          "ja": "ページ",
+          "ko": "페이지",
+          "nb": "Side",
+          "nl": "Pagina",
+          "pl": "Strona",
+          "pt-BR": "Página",
+          "pt-PT": "Página",
+          "sv": "Sida",
+          "th": "หน้า",
+          "tr": "Sayfa",
+          "vi": "Trang",
+          "zh-CN": "页面",
+          "zh-TW": "頁面"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_borders",
+        "label": {
+          "cs": "Ohraničení a čáry",
+          "da": "Kanter og beskæringer",
+          "de": "Rahmen und Linien",
+          "en": "Borders and lines",
+          "es": "Bordes y líneas",
+          "fi": "Rajat ja viivat",
+          "fr": "Bordures et lignes",
+          "it": "Bordi e linee",
+          "ja": "罫線と線",
+          "ko": "테두리 및 라인",
+          "nb": "Border og linjer",
+          "nl": "Randen en lijnen",
+          "pl": "Obramowania i linie",
+          "pt-BR": "Bordas e linhas",
+          "pt-PT": "Limites e linhas",
+          "sv": "Gränser och linjer",
+          "th": "เส้นขอบและบรรทัด",
+          "tr": "Kenarlıklar ve çizgiler",
+          "vi": "Đường viền và đường kẻ",
+          "zh-CN": "边框和线条",
+          "zh-TW": "邊框和線條"
+        },
+        "default": "#ebebeb"
+      },
+      {
+        "type": "color",
+        "id": "color_body_bg",
+        "label": {
+          "cs": "Pozadí",
+          "da": "Baggrund",
+          "de": "Hintergrund",
+          "en": "Background",
+          "es": "Fondo",
+          "fi": "Tausta",
+          "fr": "Couleur de fond",
+          "it": "Sfondo",
+          "ja": "背景",
+          "ko": "배경",
+          "nb": "Bakgrunn",
+          "nl": "Achtergrond",
+          "pl": "Tło",
+          "pt-BR": "Plano de fundo",
+          "pt-PT": "Fundo",
+          "sv": "Bakgrund",
+          "th": "พื้นหลัง",
+          "tr": "Arka plan",
+          "vi": "Nền",
+          "zh-CN": "背景",
+          "zh-TW": "背景"
+        },
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": {
+          "de": "Highlight",
+          "en": "Highlight"
+        }
+      },
+      {
+        "type": "color",
+        "id": "color_highlight_1",
+        "label": {
+          "en": "Highlight 1",
+          "de": "Highlight 1"
+        },
+        "default": "#77BC1F"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.typography.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.header__1.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_header_font",
+        "default": "assistant_n4",
+        "label": "t:settings_schema.typography.settings.type_header_font.label",
+        "info": "t:settings_schema.typography.settings.type_header_font.info"
+      },
+      {
+        "type": "range",
+        "id": "heading_scale",
+        "min": 100,
+        "max": 150,
+        "step": 5,
+        "unit": "%",
+        "label": "t:settings_schema.typography.settings.heading_scale.label",
+        "default": 100
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.header__2.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_body_font",
+        "default": "assistant_n4",
+        "label": "t:settings_schema.typography.settings.type_body_font.label",
+        "info": "t:settings_schema.typography.settings.type_body_font.info"
+      },
+      {
+        "type": "range",
+        "id": "body_scale",
+        "min": 100,
+        "max": 130,
+        "step": 5,
+        "unit": "%",
+        "label": "t:settings_schema.typography.settings.body_scale.label",
+        "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Custom Fonts"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_alt1_font",
+        "default": "avenir_next_n4",
+        "label": "Alternative Font 1"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.styles.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.styles.settings.header__1.content"
+      },
+      {
+        "type": "select",
+        "id": "sale_badge_color_scheme",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__2.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__3.label"
+          },
+          {
+            "value": "background-2",
+            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__1.label"
+          }
+        ],
+        "default": "accent-2",
+        "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.label"
+      },
+      {
+        "type": "select",
+        "id": "sold_out_badge_color_scheme",
+        "options": [
+          {
+            "value": "background-1",
+            "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.options__1.label"
+          },
+          {
+            "value": "inverse",
+            "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.options__2.label"
+          }
+        ],
+        "default": "inverse",
+        "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.label"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.styles.settings.header__2.content"
+      },
+      {
+        "type": "select",
+        "id": "accent_icons",
+        "options": [
+          {
+            "value": "accent-1",
+            "label": "t:settings_schema.styles.settings.accent_icons.options__1.label"
+          },
+          {
+            "value": "accent-2",
+            "label": "t:settings_schema.styles.settings.accent_icons.options__2.label"
+          },
+          {
+            "value": "outline-button",
+            "label": "t:settings_schema.styles.settings.accent_icons.options__3.label"
+          },
+          {
+            "value": "text",
+            "label": "t:settings_schema.styles.settings.accent_icons.options__4.label"
+          }
+        ],
+        "default": "text",
+        "label": "t:settings_schema.styles.settings.accent_icons.label"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.layout.name",
+    "settings": [
+      {
+        "type": "select",
+        "id": "page_width",
+        "options": [
+          {
+            "value": "980",
+            "label": "980px"
+          },
+          {
+            "value": "1200",
+            "label": "t:settings_schema.layout.settings.page_width.options__1.label"
+          },
+          {
+            "value": "1600",
+            "label": "t:settings_schema.layout.settings.page_width.options__2.label"
+          }
+        ],
+        "default": "1600",
+        "label": "t:settings_schema.layout.settings.page_width.label"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.social-media.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.social-media.settings.header.content"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "t:settings_schema.social-media.settings.social_twitter_link.label",
+        "info": "t:settings_schema.social-media.settings.social_twitter_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "t:settings_schema.social-media.settings.social_facebook_link.label",
+        "info": "t:settings_schema.social-media.settings.social_facebook_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_link",
+        "label": "t:settings_schema.social-media.settings.social_pinterest_link.label",
+        "info": "t:settings_schema.social-media.settings.social_pinterest_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "t:settings_schema.social-media.settings.social_instagram_link.label",
+        "info": "t:settings_schema.social-media.settings.social_instagram_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok_link",
+        "label": "t:settings_schema.social-media.settings.social_tiktok_link.label",
+        "info": "t:settings_schema.social-media.settings.social_tiktok_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_link",
+        "label": "t:settings_schema.social-media.settings.social_tumblr_link.label",
+        "info": "t:settings_schema.social-media.settings.social_tumblr_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat_link",
+        "label": "t:settings_schema.social-media.settings.social_snapchat_link.label",
+        "info": "t:settings_schema.social-media.settings.social_snapchat_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_link",
+        "label": "t:settings_schema.social-media.settings.social_youtube_link.label",
+        "info": "t:settings_schema.social-media.settings.social_youtube_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo_link",
+        "label": "t:settings_schema.social-media.settings.social_vimeo_link.label",
+        "info": "t:settings_schema.social-media.settings.social_vimeo_link.info"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.search_input.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.search_input.settings.header.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "predictive_search_enabled",
+        "default": true,
+        "label": "t:settings_schema.search_input.settings.predictive_search_enabled.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "predictive_search_show_vendor",
+        "default": false,
+        "label": "t:settings_schema.search_input.settings.predictive_search_show_vendor.label",
+        "info": "t:settings_schema.search_input.settings.predictive_search_show_vendor.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "predictive_search_show_price",
+        "default": true,
+        "label": "t:settings_schema.search_input.settings.predictive_search_show_price.label",
+        "info": "t:settings_schema.search_input.settings.predictive_search_show_price.info"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.favicon.name",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "t:settings_schema.favicon.settings.favicon.label",
+        "info": "t:settings_schema.favicon.settings.favicon.info"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.currency_format.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.currency_format.settings.content"
+      },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.currency_format.settings.paragraph"
+      },
+      {
+        "type": "checkbox",
+        "id": "currency_code_enabled",
+        "label": "t:settings_schema.currency_format.settings.currency_code_enabled.label",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "LCP Images",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Set images to preload on specific pages."
+      },
+      {
+        "type": "header",
+        "content": "Index Page"
+      },
+      {
+        "type": "image_picker",
+        "id": "index_image_wide",
+        "label": "Background Image - Wide"
+      },
+      {
+        "type": "image_picker",
+        "id": "index_image_desktop",
+        "label": "Background Image - Desktop (REQUIRED)"
+      },
+      {
+        "type": "image_picker",
+        "id": "index_image_tablet",
+        "label": "Background Image - Tablet"
+      },
+      {
+        "type": "image_picker",
+        "id": "index_image_mobile",
+        "label": "Background Image - Mobile"
+      }
+    ]
+  }
+]

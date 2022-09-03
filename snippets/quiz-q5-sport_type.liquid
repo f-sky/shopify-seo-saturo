@@ -1,0 +1,122 @@
+<!-- q5: sport_type -->
+<div class="quiz-item quiz-q5 is-hidden" data-sport-types-question data-quiz-item="q5"  data-quiz-item-handle="sportType">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.sport_type.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q5">{% render 'icon-quiz-info' %}</a></h2>
+    <p class="quiz-item__subtitle p">{{ "personalized_quiz.sport_type.subtitle" | t }}</p>
+    <div class="quiz-options quiz-options--inline">
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-muscule" type="checkbox" name="sport_type" value="Training mit Gewichten/ Krafttraining" data-quiz-answer data-quiz-answer-id="weight_workout">
+        <label for="quiz-muscule">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-muscule' %}
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_muscle" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Laufen" type="checkbox" name="sport_type" value="Laufen" data-quiz-answer data-quiz-answer-id="running">
+        <label for="quiz-Laufen">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-Ausdauersport' %}
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_running" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Fußball" type="checkbox" name="sport_type" value="Fußball" data-quiz-answer data-quiz-answer-id="football">
+        <label for="quiz-Fußball">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-football' %}
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_football" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Schwimmen" type="checkbox" name="sport_type" value="Schwimmen" data-quiz-answer data-quiz-answer-id="swimming">
+        <label for="quiz-Schwimmen">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-schwimmen' %}
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_swimming" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Walking" type="checkbox" name="sport_type" value="Walking" data-quiz-answer data-quiz-answer-id="walking">
+        <label for="quiz-Walking">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-walking' %}
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_walking" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Radfahren" type="checkbox" name="sport_type" value="Radfahren" data-quiz-answer data-quiz-answer-id="biking">
+        <label for="quiz-Radfahren">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-radfahren' %}
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_cycling" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Cross-Fit" type="checkbox" name="sport_type" value="Cross-Fit" data-quiz-answer data-quiz-answer-id="cross_fit">
+        <label for="quiz-Cross-Fit">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-crossfit' %}
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_crossfit" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Yoga" type="checkbox" name="sport_type" value="Yoga" data-quiz-answer data-quiz-answer-id="yoga">
+        <label for="quiz-Yoga">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-yoga' %}
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_yoga" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Andere" type="checkbox" name="sport_type" value="Andere" data-quiz-answer data-quiz-answer-id="other">
+        <label for="quiz-Andere">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-andereDots.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details" data-label-text>{{ "personalized_quiz.sport_type.option_other" | t }}</span>
+        </label>
+      </div>
+      <div class="mt-3 quiz-option input-wrapper">
+        <input id="quiz-Andere" type="text" class="input m-underline" name="sport_type_input" placeholder="Sonstige" data-quiz-answer data-quiz-answer-andere>
+        <label for="quiz-Andere" class="label">{{ "personalized_quiz.sport_type.option_other" | t }}</label>
+      </div>
+
+    </div>
+
+    <div data-quiz-errors>
+    </div>
+    
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.sport_type.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q5">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.sport_type.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.sport_type.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q5 -->

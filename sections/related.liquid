@@ -1,0 +1,93 @@
+{{ 'section-related.css' | asset_url | stylesheet_tag }}
+
+{{ 'masonry.pkgd.min.js' | asset_url | script_tag }}
+
+<section id="{{ section.settings.section_id }}" class="page-width related-wrapper">
+  {% if section.settings.more_articles_title != blank %}
+    <h3 class="h2-headline related__articles--title"><strong>{{ section.settings.more_articles_title }}</strong></h3>
+  {% endif %}
+  {% if section.settings.more_articles_subtitle != blank %}
+    <p class="p related__articles--subtitle">{{ section.settings.more_articles_subtitle }}</p>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="related__articles">
+      <div class="related__articles--grid-inner" data-page-blog-overview-grid="{{ section_id }}">
+        {% for block in section.blocks %}
+          {% render 'snippet-page-blog-overview-item', block: block %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const $grids = document.querySelectorAll('[data-page-blog-overview-grid]');
+    setTimeout(function() {
+      if ($grids.length) {
+        $grids.forEach(grid => {
+          var msnry = new Masonry( grid, {
+            itemSelector: '[data-page-blog-overview-item]',
+            percentPosition: true,
+            gutter: 15
+          });
+        });
+      }
+    }, 0);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Related",
+  "tag": "section",
+  "class": "related-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "more_articles_title",
+      "label": "More Articles Title"
+    },
+    {
+      "type": "text",
+      "id": "more_articles_subtitle",
+      "label": "More Articles Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Page",
+      "type": "page",
+      "settings": [
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page"
+        }
+      ]
+    },
+    {
+      "name": "Article",
+      "type": "article",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Article"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Related"
+    }
+  ]
+}
+{% endschema %}

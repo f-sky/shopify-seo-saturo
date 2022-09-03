@@ -1,0 +1,312 @@
+{{ 'single-high.css' | asset_url | stylesheet_tag }}
+
+<section class="single-high__wrapper page-width">
+    <h3 class="single-high__title h2-headline">{{ section.settings.title }}</h3>
+    
+    <div class="single-high__section1-items">
+        {% if section.settings.s1_a_text != blank or section.settings.s1_a_highlight != blank %}
+            <div class="single-high__section-item" data-s1-item>
+                {% if section.settings.s1_a_icon != blank %}
+                    <img src="{{ section.settings.s1_a_icon }}" alt="">
+                {% elsif section.settings.s1_a_highlight != blank %}
+                    <h4 class="h1-headline">{{ section.settings.s1_a_highlight }}</h4>
+                {% endif %}
+                {% if section.settings.s1_a_text != blank %}
+                    <div class="p">
+                        {{ section.settings.s1_a_text }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {% if section.settings.s1_b_text != blank or section.settings.s1_b_highlight != blank %}
+            <div class="single-high__section-item" data-s1-item>
+                {% if section.settings.s1_b_icon != blank %}
+                    <img src="{{ section.settings.s1_b_icon }}" alt="">
+                {% elsif section.settings.s1_b_highlight != blank %}
+                    <h4 class="h1-headline">{{ section.settings.s1_b_highlight }}</h4>
+                {% endif %}
+                {% if section.settings.s1_b_text != blank %}
+                    <div class="p">
+                        {{ section.settings.s1_b_text }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+    <h3 class="single-high__subtitle h2-headline">{{ section.settings.subtitle }}</h3>
+    
+    <div class="single-high__section2-items">
+        {% if section.settings.s2_a_text != blank or section.settings.s2_a_highlight != blank %}
+            <div class="single-high__section-item" data-s2-item>
+                {% if section.settings.s2_a_icon != blank %}
+                    <img src="{{ section.settings.s2_a_icon }}" alt="">
+                {% elsif section.settings.s2_a_highlight != blank %}
+                    <h4 class="h1-headline">{{ section.settings.s2_a_highlight }}</h4>
+                {% endif %}
+                {% if section.settings.s2_a_text != blank %}
+                    <div class="p">
+                        {{ section.settings.s2_a_text }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+
+        {% if section.settings.s2_b_text != blank or section.settings.s2_b_highlight != blank %}
+            <div class="single-high__section-item" data-s2-item>
+                {% if section.settings.s2_b_icon != blank %}
+                    <img src="{{ section.settings.s2_b_icon }}" alt="">
+                {% elsif section.settings.s2_b_highlight != blank %}
+                    <h4 class="h1-headline">{{ section.settings.s2_b_highlight }}</h4>
+                {% endif %}
+                {% if section.settings.s2_b_text != blank %}
+                    <div class="p">
+                        {{ section.settings.s2_b_text }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+
+        {% if section.settings.s2_c_text != blank or section.settings.s2_c_highlight != blank %}
+            <div class="single-high__section-item" data-s2-item>
+                {% if section.settings.s2_c_icon != blank %}
+                    <img src="{{ section.settings.s2_c_icon }}" alt="">
+                {% elsif section.settings.s2_c_highlight != blank %}
+                    <h4 class="h1-headline">{{ section.settings.s2_c_highlight }}</h4>
+                {% endif %}
+                {% if section.settings.s2_c_text != blank %}
+                    <div class="p">
+                        {{ section.settings.s2_c_text }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const s1DesktopGrid = Number("{{ section.settings.s1_desktop_grid }}");
+        const s1TabletGrid = Number("{{ section.settings.s1_tablet_grid }}");
+        const s1MobileGrid = Number("{{ section.settings.s1_mobile_grid }}");
+        const s1DesktopWidth = (100 / s1DesktopGrid).toFixed(2);
+        const s1TabletWidth = (100 / s1TabletGrid).toFixed(2);
+        const s1MobileWidth = (100 / s1MobileGrid).toFixed(2);
+        
+        const s2DesktopGrid = Number("{{ section.settings.s2_desktop_grid }}");
+        const s2TabletGrid = Number("{{ section.settings.s2_tablet_grid }}");
+        const s2MobileGrid = Number("{{ section.settings.s2_mobile_grid }}");
+        const s2DesktopWidth = (100 / s2DesktopGrid).toFixed(2);
+        const s2TabletWidth = (100 / s2TabletGrid).toFixed(2);
+        const s2MobileWidth = (100 / s2MobileGrid).toFixed(2);
+
+        const styles = `
+        <style>
+            [data-s1-item] { width: ${s1DesktopWidth}%; }
+            [data-s2-item] { width: ${s2DesktopWidth}%; }
+
+            @media only screen and (max-width: 1024px) {
+                [data-s1-item] { width: ${s1TabletWidth}%; }
+                [data-s2-item] { width: ${s2TabletWidth}%; }
+            }
+
+            @media only screen and (max-width: 767px) {
+                [data-s1-item] { width: ${s1MobileWidth}%; }
+                [data-s2-item] { width: ${s2MobileWidth}%; }
+            }
+        </style>`
+        document.head.insertAdjacentHTML("beforeend", styles);
+  
+    });
+  </script>
+
+{% schema %}
+{
+    "name": "Single Highlight",
+    "tag": "section",
+    "class": "single-high",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Single Highlight"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+          "type": "range",
+          "id": "s1_desktop_grid",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3,
+          "label": "Items per row",
+          "info": "Section 1 - Desktop"
+        },
+        {
+          "type": "range",
+          "id": "s1_tablet_grid",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3,
+          "label": "Items per row",
+          "info": "Section 1 - Tablet"
+        },
+        {
+          "type": "range",
+          "id": "s1_mobile_grid",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3,
+          "label": "Items per row",
+          "info": "Section 1 - Mobile"
+        },
+        {
+            "type": "header",
+            "content": "1st Item"
+        },
+        {
+            "type": "text",
+            "id": "s1_a_icon",
+            "label": "Icon - File Url"
+        },
+        {
+            "type": "text",
+            "id": "s1_a_highlight",
+            "label": "Highlight"
+        },
+        {
+            "type": "richtext",
+            "id": "s1_a_text",
+            "label": "Text"
+        },
+        {
+            "type": "header",
+            "content": "2nd Item"
+        },
+        {
+            "type": "text",
+            "id": "s1_b_icon",
+            "label": "Icon - File Url"
+        },
+        {
+            "type": "text",
+            "id": "s1_b_highlight",
+            "label": "Highlight"
+        },
+        {
+            "type": "richtext",
+            "id": "s1_b_text",
+            "label": "Text"
+        },
+        {
+            "type": "header",
+            "content": "Section 2"
+        },
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle"
+        },
+        {
+          "type": "range",
+          "id": "s2_desktop_grid",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3,
+          "label": "Items per row",
+          "info": "Section 2 - Desktop"
+        },
+        {
+          "type": "range",
+          "id": "s2_tablet_grid",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3,
+          "label": "Items per row",
+          "info": "Section 2 - Tablet"
+        },
+        {
+          "type": "range",
+          "id": "s2_mobile_grid",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3,
+          "label": "Items per row",
+          "info": "Section 2 - Mobile"
+        },
+        {
+            "type": "header",
+            "content": "1st Item"
+        },
+        {
+            "type": "text",
+            "id": "s2_a_icon",
+            "label": "Icon - File Url"
+        },
+        {
+            "type": "text",
+            "id": "s2_a_highlight",
+            "label": "Highlight"
+        },
+        {
+            "type": "richtext",
+            "id": "s2_a_text",
+            "label": "Text"
+        },
+        {
+            "type": "header",
+            "content": "2nd Item"
+        },
+        {
+            "type": "text",
+            "id": "s2_b_icon",
+            "label": "Icon - File Url"
+        },
+        {
+            "type": "text",
+            "id": "s2_b_highlight",
+            "label": "Highlight"
+        },
+        {
+            "type": "richtext",
+            "id": "s2_b_text",
+            "label": "Text"
+        },
+        {
+            "type": "header",
+            "content": "3rd Item"
+        },
+        {
+            "type": "text",
+            "id": "s2_c_icon",
+            "label": "Icon - File Url"
+        },
+        {
+            "type": "text",
+            "id": "s2_c_highlight",
+            "label": "Highlight"
+        },
+        {
+            "type": "richtext",
+            "id": "s2_c_text",
+            "label": "Text"
+        }
+    ],
+    "presets": [
+      {
+        "name": "Single Highlight"
+      }
+    ]
+}
+{% endschema %}

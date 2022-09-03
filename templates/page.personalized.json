@@ -1,0 +1,384 @@
+{
+  "sections": {
+    "16579029299027612a": {
+      "type": "product-header-2",
+      "settings": {
+        "title": "<span class=\"align-left\">Eine Mahlzeit<\/span>\n<span class=\"align-center\">auf dich<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-left\">zugeschnitten.<\/span>",
+        "heading_2": "Hole mehr aus dir raus mit einer personalisierten Mahlzeit.",
+        "heading_2_style": "h2-headline",
+        "subtitle": "",
+        "btn_text": "Starte dein Quiz",
+        "btn_url": "shopify:\/\/pages\/quiz",
+        "btn_style": "",
+        "assigned_product": "",
+        "bg_image_wide": "shopify:\/\/shop_images\/202200601-saturo-personalized-hero_desktop_3841x2732px.jpg",
+        "bg_image_desktop": "shopify:\/\/shop_images\/202200601-saturo-personalized-hero_desktop_3841x2732px.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/20220530saturopersonalizedherobottom_mobile.webp",
+        "text_color": "",
+        "bg_color": "",
+        "hide_circle": false,
+        "content_side": "content-left",
+        "mobile_content_position": "content-all-top__mobile",
+        "title_small_margin": true,
+        "custom_header_color": "",
+        "quiz_button": false
+      }
+    },
+    "16598854290e31748f": {
+      "type": "image-with-text",
+      "blocks": {
+        "69184033-0ea9-4033-9de9-6e6c470b3914": {
+          "type": "title",
+          "settings": {
+            "title_text": "Wir bieten dir die Nährstoffe, die komplett zu dir passen. Denn wir sind alle verschieden.",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "text_align": ""
+          }
+        },
+        "6e2dc6d4-c238-4115-aed9-d3b68e3ab3eb": {
+          "type": "title",
+          "settings": {
+            "title_text": "Vollwertige Ernährung voll auf dich zugeschnitten.",
+            "heading_style": "h1-headline font-two",
+            "heading_tag": "h2",
+            "text_align": ""
+          }
+        }
+      },
+      "block_order": [
+        "69184033-0ea9-4033-9de9-6e6c470b3914",
+        "6e2dc6d4-c238-4115-aed9-d3b68e3ab3eb"
+      ],
+      "settings": {
+        "bg_color": "",
+        "image_fullscreen": false,
+        "desktop_layout": "image_last",
+        "mobile_layout": "text_first",
+        "padding_top": true,
+        "padding_bottom": true,
+        "image": "shopify:\/\/shop_images\/20220608saturopersonalizedingredients-1654668793355.jpg",
+        "section_id": ""
+      }
+    },
+    "1659886832af9ee4d2": {
+      "type": "card",
+      "blocks": {
+        "93a3a8a5-b9c4-469c-a45f-c198d67c3b9f": {
+          "type": "card",
+          "settings": {
+            "card_title": "Wohlfühlgewicht erreichen",
+            "card_text": "<p>Gemeinsam mit Ernährungsexperten haben wir ein Ernährungssystem entwickelt, um dich nicht nur satt zu machen, sondern das sich an deine Bedürfnisse und Ziele anpasst. So erreicht du deine Ziele.<\/p>",
+            "card_bg_image": "shopify:\/\/shop_images\/Background_image.png"
+          }
+        },
+        "a41f19a2-e51d-4609-b5a2-13c862b6c4c6": {
+          "type": "card",
+          "settings": {
+            "card_title": "Gewicht zunehmen",
+            "card_text": "<p>Unsere Motivation heißt Innovation: Du hast dir als Ziel gesetzt, Gewicht zuzunehmen und dabei wollen wir dich unterstützen. Wir haben das passende Ernährungssystem entwickelt, welches dich schneller an dein Ziel bringt.<\/p>",
+            "card_bg_image": "shopify:\/\/shop_images\/20220528-woman-running-concrete.jpg"
+          }
+        },
+        "0e24d426-ee04-46da-b1b5-001cf8227ef2": {
+          "type": "card",
+          "settings": {
+            "card_title": "Muskeln aufbauen",
+            "card_text": "<p>Wir wollen Ernährung nicht nur weiterdenken, sondern dich damit auch weiterbringen. Mit personalisierter Ernährung wird jede Mahlzeit zu genau dem Treibstoff, der dich deinen Zielen näher bringt – und darüber hinaus.<\/p>",
+            "card_bg_image": "shopify:\/\/shop_images\/Muskelaufbau_bg.png"
+          }
+        },
+        "2da05e49-6d64-49c5-85b9-54a6bedd75fd": {
+          "type": "card",
+          "settings": {
+            "card_title": "Muskeln erhalten",
+            "card_text": "<p>Ernährung sollte so vielfältig sein wie du: Saturo liefert dir genau die Menge an Nährstoffen, damit du deine Muskelmasse halten kannst. Damit du genau das bekommst, was dein Körper braucht.<\/p>",
+            "card_bg_image": "shopify:\/\/shop_images\/20220528-woman-squat.jpg"
+          }
+        },
+        "2b1385b2-9eea-4065-95ef-3b9c64a250e1": {
+          "type": "card",
+          "settings": {
+            "card_title": "Besser regenerieren",
+            "card_text": "<p>Gesunde Ernährung hat in jedem Alltag Platz: Dein personalisiertes Produkt versorgt dich auch ohne viel Zeit mit gesunder Energie und allen wichtigen Nährstoffen, die dir dabei helfen besser zu regenerieren.<\/p>",
+            "card_bg_image": "shopify:\/\/shop_images\/Workout_recovery_bg.png"
+          }
+        },
+        "5e10ea22-db8e-4461-9cf5-97771c2d02ff": {
+          "type": "card",
+          "settings": {
+            "card_title": "Leistung steigern",
+            "card_text": "<p>Um dein Bestes zu geben, musst du auch bestmöglich versorgt sein. Saturo Personalized wird für dich angepasst, damit du genau das bekommst, was dein Körper für noch mehr Leistung braucht.<\/p>",
+            "card_bg_image": "shopify:\/\/shop_images\/20220528-woman-streching.jpg"
+          }
+        },
+        "03fc3167-2081-4dc4-8ed3-891e3305f04c": {
+          "type": "card",
+          "settings": {
+            "card_title": "Kalorienaufnahme erhöhen",
+            "card_text": "<p>Wir bieten dir gesunde Ernährung, die nicht nur zu deinen Zielen passt, sondern auch mit ihnen wächst. Durch Personalisierung kannst du deine Ernährung jederzeit anpassen und so Schritt für Schritt deinen neuen Lebensstil etablieren.<\/p>",
+            "card_bg_image": "shopify:\/\/shop_images\/Kalorienaufnahme_erhohen_bg.png"
+          }
+        },
+        "9f3cbd7f-88cd-4d16-b9a9-54f2f405d003": {
+          "type": "card",
+          "settings": {
+            "card_title": "Gut versorgt sein",
+            "card_text": "<p>Das Schönste ist, sich im eigenen Körper wohlzufühlen: dein personalisiertes Produkt begleitet dich mit den richtigen Nährstoffen ganz einfach durch den Alltag und passt sich deinen Bedürfnissen an.<\/p>",
+            "card_bg_image": "shopify:\/\/shop_images\/20220528-woman-smoothie.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "93a3a8a5-b9c4-469c-a45f-c198d67c3b9f",
+        "a41f19a2-e51d-4609-b5a2-13c862b6c4c6",
+        "0e24d426-ee04-46da-b1b5-001cf8227ef2",
+        "2da05e49-6d64-49c5-85b9-54a6bedd75fd",
+        "2b1385b2-9eea-4065-95ef-3b9c64a250e1",
+        "5e10ea22-db8e-4461-9cf5-97771c2d02ff",
+        "03fc3167-2081-4dc4-8ed3-891e3305f04c",
+        "9f3cbd7f-88cd-4d16-b9a9-54f2f405d003"
+      ],
+      "settings": {
+        "bg_color": "--color-black-grey-light-3",
+        "title": "Es ist für dich. Und nur für dich.",
+        "heading_style": "h2-headline",
+        "heading_tag": "h2",
+        "subtitle": "<p>Deine Antworten im Quiz helfen uns, deine Ziele, deine Anforderungen und Gewohnheiten zu verstehen um dir ein Saturo zu bieten, welches am besten zu dir passt.<\/p>",
+        "padding_top": true,
+        "padding_bottom": true,
+        "card_btn_text": "Starte dein Quiz",
+        "card_btn_url": "shopify:\/\/pages\/quiz",
+        "card_btn_style": "",
+        "section_id": ""
+      }
+    },
+    "165988684544039c57": {
+      "type": "card-2",
+      "blocks": {
+        "1cfdec06-2c30-4829-a03a-9350b9004609": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify:\/\/shop_images\/Saturo-ingredients-oats-1313x2048.jpg",
+            "card_title": "Hochwertiger Hafer",
+            "card_text": "<p>Reich an Ballaststoffen, die eine gesunde Verdauung fördern<\/p>",
+            "card_btn_text": "",
+            "card_btn_url": "",
+            "card_btn_style": "btn--text"
+          }
+        },
+        "d53aafb1-d03a-4f08-afae-23c1a38d6a68": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify:\/\/shop_images\/zutaten-erbsen-1480x1999.jpg",
+            "card_title": "Erbsenprotein",
+            "card_text": "<p>Reich an BCAA und essentiellen Aminosäuren für einen effektiveren Muskelaufbau.<\/p>",
+            "card_btn_text": "",
+            "card_btn_url": "",
+            "card_btn_style": "btn--text"
+          }
+        },
+        "ad4a9ced-a797-4693-8ade-058f7208c957": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify:\/\/shop_images\/20211120ingredientsriceear3500x2333px--edited-1654634799148.webp",
+            "card_title": "Reisprotein",
+            "card_text": "<p>Reich an wertvollen Vitaminen und Mineralstoffen sowie essentiellen Aminosäuren.<\/p>",
+            "card_btn_text": "",
+            "card_btn_url": "",
+            "card_btn_style": "btn--text"
+          }
+        },
+        "22919f32-b1ac-4d6c-a9e7-00a9b6db61cc": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify:\/\/shop_images\/saturoingredientswheyprotein1351x1824--edited-1654635321144_1.webp",
+            "card_title": "Wheyprotein*",
+            "card_text": "<p>Proteinreich mit wertvollen Aminosäuren, die schnell aufgenommen werden.<\/p>",
+            "card_btn_text": "",
+            "card_btn_url": "",
+            "card_btn_style": "btn--text"
+          }
+        },
+        "96426c5a-e3df-46fa-b2d3-d170ee8a5532": {
+          "type": "card",
+          "settings": {
+            "card_image": "shopify:\/\/shop_images\/20211120ingredientsflaxseedoil3500x2318px--edited-1654635093309.webp",
+            "card_title": "Leinsamen",
+            "card_text": "<p>Reich an gesunden Omega-3-Fettsäuren und mit sättigender Wirkung.<\/p>",
+            "card_btn_text": "",
+            "card_btn_url": "",
+            "card_btn_style": "btn--text"
+          }
+        }
+      },
+      "block_order": [
+        "1cfdec06-2c30-4829-a03a-9350b9004609",
+        "d53aafb1-d03a-4f08-afae-23c1a38d6a68",
+        "ad4a9ced-a797-4693-8ade-058f7208c957",
+        "22919f32-b1ac-4d6c-a9e7-00a9b6db61cc",
+        "96426c5a-e3df-46fa-b2d3-d170ee8a5532"
+      ],
+      "settings": {
+        "bg_color": "--color-vanilla-light",
+        "title": "<span class=\"align-center\">Ausgewogene<\/span>\n<span class=\"align-center\">Ernährung<\/span>\n<span class=\"align-center\">muss keine<\/span>\n<span class=\"align-center\">Wissen<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-center\">schaft sein.<\/span>",
+        "heading_style": "h1-headline font-two",
+        "heading_tag": "h2",
+        "subtitle": "<p>Zumindest nicht für dich. Wir haben mit Hilfe von Ernährungswissenschaft ein <strong>Ernährungssystem entwickelt<\/strong>, das sich auf dich anpasst und dich bestmöglich versorgt. Es macht dein Leben in jeder Hinsicht leichter.<\/p><p>Die Zutaten, die wir verwenden, sind abhängig von deinen Gewohnheiten, Unverträglichkeiten und Vorlieben. Egal, ob <strong>vegan<\/strong> oder <strong>vegetarisch<\/strong>, es passt immer.<\/p>",
+        "padding_top": true,
+        "padding_bottom": true,
+        "card_btn_text": "",
+        "card_btn_url": "",
+        "card_btn_style": "",
+        "details": "*nur enthalten, wenn du die vegetarischen Varianten wählst.",
+        "cards_bg_color": "--color-white",
+        "section_id": ""
+      }
+    },
+    "1659886855693e33be": {
+      "type": "multicolumn",
+      "blocks": {
+        "1659886854b6680fa9-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20220606_Quiz_Step_1.jpg",
+            "title": "",
+            "heading_style": "",
+            "text": "<p>Gehe durch das Quiz, damit wir dich besser kennenlernen und dir ein passendes Saturo zusammenstellen können.<\/p>",
+            "link_label": "",
+            "link": "",
+            "link_style": ""
+          }
+        },
+        "1659886854b6680fa9-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20220606_Quiz_Step2.jpg",
+            "title": "",
+            "heading_style": "",
+            "text": "<p>Gehe durch das Quiz, damit wir dich besser kennenlernen und dir ein passendes Saturo zusammenstellen können.<\/p>",
+            "link_label": "",
+            "link": "",
+            "link_style": ""
+          }
+        },
+        "1659886854b6680fa9-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20220606_founder_1-1.jpg",
+            "title": "",
+            "heading_style": "",
+            "text": "<p>Wir sind immer für dich da, falls du Fragen hast, rund um das Thema (personalisierte) Ernährung oder Zielerreichung.<\/p>",
+            "link_label": "",
+            "link": "",
+            "link_style": ""
+          }
+        }
+      },
+      "block_order": [
+        "1659886854b6680fa9-0",
+        "1659886854b6680fa9-1",
+        "1659886854b6680fa9-2"
+      ],
+      "settings": {
+        "bg_color": "",
+        "heading_before": "Wohlbefinden ist persönlich. Saturo ist passend für dich.",
+        "heading_before_style": "h5-headline",
+        "heading_before_tag": "h5",
+        "title": "Erstelle dein Saturo ganz einfach. So gehts.",
+        "heading_style": "h2-headline",
+        "heading_tag": "h2",
+        "image_width": "two-third",
+        "image_ratio": "circle",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "Starte noch heute",
+        "button_link": "shopify:\/\/pages\/quiz",
+        "btn_style": "",
+        "padding_top": true,
+        "padding_bottom": true,
+        "swipe_on_mobile": false,
+        "section_id": ""
+      }
+    },
+    "165988686304b43b1c": {
+      "type": "image-with-text",
+      "blocks": {
+        "ed377f58-66ee-41f3-b3ea-a148d5ffcad0": {
+          "type": "title",
+          "settings": {
+            "title_text": "Wie du Saturo nutzt",
+            "heading_style": "h2-headline",
+            "heading_tag": "h2",
+            "text_align": ""
+          }
+        },
+        "40f22dc6-ac03-43ec-a547-14f628f42e4b": {
+          "type": "description",
+          "settings": {
+            "description": "<p>Dein Saturo ist so konzipiert, dass du es einfach mixen kannst, damit dein Körper alles bekommt, was er verdient.<\/p>",
+            "text_align": ""
+          }
+        },
+        "164de19f-5d7a-4bcf-91a3-a06be5dcf07e": {
+          "type": "list",
+          "settings": {
+            "list_title": "Deine persönliche Mahlzeit",
+            "list_description": "<p>Mix deine persönliche Menge Pulver mit Wasser (alternativ: Milch(alternativen)).<\/p>",
+            "list_number": "1"
+          }
+        },
+        "51ab38cc-eebf-4fd8-a3ae-b738fccc2a6a": {
+          "type": "list",
+          "settings": {
+            "list_title": "Mach es zur Gewohnheit",
+            "list_description": "<p>Integriere Saturo in deine tägliche Routine, um die besten Ergebnisse zu erzielen. Z.B. als Frühstück, Mittagessen.<\/p>",
+            "list_number": "2"
+          }
+        },
+        "62e31d8e-7e1d-4b8b-9935-42ba57112c7c": {
+          "type": "list",
+          "settings": {
+            "list_title": "Genieße es",
+            "list_description": "<p>Der Weg ist genauso wichtig wie das Ziel. Genieß die Erfolge, wenn sie kommen.<\/p>",
+            "list_number": "3"
+          }
+        },
+        "7847aa7b-5617-43dd-9191-978723b886f2": {
+          "type": "button",
+          "settings": {
+            "btn_text": "Starte dein Quiz",
+            "btn_url": "shopify:\/\/pages\/quiz",
+            "btn_style": ""
+          }
+        }
+      },
+      "block_order": [
+        "ed377f58-66ee-41f3-b3ea-a148d5ffcad0",
+        "40f22dc6-ac03-43ec-a547-14f628f42e4b",
+        "164de19f-5d7a-4bcf-91a3-a06be5dcf07e",
+        "51ab38cc-eebf-4fd8-a3ae-b738fccc2a6a",
+        "62e31d8e-7e1d-4b8b-9935-42ba57112c7c",
+        "7847aa7b-5617-43dd-9191-978723b886f2"
+      ],
+      "settings": {
+        "bg_color": "--color-cappuccino-light",
+        "image_fullscreen": true,
+        "desktop_layout": "image_right",
+        "mobile_layout": "image_first",
+        "padding_top": false,
+        "padding_bottom": false,
+        "image": "shopify:\/\/shop_images\/Saturo-personalized-prepare_800x800px.gif",
+        "section_id": ""
+      }
+    }
+  },
+  "order": [
+    "16579029299027612a",
+    "16598854290e31748f",
+    "1659886832af9ee4d2",
+    "165988684544039c57",
+    "1659886855693e33be",
+    "165988686304b43b1c"
+  ]
+}

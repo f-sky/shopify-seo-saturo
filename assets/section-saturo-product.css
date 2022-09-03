@@ -1,0 +1,40 @@
+/*================ START: PRODUCT HEADER ================*/
+
+
+.span-align-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.span-align-heading span.align-left {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.span-align-heading span.align-right {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.span-align-heading span.align-center {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.span-align-heading span.heading-line {
+  width: 15rem;
+  height: 1rem;
+  background-color: var(--color-black-grey-title);
+  display: inline-block;
+  position: relative;
+  transform: translateY(-100%);
+  margin-left: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .span-align-heading span.heading-line {
+    width: 10rem;
+  }
+}
+
+/*================ END: PRODUCT HEADER ================*/

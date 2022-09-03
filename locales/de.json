@@ -1,0 +1,771 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Shop mit Passwort betreten:",
+      "login_password_button": "Mit Passwort betreten",
+      "login_form_password_label": "Passwort",
+      "login_form_password_placeholder": "Dein Passwort",
+      "login_form_error": "Falsches Passwort!",
+      "login_form_submit": "Eingeben",
+      "admin_link_html": "Bist du der Shop-Inhaber? <a href=\"\/admin\" class=\"link underlined-link\">Hier einloggen<\/a>",
+      "powered_by_shopify_html": "Dieser Shop wird unterstützt von {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Auf Facebook teilen",
+        "share_on_twitter": "Auf Twitter twittern",
+        "share_on_pinterest": "Auf Pinterest pinnen"
+      },
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok"
+      }
+    },
+    "continue_shopping": "Weiter shoppen",
+    "pagination": {
+      "label": "Seitennummerierung",
+      "page": "Seite {{ number }}",
+      "next": "Nächste Seite",
+      "previous": "Vorherige Seite"
+    },
+    "search": {
+      "search": "Suchen"
+    },
+    "cart": {
+      "view": "Meinen Warenkorb ({{ count }}) anzeigen",
+      "item_added": "Artikel wurde in den Warenkorb gelegt"
+    },
+    "share": {
+      "copy_to_clipboard": "Link kopieren",
+      "share_url": "Link",
+      "success_message": "Link in die Zwischenablage kopiert",
+      "close": "Teilen schließen"
+    }
+  },
+  "newsletter": {
+    "label": "E-Mail",
+    "success": "Danke für deine Anmeldung",
+    "button_label": "Abonnieren"
+  },
+  "accessibility": {
+    "skip_to_text": "Direkt zum Inhalt",
+    "close": "Schließen",
+    "unit_price_separator": "pro",
+    "vendor": "Anbieter:",
+    "error": "Fehler",
+    "refresh_page": "Wenn du dich für eine Auswahl entscheidest, wird die Seite komplett aktualisiert.",
+    "link_messages": {
+      "new_window": "Wird in einem neuen Fenster geöffnet.",
+      "external": "Öffnet externe Webseite."
+    },
+    "next_slide": "Nach rechts schieben",
+    "previous_slide": "Nach links schieben",
+    "loading": "Wird geladen ...",
+    "of": "von",
+    "skip_to_product_info": "Zu Produktinformationen springen",
+    "total_reviews": "Bewertungen insgesamt",
+    "star_reviews_info": "{{ rating_value }} von {{ rating_max }} Sternen"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Weiterlesen: {{ title }}",
+      "comments": {
+        "one": "{{ count }} Kommentar",
+        "other": "{{ count }} Kommentare"
+      },
+      "moderated": "Bitte beachte, dass Kommentare vor der Veröffentlichung freigegeben werden müssen.",
+      "comment_form_title": "Hinterlasse einen Kommentar",
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Kommentar",
+      "post": "Kommentar posten",
+      "back_to_blog": "Zurück zum Blog",
+      "share": "Diesen Artikel teilen",
+      "success": "Dein Kommentar wurde erfolgreich gepostet! Vielen Dank!",
+      "success_moderated": "Dein Kommentar wurde erfolgreich gepostet. Da unser Blog moderiert wird, werden wir ihn erst kurze Zeit später veröffentlichen."
+    }
+  },
+  "onboarding": {
+    "product_title": "Beispiel für Produkttitel",
+    "collection_title": "Name deiner Kategorie"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "In den Warenkorb legen",
+      "description": "Beschreibung",
+      "on_sale": "Sale",
+      "product_variants": "Produktvarianten",
+      "quantity": {
+        "label": "Anzahl",
+        "input_label": "Anzahl von {{ product }}",
+        "increase": "Erhöhe die Menge für {{ product }}",
+        "decrease": "Verringere die Menge für {{ product }}"
+      },
+      "price": {
+        "from_price_html": "Von {{ price }}",
+        "regular_price": "Normaler Preis",
+        "sale_price": "Verkaufspreis",
+        "unit_price": "Grundpreis"
+      },
+      "share": "Dieses Produkt teilen",
+      "sold_out": "Ausverkauft",
+      "unavailable": "Nicht verfügbar",
+      "vendor": "Anbieter",
+      "video_exit_message": "{{ title }} öffnet das Video auf derselben Seite im Vollbildmodus.",
+      "xr_button": "In deinem Bereich ansehen",
+      "xr_button_label": "\"Ansicht in deinem Raum\" lädt den Artikel in ein Augmented-Reality-Fenster",
+      "pickup_availability": {
+        "view_store_info": "Shop-Informationen anzeigen",
+        "check_other_stores": "Verfügbarkeit in anderen Shops überprüfen",
+        "pick_up_available": "Abholung verfügbar",
+        "pick_up_available_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}<\/span> verfügbar",
+        "pick_up_unavailable_at_html": "Abholung bei <span class=\"color-foreground\">{{ location_name }}<\/span> derzeit nicht verfügbar",
+        "unavailable": "Verfügbarkeit für Abholungen konnte nicht geladen werden",
+        "refresh": "Aktualisieren"
+      },
+      "media": {
+        "open_featured_media": "Dargestellte Medien in Galerieansicht öffnen",
+        "open_media": "Medien {{ index }} in Galerieansicht öffnen",
+        "play_model": "3D-Viewer abspielen",
+        "play_video": "Video abspielen"
+      },
+      "view_full_details": "Vollständige Details anzeigen",
+      "include_taxes": "inkl. MwSt.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Versand<\/a> wird beim Checkout berechnet"
+    },
+    "modal": {
+      "label": "Medien-Galerie"
+    },
+    "facets": {
+      "apply": "Anwenden",
+      "clear": "Löschen",
+      "clear_all": "Alles löschen",
+      "from": "Von",
+      "filter_and_sort": "Filtern und sortieren",
+      "filter_by_label": "Filter:",
+      "filter_button": "Filter",
+      "filters_selected": {
+        "one": "{{ count }} ausgewählt",
+        "other": "{{ count }} ausgewählt"
+      },
+      "max_price": "Der höchste Preis ist {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} von {{ count }} Produkt",
+        "other": "{{ product_count }} von {{ count }} Produkten"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} Produkt",
+        "other": "{{ count }} Produkte"
+      },
+      "reset": "Zurücksetzen",
+      "sort_button": "Sortieren",
+      "sort_by_label": "Sortieren nach:",
+      "to": "Bis",
+      "clear_filter": "Filter löschen"
+    }
+  },
+  "templates": {
+    "404": {
+      "title": "Seite nicht gefunden",
+      "subtext": "404"
+    },
+    "search": {
+      "no_results": "Keine Ergebnisse gefunden für \"{{ terms }}\". Überprüfe die Schreibweise oder versuche es mit einer anderen Suchanfrage.",
+      "results_with_count": {
+        "one": "{{ count }} Ergebnis",
+        "other": "{{ count }} Ergebnisse"
+      },
+      "title": "Suchergebnisse",
+      "page": "Seite",
+      "products": "Produkte",
+      "search_for": "Nach \"{{ terms }}\" suchen",
+      "results_with_count_and_term": {
+        "one": "{{ count }} Ergebnis für \"{{ terms }}\" gefunden",
+        "other": "{{ count }} Ergebnisse für \"{{ terms }}\" gefunden"
+      }
+    },
+    "cart": {
+      "cart": "Warenkorb"
+    },
+    "contact": {
+      "form": {
+        "name": "Name",
+        "email": "E-Mail",
+        "phone": "Telefonnummer",
+        "comment": "Kommentar",
+        "send": "Senden",
+        "post_success": "Danke, dass du uns kontaktiert hast. Wir werden uns so schnell wie möglich bei dir melden.",
+        "error_heading": "Bitte passe Folgendes an:"
+      }
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Ankündigung",
+      "menu": "Menü",
+      "cart_count": {
+        "one": "{{ count }} Artikel",
+        "other": "{{ count }} Artikel"
+      }
+    },
+    "cart": {
+      "title": "Dein Warenkorb",
+      "caption": "Artikel im Warenkorb",
+      "remove_title": "{{ title }} entfernen",
+      "subtotal": "Zwischensumme",
+      "new_subtotal": "Neue Zwischensumme",
+      "note": "Spezielle Bestellanweisungen",
+      "checkout": "Sicher zur Kasse",
+      "empty": "Dein Warenkorb ist leer",
+      "cart_error": "Beim Aktualisieren deines Warenkorbs ist ein Fehler aufgetreten. Bitte versuche es erneut.",
+      "cart_quantity_error_html": "Du kannst deinem Warenkorb nur {{ quantity }} Stück dieses Artikels hinzufügen.",
+      "taxes_and_shipping_policy_at_checkout_html": "Steuern und <a href=\"{{ link }}\">Versand<\/a> werden beim Checkout berechnet",
+      "taxes_included_but_shipping_at_checkout": "Inklusive Steuern, Versand wird beim Checkout berechnet",
+      "taxes_included_and_shipping_policy_html": "Inklusive Steuern. <a href=\"{{ link }}\">Versand <\/a> wird beim Checkout berechnet",
+      "taxes_and_shipping_at_checkout": "Steuern und Versand werden beim Checkout berechnet",
+      "headings": {
+        "product": "Produkt",
+        "price": "Preis",
+        "total": "Gesamtsumme",
+        "quantity": "Anzahl"
+      },
+      "update": "Aktualisieren",
+      "login": {
+        "title": "Hast du ein Konto?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logge dich ein<\/a>, damit es beim Checkout schneller geht."
+      }
+    },
+    "footer": {
+      "payment": "Zahlungsmethoden"
+    },
+    "featured_blog": {
+      "view_all": "Alle anzeigen",
+      "onboarding_title": "Blog-Beitrag",
+      "onboarding_content": "Verschaffe deinen Kunden eine Übersicht über deinen Blog-Beitrag"
+    },
+    "featured_collection": {
+      "view_all": "Alle anzeigen",
+      "view_all_label": "Alle Produkte in der Kategorie {{ collection_name }} anzeigen"
+    },
+    "collection_list": {
+      "view_all": "Alle anzeigen"
+    },
+    "collection_template": {
+      "title": "Kategorie",
+      "empty": "Keine Produkte gefunden",
+      "use_fewer_filters_html": "Verwende weniger Filter oder <a class=\"{{ class }}\" href=\"{{ link }}\">lösche alle<\/a>"
+    },
+    "video": {
+      "load_video": "Video laden: {{ description }}"
+    }
+  },
+  "localization": {
+    "country_label": "Land\/Region",
+    "language_label": "Sprache",
+    "update_language": "Sprache aktualisieren",
+    "update_country": "Land\/Region aktualisieren"
+  },
+  "customer": {
+    "account": {
+      "title": "Konto",
+      "details": "Kontodetails",
+      "view_addresses": "Adressen anzeigen",
+      "return": "Zurück zu Kontodetails"
+    },
+    "account_fallback": "Konto",
+    "activate_account": {
+      "title": "Konto aktivieren",
+      "subtext": "Erstelle ein Passwort, um dein Konto zu aktiveren.",
+      "password": "Passwort",
+      "password_confirm": "Passwort bestätigen",
+      "submit": "Konto aktivieren",
+      "cancel": "Einladung ablehnen"
+    },
+    "addresses": {
+      "title": "Adressen",
+      "default": "Standard",
+      "add_new": "Neue Adresse hinzufügen",
+      "edit_address": "Adresse bearbeiten",
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "company": "Unternehmen",
+      "address1": "Adresse 1",
+      "address2": "Adresse 2",
+      "city": "Ort",
+      "country": "Land\/Region",
+      "province": "Bundesland\/Provinz",
+      "zip": "PLZ",
+      "phone": "Telefonnummer",
+      "set_default": "Als Standard-Adresse festlegen",
+      "add": "Adresse hinzufügen",
+      "update": "Adresse aktualisieren",
+      "cancel": "Abbrechen",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "delete_confirm": "Bist du sicher, dass du diese Adresse löschen möchtest?"
+    },
+    "log_in": "Einloggen",
+    "log_out": "Abmelden",
+    "login_page": {
+      "cancel": "Abbrechen",
+      "create_account": "Konto erstellen",
+      "email": "E-Mail",
+      "forgot_password": "Hast du dein Passwort vergessen?",
+      "guest_continue": "Fortfahren",
+      "guest_title": "Als Gast fortsetzen",
+      "password": "Passwort",
+      "title": "Login",
+      "sign_in": "Anmelden",
+      "submit": "Senden"
+    },
+    "orders": {
+      "title": "Bestellhistorie",
+      "order_number": "Bestellung",
+      "order_number_link": "Bestellnummer {{ number }}",
+      "date": "Datum",
+      "payment_status": "Zahlungsstatus",
+      "fulfillment_status": "Fulfillmentstatus",
+      "total": "Gesamtsumme",
+      "none": "Du hast noch keine Bestellungen aufgegeben."
+    },
+    "recover_password": {
+      "title": "Setze dein Passwort zurück",
+      "subtext": "Wir werden dir eine E-Mail zum Zurücksetzen deines Passworts schicken",
+      "success": "Wir haben dir eine E-Mail mit einem Link zum Aktualisieren deines Passworts geschickt."
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "submit": "Erstellen"
+    },
+    "reset_password": {
+      "title": "Passwort für Konto zurücksetzen",
+      "subtext": "Gib ein neues Passwort für {{ email }} ein",
+      "password": "Passwort",
+      "password_confirm": "Passwort bestätigen",
+      "submit": "Passwort zurücksetzen"
+    },
+    "order": {
+      "title": "Bestellung {{ name }}",
+      "date_html": "Aufgegeben am {{ date }}",
+      "cancelled_html": "Bestellung storniert am {{ date }}",
+      "cancelled_reason": "Grund: {{ reason }}",
+      "billing_address": "Rechnungsadresse",
+      "payment_status": "Zahlungsstatus",
+      "shipping_address": "Lieferadresse",
+      "fulfillment_status": "Fulfillmentstatus",
+      "discount": "Rabatt",
+      "shipping": "Versand",
+      "tax": "Steuer",
+      "product": "Produkt",
+      "sku": "SKU",
+      "price": "Preis",
+      "quantity": "Menge",
+      "total": "Gesamtsumme",
+      "fulfilled_at_html": "Ausgeführt am {{ date }}",
+      "track_shipment": "Sendung nachverfolgen",
+      "tracking_url": "Tracking-Link",
+      "tracking_company": "Versanddienstleister",
+      "tracking_number": "Trackingnummer",
+      "subtotal": "Zwischensumme"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Hier ist dein Geschenkgutschein im Wert von {{ value }} für {{ shop }}!",
+      "subtext": "Dein Geschenkgutschein",
+      "gift_card_code": "Gutscheincode",
+      "shop_link": "Weiter shoppen",
+      "remaining_html": "{{ balance }} verbleibend",
+      "add_to_apple_wallet": "Zu Apple Wallet hinzufügen",
+      "qr_image_alt": "QR-Code – Scannen, um Geschenkgutschein einzulösen",
+      "copy_code": "Code kopieren",
+      "expired": "Abgelaufen",
+      "copy_code_success": "Code erfolgreich kopiert",
+      "print_gift_card": "Drucken"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
+    }
+  },
+  "personalized_quiz": {
+    "name": {
+      "headline": "Hallo",
+      "subtitle_html": "<p>damit wir dir deinen optimalen Mahlzeitenersatz anbieten können, haben wir ein paar Fragen an dich. Es dauert ungefähr 2 Minuten.<\/p><p>Deinen Namen benötigen wir, damit wir dein Produkt bestmöglich personalisieren können.<\/p>",
+      "input_label": "Dein Vorname",
+      "button_next_text": "WEITER"
+    },
+    "gender": {
+      "headline": "Was ist dein Geschlecht?",
+      "subtitle": "",
+      "popup_headline": "Was ist dein Geschlecht?",
+      "popup_subtitle": "Dein Geschlecht hat Einfluss auf die Berechnung deines Kalorienbedarfs und auf die Zusammensetzung deines Shakes.",
+      "option_female": "Frau",
+      "option_male": "Mann",
+      "option_other": "Divers",
+      "button_next_text": "WEITER"
+    },
+    "body_params": {
+      "headline": "Trage deine Körpergröße und dein aktuelles Gewicht ein.",
+      "subtitle": "Falls du dein Gewicht verändern willst, trage dies ebenfalls ein und auch bis wann du es erreichen möchtest.",
+      "popup_headline": "",
+      "popup_subtitle": "",
+      "error_message": "Das von dir gewünschte Ziel ist leider nicht in der angegeben Zeit erreichbar",
+      "button_next_text": "WEITER",
+      "option_body_size": "Körpergröße",
+      "option_body_size_metric": "cm",
+      "option_body_size_popup_subtitle": "Deine Körpergröße geht in die Berechnung deines Kalorienbedarfs ein.",
+      "option_weight_current": "Aktuelles Gewicht",
+      "option_weight_current_metric": "kg",
+      "option_weight_current_popup_subtitle": "Dein aktuelles Gewicht geht in die Berechnung deines Kalorienbedarfs (Grundumsatz) und gegebenenfalls in die Berechnung deines Kaloriendefizits ein, falls du dein Gewicht reduzieren möchtest.",
+      "option_weight_goal": "Zielgewicht",
+      "option_weight_goal_metric": "kg",
+      "option_weight_goal_popup_subtitle_html": "Anhand deines Zielgewichts wird ermittelt, ob du ab- oder zunehmen, oder dein Gewicht halten möchtest. Je nachdem, was deine Ziele sind, wirkt sich das auf die Makrozusammensetzung deines Shakes aus. <br>Makrozusammensetzung oder \"Makro-Split\" beschreibt das Verhältnis zwischen Kohlenhydraten, gesunden Fettsäuren, Proteinen und Ballaststoffen, die dir die tägliche Energie liefern.",
+      "option_weight_goal_weeks": "Zielgewicht erreichen",
+      "option_weight_goal_weeks_popup_subtitle": "Anhand der Dauer, bis du dein Zielgewicht erreichen möchtest, berechnen wir dein Kaloriendefizit oder deinen Kalorienüberschuss pro Tag."
+    },
+    "lifestyle": {
+      "headline": "Wie beschreibst du deinen Lebensstil im (Arbeits-) Alltag (ohne Sport)?",
+      "subtitle": "",
+      "select_label": "Auswählen",
+      "select_option_1": "nur sitzend oder liegend",
+      "select_option_2": "sitzend, kaum körperliche Aktivität",
+      "select_option_3": "überwiegend sitzend, gehend und stehend",
+      "select_option_4": "hauptsächlich stehend und gehend",
+      "select_option_5": "körperlich anstrengende Arbeit",
+      "popup_headline": "Wie beschreibst du deinen Lebensstil im Alltag (ohne Sport)?",
+      "popup_subtitle": "Mit Hilfe deines Lebensstils wird der PAL-Faktor (Physical Activity Level) ermittelt. Mit diesem PAL-Faktor berechnen wir deinen Leistungsumsatz. Der Leistungsumsatz ist der zusätzliche Kalorienbedarf zu deinem Grundumsatz. Dein Gesamtkalorienbedarf setzt sich aus dem Grundumsatz und dem Leistungsumsatz zusammen.",
+      "button_next_text": "WEITER"
+    },
+    "sport_per_week": {
+      "headline": "Wie häufig treibst du Sport pro Woche?",
+      "subtitle": "",
+      "option_label": "Sport pro Woche",
+      "popup_headline": "Wie häufig treibst du Sport pro Woche?",
+      "popup_subtitle": "Die Sporthäufigkeit fließt in die Berechnung deines täglichen Kalorienbedarfs und deines Proteinbedarfs ein. Zudem beeinflusst sie die Auswahl der Inhaltsstoffe.",
+      "button_next_text": "WEITER"
+    },
+    "sport_duration": {
+      "headline": "Wie lange dauern deine Sporteinheiten im Durchschnitt?",
+      "subtitle": "",
+      "option_label": "Einheiten in Minuten",
+      "popup_headline": "Wie lange dauern deine Sporteinheiten im Durchschnitt?",
+      "popup_subtitle": "Die Sportdauer und -häufigkeit bestimmen dein Aktivitätslevel zur Kalorien- und Proteinbedarfsberechnung.",
+      "button_next_text": "WEITER"
+    },
+    "sport_type": {
+      "headline": "Welche Sportarten führst du regelmäßig aus?",
+      "subtitle": "Mehrfachauswahl möglich",
+      "option_muscle": "Krafttraining",
+      "option_running": "Laufen",
+      "option_football": "Fußball",
+      "option_swimming": "Schwimmen",
+      "option_walking": "Walking",
+      "option_cycling": "Radfahren",
+      "option_crossfit": "Cross-Fit",
+      "option_yoga": "Yoga",
+      "option_other": "Sonstige",
+      "popup_headline": "Welche Sportarten führst du regelmäßig aus?",
+      "popup_subtitle": "Neben der Dauer und Häufigkeit des Sportes wirkt sich die Sportart auf deinen Energiebedarf aus.",
+      "button_next_text": "WEITER"
+    },
+    "meal_replacement_used_before": {
+      "headline": "Hast du bereits Erfahrung mit anderen Trinkmahlzeiten gesammelt?",
+      "subtitle": "",
+      "option_yes": "Ja",
+      "option_no": "Nein",
+      "popup_headline": "",
+      "popup_subtitle": "",
+      "button_next_text": "WEITER"
+    },
+    "meal_replacement_why": {
+      "headline": "Warum möchtest du ein Mahlzeitenersatzprodukt verwenden?",
+      "subtitle": "Mehrfachauswahl möglich",
+      "option_lose_weight": "Abnehmen",
+      "option_gain_weight": "Zunehmen",
+      "option_build_muscle": "Muskelaufbau",
+      "option_preserve_muscle": "Muskeln erhalten",
+      "option_post_workout_recovery": "Recovery nach dem Workout",
+      "option_athletic_performance_html": "Sportliche<br>Leistung steigern",
+      "option_increase_calorie_intake": "Kalorienaufnahme erhöhen",
+      "option_absord_vitamins_minerals": "Alle Vitamine & Mineralstoffe aufnehmen",
+      "option_other": "Sonstige",
+      "popup_headline": "Warum möchtest du ein Mahlzeitenersatzprodukt verwenden?",
+      "popup_subtitle": "Abhängig von deinen Zielen wählen wir die passende Zusammensetzung deines persönlichen Shakes.",
+      "button_next_text": "WEITER"
+    },
+    "meals_per_day": {
+      "headline": "Wie viele Mahlzeiten mit Saturo planst du am Tag?",
+      "subtitle": "",
+      "option_label": "Mahlzeitenersatz pro Tag",
+      "popup_headline": "Wie viele Mahlzeiten mit Saturo planst du am Tag?",
+      "popup_subtitle": "Je nachdem wie häufig du Saturo nutzen willst, passen wir die tägliche Empfehlung an.",
+      "button_next_text": "WEITER"
+    },
+    "diet_special": {
+      "headline": "Wünscht du eine spezielle Ernährung?",
+      "subtitle": "Mehrfachauswahl möglich",
+      "option_vegan": "Vegan",
+      "option_vegetarian": "Vegetarisch",
+      "option_keto": "Keto",
+      "option_sugarfree": "Zuckerfrei",
+      "option_no_preference": "Keine Präferenz",
+      "option_other": "Sonstige",
+      "error_message": "Bitte beachte, dass deine Eingabe bei \"Sonstige\" aktuell nicht berücksichtigt wird. Wir werden es für zukünftige Produktentwicklung berücksichtigen.",
+      "popup_headline": "Wünscht du eine spezielle Ernährung?",
+      "popup_subtitle": "Sofern du eine spezielle Ernährungsweise möchtest, passen wir natürlich die Inhaltsstoffe und die Zusammensetzung daran an.",
+      "button_next_text": "WEITER"
+    },
+    "diet_allergy": {
+      "headline": "Hast du Unverträglichkeiten (Allergien)?",
+      "subtitle": "Mehrfachauswahl möglich",
+      "option_gluten": "Gluten",
+      "option_lactose": "Laktose",
+      "option_soy": "Soja",
+      "option_peanut": "Erdnuss",
+      "option_none": "Keine",
+      "option_other": "Sonstige",
+      "option_other_warning_text": "Bitte beachte, dass deine Eingabe bei \"Sonstige\" aktuell nicht berücksichtigt wird. Wir werden es für zukünftige Produktentwicklung berücksichtigen.",
+      "error_message_no_product": "Leider können wir dir aktuell kein passendes Produkt zusammenstellen.",
+      "popup_headline": "Hast du Unverträglichkeiten (Allergien)?",
+      "popup_subtitle": "Hast du eine Allergie oder Unverträglichkeit? Lass es uns wissen und wir passen die Zutaten daran an.",
+      "button_next_text": "WEITER"
+    },
+    "sleep_day": {
+      "headline": "Wie viele Stunden schläfst du am Tag?",
+      "subtitle": "",
+      "option_label": "Schlaf (Stunden)",
+      "popup_headline": "Wie viele Stunden schläfst du am Tag?",
+      "popup_subtitle": "Die Dauer deines Schlafes wirkt sich auf den PAL-Faktor aus und dieser wiederum wird zur Berechnung deines Leistungsumsatzes benötigt.",
+      "button_next_text": "WEITER"
+    },
+    "body_current": {
+      "headline": "Beschreibe deine aktuelle Körperfigur",
+      "subtitle": "",
+      "option_very_slim": "Sehr schlank",
+      "option_slim": "Schlank",
+      "option_average": "Durchschnittlich",
+      "option_athletic": "Athletisch",
+      "option_muscular": "Muskulös",
+      "option_very_muscular": "Sehr muskulös",
+      "popup_headline": "Beschreibe deine aktuelle Körperfigur",
+      "popup_subtitle": "Deine aktuelle Körperfigur und deine Wunschfigur können die Zusammensetzung deines Shakes beeinflussen.",
+      "button_next_text": "WEITER"
+    },
+    "body_goal": {
+      "headline": "Beschreibe deine Wunschfigur",
+      "subtitle": "",
+      "option_very_slim": "Sehr schlank",
+      "option_slim": "Schlank",
+      "option_average": "Durchschnittlich",
+      "option_athletic": "Athletisch",
+      "option_muscular": "Muskulös",
+      "option_very_muscular": "Sehr muskulös",
+      "popup_headline": "Beschreibe deine Wunschfigur",
+      "popup_subtitle": "Deine aktuelle Körperfigur und deine Wunschfigur können die Zusammensetzung deines Shakes beeinflussen.",
+      "button_next_text": "WEITER"
+    },
+    "birthday": {
+      "headline": "Wann hast du Geburstag?",
+      "subtitle": "",
+      "option_day_label": "TT",
+      "option_month_label": "MM",
+      "option_year_label": "JJJJ",
+      "error_message": "Bitte überprüfe dein Geburtsdatum",
+      "popup_headline": "Wann hast du Geburstag?",
+      "popup_subtitle": "Dein Alter bestimmt deinen Kaloriengrundumsatz und auch deinen Proteinbedarf. Personen über 65 Jahren wird z. B. eine höhere Proteinzufuhr empfohlen.",
+      "button_next_text": "WEITER"
+    },
+    "meal_replacement_use_day": {
+      "headline": "Welche Mahlzeit willst du mit einem Mahlzeitenersatz ersetzen?",
+      "subtitle": "Mehrfachauswahl möglich",
+      "option_breakfast": "Frühstück",
+      "option_lunch": "Mittagessen",
+      "option_dinner": "Abendessen",
+      "option_snack": "Snack",
+      "option_other": "Sonstige",
+      "popup_headline": "Welche Mahlzeit willst du mit einem Mahlzeitenersatz ersetzen?",
+      "popup_subtitle": "Je nachdem zu welcher Tageszeit du deinen Shake trinken möchtest, kann sich deine Makrozusammensetzung verändern.",
+      "button_next_text": "WEITER"
+    },
+    "flavour": {
+      "headline": "Welcher ist dein Lieblingsgeschmack?",
+      "subtitle": "",
+      "option_chocolate": "Schokolade",
+      "option_vanilla": "Vanille",
+      "option_strawberry": "Erdbeere",
+      "popup_headline": "Welcher ist dein Lieblingsgeschmack?",
+      "popup_subtitle": "Damit du deinen Shake liebst, sollte er deiner Lieblingsgeschmacksrichtung entsprechen. Keine Angst, du kannst trotzdem noch andere Varianten bestellen. ",
+      "button_next_text": "WEITER"
+    },
+    "login": {
+      "headline": "Perfekt,",
+      "subtitle": "Um dir das passende Ergebnis zu zeigen, benötigen wir noch etwas von dir.",
+      "input_label": "Email",
+      "accept_emails_label": "Ja, ich möchte E-Mails erhalten, um meine Ziele noch besser und gesünder zu erreichen!",
+      "button_next_text": "ZEIG MIR MEIN SATURO"
+    },
+    "whey": {
+      "headline": "Bevorzugst du typischerweise vegane Drinks (z. B. Hafer- oder Sojadrinks) oder Milch?",
+      "subtitle": "",
+      "option_milk": "Milch",
+      "option_vegan": "Vegane Drinks",
+      "option_none": "Keine Präferenz",
+      "popup_headline": "Bevorzugst du typischerweise vegane Drinks (z. B. Hafer- oder Sojadrinks) oder Milch?",
+      "popup_subtitle_html": "Basierend auf deiner Vorliebe passen wir dein Personalized Saturo entsprechend an. Bevorzugst du vegane Drinks oder du gibst keine Präferenz an, so bekommst du ein veganes Produkt von uns.<br>Solltest du jedoch lieber milchbasierte Produkte bevorzugen, so wird dein Pulver Whey-Protein (Molke) beinhalten.",
+      "button_next_text": "WEITER"
+    },
+    "has_breakfast": {
+      "headline": "Frühstückst du regelmäßig?",
+      "subtitle": "Oder möchtest du regelmäßig frühstücken?",
+      "option_yes": "Ja",
+      "option_no": "Nein",
+      "popup_headline": "Frühstückst du regelmäßig oder möchtest du regelmäßig frühstücken?",
+      "popup_subtitle_html": "Das Frühstück wirkt sich auf die Größe deiner optimalen Portion aus.<br>Regelmäßig bezieht sich primär auf die Tage, an denen du Saturo verwenden möchtest.",
+      "button_next_text": "WEITER"
+    },
+    "channel_first_seen": {
+      "headline": "Wo hast du uns zu erst gesehen oder von uns gehört?",
+      "subtitle": "",
+      "option_test_review": "Testbericht",
+      "option_facebook": "Facebook",
+      "option_instagram": "Instagram",
+      "option_google": "Google",
+      "option_referral": "Empfehlung",
+      "option_amazon": "Amazon",
+      "option_supermarket": "Supermarkt",
+      "option_tiktok": "TikTok",
+      "option_influencer": "Influencer",
+      "option_youtube": "Youtube",
+      "option_tv": "TV",
+      "option_other_social_media": "Andere Social Media",
+      "option_other": "Sonstige",
+      "button_next_text": "WEITER"
+    },
+    "hydration": {
+      "headline": "Was und wie viel trinkst du im Durchschnitt pro Tag?",
+      "subtitle": "",
+      "option_water": "Wasser (liter)",
+      "option_low_calories_drinks": "Kalorienarme Getränke (liter)",
+      "option_low_calories_drinks_popup_subtitle": "z. B. zuckerfreie Limonade oder stark mit Wasser verdünnte Fruchtsäfte",
+      "option_soft_drinks": "Softdrinks\/ Fruchtsäfte (liter)",
+      "option_soft_drinks_popup_subtitle": "z. B. Limonade oder verschiedene Fruchtsäfte",
+      "option_other": "Sonstiges (liter)",
+      "option_total_drinks": "Getränke gesamt (liter)",
+      "error_message_daily_limit": "Die tägliche Menge Flüssigkeit sollte {{ hydration_max_limit }} Liter nicht übersteigen. Bitte reduziere die Menge, die du pro Tag trinkst.",
+      "popup_headline": "Was und wie viel trinkst du im Durchschnitt pro Tag?",
+      "popup_subtitle": "Die Menge und die Art der Flüssigkeit, die du zu dir nimmst, hat Einfluss auf deine Kalorienverteilung.",
+      "button_next_text": "WEITER"
+    },
+    "proteinshake": {
+      "headline": "Nutzt du regelmäßig Protein\/ Eiweißshakes?",
+      "option_yes": "Ja",
+      "option_no": "Nein",
+      "popup_headline": "Nutzt du regelmäßig Protein-\/ Eiweißshakes?",
+      "popup_subtitle": "Der regelmäßige Konsum von Proteinshakes kann Einfluss auf den Proteingehalt deines Saturo haben.",
+      "button_next_text": "WEITER"
+    }
+  },
+  "personalized_quiz_label": {
+    "company_name_html": "Saturo Foods GmbH",
+    "company_address_html": "Mariahifer Str. 101\/3\/45<br>AT-1060 Wien",
+    "meal_replacement_why_header_html": "Hilft dir deine Ziele zu erreichen:",
+    "meal_replace_header_html": "Ersetzt dein:",
+    "special_diet_header_html": "Ist auf deine Ernährung abgestimmt:",
+    "allergy_header_html": "Enthält nichts, was dir nicht gut tut:",
+    "sport_header_html": "Unterstützt dich bei deinen Aktivitäten:",
+    "preparation_intro_html": "Zubereitung:",
+    "preparation_header_html": "Wasser in den Shaker füllen, deine empfohlene Menge Saturo Personalized Pulver dazugeben, gut durchmischen und nach Lust und Laune genießen.",
+    "preparation_tbl_head_meal_html": "Mahlzeit",
+    "preparation_tbl_head_powder_html": "Pulver",
+    "preparation_tbl_head_water_html": "Wasser",
+    "preparation_tbl_column_breakfast_html": "Frühstück",
+    "preparation_tbl_column_lunch_dinner_html": "Mittag-\/ Abendessen",
+    "preparation_tbl_column_snack_html": "Snack",
+    "preparation_tbl_column_other_html": "Sonstiges",
+    "preparation_tbl_column_per_100g_html": "Per 100g",
+    "preparation_tbl_column_riNrv_html": "%RM*",
+    "order_number_text_html": "Bestellnummer",
+    "qr_code_text_html": "Scanne den QR-Code für mehr Informationen & Tipps",
+    "icon_header_html": "So vielfältig wie du",
+    "introduction_salutation_html": "Hey",
+    "introduction_goaltext_1_html": "in deinen Händen hältst du ein Produkt, das so vielfältig ist wie du und auf deine Bedürfnisse abgestimmt wurde. Wir wollen dir bestmöglich beim",
+    "introduction_goaltext_2_html": "helfen. Deshalb haben wir alles, was dein Körper braucht in ein Produkt gepackt.<br>Lass es dir schmecken und lass uns Teil deiner Erfolge sein!",
+    "introduction_greetings_2_html": "Dein Saturo Team",
+    "ingredients_intro_html": "Zutaten:",
+    "additional_legal_info_intro_html": "Info:",
+    "additional_legal_info_text_html": "Alle Angaben unterliegen den bei Naturprodukten üblichen Schwankungen. An einem trockenen und kühlen Ort aufbewahren.",
+    "filling_size_g_text_html": "g",
+    "reference_intake_html": "*Referenzmenge für einen durchschnittlichen Erwachsenen",
+    "personalized_stroke_text_html": "Personalisiert für",
+    "best_before_date_text_html": "Mindestens haltbar bis:",
+    "nutritional_values_text_html": "Nährwerte",
+    "scoop_size_label_html": "Pulvermenge pro gestrichenem Messlöffel (50 ml):",
+    "portion_water_size_text_html": "ml"
+  },
+  "structured_data": {
+    "street": "Mariahilfer Str. 101\/3\/45",
+    "zip": "1060",
+    "city": "Wien",
+    "country": "Österreich",
+    "telephone": "+43 1 395 079 400",
+    "email": "support@saturo.com",
+    "founder": "Joerg Hauke, Hannes Feistenauer",
+    "founding_date": "2017-03-23",
+    "legal_name": "Saturo Foods GmbH",
+    "slogan": "Eat Complete"
+  }
+}

@@ -1,0 +1,173 @@
+.better-food {
+  padding: 11.5rem 0;
+  position: relative;
+}
+
+.better-food::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  z-index: 10;
+  margin: auto;
+  background-color: var(--color-black-grey-title);
+  width: 15rem;
+  height: 1rem;
+}
+
+.better-food__grid {
+  z-index: 4;
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 10fr 1fr;
+}
+
+.better-food__nutriscore {
+  position: absolute;
+  left: 1rem;
+  bottom: 18vw;
+  z-index: 2;
+}
+
+.better-food__content {
+  grid-column-start: 2;
+}
+
+.better-food__image-bg {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+  display: block!important;
+  width: 100%;
+  height: 90%;
+  top: 11vw;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 2;
+}
+
+.better-food__color-bg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 41%;
+  bottom: 0;
+  z-index: 1;
+  display: block!important;
+  background-color: var(--color-black-grey-light-3);
+}
+
+.better-food__subtitle {
+  text-align: center;
+  position: relative;
+}
+
+.better-food__subtitle:last-child {
+  padding-top: 8rem;
+}
+
+.better-food__subtitle:last-child::before {
+  content: "";
+  display: block;
+  width: 14.9rem;
+  height: 8.1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: -9rem;
+}
+
+.better-food__subtitle:first-child {
+  margin-bottom: 15rem;
+}
+
+.better-food__title {
+  text-align: center;
+  font-family: var(--font-family-two);
+  line-height: 1;
+  margin: 0 auto 60vw;
+}
+
+@media only screen and (max-width: 1024px) {
+  .better-food {
+    padding: 11.5rem 0 6rem;
+  }
+
+  .better-food__subtitle:first-child {
+    margin-bottom: 7.5rem;
+  }
+
+  .better-food__subtitle:last-child {
+    padding-top: 5rem;
+  }
+
+  .better-food__subtitle:last-child::before {
+    width: 8.5rem;
+    height: 4.6rem;
+    left: 0;
+  }
+
+  .better-food__nutriscore {
+    max-width: 8.5rem;
+    left: 15.5rem;
+    bottom: 23vw;
+  }
+
+  .better-food::after {
+    width: 8.6rem;
+  }
+
+  .better-food__grid {
+    padding: 0 7rem;
+    grid-template-columns: 12fr;
+  }
+
+  .better-food__content {
+    grid-column-start: 1;
+  }
+
+  .better-food__title {
+    margin: 0 auto 70vw;
+  }
+
+  .better-food__image-bg {
+    top: 30vw;
+  }
+
+  .better-food__color-bg {
+    height: 36%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .better-food__grid {
+    padding: 0 3rem;
+  }
+
+  .better-food__nutriscore {
+    bottom: 20rem;
+    left: 3rem;
+  }
+
+  .better-food__color-bg {
+    height: 42%;
+  }
+
+  .better-food__title {
+    margin: 0 auto 90vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .better-food__image-bg {
+    left: -30%;
+    width: 130%;
+    top: 60vw;
+  }
+}

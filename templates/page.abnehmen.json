@@ -1,0 +1,706 @@
+{
+  "sections": {
+    "1660916011ca7315a1": {
+      "type": "content",
+      "blocks": {
+        "f73fb198-b5da-4f5a-9b22-dd037efc9a9e": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "text_first",
+            "title": "Gesund &amp; dauerhaft abnehmen mit personalisierter Ernährung - so geht’s!",
+            "heading_style": "h1-headline",
+            "heading_tag": "h2",
+            "description": "<p>Du möchtest abnehmen? Tipps und Diäten gibt es viele. Wir zeigen dir, welche wirklich gesund und sinnvoll sind.<\/p>",
+            "description_style": "h2-headline"
+          }
+        },
+        "69c0d42d-4a94-4842-b905-9731897ac27f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vorab: Personalisierte Ernährung ist der Schlüssel zu deinem Wohlfühlgewicht. Erfahre hier mehr über das spannende Thema.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "c99a02cf-bf49-42f5-9995-410481c9b76e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Es gibt sehr verschiedene Gründe zum Abnehmen: Bessere Blutwerte, mehr Gesundheit, weniger Bewegungseinschränkungen oder mehr Wohlbefinden sind nur Beispiele. Du fragst dich nun ‘Abnehmen, aber wie?’. Diverse Diäten versprechen schnell abnehmen oder einfach Bauchfett loswerden. Doch spätestens, wenn der Jo-Jo-Effekt einsetzt, wird klar, das hat nichts mit gesundem und dauerhaftem Erfolg zu tun. Richtig abnehmen und das Zielgewicht halten, ist gar nicht so einfach. Wir möchten dir zeigen, wie es dennoch klappt und wieso ein individueller Weg dabei so wichtig ist.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "f73fb198-b5da-4f5a-9b22-dd037efc9a9e",
+        "69c0d42d-4a94-4842-b905-9731897ac27f",
+        "c99a02cf-bf49-42f5-9995-410481c9b76e"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "1660917830015286a3": {
+      "type": "content",
+      "blocks": {
+        "ad55ec7a-1977-4838-84fb-29ed9519a7fa": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Das spricht für eine personalisierte Diät",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "56535441-8f97-48d9-b332-8e5f1176edc2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jeder von uns ist verschieden. Das macht sich nicht nur durch äußerliche Unterschiede bemerkbar, sondern auch beim Stoffwechsel.<a href=\"#references\" title=\"#references\">[1]<\/a> Dein Körper kann beispielsweise ganz anders auf eine Diät reagieren als bei einer Freundin oder einem Freund. Somit ist auch schnell klar, dass es die eine Diät zum Abnehmen für alle nicht gibt. Sinnvoller ist eine Ernährung, die an deinen Körper und deine Bedürfnisse angepasst ist. Du kannst beispielsweise durch spezielle Fragebögenn, Blutuntersuchungen oder eine Genanalyse mehr über deinen Körper erfahren und deine Ernährung danach personalisieren.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "203c4ff4-ee16-4a4d-a28b-9fbd46bda328": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lesetipp: <a href=\"\/pages\/personalisierte-ernaehrung\" title=\"Personalisierte Ernährung: So individuell wie du!\">Personalisierte Ernährung<\/a>: So individuell wie du!<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "31e23ee9-635a-49c0-97eb-e4719d929058": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wusstest du schon, dass du bei uns ein auf dich maßgeschneidertes Complete Food erstellen kannst? Beantworte dazu die Fragen in unserem Quiz und erhalte eine personalisierte Mahlzeit.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "533afdf1-2a5a-4e4a-8e17-2ef30a3a1491": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"\/pages\/personalized\" title=\"Saturo Personalized - Eine Mahlzeit auf dich zugeschnitten\">Personalized Food<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "51025288-6b57-4f41-be88-555e931c3229": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "text_first",
+            "title": "Keto Diät, Low Carb oder Paleo? Was passt zu dir?",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "<p>Abnehmen ohne Diät? Das klappt in den seltensten Fällen. Doch wie sollte richtig ernähren zum Abnehmen bei dir aussehen? Wir zeigen dir 5 Diäten im Überblick:<\/p>",
+            "description_style": ""
+          }
+        },
+        "b34f8c04-2110-4562-b0fe-705f4a41dddc": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"h5-headline\">Low Carb Diät<\/span>",
+            "heading_style": "",
+            "heading_tag": "h4",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "1ceca783-8388-4cbd-bbbc-22820d7e908b": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei dieser Diät reduzierst du den Anteil der Kohlenhydrate auf etwa 20 bis 30 Prozent. Dafür steigt der Anteil an Proteinen und (gesunden) Fetten. Somit sind Pasta, Brot, Zucker und Co. nur noch in sehr geringen Mengen erlaubt. Deine Ernährung kann nun so aussehen:<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "6b33da17-776f-48b4-a784-3087ff0675c0": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Statt Nudeln<\/strong> kannst du aus Zucchini Spaghetti schneiden (ein Spiralschneider ist dabei hilfreich)<\/p><p>werden kohlenhydratreiche Lebensmittel verzehrt, dann sollte es sich um die <strong>Vollkornvariante<\/strong> handeln<\/p><p><strong>Reichlich Gemüse<\/strong> wie Kohl, Salate und Hülsenfrüchte<\/p><p><strong>Zuckerarme Obstsorten<\/strong><\/p><p>Gute Orientierung ist die <strong>mediterrane Kost<\/strong> (abgesehen von Weißbrot)<\/p><p><strong>Hochwertige Öle<\/strong> wie Oliven- oder Rapsöl<\/p><p>Milch und Milchprodukte, Eier<\/p><p><strong>Tofu<\/strong> und Tempeh<\/p><p>Fisch und Fleisch sind erlaubt, sollten jedoch nicht in größeren Mengen als üblich verzehrt werden (dies gilt besonders für rotes Fleisch)<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "3b35b3de-1008-4e67-8cea-bc24fc125307": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"h5-headline\">Ketogene Diät<\/span>",
+            "heading_style": "",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "7743c565-a01d-458f-9cd0-8bc8f7b469ab": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Diese Diät ist eine extreme Form der Low Carb Diät, denn die Kohlenhydrate werden auf etwa 20 Gramm pro Tag reduziert. Gesunde Fette rücken in den Mittelpunkt der Ernährung. Der Organismus bildet nun aus Fett sogenannte Ketonkörper, die beispielsweise das Gehirn mit Energie versorgen. Die Diät ist aus medizinischer Sicht interessant, denn es haben sich positive Effekte bei neurologischen Erkrankungen wie Epilepsie gezeigt.<a href=\"#references\" title=\"#references\">[2]<\/a> Diese Lebensmittel sind ideal:<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "353895f0-ed70-400c-bba0-9b75422756e6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Avocado, Oliven, Nüsse und Samen<\/p><p>Gemüse mit wenig Kohlenhydraten wie Zucchini, Gurke, Spinat<\/p><p>wenig zuckerarme Obstsorten<\/p><p>hochwertige Fette wie Oliven- und Rapsöl<\/p><p>Milch und Milchprodukte, Eier<\/p><p>Fisch und Fleisch (rotes Fleisch nur in geringen Mengen)<\/p><p>Tofu und Tempeh<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "46b944e2-231f-4096-a847-8cf9b00495fd": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"h5-headline\">Paleo Diät<\/span>",
+            "heading_style": "",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "fbe3978e-8d58-4f32-aef9-9cd7e99cb99e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Auch bekannt als Steinzeitdiät. Die Idee dahinter: Unser Körper ist nicht auf die moderne Ernährung ausgelegt und steckt noch in der Steinzeit. Daher sollte deine Ernährung möglichst ähnlich sein wie damals. Auch mehr Training ist enthalten, denn die Menschen in der Steinzeit haben sich viel mehr bewegt als heute. Die Lebensmittelauswahl bei der Paleo Diät:<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "87fe599d-de2b-4746-b889-db01445d0366": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Keine Fertigprodukte<\/p><p>Kein Getreide und keine Hülsenfrüchte<\/p><p>Keine Milch und Milchprodukte<\/p><p>Saisonales Gemüse und Obst<\/p><p>Viel Fisch, Eier und Fleisch<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "beca4663-8983-4c03-ab59-0819acb7f0d4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Achtung: Du solltest bei dieser Diät besonders auf ausreichend B-Vitamine und Calcium achten, da du die üblichen Quellen aus deiner Ernährung streichst.<a href=\"#references\" title=\"#references\">[3]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "1bfe2965-6f54-417d-b061-3bf47674bb48": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"h5-headline\">Intervallfasten<\/span>",
+            "heading_style": "",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "31ce8cb7-75f7-432b-9368-c98c70e56a3a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hier ist nicht die Auswahl an Lebensmittel entscheidend, sondern mit welchen zeitlichen Abständen du isst. Intervallfasten ist dabei nur ein Überbegriff und umfasst mehrere Ernährungskonzepte wie die 16:8-Methode, bei der du 16 Stunden am Tag fastest und in acht Stunden zwei Mahlzeiten essen darfst oder die 5:2-Diät, bei der du an fünf Tagen in der Woche normal isst und an zwei Tagen nur ein Viertel der üblichen Energiemenge aufnimmst. Forschende haben bereits einige Vorteile des Intervallfastens gefunden, es soll beispielsweise Krankheiten wie Diabetes Typ 2 vorbeugen.<a href=\"#references\" title=\"#references\">[4]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "1fd32274-d9b7-4802-8f74-87be2b192479": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "<span class=\"h5-headline\">IIFYM: If it fits your macros<\/span>",
+            "heading_style": "",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "61404753-35ef-4b41-9cac-c4744b97e43d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei dieser Ernährungsweise darfst du essen, was du willst, solange du deine Makronährstoffverteilung abdeckst. Hierfür musst du zuerst ausrechnen, wie viel Eiweiß, Kohlenhydrate und Fett für dich geeignet sind und dann deine Nahrung danach tracken. Unsere Empfehlung: Auch wenn alles erlaubt ist, solltest du nicht zu häufig zu Burger, Pizza und Co. greifen, denn neben Makronährstoffen benötigt dein Körper auch Mikronährstoffe und diese stecken kaum in Fastfood.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "ad55ec7a-1977-4838-84fb-29ed9519a7fa",
+        "56535441-8f97-48d9-b332-8e5f1176edc2",
+        "203c4ff4-ee16-4a4d-a28b-9fbd46bda328",
+        "31e23ee9-635a-49c0-97eb-e4719d929058",
+        "533afdf1-2a5a-4e4a-8e17-2ef30a3a1491",
+        "51025288-6b57-4f41-be88-555e931c3229",
+        "b34f8c04-2110-4562-b0fe-705f4a41dddc",
+        "1ceca783-8388-4cbd-bbbc-22820d7e908b",
+        "6b33da17-776f-48b4-a784-3087ff0675c0",
+        "3b35b3de-1008-4e67-8cea-bc24fc125307",
+        "7743c565-a01d-458f-9cd0-8bc8f7b469ab",
+        "353895f0-ed70-400c-bba0-9b75422756e6",
+        "46b944e2-231f-4096-a847-8cf9b00495fd",
+        "fbe3978e-8d58-4f32-aef9-9cd7e99cb99e",
+        "87fe599d-de2b-4746-b889-db01445d0366",
+        "beca4663-8983-4c03-ab59-0819acb7f0d4",
+        "1bfe2965-6f54-417d-b061-3bf47674bb48",
+        "31ce8cb7-75f7-432b-9368-c98c70e56a3a",
+        "1fd32274-d9b7-4802-8f74-87be2b192479",
+        "61404753-35ef-4b41-9cac-c4744b97e43d"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": false,
+        "padding_bottom": false,
+        "section_id": ""
+      }
+    },
+    "16614594601953bc7c": {
+      "type": "content",
+      "blocks": {
+        "01a0e67e-55c9-4f6a-8520-2672c3a3a9f6": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "text_first",
+            "title": "Gesund Abnehmen: Tipps",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "<p>Diese 5 Tipps erleichtern dir das Abnehmen richtig, denn sie passen perfekt zur personalisierten Diät.<\/p>",
+            "description_style": ""
+          }
+        },
+        "fd29e0e8-94fc-4aec-a554-1c5d18e3d4cf": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "text_first",
+            "title": "1. Finde deine Methode zum Stressmanagement",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "287f2ef4-5333-48e4-9581-8acf47003b75": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Abnehmen, Ernährung und Stress stehen in direktem Zusammenhang, das haben verschiedene Studien gezeigt.<a href=\"#references\" title=\"#references\">[5]<\/a> Für deine Gewichtsreduktion bedeutet dies: Andauernder Stress macht das Abnehmen schwerer, denn Heißhunger wird wahrscheinlicher. Daher ist Entspannung ebenso wichtig wie Sport und die richtige Ernährung zum Abnehmen. Auch hier gilt: Jeder von uns ist verschieden. Du musst deine individuelle Methode finden, um Stress zu bewältigen. Einige Ideen: Atemübungen, autogenes Training, Yoga, Meditation oder beim Sport auspowern.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "5ae3aa52-3c76-42af-822b-49da84fb37bf": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "2. Ziele setzen und eigene Voraussetzungen kennen",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "7c442371-fd7d-440d-9c88-b7539528d273": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Viele Abnehm-Diäten versprechen einen schnellen Erfolg. Doch in kurzer Zeit viel Gewicht zu verlieren, ist nicht unbedingt gesund. Sogenannte Crash-Diäten können nämlich den Energieumsatz langfristig senken und sogar zu Essstörungen führen.<a href=\"#references\" title=\"#references\">[6]<\/a> Also sind realistische und gesunde Ziele für einen langfristigen Erfolg entscheidend. Wir empfehlen dir daher ein Kaloriendefizit zwischen 200-500 kcal pro Tag. Damit kannst du etwa 1-2 Kilogramm im Monat an Gewicht verlieren. Beispiel für ein gesundes Abnehmziel: 5 Kilogramm in 7 Monaten. Zwar ist ein langer Atem für diese Art des Abnehmens gefragt, aber Studien zeigen, dass ein kleines Kaloriendefizit seltener zum Jo-Jo-Effekt führt.<a href=\"#references\" title=\"#references\">[7]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "492cb0da-aed4-4f28-b258-27a924e2c23c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lesetipp: <a href=\"\/pages\/weniger-koerperfett\" title=\"Das Einmaleins der Fettverbrennung - gesund und dauerhaft abnehmen\">Das Einmaleins der Fettverbrennung<\/a> - gesund und dauerhaft abnehmen. Hier erklären wir dir, wie du deinen individuellen Energieverbrauch und Kalorienbedarf zum Abnehmen berechnen kannst. <\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "2c6bc4a6-4a03-4315-97ad-cdd6c6fef2c9": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "3. Gesunde Routinen entwickeln",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "a9c2f014-d8e6-4ef1-82fd-63afd2c84318": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir Menschen sind Gewohnheitstiere. Das ist manchmal gut und ein anderes Mal schlecht. Denn ungesunde Angewohnheiten lassen sich nicht so leicht aus dem Leben streichen, aber wenn wir erst mal eine gesunde Routine entwickelt haben, dann ist es auch leicht, diese beizubehalten. Zum nachhaltig und gesund Abnehmen ohne Jo-Jo-Effekt bedeutet dies, dass du deine Routinen unter die Lupe nehmen solltest. Entdeckst du eine ungesunde Gewohnheit, dann wandle diese in eine gesündere Routine um. Ein Beispiel: <\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "a0fa125d-5038-4a37-8041-9a028ce49541": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alte Gewohnheit: Nach dem Mittagessen gibt es einen süßen Nachtisch.<\/p><p>Neue Gewohnheit: Nach dem Mittagessen ein Espresso, Kaffee oder Tee (ohne Zucker und bei Bedarf mit wenig Milch).<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "383eb943-a596-4950-ba21-b2acfa3a42a0": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "4. Kalorienverbrauch erhöhen mit Bewegung und Sport",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "f1817663-eadf-4b8c-963d-1712994c716c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Am Ende des Tages zählt das Kaloriendefizit. Einigen Menschen fällt es leichter, dieses durch eine kalorienreduzierte Nahrung zu erreichen, anderen durch das Erhöhen des Kalorienverbrauchs, sprich mehr Bewegung in den Alltag zu bringen. Abnehmen ohne Sport und Bewegung funktioniert in den seltensten Fällen. Entscheide dich daher öfter für die Treppe anstelle des Aufzugs oder steig aufs Fahrrad statt ins Auto.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "973eea95-8814-453d-a14c-80e537966d52": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Auch Krafttraining ist zum Abnehmen ideal, denn je größer deine Muskelmasse, desto höher dein Grundumsatz. In der folgenden Tabelle kannst du sehen, wie viel Kalorien, welche Sportart oder Alltagstätigkeit pro 30 Minuten verbraucht.<a href=\"#references\" title=\"#references\">[8]<\/a> Beachte hierbei, dass es sich um einen Mittelwert für einen Menschen mit 80 kg handelt. Je nach Intensität und körperlichen Voraussetzungen kannst du mehr oder weniger Kalorien verbrauchen:<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "55ad19ab-e008-4b61-bc88-00627b229821": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Sportart <\/strong>Kalorienverbrauch in 30 Min. bei 80 kg<\/p><p>Boxen: 380 kcal<\/p><p>CrossFit: 200 kcal<\/p><p>Fußball: 340 kcal<\/p><p>Gartenarbeit: 200 kcal<\/p><p>Golf: 180 kcal<\/p><p>HIIT: 220 kcal<\/p><p>Reiten: 160 kcal<\/p><p>Klettern: 380 kcal<\/p><p>Kochen: 90 kcal<\/p><p>Joggen bei 7min\/km oder 5 min\/km: 330 kcal oder 500 kcal<\/p><p>Radfahren bei 15km\/h oder 25 km\/h: 240 kcal oder 410 kcal<\/p><p>Spazieren: 140 kcal<\/p><p>Schwimmen: 350 kcal<\/p><p>Squash: 480 kcal<\/p><p>Treppensteigen: 280 kcal<\/p><p>Walken: 260 kcal<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "b589146b-3ac6-4b8f-8222-9bc863cbe601": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "5. Stoffwechsel ankurbeln",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "726371a8-c7b7-4427-8ec5-68c732f06a1d": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Es gibt tatsächlich Lebensmittel zum Abnehmen, wie beispielsweise Chili. Denn die Schote erhöht deinen Energiestoffwechsel, indem sie dich zum Schwitzen bringt.<a href=\"#references\" title=\"#references\">[9]<\/a> Ebenso hilft dir Wasser. Trinkst du viel kaltes Wasser, dann benötigt dein Körper Energie, um dieses auf Körpertemperatur zu erwärmen. Toller Nebeneffekt: Trinkst du Wasser etwa 30 Minuten vor einer Mahlzeit, wirst du wahrscheinlich weniger Energie aufnehmen.<a href=\"#references\" title=\"#references\">[10]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "e7ec529f-d69b-4335-b2be-688378485e4c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Zudem sorgen mehr Muskeln für einen höheren Energieumsatz, denn die Muskeln müssen mit Energie versorgt werden. Also ist jede Bewegung, die du zusätzlich tätigst, ein Booster für den Stoffwechsel. Folglich spricht sich Experte Matthias Weber, Pressesprecher der Deutschen Gesellschaft für Endokrinologie, gegenüber dem Spiegel auch zu einer Kombination aus Ausdauer- und Krafttraining zum Abnehmen aus.<a href=\"#references\" title=\"#references\">[11]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "01a0e67e-55c9-4f6a-8520-2672c3a3a9f6",
+        "fd29e0e8-94fc-4aec-a554-1c5d18e3d4cf",
+        "287f2ef4-5333-48e4-9581-8acf47003b75",
+        "5ae3aa52-3c76-42af-822b-49da84fb37bf",
+        "7c442371-fd7d-440d-9c88-b7539528d273",
+        "492cb0da-aed4-4f28-b258-27a924e2c23c",
+        "2c6bc4a6-4a03-4315-97ad-cdd6c6fef2c9",
+        "a9c2f014-d8e6-4ef1-82fd-63afd2c84318",
+        "a0fa125d-5038-4a37-8041-9a028ce49541",
+        "383eb943-a596-4950-ba21-b2acfa3a42a0",
+        "f1817663-eadf-4b8c-963d-1712994c716c",
+        "973eea95-8814-453d-a14c-80e537966d52",
+        "55ad19ab-e008-4b61-bc88-00627b229821",
+        "b589146b-3ac6-4b8f-8222-9bc863cbe601",
+        "726371a8-c7b7-4427-8ec5-68c732f06a1d",
+        "e7ec529f-d69b-4335-b2be-688378485e4c"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": ""
+      }
+    },
+    "16614600620aa0e684": {
+      "type": "content",
+      "blocks": {
+        "69fb1a13-4f75-40b3-ac08-cdc16e553d80": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "Diät-Mythen und typische Fehler beim Abnehmen",
+            "heading_style": "h2-headline bold",
+            "heading_tag": "h2",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "ddd2f88d-6390-41f8-b02d-cf89cdf681f6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bauchfett verlieren, das möchten viele. Doch welche typischen Fehler gibt es dabei? Einige Diät-Mythen halten sich schon seit mehreren Jahren. Wir haben uns gängige Annahmen angeschaut und geprüft, was die Wissenschaft dazu sagt. Hier unsere Ergebnisse:<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "bbb0f5a7-0121-41bc-9da7-38185cb6e86c": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "1. Essen am Abend macht dick",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "e58a2393-1740-40b4-a493-424063906cd5": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Obwohl diese Aussage in vielen Studien untersucht wurde, sind sich Forschende nicht einig. Bekannt ist: Wer einen Großteil seiner Kalorien erst beim Abendessen aufnimmt, hat ein größeres Risiko für Übergewicht. <a href=\"#references\" title=\"#references\">[12]<\/a> Aber ob dies nun durch ein spätes Essen verstärkt wird, ist nicht ganz so eindeutig. Eine andere Forschungsgruppe kommt zu dem Schluss, dass unsere Ernährung mit unserer inneren Uhr abgestimmt sein sollte, um Übergewicht vorzubeugen.<a href=\"#references\" title=\"#references\">[13]<\/a> Mehrere Studien sprechen dafür, dass spätes Essen für den Körper ungünstig ist. Es kann bei Sodbrennen die Symptome verschlimmern<a href=\"#references\" title=\"#references\">[14]<\/a> und allgemein zu Verdauungsproblemen führen, denn der Stoffwechsel wird in der Nacht eingeschränkt.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "e1bd7f54-1177-43f6-a4d3-a8551a8bb5b9": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "2. Low Carb bringt dich zur Traumfigur",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "bff2ce88-b0da-4ad1-9897-c7280f15b1eb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Diese Aussage trifft nicht auf jeden zu. Je nach Stoffwechsel kann dir eine andere Diät viel leichter fallen. Eine Studie fand beispielsweise heraus, dass Menschen mit einem gesunden Glukosestoffwechsel durch eine Diät mit weniger Fett und mehr Kohlenhydraten am besten Gewicht verlieren. Während Menschen mit einem gestörten Glukosestoffwechsel von einer kohlenhydratreduzierten Kost profitieren.<a href=\"#references\" title=\"#references\">[15]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "f4969f07-4cb0-4aa8-8a58-1366311269b9": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "3. Obst geht immer, denn es ist gesund",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "2b966439-5029-4b2a-aa59-ae248287fe18": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Es stimmt zwar, dass Früchte viele Vitamine enthalten und gesund sind, jedoch solltest du es damit nicht übertreiben. Denn sie enthalten auch Fruchtzucker, der im Übermaß auch zu Übergewicht führen kann. Zwei Stücke Obst am Tag sind eine empfehlenswerte Menge. Beachte den Fruchtzucker auch bei Produkten, die ‘natürliche Süße aus Früchten’ enthalten.<a href=\"#references\" title=\"#references\">[16]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "66b21869-ad18-49b0-9a8e-78e497ae11fc": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "4. Zucker macht dick",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "da639a42-4a43-44ac-8326-ba376bf69195": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Zur Entstehung von Übergewicht trägt meist eine Kombination aus mehreren Faktoren bei. Wenig Bewegung, genetische Veranlagungen und eine falsche Ernährung. Zu Letzterem gehört auch ein übermäßiger Konsum von Zucker. Laut der Deutschen Gesellschaft für Ernährung (DGE) sollten maximal 10 Prozent der zugeführten Energie aus Zucker stammen. Mehr Zucker in der Ernährung trägt zu Übergewicht und anderen Krankheiten wie Diabetes bei.<a href=\"#references\" title=\"#references\">[17]<\/a><\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        },
+        "0db4130d-9930-4d86-9266-1dbbc3a555ba": {
+          "type": "header",
+          "settings": {
+            "desktop_layout": "title_left",
+            "mobile_layout": "image_first",
+            "title": "5. Fett ist immer ungünstig",
+            "heading_style": "h2-headline",
+            "heading_tag": "h3",
+            "description": "",
+            "description_style": ""
+          }
+        },
+        "6950883c-a89d-43d9-811f-843118faa1db": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Diese Aussage ist schlichtweg falsch. Fette sind nicht unbedingt schlecht. Ganz im Gegenteil, einige Fettsäuren wie bestimmte Omega-3-Fette benötigen wir sogar für eine normale Gehirnfunktion. Da Fett nun aber im Vergleich zu den anderen Makronährstoffen mehr Kalorien pro Gramm enthält, solltest du beim Abnehmen besonders auf eine gute Auswahl an Fetten achten. Sprich: Pommes, Schlagsahne und Co. sind eher tabu und gesunde Fette aus Avocado, Olivenöl oder Nüssen sind (in normalen Maßen) erlaubt.<\/p>",
+            "text_style": "p",
+            "text_2": "",
+            "text_2_style": "p"
+          }
+        }
+      },
+      "block_order": [
+        "69fb1a13-4f75-40b3-ac08-cdc16e553d80",
+        "ddd2f88d-6390-41f8-b02d-cf89cdf681f6",
+        "bbb0f5a7-0121-41bc-9da7-38185cb6e86c",
+        "e58a2393-1740-40b4-a493-424063906cd5",
+        "e1bd7f54-1177-43f6-a4d3-a8551a8bb5b9",
+        "bff2ce88-b0da-4ad1-9897-c7280f15b1eb",
+        "f4969f07-4cb0-4aa8-8a58-1366311269b9",
+        "2b966439-5029-4b2a-aa59-ae248287fe18",
+        "66b21869-ad18-49b0-9a8e-78e497ae11fc",
+        "da639a42-4a43-44ac-8326-ba376bf69195",
+        "0db4130d-9930-4d86-9266-1dbbc3a555ba",
+        "6950883c-a89d-43d9-811f-843118faa1db"
+      ],
+      "settings": {
+        "bg_color": "",
+        "circle_bg_color": "",
+        "hide_circle": false,
+        "padding_top": true,
+        "padding_bottom": true,
+        "section_id": ""
+      }
+    },
+    "1661461342d2e751fd": {
+      "type": "accordion",
+      "blocks": {
+        "3d9c55bd-ad6c-4e08-99d5-8a92d326abf2": {
+          "type": "question",
+          "settings": {
+            "title": "Wie schlimm ist es abends zu Essen?",
+            "answer": "<p>Wer mehr überwiegen Kalorien am Abend isst, kann ein höheres Risiko für Übergewicht haben. Ob dies nun durch Essen am Abend verstärkt wird, ist nicht eindeutig belegt. Viele Studien sprechen dafür, dass Essen am Ende des Tages für den Körper nicht ganz so gut ist. Sodbrennen kann dadurch verstärkt werden und es kann allgemein zu Verdauungsproblemen führen, da der Stoffwechsel in der Nacht eingeschränkt ist.<\/p>"
+          }
+        },
+        "48af42d8-c846-426a-aa84-7b03b4076773": {
+          "type": "question",
+          "settings": {
+            "title": "Was hilft wirklich um abzunehmen?",
+            "answer": "<p>Um wirklich abzunehmen, ist ein Kaloriendefizit notwendig. Dies ist das einzige, was hilft, um Körperfett abzubauen.<\/p><p>Um 0,5 kg Körperfett in der Woche abzunehmen, wird ein Kaloriendefizit von 500 kcal pro Tag benötigt.<\/p><p>Es gibt keine Wundermittel außer Disziplin.<\/p>"
+          }
+        },
+        "4851ac70-674c-49e1-8cfa-31d607689916": {
+          "type": "question",
+          "settings": {
+            "title": "Wie viel kann man in 4 Wochen gesund abnehmen?",
+            "answer": "<p>Für langfristigen Erfolg wird empfohlen, ein Kaloriendefizit von 500 kcal pro Tag nicht zu überschreiten. Damit verliert man in 4 Wochen gesund ca. 2 kg.<\/p><p>Es ist wichtig, dass man gut mit diesem Kaloriendefizit leben kann, ohne sich eingeschränkt zu fühlen.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3d9c55bd-ad6c-4e08-99d5-8a92d326abf2",
+        "48af42d8-c846-426a-aa84-7b03b4076773",
+        "4851ac70-674c-49e1-8cfa-31d607689916"
+      ],
+      "settings": {
+        "bg_color_variable": "",
+        "html_heading": "<h3 class=\"h2-headline\">\n<strong>Kompaktes Wissen<\/strong>\n    <\/h3>",
+        "description": "",
+        "id": "",
+        "google_structured_data": true,
+        "padding_top": false,
+        "padding_bottom": true
+      }
+    },
+    "1660920913a74b3a80": {
+      "type": "accordion",
+      "blocks": {
+        "e25aa9ed-3ac6-4449-8e55-f27f287fa118": {
+          "type": "question",
+          "settings": {
+            "title": "Quellen",
+            "answer": "<p>1. Zeisel S. H. (2020). Precision (Personalized) Nutrition: Understanding Metabolic Heterogeneity. Annual review of food science and technology, 11, 71–92.<\/p><p>2. Pietrzak, D., Kasperek, K., Rękawek, P., & Piątkowska-Chmiel, I. (2022). The Therapeutic Role of Ketogenic Diet in Neurological Disorders. Nutrients, 14(9), 1952.<\/p><p>3. Verbraucherzentrale, Von Stoffwechsel-Diäten bis Trennkost: Erfolgsaussichten und Gefahren, Abgerufen am 09.August 2022, von <a href=\"https:\/\/www.dge.de\/ernaehrungspraxis\/diaeten-fasten\/intervallfasten\/\" title=\"https:\/\/www.dge.de\/ernaehrungspraxis\/diaeten-fasten\/intervallfasten\/\">https:\/\/www.dge.de\/ernaehrungspraxis\/diaeten-fasten\/intervallfasten\/<\/a><\/p><p>4.  Deutsche Gesellschaft für Ernährung, Intervallfasten, Abgerufen am 10. August 202<\/p><p>5.  Bremner, J., Moazzami, K., Wittbrodt, M., Nye, J., Lima, B., Gillespie, C., Rapaport, M., Pearce, B., Shah, A., & Vaccarino, V. (2020). Diet, Stress and Mental Health. Nutrients, 12(8), 2428.<\/p><p>6. Verbraucherzentrale, Von Stoffwechsel-Diäten bis Trennkost: Erfolgsaussichten und Gefahren, Abgerufen am 09.August 2022, von <a href=\"https:\/\/www.verbraucherzentrale.de\/wissen\/lebensmittel\/schlankheitsmittel-und-diaeten\/von-stoffwechseldiaeten-bis-trennkost-erfolgsaussichten-und-gefahren-6555 \" title=\"https:\/\/www.verbraucherzentrale.de\/wissen\/lebensmittel\/schlankheitsmittel-und-diaeten\/von-stoffwechseldiaeten-bis-trennkost-erfolgsaussichten-und-gefahren-6555 \">https:\/\/www.verbraucherzentrale.de\/wissen\/lebensmittel\/schlankheitsmittel-und-diaeten\/von-stoffwechseldiaeten-bis-trennkost-erfolgsaussichten-und-gefahren-6555 <\/a><\/p><p>7. Nackers, L. M., Ross, K. M., & Perri, M. G. (2010). The association between rate of initial weight loss and long-term success in obesity treatment: does slow and steady win the race?. International journal of behavioral medicine, 17(3), 161-167.<\/p><p>8. MarathonFitness, Kalorienverbrauch von 47 Sport- und Alltagsaktivitäten, Abgerufen am 09 August, 2022, von <a href=\"https:\/\/www.marathonfitness.de\/tools\/kalorienverbrauch-sport-tabelle\/\" title=\"https:\/\/www.marathonfitness.de\/tools\/kalorienverbrauch-sport-tabelle\/\">https:\/\/www.marathonfitness.de\/tools\/kalorienverbrauch-sport-tabelle\/ <\/a><\/p><p>9. Varghese, S., Kubatka, P., Rodrigo, L., Gazdikova, K., Caprnda, M., Fedotova, J., Zulli, A., Kruzliak, P., & Büsselberg, D. (2017). Chili pepper as a body weight-loss food. International journal of food sciences and nutrition, 68(4), 392–401.<\/p><p>10. Hansen, T. H., Thomassen, M. T., Madsen, M. L., Kern, T., Bak, E. G., Kashani, A., Allin, K. H., Hansen, T., & Pedersen, O. (2018). The effect of drinking water pH on the human gut microbiota and glucose regulation: results of a randomized controlled cross-over intervention. Scientific reports, 8(1), 16626.<\/p><p>11. Weimer,S., So wird man zum guten Futterverwerter, Abgerufen am 09. August 2022, von <a href=\"https:\/\/www.spiegel.de\/gesundheit\/ernaehrung\/den-stoffwechsel-ankurbeln-so-wird-man-zum-guten-futterverwerter-a-1150098.html\" title=\"https:\/\/www.spiegel.de\/gesundheit\/ernaehrung\/den-stoffwechsel-ankurbeln-so-wird-man-zum-guten-futterverwerter-a-1150098.html\">https:\/\/www.spiegel.de\/gesundheit\/ernaehrung\/den-stoffwechsel-ankurbeln-so-wird-man-zum-guten-futterverwerter-a-1150098.html<\/a><\/p><p>12. Bo, S., Musso, G., Beccuti, G., Fadda, M., Fedele, D., Gambino, R., Gentile, L., Durazzo, M., Ghigo, E., & Cassader, M. (2014). Consuming more of daily caloric intake at dinner predisposes to obesity. A 6-year population-based prospective cohort study. PloS one, 9(9), e108467.<\/p><p>13. Laermans, J., & Depoortere, I. (2016). Chronobesity: role of the circadian system in the obesity epidemic. Obesity reviews : an official journal of the International Association for the Study of Obesity, 17(2), 108–125.<\/p><p>14. Fujiwara, Y., Machida, A., Watanabe, Y., Shiba, M., Tominaga, K., Watanabe, T., Oshitani, N., Higuchi, K., & Arakawa, T. (2005). Association between dinner-to-bed time and gastro-esophageal reflux disease. The American journal of gastroenterology, 100(12), 2633–2636.<\/p><p>15. Astrup, A., & Hjorth, M. F. (2017). Low-Fat or Low Carb for Weight Loss? It Depends on Your Glucose Metabolism. EBioMedicine, 22, 20–21.<\/p><p>16. Verbraucherzentrale, Fruchtzucker: Rasch zuviel genascht, Abgerufen am 09. August 2022, von <a href=\"https:\/\/www.verbraucherzentrale.de\/wissen\/lebensmittel\/gesund-ernaehren\/fruchtzucker-rasch-zuviel-genascht-10557\" title=\"https:\/\/www.verbraucherzentrale.de\/wissen\/lebensmittel\/gesund-ernaehren\/fruchtzucker-rasch-zuviel-genascht-10557\">https:\/\/www.verbraucherzentrale.de\/wissen\/lebensmittel\/gesund-ernaehren\/fruchtzucker-rasch-zuviel-genascht-10557<\/a><\/p><p>17. Ernst,J. B., Arens-Azevêdo, U., Bitzer, B., Bosy-Westphal, A., de Zwaan, M., Egert, S., Fritsche, A., Gerlach, S., Hauner, H., Heseker, H., Koletzko, B., Müller-Wieland, D., Schulze,M., Virmani, K., Watzl, B. & Buyken, A. E. (2019). Quantitative Empfehlung zur Zuckerzufuhr in Deutschland, Ernährungs Umschau, 2, M78-M86<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "e25aa9ed-3ac6-4449-8e55-f27f287fa118"
+      ],
+      "settings": {
+        "bg_color_variable": "",
+        "html_heading": "",
+        "description": "",
+        "id": "references",
+        "google_structured_data": false,
+        "padding_top": false,
+        "padding_bottom": true
+      }
+    }
+  },
+  "order": [
+    "1660916011ca7315a1",
+    "1660917830015286a3",
+    "16614594601953bc7c",
+    "16614600620aa0e684",
+    "1661461342d2e751fd",
+    "1660920913a74b3a80"
+  ]
+}

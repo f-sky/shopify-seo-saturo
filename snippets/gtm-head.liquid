@@ -1,0 +1,77 @@
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+  {% if customer %}
+      window.dataLayer.push({
+          "visitorType": "Logged In",
+          "visitorId": "{{ customer.id | remove: "'" }}",
+          "CustomerId": "{{ customer.id | remove: "'" }}",
+          "CustomerEmail": "{{ customer.email }}",
+          "CustomerFirstName": "{{ customer.first_name }}",
+          "CustomerLastName": "{{ customer.last_name }}",
+          "CustomerPhone": "{{ customer.default_address.phone }}",
+          "sha_email": "{{ customer.email | strip | sha256}}",
+          "sha_fn": "{{ customer.first_name | strip | downcase | sha256 }}",
+          "sha_ln": "{{ customer.last_name | strip | downcase | sha256}}",
+          "sha_ph": "{{ customer.default_address.phone | strip | remove: "+" | sha256}}",
+          "sha_ct": "{{ customer.default_address.city | strip | downcase | sha256}}",
+          "sha_zp": "{{ customer.default_address.zip | strip | sha256}}",
+          "sha_country": "{{ customer.default_address.country_code | strip | downcase | sha256}}",
+          "CustomerOrdersCount": "{{ customer.orders_count }}",
+          "CustomerTotalSpent": "{{ customer.total_spent | divided_by: 100 }}",
+      });
+
+  {% else %}
+      window.dataLayer.push({
+          "visitorType": "Guest",
+      });
+  {% endif %}
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLB9MJ7');</script>
+
+<script>
+  //Event ID Generator
+  window.temp_track_store = window.temp_track_store || {};
+  window.temp_track_store.event_id = window.temp_track_store.event_id || {};
+  window.temp_track_store.generateEventId = function(event) {
+      return event+'_'+decodeURIComponent(window.location.pathname)+'_'+new Date().getTime();
+  }
+
+  var generateEventId = window.temp_track_store.generateEventId;
+  
+  //Page View
+  window.temp_track_store.event_id['gtm.js'] = generateEventId('gtm.js');
+  //Dom Ready
+  window.temp_track_store.event_id['gtm.dom'] = generateEventId('gtm.dom');
+  //Window Loaded
+  window.temp_track_store.event_id['gtm.load'] = generateEventId('gtm.load');
+
+  //Login Event
+  {% if customer %}
+      var _login = sessionStorage.getItem('login_event');
+      var event_id = generateEventId('login');
+      window.temp_track_store.event_id['login'] = event_id;
+      if (_login != "false") {
+          window.dataLayer.push({
+              event: 'login',
+              event_id: event_id,
+          })
+      }
+      sessionStorage.setItem('login_event',false);
+  {% else %}
+      if (sessionStorage.getItem('login_event') !== null) sessionStorage.removeItem('login_event');
+  {% endif %}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2WT7JVNN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QR2WT7JVNN');
+</script>

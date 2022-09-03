@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "166054296325db3fbb": {
+      "type": "page-blog-overview",
+      "blocks": {
+        "9de7e2a6-51ac-450a-af2a-6ce2f13559b2": {
+          "type": "page",
+          "settings": {
+            "page": "makronaehrstoffe",
+            "section_id": ""
+          }
+        },
+        "9b7e25f2-af6c-4620-9715-3cdb29d0f903": {
+          "type": "page",
+          "settings": {
+            "page": "vitamin-mangel-symptome",
+            "section_id": ""
+          }
+        },
+        "5f4f0eea-67f6-4cb8-9ced-50bd685994eb": {
+          "type": "page",
+          "settings": {
+            "page": "mineralstoffe",
+            "section_id": ""
+          }
+        },
+        "c6fc618a-7102-4cfc-bd31-09ad9f7e1ea1": {
+          "type": "page",
+          "settings": {
+            "page": "koffein-wirkung",
+            "section_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "9de7e2a6-51ac-450a-af2a-6ce2f13559b2",
+        "9b7e25f2-af6c-4620-9715-3cdb29d0f903",
+        "5f4f0eea-67f6-4cb8-9ced-50bd685994eb",
+        "c6fc618a-7102-4cfc-bd31-09ad9f7e1ea1"
+      ],
+      "settings": {
+        "title": "Ernährung A-Z",
+        "desc": "Hier findest du ein breites Wissen verschiedenen Themen der Ernährung. Die Informationen hier bilden die Basis, damit du in Zukunft die verschiedenen Inhaltsstoffe bewerten kannst und somit das Beste für dich auswählst."
+      }
+    }
+  },
+  "order": [
+    "166054296325db3fbb"
+  ]
+}

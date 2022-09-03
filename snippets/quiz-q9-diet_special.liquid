@@ -1,0 +1,91 @@
+<!-- q9: diet_special -->
+<div class="quiz-item quiz-q9 is-hidden" data-nutrition-question data-quiz-item="q9" data-quiz-item-handle="specialDiet">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.diet_special.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q9">{% render 'icon-quiz-info' %}</a></h2>
+    <p class="quiz-item__subtitle p">{{ "personalized_quiz.diet_special.subtitle" | t }}</p>
+    <input type="hidden" value="null" name="diet_special" checked data-quiz-answer>
+    <div class="quiz-options quiz-options--inline justify-content-center">
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Vegan" type="checkbox" name="diet_special" value="Vegan" data-quiz-answer data-quiz-answer-id="vegan">
+        <label for="quiz-Vegan">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-vegan.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_special.option_vegan" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Vegetarisch" type="checkbox" name="diet_special" value="Vegetarisch" data-quiz-answer data-quiz-answer-id="vegetarian">
+        <label for="quiz-Vegetarisch">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-vegetarisch.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_special.option_vegetarian" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Keto" type="checkbox" name="diet_special" value="Keto" data-quiz-answer data-quiz-answer-id="keto">
+        <label for="quiz-Keto">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-keto.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_special.option_keto" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon" data-quiz-option-sugarfree>
+        <input id="quiz-Zuckerfrei" type="checkbox" name="diet_special" value="Zuckerfrei" data-quiz-answer data-quiz-answer-id="sugarfree">
+        <label for="quiz-Zuckerfrei">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-zuckerfrei.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_special.option_sugarfree" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Mediteran" type="checkbox" name="diet_special" value="Keine Präferenz" data-quiz-answer data-quiz-answer-id="none">
+        <label for="quiz-Mediteran">
+          <div class="quiz-option__circle">
+            <!-- <img src="{{ 'icon-quiz-mediteran.svg' | asset_url }}" class="quiz-option__img" alt=""> -->
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_special.option_no_preference" | t }}</span>
+        </label>
+      </div>
+      
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Andere2" type="checkbox" name="diet_special" value="Andere" data-quiz-answer data-quiz-answer-id="other">
+        <label for="quiz-Andere2">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-andereDots.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.diet_special.option_other" | t }}</span>
+        </label>
+      </div>
+      <div class="quiz-option input-wrapper input-wrapper-extra-msg">
+        <p class="p quiz-option-extra-msg-text">{{ "personalized_quiz.diet_special.error_message" | t }}</p>
+        <div class="quiz-option-extra-msg-input">
+          <input id="quiz-q9-diet-special" type="text" class="input m-underline" name="diet_special_input" placeholder="Sonstige" data-quiz-answer data-quiz-answer-andere>
+          <label for="quiz-q9-diet-special" class="label">{{ "personalized_quiz.diet_special.option_other" | t }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn">{{ "personalized_quiz.diet_special.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q9">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.diet_special.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.diet_special.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q9 -->

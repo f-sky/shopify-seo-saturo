@@ -1,0 +1,193 @@
+{{ 'home-body-needs.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'glider.min.css' | asset_url | stylesheet_tag }}  {% endcomment %}
+<link rel="stylesheet" href="{{ 'glider.min.css' | asset_url }} " media="print" onload="this.media='all'">
+
+<section class="page-width body-needs__wrapper">
+  <h2 class="h1-headline span-align-heading body-needs__title">
+    {{ section.settings.title }}
+  </h2>
+
+  <div class="body-needs__desc h2-headline">
+    {{ section.settings.desc }}
+  </div>
+
+  <div class="body-needs__icon-holder">
+    <div class="body-needs__icon-holder--row">
+      <div class="body-needs__icon-holder--item">
+        {% render 'icon-scale' %}
+        <p class="h5-headline">{{ section.settings.text_1 | escape }}</p>
+      </div>
+      <div class="body-needs__icon-holder--item">
+        {% render 'icon-nutri-bottle' %}
+        <p class="h5-headline">{{ section.settings.text_2 | escape }}</p>
+      </div>
+    </div>
+    <div class="body-needs__icon-holder--row">
+      <div class="body-needs__icon-holder--item">
+        {% render 'icon-clock-5-hours' %}
+        <p class="h5-headline">{{ section.settings.text_3 | escape }}</p>
+      </div>
+      <div class="body-needs__icon-holder--item">
+        {% render 'icon-bicep' %}
+        <p class="h5-headline">{{ section.settings.text_4 | escape }}</p>
+      </div>
+    </div>
+  </div>
+
+  {% if section.settings.feat_image != blank %}
+    <img id="bodyNeedsFeatImage-{{ section.id }}" class="body-needs__feat-image" src="{{ section.settings.feat_image | img_url: '1600x' }}" alt="{{ section.settings.feat_image.alt }}" loading="lazy" width="1600px" height="{{ 1600 | times: section.settings.feat_image.aspect_ratio }}" />
+  {% endif %}
+
+  <div class="body-needs__references--wrapper">
+    <div class="body-needs__references js-references">
+      {% for block in section.blocks %}
+        <div class="body-needs__reference">
+          {% if block.settings.image != blank %}
+            <img class="body-needs__reference-image" src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" loading="lazy" />
+          {% endif %}
+          <p class="p">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <button class="body-needs__references--glider-prev glider-prev">{% render 'icon-chevron' %}</button>
+    <button class="body-needs__references--glider-next glider-next">{% render 'icon-chevron' %}</button>
+  </div>
+
+</section>
+
+
+
+<script>
+  window.addEventListener("load", function (event) {
+    var script = document.createElement("script");
+    script.onload = function () {
+      new Glider(document.querySelector('.js-references'), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        },
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2
+            }
+          }
+        ]
+      });
+    }
+    script.src = "{{ 'glider.min.js' | asset_url }}";
+    document.head.appendChild(script);
+  });
+</script>
+
+
+{% comment %} <script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+
+    new Glider(document.querySelector('.js-references'), {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: true,
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
+      },
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
+    });
+
+  });
+</script> {% endcomment %}
+
+{% schema %}
+{
+  "name": "Home - Body Needs",
+  "tag": "section",
+  "class": "body-needs",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML",
+      "default": "<span class=\"align-left\">Alles was<\/span>\n    <span class=\"align-right\"><span class=\"heading-line-left\"><\/span>dien<\/span>\n    <span class=\"align-left\">Körper<\/span>\n    <span class=\"align-center\">braucht<\/span>"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description",
+      "default": "<p>Saturo bietet dir die Möglichkeit, dich auf einfachstem Wege <strong>ausgewogen <\/strong>zu <strong>ernähren <\/strong>und deinem Körper alles zu geben was er braucht. <strong>Egal wann, egal wo.<\/strong><\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "feat_image",
+      "label": "Featured Image"
+    },
+    {
+      "type": "header",
+      "content": "4 Icons - Texts"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Text - 1",
+      "default": "Ausgewogene Mahlzeit"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Text - 2",
+      "default": "Alle 26 Vitamine & Mineralien"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Text - 3",
+      "default": "Sättigend bis zu 5 Stunden"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "Text - 4",
+      "default": "Bis zu 25 g Protein pro Mahlzeit"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "reference",
+      "name": "Reference",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Reference Logo"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Reference Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Reference Source Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home - Body Needs"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,49 @@
+{{ 'component-delivery-content.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width delivery-content__wrapper">
+  {% assign product_image = section.settings.product_image %}
+  {% if product_image != blank %}
+    <img src="{{ product_image | img_url: '1000x' }}" alt="{{ product_image.alt }}" class="delivery-content__image" loading="lazy" />
+  {% endif %}
+
+  <div class="delivery-content__content">
+    <h3 class="h2-headline">{{ section.settings.product_title }}</h3>
+    <p class="p">{{ section.settings.product_text }}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+    "name": "Delivery Content",
+    "tag": "section",
+    "class": "delivery-content side-circle side-circle__large side-circle__bottom-left",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product Section"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_image",
+        "label": "Image"
+      },
+      {
+        "type": "html",
+        "id": "product_title",
+        "label": "Title HTML",
+        "default": "Was bekommst du?<br><strong>16 Mahlzeiten à 400 kcal<\/strong>"
+      },
+      {
+        "type": "html",
+        "id": "product_text",
+        "label": "Text HTML",
+        "default": "Gewicht: 1,4 kg<br><br>Abmessung (BxHxT): X cm x Y cm x Z cm"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Delivery Content"
+      }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,50 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-product-grid-saturo",
+      "blocks": {
+        "45aa122f-5a4d-402a-8dcd-b74c15db735f": {
+          "type": "collection",
+          "settings": {
+            "collection": "trinkmahlzeit"
+          }
+        },
+        "012f6594-247f-428e-a736-8055273b3625": {
+          "type": "collection",
+          "settings": {
+            "collection": "pulver"
+          }
+        },
+        "c6801267-6c3b-42e8-9ace-bc82821bdd9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "riegel"
+          }
+        },
+        "7c7c4b95-280f-4d7f-8b2a-4360f881ea3b": {
+          "type": "collection",
+          "settings": {
+            "collection": "merchandise"
+          }
+        }
+      },
+      "block_order": [
+        "45aa122f-5a4d-402a-8dcd-b74c15db735f",
+        "012f6594-247f-428e-a736-8055273b3625",
+        "c6801267-6c3b-42e8-9ace-bc82821bdd9f",
+        "7c7c4b95-280f-4d7f-8b2a-4360f881ea3b"
+      ],
+      "settings": {
+        "hide_circle": false,
+        "circle_bg_color": "",
+        "btn_style": "",
+        "btn_modal_text": "In den Warenkorb",
+        "btn_buy_text": "In den Warenkorb",
+        "btn_more_text": "Mehr Details"
+      }
+    }
+  },
+  "order": [
+    "product-grid"
+  ]
+}

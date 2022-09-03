@@ -1,0 +1,36 @@
+.cta-bar-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  body.cta-bar__visible .cta-bar-mobile {
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .cta-bar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    padding: 1.5rem 3rem;
+    width: 100%;
+    max-height: 7.6rem;
+    box-shadow: 0 0 2rem rgb(0 0 0 / 25%);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .cta-bar-mobile .p {
+    max-height: 5.25rem;
+    overflow: hidden;
+  }
+}

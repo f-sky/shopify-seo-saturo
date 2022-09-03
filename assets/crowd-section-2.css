@@ -1,0 +1,125 @@
+.crowd-s2 {
+  padding: 11.5rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.crowd-s2__wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 1.5rem;
+  position: relative;
+}
+
+.crowd-s2 {
+  background-color: var(--color-vanilla-light);
+}
+
+.crowd-s2:before {
+  background-color: var(--color-cocoa-light);
+}
+
+.crowd-s2__title {
+  grid-column: 2/11;
+  grid-row: 1/2;
+  font-family: var(--font-family-two);
+  color: var(--color-black-grey-title);
+  line-height: 1;
+}
+
+
+.crowd-s2__viewport {
+  grid-column: 1/13;
+  grid-row: 2/3;
+  text-align: center;
+  height: 100vh;
+  min-height: 100rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.crowd-s2__viewport p {
+  margin-bottom: 1.5rem;
+}
+
+.crowd-s2__row1 {
+  grid-column: 1/13;
+  grid-row: 3/4;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 1.5rem;
+}
+
+.crowd-s2__row1--image {
+  grid-column: 1/7;
+  width: 100%;
+  width: calc(100% + 11.5rem);
+  transform: translateX(-11.5rem);
+}
+
+.crowd-s2__row1--content {
+  padding-top: 7rem;
+  grid-column: 7/13;
+}
+
+.crowd-s2__row1--content .h2-headline {
+  margin-bottom: 3rem;
+}
+
+
+.crowd-s2__row1--content .h2-headline p {
+  margin-bottom: 1.5rem;
+}
+
+.crowd-s2__row1--content .btn {
+  display: inline-block;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .crowd-s2__wrapper {
+    padding: 0 7rem;
+  }
+  
+  .crowd-s2__viewport {
+   	min-height: 110rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+    
+  .crowd-s2__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 3rem;
+  }
+  
+  .crowd-s2__title {
+   	grid-column: 1/5;
+  }
+  
+  .crowd-s2__viewport {
+   	grid-column: 1/5;
+   	min-height: 125rem
+  }
+  
+  .crowd-s2__row1 {
+   	grid-column: 1/5;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .crowd-s2__row1--image {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    width: 100%;
+    transform: none;
+  }
+  
+  .crowd-s2__row1--content {
+    padding-top: 4rem;
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+}

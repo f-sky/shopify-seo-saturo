@@ -1,0 +1,35 @@
+<!-- q16: flavour -->
+<div class="quiz-item quiz-q16 is-hidden" data-quiz-item="q16" data-quiz-item-handle="flavor">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.flavour.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q16">{% render 'icon-quiz-info' %}</a></h2>
+    <div class="quiz-options">
+      <div class="quiz-option">
+        <input id="quiz-flavour-Chokolade" type="radio" name="flavour" value="Schokolade" data-quiz-answer>
+        <label for="quiz-flavour-Chokolade">{{ "personalized_quiz.flavour.option_chocolate" | t }}</label>
+      </div>
+      <div class="quiz-option">
+        <input id="quiz-flavour-Vanilla" type="radio" name="flavour" value="Vanille" data-quiz-answer>
+        <label for="quiz-flavour-Vanilla">{{ "personalized_quiz.flavour.option_vanilla" | t }}</label>
+      </div>
+      <div class="quiz-option">
+        <input id="quiz-flavour-Strawberry" type="radio" name="flavour" value="Erdbeere" data-quiz-answer>
+        <label for="quiz-flavour-Strawberry">{{ "personalized_quiz.flavour.option_strawberry" | t }}</label>
+      </div>
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.flavour.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q16">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.flavour.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.flavour.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q16 -->

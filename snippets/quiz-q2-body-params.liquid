@@ -1,0 +1,89 @@
+<!-- q2: body params -->
+<div class="quiz-item quiz-q2 is-hidden" data-body-param-questions data-quiz-item="q2"  data-quiz-item-handle="bodySizeBodySize">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.body_params.headline" | t }}</h2>
+    <p class="p quiz-item__subtitle">{{ "personalized_quiz.body_params.subtitle" | t }}</p>
+    <div class="quiz-options quiz-options--inline justify-content-center">
+      <div class="input-wrapper input-wrapper-full">
+        <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+        <input id="body_size" type="number" pattern="\d*" class="input" data-quiz-answer min="130" max="220" step="1" value="180" name="body_size" data-label="{{ "personalized_quiz.body_params.option_body_size" | t }}" data-metric="{{ "personalized_quiz.body_params.option_body_size_metric" | t }}" data-auto-focus>
+        <label for="body_size" class="label">{{ "personalized_quiz.body_params.option_body_size" | t }} ({{ "personalized_quiz.body_params.option_body_size_metric" | t }}) <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q2a" tabindex="-1">{% render 'icon-quiz-info' %}</a></label>
+      </div>
+
+      <div class="input-wrapper input-wrapper-full">
+        <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+        <input id="weight_current" type="number" pattern="\d*" class="input" data-quiz-answer min="35" max="200" step="1" value="85" name="weight_current" data-label="{{ "personalized_quiz.body_params.option_weight_current" | t }}" data-metric="{{ "personalized_quiz.body_params.option_weight_current_metric" | t }}">
+        <label for="weight_current" class="label">{{ "personalized_quiz.body_params.option_weight_current" | t }} ({{ "personalized_quiz.body_params.option_weight_current_metric" | t }}) <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q2b" tabindex="-1">{% render 'icon-quiz-info' %}</a></label>
+      </div>
+
+      <div class="input-wrapper input-wrapper-full">
+        <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+        <input id="weight_goal" type="number" pattern="\d*" class="input" data-quiz-answer min="35" max="200" step="1" value="85" name="weight_goal" data-label="{{ "personalized_quiz.body_params.option_weight_goal" | t }}" data-metric="{{ "personalized_quiz.body_params.option_weight_goal_metric" | t }}">
+        <label for="weight_goal" class="label">{{ "personalized_quiz.body_params.option_weight_goal" | t }} ({{ "personalized_quiz.body_params.option_weight_goal_metric" | t }}) <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q2c" tabindex="-1">{% render 'icon-quiz-info' %}</a></label>
+      </div>
+
+      <div class="input-wrapper input-wrapper-full is-hidden" data-target-weeks>
+        <div class="quiz-input-error-notification" data-quiz-notification-message></div>
+        <input id="weight_goal_d" type="number" pattern="\d*" class="input" data-quiz-answer min="1" max="52" value="10" name="weight_goal_d" data-label="Zielgewicht erreichen">
+        <label for="weight_goal_d" class="label">{{ "personalized_quiz.body_params.option_weight_goal_weeks" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q2d" tabindex="-1">{% render 'icon-quiz-info' %}</a></label>
+      </div>
+    </div>
+
+    <div class="bg-color-general-contrast alert-danger d-none" data-body-param-callout>
+      {{ "personalized_quiz.body_params.error_message" | t }}
+    </div>
+
+    <div data-quiz-errors>
+    </div>
+    <div data-quiz-warnings>
+    </div>
+
+
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img
+          src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn">{{ "personalized_quiz.body_params.button_next_text" | t }}</button>
+    </div>
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q2b">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.body_params.option_weight_current" | t }} ({{ "personalized_quiz.body_params.option_weight_current_metric" | t }})</h4>
+        <p>{{ "personalized_quiz.body_params.option_weight_current_popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q2a">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.body_params.option_body_size" | t }} ({{ "personalized_quiz.body_params.option_body_size_metric" | t }})</h4>
+        <p>{{ "personalized_quiz.body_params.option_body_size_popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q2c">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.body_params.option_weight_goal" | t }} ({{ "personalized_quiz.body_params.option_weight_goal_metric" | t }})</h4>
+        <p>{{ "personalized_quiz.body_params.option_weight_goal_popup_subtitle_html" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q2d">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.body_params.option_weight_goal_weeks" | t }}</h4>
+        <p>{{ "personalized_quiz.body_params.option_weight_goal_weeks_popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q2 -->

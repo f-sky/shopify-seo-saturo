@@ -1,0 +1,36 @@
+.author__editor-details {
+  grid-column: 4/10;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0;
+}
+
+.author__editor-photo {
+  margin-right: 2rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+}
+
+.author__editor-text .p {
+  margin-bottom: 1rem;
+}
+
+.author__editor-text .p:first-child {
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .author__editor-details {
+    padding: 6rem 7rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .author__editor-details {
+    grid-column: 1/5;
+    padding: 6rem 3rem;
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "sections": {
+    "16443895774ede6aab": {
+      "type": "product-header-2",
+      "settings": {
+        "title": "<span class=\"align-left\">Ausgewogen<\/span> <span class=\"align-center\">Snacken<\/span> <span class=\"align-left\">kann<span class=\"heading-line\"><\/span><\/span> <span class=\"align-center\">schmecken<\/span>",
+        "heading_2": "",
+        "heading_2_style": "h2-headline bold",
+        "subtitle": "",
+        "btn_text": "Jetzt bestellen",
+        "btn_url": "",
+        "btn_style": "btn--primary",
+        "assigned_product": "",
+        "bg_image_wide": "shopify:\/\/shop_images\/saturo-complete-bar-lemon-cheesecake.jpg",
+        "bg_image_desktop": "shopify:\/\/shop_images\/saturo-complete-bar-lemon-cheesecake.jpg",
+        "text_color": "--color-white",
+        "bg_color": "",
+        "hide_circle": true,
+        "content_side": "content-left",
+        "mobile_content_position": "content-top__mobile",
+        "title_small_margin": false,
+        "custom_header_color": "",
+        "quiz_button": false
+      }
+    },
+    "main": {
+      "type": "saturo-product",
+      "settings": {
+      }
+    },
+    "164267866719bbc104": {
+      "type": "product-better-food",
+      "settings": {
+        "uppertitle": "Die schnelle Antwort auf den kleinen Hunger, die nicht nur gut schmeckt, sondern dich auch richtig gut versorgt",
+        "title": "Vollwertig. Voll lecker.",
+        "image": "shopify:\/\/shop_images\/Saturo-complete-bar-lemon-cheesecakte-hand_5e311a62-a4ce-48f8-a101-5aebd594b869.png",
+        "subtitle": "mit <strong>11g Protein<\/strong>, komplexen Kohlenhydraten, allen <strong>26 essentiellen Vitaminen<\/strong> und <strong>wertvollen Mineralien<\/strong>. Im Saturo <strong>Complete Bar<\/strong> steckt alles, was du brauchst. Und das auch noch <strong>vegan<\/strong>.",
+        "nutriscore_image": "shopify:\/\/shop_images\/Nutri-Score_A.png"
+      }
+    },
+    "powder-form-v2": {
+      "type": "powder-form-v2",
+      "settings": {
+        "s1_title": "",
+        "s2_title": "Wähle deinen Geschmack und die Menge.",
+        "s2_before_product": "",
+        "s2_after_product": "",
+        "btn_text": "In den Warenkorb",
+        "subs_section_text": "<h3 class=\"h2-headline\"> Wähle deine Bestellart.<\/h3><p class=\"p\">Du kannst zwischen einem Einzelkauf und einem regelmäßigen Spar-Abo entscheiden.<\/p>",
+        "modal_title": "",
+        "modal_text1": "",
+        "modal_text2": "",
+        "modal_text3": "",
+        "modal_details": ""
+      }
+    },
+    "product-for-all": {
+      "type": "product-for-all",
+      "settings": {
+        "s1_image": "shopify:\/\/shop_images\/Saturo-Complete-bar-vegan.jpg",
+        "s1_title": "<span class=\"align-center\">Der<\/span>\n<span class=\"align-right\">perfekte<\/span>\n<span class=\"align-left\">Bissen<span class=\"heading-line-left\"><\/span><\/span>\n<span class=\"align-right\">für<\/span>\n<span class=\"align-right\">dazwischen.<\/span>",
+        "s1_subtitle": "Lecker, vollwertig und sättigend.",
+        "s2_image": "shopify:\/\/shop_images\/Saturo-Lemon-Cheesecake-Riegel-Tasche.jpg",
+        "s2_title": "<strong>Auch auf Reisen gut zu beißen.<\/strong>\n<p>Entdecke eine neue Welt der vollwertigen Snacks.<\/p>",
+        "s3_image": "shopify:\/\/shop_images\/Saturo-Complete-Bar-Energieriegel_7d694d6c-7edb-4bd7-87f0-3e4ef945c335.jpg",
+        "s3_title": "<strong>Rein Pflanzliches kommt rein.<\/strong>\n<p>Für vegane Ernährung geeignet<\/p>\n<p>Mit besten Pflanzenproteinen<\/p>"
+      }
+    },
+    "product-for-vegans": {
+      "type": "product-for-vegans",
+      "settings": {
+        "title": "<span class=\"align-left\">Für vegane<\/span>\n        <span class=\"align-center\">Ernährung<\/span>\n        <span class=\"align-left\">geeignet.<span class=\"heading-line\"><\/span><\/span>\n        <span class=\"align-right\">Mit besten<\/span>\n        <span class=\"align-left\">Pflanzenproteinen<\/span>",
+        "subtitle": "Wir lassen Zutaten sprechen.",
+        "s1_title": "Hochwertiger Hafer: Der Healthy Held vom Feld.",
+        "s1_text": "<p class=\"h2-headline\">Reich an Ballaststoffen<\/p>\n    <p class=\"h2-headline\">Fördert eine gesunde Verdauung<\/p>",
+        "s1_image": "shopify:\/\/shop_images\/Saturo-hafer.jpg",
+        "s2_title": "Erbsenprotein: Das All-In-One-Protein.",
+        "s2_text": "<p class=\"h2-headline\">Reich an BCAA (Branched Chain Amino Acids)<\/p>\n      <p class=\"h2-headline\">Enthält essentielle Amionsäuren<\/p>",
+        "s2_image": "shopify:\/\/shop_images\/Saturo-zutaten-erbsen.jpg",
+        "s3_title": "Reisprotein: Ein echtes Muskel-Have.",
+        "s3_text": "<p class=\"h2-headline\">Hoher Anteil an essentiellen Aminosäuren<\/p>\n      <p class=\"h2-headline\">Reich an wertvollen Vitaminen und Mineralstoffen<\/p>",
+        "s3_image": "shopify:\/\/shop_images\/Saturo-zutaten-reis.jpg",
+        "s4_title": "Leinsamen: Die Saat, die mehr als satt macht.",
+        "s4_text": "<p class=\"h2-headline\">Reich an gesunden Omega-3-Fettsäuren<\/p>\n    <p class=\"h2-headline\">Wirken sättigend und fördert die Verdauung<\/p>",
+        "s4_image": "shopify:\/\/shop_images\/Saturo-zutaten-leinsamen.jpg"
+      }
+    },
+    "product-stay-zero": {
+      "type": "product-stay-zero",
+      "settings": {
+        "title": "Und wir müssen leider draußen bleiben...",
+        "list_items": "<li> <h4 class=\"h2-headline\">x raffinierter Zucker<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Farbstoffe<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Palmöl<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Konservierungsstoffe<\/h4> <\/li>",
+        "percentage": "0%"
+      }
+    },
+    "product-tastes-different": {
+      "type": "product-tastes-different",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Saturo-complete-bar-lemon-cheesecake-with-lemon.jpg",
+        "title": "<span class=\"align-center\">Geschmack-<\/span> \n<span class=\"align-left\">lich rund<span class=\"heading-line\"><\/span><\/span> <span class=\"align-center\">natürlich<\/span> <span class=\"align-left\">lecker<\/span>",
+        "subtitle": "<h4 class=\"h2-headline\">Egal, ob voller Schokogeschmack<\/h4><h4 class=\"h2-headline\">oder fruchtig zitronig<\/h4>",
+        "text": "Alle haben eine softe Textur für ein unschlagbares Snack-Erlebnis",
+        "s1_title": "Power pur mit der Kraft der Natur.",
+        "s1_text": "Natürlicher Energielieferant für jede Lebenslage.",
+        "s1_image": "shopify:\/\/shop_images\/Saturo-man-running.jpg",
+        "s2_title": "Macht satt statt platt.",
+        "s2_text": "Lange Sättigung dank komplexer Kohlenhydrate und Ballaststoffe.",
+        "s2_image": "shopify:\/\/shop_images\/Saturo-complete-bar-happy-person.jpg",
+        "s3_title": "Voll versorgt trotz vollem Kalender.",
+        "s3_text": "Gibt dir Energie, wenn du sie brauchst",
+        "s3_image": "shopify:\/\/shop_images\/saturo-complete-bar-cocoa-brownie-notebook.jpg",
+        "s4_title": "",
+        "s4_text": ""
+      }
+    },
+    "product-macrosplit": {
+      "type": "product-macrosplit",
+      "blocks": {
+        "8260bfce-3c7c-4917-b5a0-599d844522f2": {
+          "type": "stat",
+          "settings": {
+            "number": "44%",
+            "text": "Kohlenhydrate"
+          }
+        },
+        "5c1306eb-94f8-4643-ad60-489ef3a8c3e5": {
+          "type": "stat",
+          "settings": {
+            "number": "22%",
+            "text": "Protein"
+          }
+        },
+        "814d4c87-7937-445a-80f9-6f7b1afd779a": {
+          "type": "stat",
+          "settings": {
+            "number": "27 %",
+            "text": "Fett"
+          }
+        },
+        "2fee5c12-d0f5-4dc9-8b15-a4945b6c5e28": {
+          "type": "stat",
+          "settings": {
+            "number": "8 %",
+            "text": "Ballaststoffe"
+          }
+        }
+      },
+      "block_order": [
+        "8260bfce-3c7c-4917-b5a0-599d844522f2",
+        "5c1306eb-94f8-4643-ad60-489ef3a8c3e5",
+        "814d4c87-7937-445a-80f9-6f7b1afd779a",
+        "2fee5c12-d0f5-4dc9-8b15-a4945b6c5e28"
+      ],
+      "settings": {
+        "title": "Makrosplit",
+        "subtitle": "Unser Riegel liefert dir ein ausgewogenes Makronährstoffverhältnis (45 % der Energie stammen aus Kohlenhydraten, 21 % aus Proteinen, 27 % aus Fett, 15 % aus Ballaststoffe) und zudem alle 26 essentielle Vitamine und Mineralstoffe. Alles drin, was du brauchst.",
+        "image": "shopify:\/\/shop_images\/macrosplit_image1.png",
+        "tables_title": "Nährwerttabelle und Zutaten",
+        "meta_name": "id4699414298761"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    },
+    "product-nutri-ingre": {
+      "type": "product-nutri-ingre",
+      "blocks": {
+        "b3f5017e-5245-46dd-8b58-c78488165249": {
+          "type": "ingredient",
+          "settings": {
+            "title": "11 g pflanzliches Protein",
+            "desc": "Der wichtigste Baustein für deine Muskeln."
+          }
+        },
+        "996c3c14-c75d-4358-889f-c1d2befe1978": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Alle 26 essentielle Vitamine und Mineralien",
+            "desc": "Weil sie dein Körper braucht, um richtig zu funktionieren und zur Stärkung deines Immunsystems."
+          }
+        },
+        "10899912-e797-4625-a7a2-4bd0a9e736d9": {
+          "type": "ingredient",
+          "settings": {
+            "title": "7,6 g Ballaststoffe",
+            "desc": "Für eine langanhaltende Sättigung und zur Unterstützung deiner Verdauung."
+          }
+        },
+        "d46c7dbf-0932-4e6b-a52a-ff4e97a66343": {
+          "type": "ingredient",
+          "settings": {
+            "title": "22 g komplexe Kohlenhydrate",
+            "desc": "Natürliche Energie, damit du gut durch den Tag kommst und dein Bestes geben kannst."
+          }
+        },
+        "aa3e44d6-2248-4527-ace3-036c3ef557c9": {
+          "type": "ingredient",
+          "settings": {
+            "title": "200 kcal pro Riegel",
+            "desc": "Der perfekte Snack für den kleinen Hunger zwischendurch."
+          }
+        },
+        "f1eb817a-fd80-4c2e-83d9-6699adc13bc0": {
+          "type": "ingredient",
+          "settings": {
+            "title": "",
+            "image": "shopify:\/\/shop_images\/Nutri-Score_A.png",
+            "desc": "Die höchste Nutri-Score-Bewertung A bestätigt das optimale Nährwertprofil von Saturo."
+          }
+        }
+      },
+      "block_order": [
+        "b3f5017e-5245-46dd-8b58-c78488165249",
+        "996c3c14-c75d-4358-889f-c1d2befe1978",
+        "10899912-e797-4625-a7a2-4bd0a9e736d9",
+        "d46c7dbf-0932-4e6b-a52a-ff4e97a66343",
+        "aa3e44d6-2248-4527-ace3-036c3ef557c9",
+        "f1eb817a-fd80-4c2e-83d9-6699adc13bc0"
+      ],
+      "settings": {
+        "title": "Nährwerte und Zutaten",
+        "subtitle": "Wir geben das Beste rein, du holst das Beste aus dir raus."
+      }
+    },
+    "164450206319319288": {
+      "type": "delivery-content",
+      "settings": {
+        "product_image": "shopify:\/\/shop_images\/Saturo-complete-bar-lemon-cheesecake-box-open.png",
+        "product_title": "Was bekommst du?<br><strong>12 Riegel mit Biss?<\/strong>",
+        "product_text": "<p>Anzahl Riegel pro Box: 12 Stück<\/p>\n<p>Gesamtgewicht: 648 g (Cocoa-Brownie), 660 g (Lemon-Cheesecake)<\/p>\n<p>Abmessung (BxHxT): 150x48x170 mm<\/p>"
+      }
+    },
+    "16612008797645b470": {
+      "type": "accordion",
+      "blocks": {
+        "176a9d38-b337-4bdb-8b55-c42e604ad8d4": {
+          "type": "question",
+          "settings": {
+            "title": "Was ist der Saturo Complete Bar?",
+            "answer": "<p>Der Saturo Complete Bar ist der gesunde Snack, der schmeckt. Die schnelle Antwort auf den kleinen Hunger, die nicht nur gut schmeckt, sondern dich auch richtig gut versorgt – mit 11g Protein, komplexen Kohlenhydraten, allen 26 essentiellen Vitaminen und wertvollen Mineralien. Im Saturo Complete Bar steckt alles, was du brauchst. Und das auch noch vegan.<\/p>"
+          }
+        },
+        "120d9f48-6511-458d-ad0e-569962dea44f": {
+          "type": "question",
+          "settings": {
+            "title": "Macht der Saturo Complete Bar satt?",
+            "answer": "<p>Der Saturo Riegel enthält hochwertige komplexe Kohlenhydrate aus Haferflocken, die die Energie langsam freisetzen und für ein langanhaltendes Sättigungsgefühl sorgen. Außerdem sind sie reich an pflanzlichen Proteinen und Ballaststoffen, die zusätzlich für eine angenehme Sättigung sorgen. Und mit 200 Kalorien pro Riegel sind sie der ideale Snack.<\/p>"
+          }
+        },
+        "3d9a3005-f1ad-4bd3-bf44-c939386dc49d": {
+          "type": "question",
+          "settings": {
+            "title": "Nach was schmeckt der Saturo Complete Bar?",
+            "answer": "<p>Der Saturo Complete Bar <strong>Cocoa-Brownie<\/strong> schmeckt einmalig schokoladig, aber nicht zu süß. Zudem schmeckt er sehr natürlich durch Hafer und veganes Protein.<\/p><p>Der <strong>Lemon-Cheesecake<\/strong> Riegel schmeckt fruchtig nach Zitrone.<\/p><p>Der <strong>Muesli<\/strong> Riegel schmeckt wie ein leckeres und ausgewogenes Müsli.<\/p>"
+          }
+        },
+        "b3b8aec5-a394-4bb9-a6ec-dcd4d4de4db0": {
+          "type": "question",
+          "settings": {
+            "title": "Was sind die Zutaten des Saturo Complete Bars?",
+            "answer": "<p>Die Zutaten des Saturo Complete Bars sind:<\/p><p><strong>Cocoa-Brownie<\/strong>: Reissirup, glutenfreier Hafer, Reisprotein, Erbsenproteinchips (Erbsenprotein, Reismehl), Zichorienfaser, gemahlene Leinsamen, Kakaopulver (6%), Mandelöl, Mikronährstoffmischung (Vitamine und Mineralstoffe), Kakaonibs (1%), Aroma.<\/p><p><strong>Lemon-Cheesecake:<\/strong> Reissirup, glutenfreier Hafer, Reisprotein, Erbsenproteinchips (Erbsenprotein, Reismehl), Zichorienfaser, gemahlene Leinsamen, <strong>Mandel<\/strong>öl, Mikronährstoffmischung (Vitamine und Mineralstoffe), natürliches Aroma, Zitronenöl (0,22%).<\/p><p><strong>Muesli:<\/strong> Reissirup, glutenfreier Hafer, Reisprotein, Erbsenproteinchips (Erbsenprotein, Reismehl), Zichorienfaser, gemahlene Leinsamen, <strong>Mandel<\/strong>öl, Mikronährstoffmischung (Vitamine und Mineralstoffe), natürliches Aroma, Meersalz.<\/p>"
+          }
+        },
+        "35ee3b5e-91d3-47dc-a4e5-a1c993b14242": {
+          "type": "question",
+          "settings": {
+            "title": "Woher kommt der hohe Proteingehalt im Saturo Riegel?",
+            "answer": "<p>Unsere veganen Proteinquellen sind Erbsen- und Reisprotein. Dies sorgen für einen Proteingehalt von 11 g pro Riegel.<\/p>"
+          }
+        },
+        "5cbe7036-fd30-4c40-8ce7-b38ffcb4ee63": {
+          "type": "question",
+          "settings": {
+            "title": "Wie viel Kalorien hat der Saturo Complete Bar?",
+            "answer": "<p>Der Saturo Complete Bar enthält 200 kcal bei 54 g (Cocoa-Brownie, Muesli)oder 55 g (Lemon-Cheesecake)<\/p>"
+          }
+        },
+        "99b33f40-f03e-4df6-b752-2399e5ccec13": {
+          "type": "question",
+          "settings": {
+            "title": "Ist der Saturo Riegel vegan?",
+            "answer": "<p>Ja, der Saturo Complete Bar ist zu 100 % vegan. Die Proteinquelle ist Erbse und Reis.<\/p>"
+          }
+        },
+        "5da5d039-f844-4228-b817-12d0f1662358": {
+          "type": "question",
+          "settings": {
+            "title": "Ist der Saturo Complete Bar glutenfrei?",
+            "answer": "<p>Jein. Wir nutzen glutenfreien Hafer und somit sind die Inhaltsstoffe glutenfrei. Jedoch werden in der Produktionsstätte auch glutenhaltige Zutaten verarbeitet, sodass wir nicht garantieren können, dass der Riegel zu 100 % glutenfrei ist.<\/p>"
+          }
+        },
+        "54d5ee05-531c-461c-8ede-a9bd4f030f2c": {
+          "type": "question",
+          "settings": {
+            "title": "Welche Allergene sind im Saturo Complete Bar enthalten?",
+            "answer": "<p>Unser Riegel enthält <strong>Mandel<\/strong>öl. Wir verwenden glutenfreien Hafer.<br\/><br\/>Jedoch werden in der Produktionsstätte folgende Allergene verarbeitet: Nüsse, Sesam, Soja, Milch und glutenhaltige Zerealien.<\/p>"
+          }
+        },
+        "cb25a4b7-8729-45ba-b8be-7aaa8e5ba460": {
+          "type": "question",
+          "settings": {
+            "title": "Wie lange ist der Saturo Riegel haltbar?",
+            "answer": "<p>Das Mindesthaltbarkeitsdatum (MHD) beträgt ca. 12 Monate ab dem Produktionsdatum. Das lange MHD wird durch hochwertige Zutaten und den modernen Produktionsprozess erreicht. Natürlich ohne künstliche Zusatzstoffe.<\/p>"
+          }
+        },
+        "acbf0e87-cc6e-4aa8-9dc4-e9512b013a4f": {
+          "type": "question",
+          "settings": {
+            "title": "Wo werden die Saturo Complete Bars hergestellt?",
+            "answer": "<p>Saturo Complete Bars werden in einer hochmodernen Produktionsanlage in Großbritannien hergestellt. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "176a9d38-b337-4bdb-8b55-c42e604ad8d4",
+        "120d9f48-6511-458d-ad0e-569962dea44f",
+        "3d9a3005-f1ad-4bd3-bf44-c939386dc49d",
+        "b3b8aec5-a394-4bb9-a6ec-dcd4d4de4db0",
+        "35ee3b5e-91d3-47dc-a4e5-a1c993b14242",
+        "5cbe7036-fd30-4c40-8ce7-b38ffcb4ee63",
+        "99b33f40-f03e-4df6-b752-2399e5ccec13",
+        "5da5d039-f844-4228-b817-12d0f1662358",
+        "54d5ee05-531c-461c-8ede-a9bd4f030f2c",
+        "cb25a4b7-8729-45ba-b8be-7aaa8e5ba460",
+        "acbf0e87-cc6e-4aa8-9dc4-e9512b013a4f"
+      ],
+      "settings": {
+        "bg_color_variable": "",
+        "html_heading": "<h3 class=\"h2-headline\" style=\"grid-column: 1\/13; margin-bottom: 3rem;\">\n<strong>Falls du dich das jetzt auch fragst:<\/strong>\n    <\/h3>",
+        "description": "",
+        "id": "",
+        "google_structured_data": true,
+        "padding_top": true,
+        "padding_bottom": true
+      }
+    },
+    "16488166785bbc2690": {
+      "type": "cta-bar-mobile",
+      "settings": {
+        "btn_text": "Jetzt bestellen",
+        "btn_style": "btn--primary"
+      }
+    }
+  },
+  "order": [
+    "16443895774ede6aab",
+    "main",
+    "164267866719bbc104",
+    "powder-form-v2",
+    "product-for-all",
+    "product-for-vegans",
+    "product-stay-zero",
+    "product-tastes-different",
+    "product-macrosplit",
+    "product-reviews",
+    "product-nutri-ingre",
+    "164450206319319288",
+    "16612008797645b470",
+    "16488166785bbc2690"
+  ]
+}

@@ -1,0 +1,120 @@
+{{ 'template-coll-v2.css' | asset_url | stylesheet_tag }}
+
+<section class="coll-v2__wrapper">
+{%- if collection.handle == 'all' -%}
+  <script>
+    let path = window.location.pathname;
+    window.location = path.replace('/collections/all', '/collections/catalog');
+  </script>
+{%- endif -%}
+
+{%- if collection.handle == 'all' or collection.handle == 'catalog' -%}
+  
+  {% for block in section.blocks %}
+    {% assign collection = collections[block.settings.collection.handle] %}
+    {% render 'collection-item-saturo', collection: collection, index: forloop.index, btn_style: section.settings.btn_style, btn_modal_text: section.settings.btn_modal_text, btn_buy_text: section.settings.btn_buy_text, btn_more_text: section.settings.btn_more_text %}
+  {% endfor %}
+  {%- else -%}
+    {% render 'collection-item-saturo', collection: collection, index: 1, btn_style: section.settings.btn_style ,btn_modal_text: section.settings.btn_modal_text, btn_buy_text: section.settings.btn_buy_text, btn_more_text: section.settings.btn_more_text %}
+
+    <style>
+      {% if section.settings.hide_circle %}
+        .coll-v2__product-type.side-circle:before {
+          content: none;
+        }
+      {% endif %}
+      {% if section.settings.circle_bg_color %}
+        .coll-v2__product-type.side-circle:before {
+          background-color: var({{ section.settings.circle_bg_color }});
+        }
+      {% endif %}
+    </style>
+
+  {%- endif -%}
+</section>
+
+{% render 'reviews-io-rukrating-snippet-end', color_review_star: '--color-black-grey-title', mode: "extended", link: "TRUE" %}
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-product-grid.name",
+  "class": "coll-v2",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide_circle",
+      "label": "Hide Circle",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "circle_bg_color",
+      "label": "Circle Background Color",
+      "info": "CSS Variable"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "select",
+      "id": "btn_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "btn--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "btn--tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "btn--text",
+          "label": "Text"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "btn_modal_text",
+      "label": "Button Text - Show Modal",
+      "default": "Auswählen"
+    },
+    {
+      "type": "text",
+      "id": "btn_buy_text",
+      "label": "Button Text - Buy",
+      "default": "Hinzufügen"
+    },
+    {
+      "type": "text",
+      "id": "btn_more_text",
+      "label": "Button Text - More Info",
+      "default": "Weitere Infos"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

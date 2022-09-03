@@ -1,0 +1,90 @@
+{{ 'product-header.css' | asset_url | stylesheet_tag }}
+
+<section class="product__header">
+  <section class="page-width product__header-grid">
+    <div class="product__header--content">
+      <h2 class="h1-headline product__header-heading span-align-heading">
+        {{ section.settings.title }}
+      </h2>
+
+      <div class="product__header--image product__header--image-mobile">
+        {% render 'product-media', media: product.featured_media %}
+      </div>
+
+      <div class="product__header--info global-reviews">
+        {% assign meta_title = product.metafields.my_fields.product_title %}
+        <h3 class="h2-headline"><strong>
+            {%- if meta_title != blank -%}
+            {{ meta_title }}
+          {%- else -%}
+            {{ product.title }}
+          {%- endif -%}
+        </strong></h3>
+        {% assign meta_subtitle = product.metafields.my_fields.product_subtitle %}
+        {%- if meta_subtitle != blank -%}
+          <p class="p">{{ meta_subtitle }}</p>
+        {%- endif -%}
+        {% render 'reviews-io-rukrating-snippet', product: product %}
+
+        <button class="btn" data-scroll-to-product><strong>Kaufen</strong></button>
+      </div>
+    </div>
+    <div class="product__header--image">
+      {% assign product_image = section.settings.product_image %}
+      {% if product_image != blank %}
+        <img src="{{ product_image | img_url: '2000x' }}" alt="{{ product_image.alt }}" loading="lazy" />
+      {% else %}
+        {% render 'product-media', media: product.featured_media %}
+      {% endif %}
+    </div>
+  </section>
+</section>
+
+{% render 'reviews-io-rukrating-snippet-end', color_review_star: '--color-black-grey-title', mode: "extended", link: "TRUE" %}
+
+<style>
+  {% assign custom_header_color = section.settings.custom_header_color %}
+  {% if custom_header_color != blank %}
+    .mega-menu-header {
+      color: var({{ custom_header_color }});
+    }
+
+    .mega-menu-header .icon>path,
+    .mega-menu-header svg.icon {
+      fill: var({{ custom_header_color }});
+    }
+  {% endif %}
+</style>
+
+{% schema %}
+{
+  "name": "Product Header 1",
+  "tag": "section",
+  "class": "product-header",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML",
+      "default": "<span class=\"align-left\">Ausgewogene<\/span> <span class=\"align-right\">Ernährung?<\/span> <span class=\"align-left\">Mischen<span class=\"heading-line\"><\/span><\/span> <span class=\"align-center\">Possible.<\/span>"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Custom Product Image",
+      "info": "Optional. Replaces the product image."
+    },
+    {
+      "type": "text",
+      "id": "custom_header_color",
+      "label": "Custom Header Color",
+      "info": "CSS Variable"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Header 1"
+    }
+  ]
+}
+{% endschema %}

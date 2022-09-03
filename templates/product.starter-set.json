@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "1643715902997f1db6": {
+      "type": "product-header-2",
+      "disabled": true,
+      "settings": {
+        "title": "<span class=\"align-left\">Ausgewogene<\/span> <span class=\"align-right\">Ernährung?<\/span> <span class=\"align-left\">Aber<span class=\"heading-line\"><\/span><\/span> <span class=\"align-center\">schnell.<\/span>",
+        "heading_2": "",
+        "subtitle": "",
+        "btn_text": "Jetzt bestellen",
+        "btn_url": "",
+        "btn_style": "btn--primary",
+        "assigned_product": "",
+        "bg_image_wide": "shopify:\/\/shop_images\/Saturo-Eat-Complete-330ml-glas_dc831273-5b7e-42ab-ad83-83c4afde558c.jpg",
+        "bg_image_desktop": "shopify:\/\/shop_images\/Saturo-Eat-Complete-330ml-glas_dc831273-5b7e-42ab-ad83-83c4afde558c.jpg",
+        "text_color": "--color-white",
+        "bg_color": "#d9d8d6",
+        "hide_circle": true,
+        "content_side": "content-left",
+        "mobile_content_position": "content-top__mobile",
+        "custom_header_color": ""
+      }
+    },
+    "main": {
+      "type": "saturo-product",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "164267866719bbc104": {
+      "type": "product-better-food",
+      "disabled": true,
+      "settings": {
+        "uppertitle": "Ausgewogene Ernährung leicht gemacht. Im Handumdrehen hast du eine <strong>komplette Mahlzeit<\/strong> parat mit allem, was dein Körper braucht.",
+        "title": "Besser essen, ohne dich zu stressen.",
+        "image": "shopify:\/\/shop_images\/Saturo-balanced-pulver-glas_fa05dede-70c7-46e6-99a4-c7f56a91f889.png",
+        "subtitle": "<strong>17-25 g Protein,<\/strong> komplexe Kohlenhydrate, alle <strong>26 essentielle Vitamine &amp; Mineralien<\/strong> und sättigt bis zu <strong>3-5 Stunden<\/strong>. Natürlich <strong>vegan<\/strong>.",
+        "nutriscore_image": "shopify:\/\/shop_images\/Nutri-Score_A.png"
+      }
+    },
+    "powder-form-v2": {
+      "type": "powder-form-v2",
+      "settings": {
+        "s1_title": "",
+        "s2_title": "Starter-Set S",
+        "btn_text": "In den Warenkorb",
+        "modal_title": "Deine Abo Vorteile",
+        "modal_text1": "",
+        "modal_text2": "",
+        "modal_text3": "",
+        "modal_details": ""
+      }
+    },
+    "product-for-all": {
+      "type": "product-for-all",
+      "settings": {
+        "s1_image": "shopify:\/\/shop_images\/saturo-trinkmahlzeit-330ml-2.jpg",
+        "s1_title": "<span class=\"align-right\">Für alle,<\/span>\n<span class=\"align-right\"><span class=\"heading-line-left\"><\/span>die<\/span>\n<span class=\"align-right\">alles<\/span>\n<span class=\"align-right\">wollen.<\/span>",
+        "s1_subtitle": "Die Mahlzeit ohne Zeitaufwand.",
+        "s2_image": "shopify:\/\/shop_images\/Saturo-trinkmahlzeit-330-ml-erdbeere-sport.jpg",
+        "s2_title": "<strong>Keine Sorgen beim Versorgen.<\/strong>\n<p>Jederzeit alles, was der Körper braucht<\/p>",
+        "s3_image": "shopify:\/\/shop_images\/Saturo-trinkmahlzeit-330-ml-business.jpg",
+        "s3_title": "<strong>Schieb den Hunger auf die lange Bank<\/strong>\n<p>Sorgt für ein langes Sättigungsgefühl mit komplexen Kohlenhydraten, Ballaststoffen und Proteinen.<\/p>"
+      }
+    },
+    "product-stay-zero": {
+      "type": "product-stay-zero",
+      "settings": {
+        "title": "Und wir müssen leider draußen bleiben...",
+        "list_items": "<li> <h4 class=\"h2-headline\">x raffinierter Zucker<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Farbstoffe<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Palmöl<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Konservierungsstoffe<\/h4> <\/li>",
+        "percentage": "0%"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    },
+    "product-nutri-ingre": {
+      "type": "product-nutri-ingre",
+      "disabled": true,
+      "blocks": {
+        "b3f5017e-5245-46dd-8b58-c78488165249": {
+          "type": "ingredient",
+          "settings": {
+            "title": "30 g pflanzliches Protein",
+            "desc": "Der wichtigste Baustein für deine Muskeln. Saturo enthält eine Kombination aus Erbsen- und Reisprotein."
+          }
+        },
+        "996c3c14-c75d-4358-889f-c1d2befe1978": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Alle 26 essentielle Vitamine und Mineralien",
+            "desc": "Weil dein Körper Vitamine und Mineralien braucht, um richtig zu funktionieren und zur Stärkung deines Immunsystems."
+          }
+        },
+        "10899912-e797-4625-a7a2-4bd0a9e736d9": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Zuckerfrei - nur 0,5 g Zucker",
+            "desc": "Weil es auch ohne Zucker lecker schmeckt. (Angabe bezieht sich auf die Sorte Natur und auf 500 ml\/ 400 kcal)"
+          }
+        },
+        "d46c7dbf-0932-4e6b-a52a-ff4e97a66343": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Reich an Omega-3",
+            "desc": "Omega-3 ist ein lebenswichtiger Baustein für deinen Organismus."
+          }
+        },
+        "aa3e44d6-2248-4527-ace3-036c3ef557c9": {
+          "type": "ingredient",
+          "settings": {
+            "title": "7,3 g Ballaststoffe",
+            "desc": "Für eine langanhaltende Sättigung und zur Unterstützung deiner Verdauung."
+          }
+        },
+        "83e4234e-3f54-48a4-8ad0-3d6ceb825792": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Probiotika (Bacillus Coagulans)",
+            "desc": "Können sich positiv für deine Darmgesundheit auswirken."
+          }
+        },
+        "10f68772-d043-49a8-a619-805d4d07b0ae": {
+          "type": "ingredient",
+          "settings": {
+            "title": "39 g komplexe Kohlenhydrate",
+            "desc": "Natürliche Energie, damit du gut jeden Tag dein Bestes geben kannst."
+          }
+        },
+        "f1eb817a-fd80-4c2e-83d9-6699adc13bc0": {
+          "type": "ingredient",
+          "settings": {
+            "title": "",
+            "image": "shopify:\/\/shop_images\/Nutri-Score_A.png",
+            "desc": "Nutri-Score A bestätigt das optimale Nährwertprofil von Saturo."
+          }
+        }
+      },
+      "block_order": [
+        "b3f5017e-5245-46dd-8b58-c78488165249",
+        "996c3c14-c75d-4358-889f-c1d2befe1978",
+        "10899912-e797-4625-a7a2-4bd0a9e736d9",
+        "d46c7dbf-0932-4e6b-a52a-ff4e97a66343",
+        "aa3e44d6-2248-4527-ace3-036c3ef557c9",
+        "83e4234e-3f54-48a4-8ad0-3d6ceb825792",
+        "10f68772-d043-49a8-a619-805d4d07b0ae",
+        "f1eb817a-fd80-4c2e-83d9-6699adc13bc0"
+      ],
+      "settings": {
+        "title": "Nährwerte und Zutaten",
+        "subtitle": "Damit du das Beste rausholst, geben wir nur das Beste rein.",
+        "image": "shopify:\/\/shop_images\/nutri-ingre_image1.png"
+      }
+    },
+    "1648816554cb890e2f": {
+      "type": "cta-bar-mobile",
+      "settings": {
+        "btn_text": "Jetzt bestellen",
+        "btn_style": "btn--primary"
+      }
+    }
+  },
+  "order": [
+    "1643715902997f1db6",
+    "main",
+    "164267866719bbc104",
+    "powder-form-v2",
+    "product-for-all",
+    "product-stay-zero",
+    "product-reviews",
+    "product-nutri-ingre",
+    "1648816554cb890e2f"
+  ]
+}

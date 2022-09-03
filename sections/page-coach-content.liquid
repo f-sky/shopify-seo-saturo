@@ -1,0 +1,457 @@
+{{ 'section-coach-content.css' | asset_url | stylesheet_tag }}
+
+{% for block in section.blocks %}
+  {% if block.type == 'section_1' %}
+    {% render 'snippet-coach-content-section1', block: block %}
+  {% endif %}
+
+  {% if block.type == 'section_2' %}
+    {% render 'snippet-coach-content-section2', block: block %}
+  {% endif %}
+
+  {% if block.type == 'section_3' %}
+    {% render 'snippet-coach-content-section3', block: block %}
+  {% endif %}
+
+  {% if block.type == 'section_4' %}
+    {% render 'snippet-coach-content-section4', block: block %}
+  {% endif %}
+
+  {% if block.type == 'section_5' %}
+    {% render 'snippet-coach-content-section5', block: block %}
+  {% endif %}
+
+{% endfor %}
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+  
+    function animateToSectionId(sectionId) {
+      $('html').animate({
+        scrollTop: $(`[data-scroll-section="${sectionId}"]`).offset().top
+      }, 700);
+    }
+  
+    $('[data-scroll-id]').on('click', function() {
+      const sectionId = $(this).attr('data-scroll-id');
+      animateToSectionId(sectionId);
+    });
+  
+    $('[data-scroll-select]').on('change', function() {
+      animateToSectionId( $(this).val() );
+    });
+  
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Coach Content",
+  "tag": "section",
+  "class": "coach-content",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Section 1",
+      "type": "section_1",
+      "settings": [
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "Description"
+        },
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Title HTML"
+        },
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "Title without formatting",
+          "info": "It will show up on navigation"
+        },
+        {
+          "type": "text",
+          "id": "bg_color_variable",
+          "label": "Background Color CSS Variable Name"
+        },
+        {
+          "type": "header",
+          "content": "Section 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "s1_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "s1_title",
+          "label": "Title"
+        },
+        {
+          "type": "html",
+          "id": "s1_desc",
+          "label": "Description HTML"
+        },
+        {
+          "type": "header",
+          "content": "Section 2"
+        },
+        {
+          "type": "text",
+          "id": "s2_title",
+          "label": "Title"
+        },
+        {
+          "type": "html",
+          "id": "s2_desc",
+          "label": "Description HTML"
+        },
+        {
+          "type": "image_picker",
+          "id": "s2_image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "name": "Section 2",
+      "type": "section_2",
+      "settings": [
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Title HTML"
+        },
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "Title without formatting",
+          "info": "It will show up on navigation"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "bg_color_variable",
+          "label": "Background Color CSS Variable Name"
+        },
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Rich text"
+        },
+        {
+          "type": "header",
+          "content": "Product 1"
+        },
+        {
+          "type": "text",
+          "id": "item1_title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "item1_subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "collection",
+          "id": "item1_collection",
+          "label": "Collection"
+        },
+        {
+          "type": "product",
+          "id": "item1_product",
+          "label": "Product",
+          "info": "Instead of a collection"
+        },
+        {
+          "type": "header",
+          "content": "Product 2"
+        },
+        {
+          "type": "text",
+          "id": "item2_title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "item2_subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "collection",
+          "id": "item2_collection",
+          "label": "Collection"
+        },
+        {
+          "type": "product",
+          "id": "item2_product",
+          "label": "Product",
+          "info": "Instead of a collection"
+        },
+        {
+          "type": "header",
+          "content": "Product 3"
+        },
+        {
+          "type": "text",
+          "id": "item3_title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "item3_subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "collection",
+          "id": "item3_collection",
+          "label": "Collection"
+        },
+        {
+          "type": "product",
+          "id": "item3_product",
+          "label": "Product",
+          "info": "Instead of a collection"
+        }
+      ]
+    },
+    {
+      "name": "Section 3",
+      "type": "section_3",
+      "settings": [
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Title HTML"
+        },
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "Title without formatting",
+          "info": "It will show up on navigation"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Rich text"
+        },
+        {
+          "type": "text",
+          "id": "bg_color_variable",
+          "label": "Background Color CSS Variable Name"
+        },
+        {
+          "type": "header",
+          "content": "Row 1"
+        },
+        {
+          "type": "text",
+          "id": "row1_title",
+          "label": "Title"
+        },
+        {
+          "type": "html",
+          "id": "row1_desc",
+          "label": "Description HTML"
+        },
+        {
+          "type": "image_picker",
+          "id": "row1_image",
+          "label": "Image"
+        },
+        {
+          "type": "header",
+          "content": "Row 2"
+        },
+        {
+          "type": "product",
+          "id": "row2_product",
+          "label": "Product"
+        }
+      ]
+    },
+    {
+      "name": "Section 4",
+      "type": "section_4",
+      "settings": [
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Title HTML"
+        },
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "Title without formatting",
+          "info": "It will show up on navigation"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "bg_color_variable",
+          "label": "Background Color CSS Variable Name"
+        },
+        {
+          "type": "header",
+          "content": "Row 1"
+        },
+        {
+          "type": "text",
+          "id": "row1_title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "row1_desc",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "row1_image",
+          "label": "Image"
+        },
+        {
+          "type": "header",
+          "content": "Row 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "row2_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "row2_title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "row2_desc",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "row2_subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "header",
+          "content": "Row 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "row3_image1",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "row3_image2",
+          "label": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "row3_image3",
+          "label": "Image 3"
+        },
+        {
+          "type": "richtext",
+          "id": "row3_desc",
+          "label": "Description"
+        },
+        {
+          "type": "header",
+          "content": "Row 4"
+        },
+        {
+          "type": "text",
+          "id": "row4_title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "row4_desc",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "row4_image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "name": "Section 5",
+      "type": "section_5",
+      "settings": [
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Title HTML"
+        },
+        {
+          "type": "text",
+          "id": "link_title",
+          "label": "Title without formatting",
+          "info": "It will show up on navigation"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "bg_color_variable",
+          "label": "Background Color CSS Variable Name"
+        },
+        {
+          "type": "header",
+          "content": "Row 1"
+        },
+        {
+          "type": "text",
+          "id": "row1_title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "row1_desc",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "row1_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Coach Content"
+    }
+  ]
+}
+{% endschema %}

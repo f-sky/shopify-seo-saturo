@@ -1,0 +1,29 @@
+{% assign side_circle_class = '' %}
+{% if index == 1 %}
+  {% assign side_circle_class = 'side-circle side-circle__medium side-circle__top-right' %}
+{% elsif index == 2 %}
+  {% assign side_circle_class = 'side-circle side-circle__large side-circle__top-left' %}
+  {% elsif index == 4 %}
+    {% assign side_circle_class = 'side-circle side-circle__medium side-circle__bottom-right' %}
+{% endif %}
+
+<div class="coll-v2__product-type {{ side_circle_class }}">
+
+  <div class="coll-v2__product-type--content page-width">
+    {% assign meta_html_heading = collection.metafields.global.html_heading.value %}
+    <h2 class="h1-headline coll-v2__product-type--heading span-align-heading">
+      {%- if meta_html_heading != blank -%}
+        {{ meta_html_heading }}
+      {%- else -%}
+        <span class="align-left">&nbsp;&nbsp;&nbsp;{{ collection.title }}</span>
+      {%- endif -%}
+    </h2>
+
+    <p class="p coll-v2__product-type--desc">{{ collection.metafields.global.short_description.value }}</p>
+  </div>
+  <div class="coll-v2__product-type--products page-width">
+    {% for product in collection.products %}
+      {% render 'collection-item-saturo-single-product', product: product, btn_buy_text: btn_buy_text, btn_more_text: btn_more_text, btn_modal_text: btn_modal_text, btn_style: btn_style %}
+    {% endfor %}
+ </div>
+</div>

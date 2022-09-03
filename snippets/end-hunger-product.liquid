@@ -1,0 +1,32 @@
+{{ 'snippet-end-hunger-product.css' | asset_url | stylesheet_tag }}
+
+<div class="{{ class }} end-hunger__row-content">
+  <a class="end-hunger__coll-image-link" href="{{ collection_or_product.url }}">
+    {% if collection_or_product != blank %}
+      <img src="{{ collection_or_product.featured_image | img_url: '600x' }}" alt="" class="end-hunger__coll-image" loading="lazy" />
+    {% endif %}
+  </a>
+  <a href="{{ collection_or_product.url }}"><h3 class="end-hunger__row-title h2-headline"><strong>{{ title }}</strong></h3></a>
+  <a href="{{ collection_or_product.url }}"><h3 class="h2-headline">{{ subtitle }}</h3></a>
+
+  <div class="global-reviews end-hunger__coll-reviews">
+    {% if is_product == true %}
+      {% render 'reviews-io-rukrating-snippet', product: collection_or_product %}
+    {% else %}
+      {% render 'reviews-io-rukrating-snippet', collection: collection_or_product %}
+    {% endif %}
+  </div>
+
+  <div class="end-hunger__coll-buttons">
+    <a href="{{ collection_or_product.url }}" class="btn {{ btn_style }}">
+      <strong>{{ btn_text }}</strong>
+    </a>
+    
+    {% if btn_more_text != blank %}
+      <a href="{{ collection_or_product.url }}" class="btn btn--text">
+        {{ btn_more_text }}
+        {% render 'icon-chevron' %}
+      </a>
+    {% endif %}
+  </div>
+</div>

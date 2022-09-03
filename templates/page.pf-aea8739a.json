@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "pf-aea8739a": {
+      "type": "pf-aea8739a",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "pf-aea8739a"
+  ],
+  "layout": "theme.pagefly"
+}

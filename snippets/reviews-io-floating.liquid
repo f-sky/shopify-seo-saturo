@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="https://widget.reviews.io/floating-widget/css/dist.css" media="print" onload="this.media='all'">
+{% comment %} <script src="https://widget.reviews.io/rich-snippet-reviews-widgets/dist.js" type="text/javascript" defer></script> {% endcomment %}
+
+<script>
+    window.onload = function () {
+        var script = document.createElement("script");
+        script.onload = function () {
+            richSnippetReviewsWidgets({
+                store: "saturo.com",
+                primaryClr: "#ac8700",
+                widgetName: "floating-widget",
+              structured_data: {                         
+                         
+    abstract: "Made from Egyptian cotton of the central grazing lands, these towels have a softness that rivals your favourite childhood blanket"
+},
+                numReviews: 40,
+                floatPosition: "left",
+                contentMode: "company;product;third-party",
+                sku: "all-product-reviews;",
+                tabStyle: "normal",
+                hideDates: false,
+                translateReviews: "Bewertungen",
+                translateAverage: "Durchschnitt",
+                translateExcellent: "Hervorragend",
+                translateAnonymous: "Anonym",
+                translateVerified: "Verifiziert",
+                translateCustomerFeedback: "Kunden-feedback",
+                translateRating: "Bewertung",
+                translateBasedOn: "basierend auf",
+                translateReadAllReviews: "Alle Bewertungen lesen",
+                translateAlreadyLiked: "Ihnen gefällt diese Bewertung bereits",
+                css: ".RatingStatistics .RatingStatistics__Text { font-size: 12px; } .RatingVerdict { font-size: 16px; }"
+            });
+        };
+        script.src = "https://widget.reviews.io/rich-snippet-reviews-widgets/dist.js";
+        document.head.appendChild(script);
+    };
+</script>

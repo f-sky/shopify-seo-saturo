@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-contact",
+      "blocks": {
+        "3d08fda9-5a84-4b53-a771-db8606ea89cf": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Saturo-send-us-email.jpg",
+            "title": "Schreib uns eine E-Mail",
+            "desc": "<p>Du erreichst uns unter <a href=\"mailto:support@saturo.com\" title=\"mailto:support@saturo.com\">support@saturo.com<\/a>. Wir  antworten für gewöhnlich innerhalb eines Arbeitstages. Schick uns eine Nachricht!<\/p>",
+            "url": "mailto:support@saturo.com",
+            "url_text": "E-Mail senden"
+          }
+        },
+        "028b0941-7605-4b4d-9c87-69d5a2bf1277": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Saturo-call-us.jpg",
+            "title": "Ruf uns an",
+            "desc": "<p>Wenn es mal schnell gehen muss oder du lieber telefonierst, rufe uns unter <a href=\"tel:+431395079400\" title=\"tel:+431395079400\">+43 1 395 079 400<\/a> an.<\/p><p>Du erreichst uns Montag-Freitag von 9 - 18 Uhr (ausgenommen Feiertage).<\/p>",
+            "url": "tel:+431395079400",
+            "url_text": "Anrufen"
+          }
+        },
+        "ce8c5550-da52-4fd9-90ba-b9d147e7bf91": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Saturo-chat-with-us.jpg",
+            "title": "Chatte mit uns",
+            "desc": "<p>Unten rechts auf deinem Bildschirm findest du eine Sprechblase. Dort kannst du direkt mit uns chatten.<\/p>",
+            "url": "",
+            "url_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "3d08fda9-5a84-4b53-a771-db8606ea89cf",
+        "028b0941-7605-4b4d-9c87-69d5a2bf1277",
+        "ce8c5550-da52-4fd9-90ba-b9d147e7bf91"
+      ],
+      "settings": {
+        "title": "<span class=\"align-center\">Wir sind für dich<\/span>\n<span class=\"align-right\">da, wenn du<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-center\">uns brauchst<\/span>",
+        "desc": "<p>Egal, ob du eine Frage rund um das Thema Ernährung hast, oder einfach nur wissen willst, wann deine nächste Bestellung bei dir ankommt. Wir sind für dich da!<\/p><p>Kennst du schon unser<a href=\"\/apps\/hilfe-center\" title=\"\/apps\/hilfe-center\"> Hilfe-Center<\/a>? Dort findest du viele Antworten auf häufig gestellte Fragen.<\/p>",
+        "image": "shopify:\/\/shop_images\/Saturo-contact-shaker_e51bdf91-4d5d-4232-a4fa-c18a146d396a.jpg"
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Schreibe uns direkt über dieses Formular"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form"
+  ]
+}

@@ -1,0 +1,100 @@
+{{ 'section-table-contents.css' | asset_url | stylesheet_tag }}
+
+<nav class="table-contents {% unless section.settings.margin_top %}mt-0{% endunless %} {% unless section.settings.margin_bottom %}mb-0{% endunless %}">
+  <ul>
+    {% for block in section.blocks %}
+      {% if block.settings.link != blank %}
+        <li>
+          {% comment %}
+            <button data-scroll-id="{{ block.settings.section_id }}" class="p">{{ block.settings.link_text }}</button>
+          {% endcomment %}
+          <a href="{{ block.settings.link }}" class="p">{{ block.settings.link_text }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+
+{% if section.settings.bg_color != blank %}
+  <style>
+      #shopify-section-{{ section.id }} .table-contents ul {
+        background-color: var({{ section.settings.bg_color }});
+      }
+  </style>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Table of contents",
+    "class": "page-width",
+    "settings": [
+      {
+          "type": "text",
+          "id": "bg_color",
+          "label": "Background Color",
+          "info": "CSS Variable name eg. --color-white"
+      },
+      {
+        "type": "checkbox",
+        "id": "margin_top",
+        "label": "Margin-top",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "margin_bottom",
+        "label": "Margin-bottom",
+        "default": true
+      }
+    ],
+    "max_blocks": 8,
+    "blocks": [
+      {
+        "type": "link",
+        "name": "Link",
+        "settings": [
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link Text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Table of contents"
+      }
+    ]
+  }
+{% endschema %}
+
+{% comment %}
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+  
+    function animateToSectionId(sectionId) {
+      $('html').animate({
+        scrollTop: $(`[data-scroll-section="${sectionId}"]`).offset().top
+      }, 700);
+    }
+  
+    $('[data-scroll-id]').on('click', function() {
+      const sectionId = $(this).attr('data-scroll-id');
+      animateToSectionId(sectionId);
+    });
+  
+  });
+</script>
+{% endcomment %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

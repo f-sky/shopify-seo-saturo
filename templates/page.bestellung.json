@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1644353841cd0efb37": {
+      "type": "multicolumn",
+      "blocks": {
+        "16443538418252c420-0": {
+          "type": "column",
+          "settings": {
+            "title": "Abonnement",
+            "text": "<p>Wir machen ausgewogene Ernährung so einfach und bequem wie möglich. Mit deinem SATURO-Abo bekommst du regelmäßig deine Bestellung geliefert. Das Abo ist jederzeit kündbar.<\/p>",
+            "link_label": "Weiter Infos",
+            "link": "shopify:\/\/pages\/abo"
+          }
+        },
+        "16443538418252c420-1": {
+          "type": "column",
+          "settings": {
+            "title": "Versand",
+            "text": "<p>Der Versand dauert in der Regel zwischen 1-3 Werktagen in Deutschland und Österreich. Wenn du noch vor 13:30 Uhr bestellst, wird dein Paket noch am selben Tag verschickt.<\/p>",
+            "link_label": "Weitere Infos",
+            "link": "shopify:\/\/pages\/versand-und-bezahlung"
+          }
+        },
+        "814621c6-4028-4826-a1ff-ac3ad70460b8": {
+          "type": "column",
+          "settings": {
+            "title": "Bezahlung",
+            "text": "<p>Bei uns kannst du in vielen gängigen Bezahlungsmethoden bezahlen. Wir bieten u.a. PayPal, Kreditkarte, Klarna an<\/p>",
+            "link_label": "Weitere Infos",
+            "link": "shopify:\/\/pages\/versand-und-bezahlung"
+          }
+        },
+        "6cdd4398-5524-40d0-b6ce-6d195885a885": {
+          "type": "column",
+          "settings": {
+            "title": "Rücknahmegarantie",
+            "text": "<p>Solltest du mal nicht mit SATURO zufrieden sein, dann kannst du innerhalb von 14 Tagen deine Bestellung zurücksenden<\/p>",
+            "link_label": "Weitere Infos",
+            "link": "shopify:\/\/policies\/refund-policy"
+          }
+        }
+      },
+      "block_order": [
+        "16443538418252c420-0",
+        "16443538418252c420-1",
+        "814621c6-4028-4826-a1ff-ac3ad70460b8",
+        "6cdd4398-5524-40d0-b6ce-6d195885a885"
+      ],
+      "settings": {
+        "title": "Deine Bestellung - ganz einfach",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1644353841cd0efb37"
+  ]
+}

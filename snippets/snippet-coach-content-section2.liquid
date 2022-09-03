@@ -1,0 +1,40 @@
+<section class="coach-content__section coach-content__section2" data-scroll-section="{{ block.id }}">
+  <div class="page-width coach-content__section-wrapper">
+
+    <h3 class="h1-headline span-align-heading coach-content__section-title">{{ block.settings.title }}</h3>
+    <p class="h2-headline coach-content__section2-desc">{{ block.settings.desc }}</p>
+
+    <div class="p coach-content__section2-richtext">
+      {{ block.settings.richtext }}
+    </div>
+
+    <div class="coach-content__section2-items--grid">
+      {% assign item1_title = block.settings.item1_title %}
+      {% assign item1_subtitle = block.settings.item1_subtitle %}
+      {% assign item1_collection_or_product = collections[block.settings.item1_collection.handle] %}
+      {% if block.settings.item1_product != blank %}
+        {% assign item1_collection_or_product = all_products[block.settings.item1_product.handle] %}
+      {% endif %}
+      {% render 'end-hunger-product', class: 'coach-content__section2-item1', collection_or_product: item1_collection_or_product, title: item1_title, subtitle: item1_subtitle, is_product: false %}
+
+
+      {% assign item2_title = block.settings.item2_title %}
+      {% assign item2_subtitle = block.settings.item2_subtitle %}
+      {% assign item2_collection_or_product = collections[block.settings.item2_collection.handle] %}
+      {% if block.settings.item2_product != blank %}
+        {% assign item2_collection_or_product = all_products[block.settings.item2_product.handle] %}
+      {% endif %}
+      {% render 'end-hunger-product', class: 'coach-content__section2-item2', collection_or_product: item2_collection_or_product, title: item2_title, subtitle: item2_subtitle, is_product: false %}
+
+
+      {% assign item3_title = block.settings.item3_title %}
+      {% assign item3_subtitle = block.settings.item3_subtitle %}
+      {% assign item3_collection_or_product = collections[block.settings.item3_collection.handle] %}
+      {% if block.settings.item3_product != blank %}
+        {% assign item3_collection_or_product = all_products[block.settings.item3_product.handle] %}
+      {% endif %}
+      {% render 'end-hunger-product', class: 'coach-content__section2-item3', collection_or_product: item3_collection_or_product, title: item3_title, subtitle: item3_subtitle, is_product: false %}
+    </div>
+  </div>
+</section>
+{% render 'reviews-io-rukrating-snippet-end', color_review_star: '--color-black-grey-title', mode: "extended", link: "TRUE" %}

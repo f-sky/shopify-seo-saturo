@@ -1,0 +1,67 @@
+{{ 'home-its-saturo.css' | asset_url | stylesheet_tag }}
+
+{% assign image = section.settings.image %}
+{% assign title_html = section.settings.title %}
+{% assign desc = section.settings.desc %}
+{% assign signatures = section.settings.signatures_image %}
+
+<section class="page-width its-saturo__wrapper">
+
+  {% if image != blank %}
+    <img src="{{ image | img_url: '1000x'}}" alt="{{ image.alt }}" class="its-saturo__image" loading="lazy" />
+  {% endif %}
+
+  <h2 class="h1-headline its-saturo__title span-align-heading {% if section.settings.full_width_title %}full-width-title{% endif %}">
+    {{ title_html }}
+  </h2>
+
+  <div class="its-saturo__content">
+    {{ desc }}
+
+    {% if signatures != blank %}
+    	<img src="{{ signatures | img_url: '1000x'}}" alt="{{ signatures.alt }}" class="its-saturo__signatures" loading="lazy" />
+    {% endif %}
+  </div>
+
+</section>
+
+
+{% schema %}
+{
+  "name": "Home - This is Saturo",
+  "tag": "section",
+  "class": "its-saturo side-circle side-circle__large side-circle__top-left",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Photo"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "signatures_image",
+      "label": "Signatures Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width_title",
+      "label": "Full Width Title (Mobile)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home - This is Saturo"
+    }
+  ]
+}
+{% endschema %}

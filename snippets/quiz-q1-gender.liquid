@@ -1,0 +1,50 @@
+<!-- q1: gender -->
+<div class="quiz-item quiz-q1 is-hidden" data-quiz-item="q1" data-quiz-item-handle="gender">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.gender.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q1">{% render 'icon-quiz-info' %}</a></h2>
+    <div class="quiz-options quiz-options--inline quiz-options--icons">
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-female" type="radio" name="gender" value="female" data-quiz-answer>
+        <label for="quiz-female">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-female' %}
+          </div>
+          <span class="details">{{ "personalized_quiz.gender.option_female" | t }}</span>
+        </label>
+      </div>
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-male" type="radio" name="gender" value="male" data-quiz-answer>
+        <label for="quiz-male">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-male' %}
+          </div>
+          <span class="details">{{ "personalized_quiz.gender.option_male" | t }}</span>                
+        </label>
+      </div>
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-other" type="radio" name="gender" value="other" data-quiz-answer>
+        <label for="quiz-other">
+          <div class="quiz-option__circle">
+            {% render 'icon-quiz-other' %}
+          </div>
+          <span class="details">{{ "personalized_quiz.gender.option_other" | t }}</span>        
+        </label>
+      </div>
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.gender.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q1">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.gender.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.gender.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q1 -->

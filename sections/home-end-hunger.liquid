@@ -1,0 +1,295 @@
+{{ 'home-end-hunger.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width end-hunger__wrapper">
+
+  {% assign desc = section.settings.desc %}
+  <div class="end-hunger__desc h2-headline">{{ desc }}</div>
+
+  {% assign title_html = section.settings.title %}
+  <h2 class="h1-headline end-hunger__title span-align-heading">
+    {{ title_html }}
+  </h2>
+
+  {% assign row1_title = section.settings.row1_title %}
+  {% assign row1_subtitle = section.settings.row1_subtitle %}
+  {% assign row1_is_product = false %}
+  {% assign row1_collection_or_product = collections[section.settings.row1_collection.handle] %}
+  {% if section.settings.row1_product != blank %}
+    {% assign row1_is_product = true %}
+    {% assign row2_collection_or_product = all_products[section.settings.row1_product.handle] %}
+  {% endif %}
+  {% render 'end-hunger-product', btn_style: section.settings.row1_btn_style, btn_text: section.settings.row1_btn_text, btn_more_text: section.settings.row1_btn_more_text, class: 'end-hunger__row1-content', collection_or_product: row1_collection_or_product, title: row1_title, subtitle: row1_subtitle, is_product: row1_is_product %}
+
+  {% assign row1_image = section.settings.row1_image %}
+  {% if row1_image != blank %}
+    <img src="{{ row1_image | img_url: '1300x' }}" alt="{{ row1_image.alt }}" class="end-hunger__row1-image" loading="lazy" />
+  {% endif %}
+
+  {% assign row2_title = section.settings.row2_title %}
+  {% assign row2_subtitle = section.settings.row2_subtitle %}
+  {% assign row2_is_product = false %}
+  {% assign row2_collection_or_product = collections[section.settings.row2_collection.handle] %}
+  {% if section.settings.row2_product != blank %}
+    {% assign row2_is_product = true %}
+    {% assign row2_collection_or_product = all_products[section.settings.row2_product.handle] %}
+  {% endif %}
+  {% render 'end-hunger-product', btn_style: section.settings.row2_btn_style, btn_text: section.settings.row2_btn_text, btn_more_text: section.settings.row2_btn_more_text, class: 'end-hunger__row2-content', collection_or_product: row2_collection_or_product, title: row2_title, subtitle: row2_subtitle, is_product: row2_is_product %}
+
+  {% assign row2_image = section.settings.row2_image %}
+  {% if row2_image != blank %}
+    <img src="{{ row2_image | img_url: '1300x' }}" alt="{{ row2_image.alt }}" class="end-hunger__row2-image" loading="lazy" />
+  {% endif %}
+
+  {% assign row3_image = section.settings.row3_image %}
+  {% if row3_image != blank %}
+    <img src="{{ row3_image | img_url: '1300x' }}" alt="{{ row3_image.alt }}" class="end-hunger__row3-image" loading="lazy" />
+  {% endif %}
+
+  {% assign row3_title = section.settings.row3_title %}
+  {% assign row3_subtitle = section.settings.row3_subtitle %}
+  {% assign row3_is_product = false %}
+  {% assign row3_collection_or_product = collections[section.settings.row3_collection.handle] %}
+  {% if section.settings.row3_product != blank %}
+    {% assign row3_is_product = true %}
+    {% assign row3_collection_or_product = all_products[section.settings.row3_product.handle] %}
+  {% endif %}
+  {% render 'end-hunger-product', btn_style: section.settings.row3_btn_style, btn_text: section.settings.row3_btn_text, btn_more_text: section.settings.row3_btn_more_text, class: 'end-hunger__row3-content', collection_or_product: row3_collection_or_product, title: row3_title, subtitle: row3_subtitle, is_product: row3_is_product %}
+
+</section>
+
+{% render 'reviews-io-rukrating-snippet-end', color_review_star: '--color-black-grey-title', mode: "extended", link: "TRUE" %}
+
+{% schema %}
+{
+  "name": "Home - End Hunger",
+  "tag": "section",
+  "class": "end-hunger side-circle side-circle__large side-circle__top-right",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "header",
+      "content": "Section 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "row1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "row1_title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "row1_subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "collection",
+      "id": "row1_collection",
+      "label": "Collection"
+    },
+    {
+      "type": "product",
+      "id": "row1_product",
+      "label": "Product",
+      "info": "Instead of a collection"
+    },
+    {
+      "type": "select",
+      "id": "row1_btn_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "btn--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "btn--tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "btn--text",
+          "label": "Text"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "row1_btn_text",
+      "label": "Button Text",
+      "default": "Kaufen"
+    },
+    {
+      "type": "text",
+      "id": "row1_btn_more_text",
+      "label": "Button More Info Text",
+      "default": "Weitere Infos"
+    },
+    {
+      "type": "header",
+      "content": "Section 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "row2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "row2_title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "row2_subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "collection",
+      "id": "row2_collection",
+      "label": "Collection"
+    },
+    {
+      "type": "product",
+      "id": "row2_product",
+      "label": "Product",
+      "info": "Instead of a collection"
+    },
+    {
+      "type": "select",
+      "id": "row2_btn_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "btn--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "btn--tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "btn--text",
+          "label": "Text"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "row2_btn_text",
+      "label": "Button Text",
+      "default": "Kaufen"
+    },
+    {
+      "type": "text",
+      "id": "row2_btn_more_text",
+      "label": "Button More Info Text",
+      "default": "Weitere Infos"
+    },
+    {
+      "type": "header",
+      "content": "Section 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "row3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "row3_title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "row3_subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "collection",
+      "id": "row3_collection",
+      "label": "Collection"
+    },
+    {
+      "type": "product",
+      "id": "row3_product",
+      "label": "Product",
+      "info": "Instead of a collection"
+    },
+    {
+      "type": "select",
+      "id": "row3_btn_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "btn--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "btn--tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "btn--text",
+          "label": "Text"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "row3_btn_text",
+      "label": "Button Text",
+      "default": "Kaufen"
+    },
+    {
+      "type": "text",
+      "id": "row3_btn_more_text",
+      "label": "Button More Info Text",
+      "default": "Weitere Infos"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home - End Hunger"
+    }
+  ]
+}
+{% endschema %}

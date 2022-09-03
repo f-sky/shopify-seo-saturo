@@ -1,0 +1,43 @@
+{{ 'product-always-clean.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width always-clean__wrapper">
+  <h3 class="h1-headline always-clean__title">{{ section.settings.title }}</h3>
+  <p class="h2-headline always-clean__subtitle">
+    {{ section.settings.subtitle }}
+  </p>
+
+  <p class="p always-clean__small">{{ section.settings.note }}</p>
+</section>
+
+{% schema %}
+{
+  "name": "Product - Always Clean",
+  "tag": "section",
+  "class": "always-clean",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Immer schön clean bleiben."
+    },
+    {
+      "type": "html",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "<strong>Nur 0,5 g Zucker pro Mahlzeit (400 kcal)*<\/strong>\n    <strong>Ohne Süßstoff und Aroma*<\/strong>\n    <strong>Keine Gentechnik (GMO-free)<\/strong>"
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Note",
+      "default": "* Angaben beziehen sich auf Geschmackssorte Natur."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product - Always Clean"
+    }
+  ]
+}
+{% endschema %}

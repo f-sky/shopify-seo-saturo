@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Rubrik New';
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src: local('Rubrik New Italic'),
+         local('Rubrik-New-Italic'),
+         url('{{ 'Rubrik_New_Regular_Italic.woff2' | asset_url }}') format("woff2"),
+         url('{{ 'Rubrik_New_Regular_Italic.woff' | asset_url }}') format("woff");
+  }
+
+  @font-face {
+    font-family: 'Rubrik New';
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src: local('Rubrik New Bold Italic'),
+         local('Rubrik-New-Bold-Italic'),
+         url('{{ 'Rubrik_New_Bold_Italic.woff2' | asset_url }}') format("woff2"),
+         url('{{ 'Rubrik_New_Bold_Italic.woff' | asset_url }}') format("woff");
+  }

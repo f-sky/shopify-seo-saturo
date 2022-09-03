@@ -1,0 +1,196 @@
+{% comment %} {{ 'home-trust-reviews.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %} <link rel="preload" as="style" href="{{ 'home-trust-reviews.css' | asset_url }}"> {% endcomment %}
+<link rel="stylesheet" href="{{ 'home-trust-reviews.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="page-width trust-reviews__wrapper">
+
+  {% assign title_html = section.settings.title %}
+  <h2 class="h1-headline trust-reviews__title span-align-heading">
+    {{ title_html }}
+  </h2>
+
+  {% assign row1_name = section.settings.row1_name %}
+  {% assign row1_title = section.settings.row1_title %}
+  {% assign row1_desc = section.settings.row1_desc %}
+  
+  {% if row1_name != blank or row1_title != blank or row1_desc != blank %}
+    <div class="trust-reviews__row1-content">
+      <h3 class="h2-headline">
+        {% if row1_name != blank %}
+          <strong>{{ row1_name }}</strong><br>
+        {% endif %}
+        {% if row1_title != blank %}
+          {{ row1_title }}
+        {% endif %}
+      </h3>
+
+      {% if row1_desc != blank %}
+          <p class="p">{{ row1_desc }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+  {% assign row1_image1 = section.settings.row1_image1 %}
+  {% assign row1_image2 = section.settings.row1_image2 %}
+  {% assign row1_image3 = section.settings.row1_image3 %}
+  {% if row1_image1 != blank or row1_image2 != blank or row1_image3 != blank %}
+    <div class="trust-reviews__row1-images {% unless section.settings.images_as_bg %}images-not-bg{% endunless %}">
+      {% if row1_image1 != blank %}
+      	{% if section.settings.images_as_bg %}
+        	<div class="trust-reviews__row1-image1 lazy-bg" style="background-image: url('{{ row1_image1 | img_url: '800x' }}');"></div>
+      	{% else %}
+      		<img class="trust-reviews__row1-image1" loading="lazy" src="{{ row1_image1 | img_url: '800x' }}" alt="" />
+      	{% endif %}
+      
+      {% endif %}
+
+      {% if row1_image2 != blank %}
+        <div class="trust-reviews__row1-image2 lazy-bg" style="background-image: url('{{ row1_image2 | img_url: '800x' }}');"></div>
+      {% endif %}
+
+      {% if row1_image3 != blank %}
+        <div class="trust-reviews__row1-image3 lazy-bg" style="background-image: url('{{ row1_image3 | img_url: '800x' }}');"></div>
+      {% endif %}
+    </div>
+  {% endif %}
+    
+  {% assign row2_image1 = section.settings.row2_image1 %}
+  {% assign row2_image2 = section.settings.row2_image2 %}
+  {% assign row2_image3 = section.settings.row2_image3 %}
+  {% if row2_image1 != blank or row2_image2 != blank or row2_image3 != blank %}
+    <div class="trust-reviews__row2-images {% unless section.settings.images_as_bg %}images-not-bg{% endunless %}">
+      {% if row2_image1 != blank %}
+      	{% if section.settings.images_as_bg %}
+        	<div class="trust-reviews__row2-image1 lazy-bg" style="background-image: url('{{ row2_image1 | img_url: '800x' }}');"></div>
+        {% else %}
+      		<img class="trust-reviews__row2-image1" loading="lazy" src="{{ row2_image1 | img_url: '800x' }}" alt="" />
+      	{% endif %}
+      {% endif %}
+
+      {% if row2_image2 != blank %}
+        <div class="trust-reviews__row2-image2 lazy-bg" style="background-image: url('{{ row2_image2 | img_url: '800x' }}');"></div>
+      {% endif %}
+
+      {% if row2_image3 != blank %}
+        <div class="trust-reviews__row2-image3 lazy-bg" style="background-image: url('{{ row2_image3 | img_url: '800x' }}');"></div>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+  {% assign row2_name = section.settings.row2_name %}
+  {% assign row2_title = section.settings.row2_title %}
+  {% assign row2_desc = section.settings.row2_desc %}
+  
+  {% if row2_name != blank or row2_title != blank or row2_desc != blank %}
+    <div class="trust-reviews__row2-content">
+      <h3 class="h2-headline">
+        {% if row2_name != blank %}
+          <strong>{{ row2_name }}</strong><br>
+        {% endif %}
+        {% if row2_title != blank %}
+          {{ row2_title }}
+        {% endif %}
+      </h3>
+
+      {% if row2_desc != blank %}
+          <p class="p">{{ row2_desc }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+</section>
+
+
+{% schema %}
+{
+  "name": "Home - Trust 3m Meals",
+  "tag": "section",
+  "class": "trust-reviews",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "header",
+      "content": "Section 1"
+    },
+    {
+      "type": "text",
+      "id": "row1_name",
+      "label": "Name"
+    },
+    {
+      "type": "html",
+      "id": "row1_title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "row1_desc",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "row1_image1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "row1_image2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "row1_image3",
+      "label": "Image 3"
+    },
+    {
+      "type": "header",
+      "content": "Section 2"
+    },
+    {
+      "type": "text",
+      "id": "row2_name",
+      "label": "Name"
+    },
+    {
+      "type": "html",
+      "id": "row2_title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "row2_desc",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "row2_image1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "row2_image2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "row2_image3",
+      "label": "Image 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "images_as_bg",
+      "label": "Show Images as Background",
+	  "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home - Trust 3m Meals"
+    }
+  ]
+}
+{% endschema %}

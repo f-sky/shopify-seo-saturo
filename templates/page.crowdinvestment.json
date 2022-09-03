@@ -1,0 +1,150 @@
+{
+  "sections": {
+    "16474593922ff5ce3b": {
+      "type": "product-header-2",
+      "settings": {
+        "title": "<span class=\"align-left\">Introducing<\/span>\n<span class=\"align-center\">a new age<span class=\"heading-line\" style=\"width:8rem;\"><\/span><\/span> <span class=\"align-left\">of nutrition<\/span>",
+        "heading_2": "Wir launchen<br>personalisiertes<br>Complete Food<br>und suchen<br>Crowdinvestoren  ",
+        "subtitle": "Bist du dabei?",
+        "btn_text": "Jetzt investieren",
+        "btn_url": "https:\/\/www.seedmatch.de\/saturo",
+        "assigned_product": "",
+        "bg_image_wide": "shopify:\/\/shop_images\/20220317-Saturo-personalized-bench_6d714f93-26ed-4003-90c3-83787da86e75.jpg",
+        "bg_image_desktop": "shopify:\/\/shop_images\/20220317-Saturo-personalized-bench_6d714f93-26ed-4003-90c3-83787da86e75.jpg",
+        "text_color": "",
+        "bg_color": "#ffffff",
+        "hide_circle": true,
+        "content_side": "content-left",
+        "mobile_content_position": "content-top__mobile",
+        "custom_header_color": ""
+      }
+    },
+    "1647511790e0ddfe11": {
+      "type": "crowd-section-1",
+      "settings": {
+        "title": "<span class=\"align-center\">Saturo<\/span>\n    <span class=\"align-right\">Crowd<span class=\"heading-line\" style=\"width: 5rem;\"><\/span><\/span>\n    <span class=\"align-center\">investing<\/span>",
+        "desc": "<p>Zusammen mit der renommierten Finanzierungsplattform Seedmatch starten wir in kürze unsere <strong>Crowdinvesting-Kampagne<\/strong>. Auf diese Weise können sich Investoren bereits ab 250 Euro an dem Erfolg von Saturo beteiligen.<\/p>",
+        "button_text": "Jetzt investieren",
+        "button_url": "https:\/\/www.seedmatch.de\/saturo",
+        "button_bg_color": "--color-turquoise",
+        "button_color": "--color-white"
+      }
+    },
+    "16475168281426d442": {
+      "type": "crowd-section-2",
+      "settings": {
+        "title": "<span class=\"align-right\">Wir machen    <\/span>\n    <span class=\"align-center\">personalisierte<\/span>\n<span class=\"align-right\">Ernährung<\/span>\n    <span class=\"align-right\">einfach<span class=\"heading-line\"><\/span><\/span>",
+        "desc": "<p>Leute sagen <strong>»du bist, was du isst«.<\/strong><\/p><p>Aber wer sind wir eigentlich?<\/p><p>Wir sind vieles. Vor allem: <strong>verschieden<\/strong>.<br\/> Mit einzigartigem Charakter und individuellen Zielen.<\/p><p>Jeder hat etwas, das ihn antreibt. <strong>Ernährung<\/strong> kann dieser Treibstoff sein. Aber sie ist <strong>komplex<\/strong>. Genauso wie wir.<\/p><p>»One size fits all« passt also am Ende des Tages für niemanden.<\/p><p>Deshalb schlüsseln wir die komplexe Wissenschaft der Ernährung auf. Vereinfachen sie radikal und <strong>passen sie an die individuellen Bedürfnisse an.<\/strong><\/p><p>Damit jeder stets sein Bestes geben kann.<\/p><p><strong>Das ist Saturo.<\/strong><\/p><p>Das ist »Complete Food«.<\/p><p><strong>Auf Vielfalt zugeschnitten.<\/strong><\/p>",
+        "row1_image": "shopify:\/\/shop_images\/saturo_imagefilm_setfoto_14_cfb740d2-6272-4d1b-a4f7-c1281be8efa8.jpg",
+        "row1_text": "<p>Wir sind <strong>weltweit die Ersten, die personalisiertes Complete Food entwickelt haben.<\/strong><\/p><p>Jede Mahlzeit ist eine <strong>individuell abgestimmte Zusammensetzung<\/strong> aus allen Nährstoffen, die der Körper braucht.<\/p><p>Wissenschaftliche Studien belegen, dass <strong>personalisierte Ernährung der Schlüssel<\/strong> ist, um Gesundheit und Leistungsfähigkeit zu verbessern.<\/p><p>Sowohl körperlich als auch mental.<\/p>",
+        "button_text": "Jetzt investieren",
+        "button_url": "https:\/\/www.seedmatch.de\/saturo",
+        "button_bg_color": "--color-turquoise",
+        "button_color": "--color-white"
+      }
+    },
+    "1647471900980e5911": {
+      "type": "home-trust-reviews",
+      "settings": {
+        "title": "<span class=\"align-center\">Warum<\/span>\n    <span class=\"align-left\">Crowd<span class=\"heading-line\" style=\"width: 5rem;\"><\/span><\/span>\n    <span class=\"align-left\">investing?<\/span>",
+        "row1_name": "",
+        "row1_title": "Beteiligung der Saturo-Community am Erfolg",
+        "row1_desc": "Das Crowdinvesting bietet uns die Möglichkeit, unsere Community noch stärker in die weitere Entwicklung von Saturo einzubinden und am Erfolg zu beteiligen. Unser Partner Seedmatch, Deutschlands erste Plattform für Unternehmens-Crowdinvesting, ist dabei die perfekte Wahl, da Kleinanleger schon ab €250 und gebührenfrei in innovative Unternehmen wie uns investieren können. Mehr als 75.000 Nutzer konnten so bereits in bekannte Marken wie Veganz investieren.",
+        "row1_image1": "shopify:\/\/shop_images\/Saturo-community-jeanny.jpg",
+        "row1_image2": "shopify:\/\/shop_images\/20220317-Saturo-Community.jpg",
+        "row1_image3": "shopify:\/\/shop_images\/20220317-Saturo-Community-2.jpg",
+        "row2_name": "",
+        "row2_title": "",
+        "row2_desc": "",
+        "images_as_bg": true
+      }
+    },
+    "1647471198f8407fc1": {
+      "type": "home-its-saturo",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/saturo_founders_photo.jpg",
+        "title": "<span class=\"align-center\">Investieren<\/span><span class=\"align-right\"><span class=\"heading-line-left\"><\/span>kann so<\/span><span class=\"align-left\">einfach sein<\/span>",
+        "desc": "<p>1. Erstelle einfach ein Profil auf <a href=\"https:\/\/www.seedmatch.de\" title=\"https:\/\/www.seedmatch.de\">seedmatch.de<\/a><\/p><p>2 Investiere deinen Wunschbetrag (Mindestinvestment €250) und profitiere in den ersten 48 Stunden bis Samstag, 26.2.202,2 12 Uhr von exklusiven Konditionen (Details dazu bekommst du in unserem Newsletter).<\/p><p>Du wirst finanziell an unserer Unternehmensentwicklung beteiligt!<\/p><p><a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0328\/1826\/6249\/files\/Vermogensanlagen-Informationsblatt.pdf?v=1648031000\" target=\"_blank\" title=\"Vermögensanlagen-Informationsblatt gemäß §§ 2a, 13 VermAnlG\">Vermögensanlagen-Informationsblatt gemäß §§ 2a, 13 VermAnlG<\/a><\/p>",
+        "full_width_title": true
+      }
+    },
+    "1647512934afa4c394": {
+      "type": "newsletter-signup",
+      "settings": {
+        "title": "",
+        "subtitle": "Sichere dir <strong>exklusive Investmentkonditionen<\/strong>. Trag dich ein und wir informieren dich.",
+        "details_text": "<p>Unsere Datenschutzerklärung kannst du <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">hier<\/a> einsehen.<\/p>",
+        "btn_text": "senden",
+        "input_placeholder": "name@mail.com",
+        "custom_form_html": "<div class=\"klaviyo-form-WVagFH\"><\/div>",
+        "custom_id": "signup-form"
+      }
+    },
+    "1647472795762286d8": {
+      "type": "home-trust-reviews",
+      "disabled": true,
+      "settings": {
+        "title": "<span class=\"align-center\">Wer<\/span>\n    <span class=\"align-left\">vertraut<\/span>\n    <span class=\"align-center\">bereits<span class=\"heading-line\" style=\"width: 5rem;\"><\/span><\/span>\n    <span class=\"align-center\">auf uns?<\/span>",
+        "row1_name": "",
+        "row1_title": "Square One Foods GmbH",
+        "row1_desc": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+        "row1_image1": "shopify:\/\/shop_images\/image_42.jpg",
+        "row2_name": "",
+        "row2_title": "Biogena Group",
+        "row2_desc": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+        "row2_image1": "shopify:\/\/shop_images\/biogena_image.jpg",
+        "images_as_bg": false
+      }
+    },
+    "1647460112595cb40e": {
+      "type": "newsletter-signup",
+      "disabled": true,
+      "settings": {
+        "title": "Sicher dir",
+        "subtitle": "exklusive Goodies und verpasse keine Neuigkeiten.",
+        "details_text": "<p>Unsere Datenschutzerklärung kannst du <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">hier<\/a> einsehen.<\/p>",
+        "btn_text": "senden",
+        "input_placeholder": "name@mail.com",
+        "custom_form_html": "<div class=\"klaviyo-form-WVagFH\"><\/div>",
+        "custom_id": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "title": ""
+      }
+    },
+    "16475388384c52293d": {
+      "type": "rich-text",
+      "blocks": {
+        "164753883811d2fddf-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der Erwerb dieser Vermögensanlage ist mit erheblichen Risiken verbunden und kann zum vollständigen Verlust des eingesetzten Vermögens führen. Die angebotene Vermögensanlage der Saturo Foods GmbH richtet sich <strong>ausschließlich an Personen mit Wohnsitz in Deutschland<\/strong>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "164753883811d2fddf-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    }
+  },
+  "order": [
+    "16474593922ff5ce3b",
+    "1647511790e0ddfe11",
+    "16475168281426d442",
+    "1647471900980e5911",
+    "1647471198f8407fc1",
+    "1647512934afa4c394",
+    "1647472795762286d8",
+    "1647460112595cb40e",
+    "main",
+    "16475388384c52293d"
+  ]
+}

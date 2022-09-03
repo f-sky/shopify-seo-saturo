@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+<section class="page-width page__wrapper">
+  <h1 class="h1-headline page__title span-align-heading">
+    {% assign title_html = section.settings.title %}
+    {% if title_html != blank %}
+      {{ title_html }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+  </h1>
+
+  <div class="page__desc">
+    <p class="p">{{ page.content }}</p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    }
+  ]
+}
+{% endschema %}

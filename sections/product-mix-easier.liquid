@@ -1,0 +1,92 @@
+{{ 'product-mix-easier.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width mix-easier__wrapper">
+
+  <h3 class="h1-headline span-align-heading mix-easier__title">
+    {{ section.settings.title }}
+  </h3>
+
+  {% assign s2_image2 = section.settings.s2_image2 %}
+  {% if s2_image2 != blank %}
+     <img src="{{ s2_image2 | img_url: '1500x' }}" alt="{{ s2_image2.alt }}" class="mix-easier__row2-image" loading="lazy" />
+  {% endif %}
+
+  <div class="mix-easier__row1-text">
+    {{ section.settings.s1_text }}
+  </div>
+
+  {% assign s1_image = section.settings.s1_image %}
+  {% if s1_image != blank %}
+    <img src="{{ s1_image | img_url: '1500x' }}" alt="{{ s1_image.alt }}" class="mix-easier__row1-image" loading="lazy" />
+  {% endif %}
+
+  <div class="mix-easier__row2-content">
+
+    {% assign s2_image1 = section.settings.s2_image1 %}
+    {% if s2_image1 != blank %}
+      <img src="{{ s2_image1 | img_url: '1500x' }}" alt="{{ s2_image1.alt }}" class="mix-easier__image" loading="lazy" />
+    {% endif %}
+
+    {% if s2_image2 != blank %}
+       <img src="{{ s2_image2 | img_url: '1500x' }}" alt="{{ s2_image2.alt }}" class="mix-easier__row2-image mix-easier__row2-image--mobile" loading="lazy" />
+    {% endif %}
+
+    {{ section.settings.s2_text }}
+  </div>
+</section>
+
+{% schema %}
+{
+    "name": "Product - Mix Easier",
+    "tag": "section",
+    "class": "mix-easier",
+    "settings": [
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title HTML",
+        "default": "<span class=\"align-left\">Eine Mahlzeit<\/span> <span class=\"align-left\"><span class=\"heading-line\"><\/span>zubereiten?<\/span> <span class=\"align-left\">Mix leichter<\/span> <span class=\"align-center\">als das!<\/span>"
+      },
+      {
+        "type": "header",
+        "content": "Section 1"
+      },
+      {
+        "type": "html",
+        "id": "s1_text",
+        "label": "Text HTML",
+        "default": "<p class=\"p\">500ml Wasser in den Shaker füllen<\/p><p class=\"p\">Drei gestrichene Löffel Saturo Balanced Pulver dazugeben<\/p><p class=\"p\">Gut durchmischen<\/p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "s1_image",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Section 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "s2_image1",
+        "label": "Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "s2_image2",
+        "label": "Image 2"
+      },
+      {
+        "type": "html",
+        "id": "s2_text",
+        "label": "Text HTML",
+        "default": "<p class=\"p\">Ausgewogen ernähren mit allen Nährstoffen, die du brauchst.<\/p><p class=\"p\">Nach Lust und Laune genießen.<\/p>"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product - Mix Easier"
+      }
+    ]
+}
+{% endschema %}

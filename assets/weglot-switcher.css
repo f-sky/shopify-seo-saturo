@@ -1,0 +1,70 @@
+.header__lang {
+  position: relative;
+  top: 0.2rem;
+  margin-right: 2.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .header__lang {
+    display: none;
+  }
+}
+
+.header__lang .wg-drop.country-selector,
+.mega-menu__footer--lang .wg-drop.country-selector {
+  background-color: transparent;
+}
+
+
+body:not(.transparent-header) .mega-menu-header .header__lang .wg-drop.country-selector .wgcurrent:after,
+.mega-menu-header:hover .header__lang .wg-drop.country-selector .wgcurrent:after {
+  cursor: pointer;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI4NC45IDI4NC45Ij48cGF0aCBkPSJtMjgyIDc2LjUtMTQuMi0xNC4zYTkgOSAwIDAgMC0xMy4xIDBMMTQyLjUgMTc0LjQgMzAuMyA2Mi4yYTkgOSAwIDAgMC0xMy4yIDBMMyA3Ni41YTkgOSAwIDAgMCAwIDEzLjFsMTMzIDEzM2E5IDkgMCAwIDAgMTMuMSAwbDEzMy0xMzNhOSA5IDAgMCAwIDAtMTN6Ii8+PC9zdmc+);
+}
+
+.header__lang .wg-drop.country-selector .wgcurrent:after,
+.mega-menu__footer--lang .wg-drop.country-selector .wgcurrent:after {
+  right: -1.5rem;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI4NC45IDI4NC45Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJtMjgyIDc2LjUtMTQuMi0xNC4zYTkgOSAwIDAgMC0xMy4xIDBMMTQyLjUgMTc0LjQgMzAuMyA2Mi4yYTkgOSAwIDAgMC0xMy4yIDBMMyA3Ni41YTkgOSAwIDAgMCAwIDEzLjFsMTMzIDEzM2E5IDkgMCAwIDAgMTMuMSAwbDEzMy0xMzNhOSA5IDAgMCAwIDAtMTN6Ii8+PC9zdmc+);
+}
+
+.header__lang .wg-drop.country-selector.closed .wgcurrent:after,
+.mega-menu__footer--lang .wg-drop.country-selector.closed .wgcurrent:after {
+  transform: rotate(-90deg) scale(1.3);
+}
+
+.header__lang  .wg-drop.weg-openleft .wgcurrent:after {
+  transform: scale(1.3);
+}
+
+.header__lang  .wg-drop.weg-openup .wgcurrent:after,
+.mega-menu__footer--lang .wg-drop.weg-openup .wgcurrent:after {
+  transform: rotate(-180deg) scale(1.3);
+}
+
+.header__lang .wg-drop.country-selector .wgcurrent a,
+.mega-menu__footer--lang .wg-drop.country-selector .wgcurrent a {
+  padding-right: 0;
+}
+
+.header__lang .wg-flags a img.wg-flag,
+.mega-menu__footer--lang .wg-flags a img.wg-flag {
+  margin-right: 0;
+}
+
+.header__lang .wg-drop.country-selector a,
+.mega-menu__footer--lang .wg-drop.country-selector a {
+  padding: 0;
+  min-width: 3.5rem;
+}
+
+.header__lang .wg-drop.country-selector .wgcurrent,
+.mega-menu__footer--lang .wg-drop.country-selector .wgcurrent {
+  border: none;
+}
+
+.header__lang .wg-drop.country-selector ul,
+.mega-menu__footer--lang .wg-drop.country-selector ul {
+  border: none;
+  background-color: transparent;
+}

@@ -1,0 +1,36 @@
+<!-- q3: lifestyle -->
+<div class="quiz-item quiz-q3 is-hidden" data-quiz-item="q3" data-quiz-item-handle="lifestyle">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.lifestyle.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q3">{% render 'icon-quiz-info' %}</a></h2>
+    <div class="quiz-options">
+      <div class="input-wrapper">
+        <select name="lifestyle" class="show select has-option" id="quiz-lifestyle" data-custom-select data-quiz-answer>
+          <option value="" selected disabled></option>
+          <option value="nur sitzend oder liegend">{{ "personalized_quiz.lifestyle.select_option_1" | t }}</option>
+          <option value="sitzend, kaum körperliche Aktivität">{{ "personalized_quiz.lifestyle.select_option_2" | t }}</option>
+          <option value="überwiegend sitzend, gehend und stehend">{{ "personalized_quiz.lifestyle.select_option_3" | t }}</option>
+          <option value="hauptsächlich stehend und gehend">{{ "personalized_quiz.lifestyle.select_option_4" | t }}</option>
+          <option value="körperlich anstrengende Arbeit">{{ "personalized_quiz.lifestyle.select_option_5" | t }}</option>
+        </select>
+        <span class="select-chevron">{% render 'icon-chevron' %}</span>
+        <label for="quiz-lifestyle" class="label">{{ "personalized_quiz.lifestyle.select_label" | t }}</label>
+      </div>
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.lifestyle.button_next_text" | t }}</button>
+    </div> 
+  </div>
+
+  <div class="popup quiz-popup is-hidden" data-popup="q3">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.lifestyle.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.lifestyle.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q3 -->

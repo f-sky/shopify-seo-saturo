@@ -1,0 +1,147 @@
+{%- liquid
+    assign price = product.variants.first.price
+    assign compare_at_price = product.variants.first.compare_at_price
+    assign product_details = product.metafields.product
+
+    assign has_subscription = false
+    if product.selling_plan_groups.size > 0
+        assign has_subscription = true
+    endif
+
+    assign selling_plan_group = product.selling_plan_groups[0]
+    assign discount_percentage = 0
+    for selling_plan in selling_plan_group.selling_plans
+        if selling_plan.price_adjustments[0].value > discount_percentage
+            assign discount_percentage = selling_plan.price_adjustments[0].value
+        endif
+    endfor
+
+    assign price_times_discount = price | times: discount_percentage | divided_by: 100.0
+    assign discount_price = price | minus: price_times_discount
+    unless has_subscription
+        assign discount_price = price
+    endunless
+-%}
+
+<div class="product-form">
+    {%- if has_subscription -%}
+        <hr>
+        <div class="row product-form__controls-group product-form__order-type">
+            <div class="pf-c product-form__order-type-selector" style="--c-xs:7">
+                <input type="radio" id="product-form__order-type-selector--subscribe" name="option" value="subscription"
+                    checked>
+                <label for="product-form__order-type-selector--subscribe">Abonnieren und
+                    <span class="text--color--highlight-1 text--weight--highlight-1">{{ discount_percentage }} % sparen</span>
+                </label>
+                <button class="product-form__info-popup-show" type="button" data-show-info-popup>i</button>
+            </div>
+            <div class="text-right pf-c product-form__order-type-selector" style="--c-xs:5">
+                <input type="radio" id="product-form__order-type-selector--onetime" name="option" value="onetime">
+                <label for="product-form__order-type-selector--onetime">Einzelkauf</label>
+            </div>
+        </div>
+        <div class="row product-form__controls-group product-form__order-type--subscription">
+            <div class="pf-c" style="--c-xs:6;--c-lg:7">
+                {% render "icon-subscription-cancel" %}
+                <span>Jederzeit kostenlos kündbar</span>
+            </div>
+            <div class="text-right pf-c" style="--c-xs:6;--c-lg:5">
+                {% render "icon-subscription-edit" %}
+                <span>Stets anpassbar</span>
+            </div>
+        </div>
+        <div class="row product-form__controls-group product-form__order-type--subscription">
+            <div class="pf-c product-form__item-label" style="--c-xs:6;--c-lg:7">
+                <label for="product-form__subscription-frequency">LIEFERINTERVALL</label>
+            </div>
+            <div class="pf-c input-group__field input--border--darkest" style="--c-xs:6;--c-lg:5">
+                {% assign shipping_interval_frequency_most = " 4 Wochen" %}
+                {% assign label_shipping_interval_frequency_most = "(Am häufigsten)" %}
+
+                <select name="product-form__subscription-frequency" id="product-form__subscription-frequency"
+                    class="pf-variant-select" data-selling-plan-group="{{ selling_plan_group.id }}">
+                    {% for selling_plan in selling_plan_group.selling_plans %}
+                        <option value="{{ selling_plan.id }}" {% if selling_plan.name == shipping_interval_frequency_most %}selected{% endif %}>
+                            {{ selling_plan.name }}{% if selling_plan.name == shipping_interval_frequency_most %} {{ label_shipping_interval_frequency_most }}{% endif %}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <div class="row product-form__controls-group product-form__order-type--normal" style="display: none;">
+            <div class="product-form__order-type--subcription-icon">
+                {% render "icon-subscription" %}
+            </div>
+            <div class="product-form__order-type--subcription-save">
+                <p>
+                    Spare noch {{ discount_percentage }} % mit einem Abo!
+                </p>
+            </div>
+            <div class="product-form__order-type--subcription-save-description">
+                <p>
+                    Dein Abo kannst du jederzeit kostenlos kündigen.
+                </p>
+            </div>
+        </div>
+        <hr>
+    {%- endif -%}
+    <div class="row product-form__controls-group product-form__product-details price-details">
+        <input type="hidden" id="product-form__product-details-meta"
+            data-serving-size="{{ product_details.serving-size__size }}"
+            data-comparisonunit="{{ product_details.comparison__unit }}"
+            data-shipping-unit-servings="{{ product_details.shipping-unit__servings }}">
+
+        <div class="product-form__product-comparison-facts">{{- product_details.shipping-unit__servings }} {{ product_details.shipping-unit__unit }} pro {{ product_details.shipping-unit__type -}} {% if
+            product_details.shipping-unit__tot-amount-unit %} ({{ product_details.shipping-unit__servings | times:
+            product_details.serving-size__size | divided_by: 1000 | round: 2 }} {{
+            product_details.shipping-unit__tot-amount-unit }}) {% endif %}</div>
+        <div class="product-form__product-comparison-facts"><span class="product-form__comparison-price">{{- discount_price | times: 100 | divided_by: product_details.serving-size__size | divided_by: product_details.shipping-unit__servings | money }}</span>/ 100 {{ product_details.comparison__unit -}}
+        </div>
+        <div class="product-form__product-comparison-facts">Nur <span class="product-form__product-price-serving">{{ discount_price | divided_by: product_details.shipping-unit__servings | money }}</span> pro {{ product_details.price-unit__type }} ({{ product_details.serving-size__size-kcal }}
+            kcal)</div>
+        <div class="text-right product-form__product-price">
+            {% if discount_price != 0 and has_subscription %}
+                <del class="product-form__product-price-before" data-wg-notranslate="manual">{{ price | money }}</del>
+                <ins class="product-form__product-price-actual" data-discounted-price="{{ discount_price | money }}" data-wg-notranslate="manual">{{ discount_price | money }}</ins>
+            {% else %}
+                {%- if compare_at_price != blank -%}
+                    <del class="product-form__product-price-before" data-wg-notranslate="manual">{{ compare_at_price | money }}</del>
+                {%- endif -%}
+                <ins class="product-form__product-price-actual" data-wg-notranslate="manual">{{ discount_price | money }}</ins>
+            {% endif %}
+        </div>
+        <div class="text-right product-form__shipping-tax-notes">
+            <span>inkl. MwSt., zzgl. {{ 'Versandkosten' | link_to: '/pages/versand-und-bezahlung' }}</span>
+        </div>
+    </div>
+
+    {% render 'shipping-countdown' %}
+    {% assign max_quantity = product.metafields.my_fields.max_quantity %}
+
+    {% comment %}
+        Exception for 500ml product
+    {% endcomment %}
+    {%- if product.id == 4699403714697 -%}
+        <div class="product-form__controls-group hide" data-sold-out-alt="32879054258313">
+            <a href="https://saturo.com/products/saturo-drink-330ml?variant=32878943207561" class="btn btn--secondary btn--full-width">Probiere Saturo Schokolade 330 ml anstatt</a>	
+        </div>
+    {%- endif -%}
+    <div class="product-form__controls-group product-form__controls-group--submit"
+        data-selling-plans="{{ product.selling_plan_groups[0].selling_plans[0].id }}">
+        <a
+            href="javascript:void(0);"
+            class="btn btn--secondary btn--full-width product-form__cart-submit product-form__cart-submit--highlight"
+            {% if max_quantity != blank %}data-max-quantity="{{max_quantity}}"{% endif %}
+        >
+            {{ 'products.product.add_to_cart' | t }}
+        </a>
+    </div>
+    <div class="product-form__controls-group product-form__trust-icon icon-grey100">
+    {% unless enabled_payment_types == empty %}
+        <ul>
+            {% for type in shop.enabled_payment_types %} {{ type | payment_type_svg_tag: class:'payment-icon' }} {% endfor %}
+        </ul>
+    {% endunless %}
+    </div>
+</div>

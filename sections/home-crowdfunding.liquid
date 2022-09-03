@@ -1,0 +1,170 @@
+{{ 'home-crowdfunding.css' | asset_url | stylesheet_tag }}
+
+{% assign image = section.settings.image %}
+{% assign image_url = section.settings.image_url %}
+
+<section class="page-width crowdfunding__wrapper">
+  {% if image != blank %}
+    {% if image_url != blank %}
+      <a class="crowdfunding__image-wrapper" href="{{ image_url }}">
+    {% else %}
+      <div class="crowdfunding__image-wrapper">
+    {% endif %}
+    <img class="crowdfunding__image" src="{{ image | img_url: '1200x'}}" alt="" loading="lazy" />
+    {% if image_url != blank %}
+      </a>
+    {% else %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  <div class="crowdfunding__content">
+    {% assign title_html = section.settings.title %}
+    {% if title_html != blank %}
+      <h2 class="h1-headline crowdfunding__title span-align-heading">
+        {{ title_html }}
+      </h2>
+    {% endif %}
+
+    {% if image != blank %}
+      {% if image_url != blank %}
+        <a class="crowdfunding__content-image-wrapper" href="{{ image_url }}">
+      {% else %}
+        <div class="crowdfunding__content-image-wrapper">
+      {% endif %}
+      <img class="crowdfunding__image" src="{{ image | img_url: '1200x'}}" alt="" loading="lazy" />
+      {% if image_url != blank %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% assign richtext = section.settings.richtext %}
+    {% if richtext != blank %}
+      <div class="crowdfunding__richtext h2-headline">{{ richtext }}</div>
+    {% endif %}
+    
+    {% assign btn_url = section.settings.btn_url %}
+    {% if btn_url != blank %}
+      <a href="{{ btn_url }}" class="btn {{ section.settings.btn_style }}"><strong>{{ section.settings.btn_text }}</strong></a>
+    {% endif %}
+  </div>
+  
+  {% assign legal_text = section.settings.legal_text %}
+  {% if legal_text != blank %}
+    <div class="crowdfunding__legal-text p">{{ legal_text }}</div>
+  {% endif %}
+
+</section>
+
+<style>
+  {% assign bg_color = section.settings.bg_color %} 
+  {% if bg_color != blank %}
+    .crowdfunding {
+      background-color: {{ bg_color }};
+    }
+  {% endif %}
+
+  {% assign circle_color = section.settings.circle_color %} 
+  {% if circle_color != blank %}
+    .crowdfunding::before {
+      background-color: var({{ circle_color }});
+    }
+  {% endif %}
+</style>
+
+
+{% schema %}
+{
+  "name": "Home - Crowdfunding",
+  "tag": "section",
+  "class": "crowdfunding side-circle side-circle__large side-circle__top-left",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "image_url",
+      "label": "Image Link"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Rich text"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Jetzt zur Kampagnen-Seite"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "btn_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "btn--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "btn--tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "btn--text",
+          "label": "Text"
+        }
+      ],
+      "default": "btn--primary"
+    },
+    {
+      "type": "richtext",
+      "id": "legal_text",
+      "label": "Legal text"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "circle_color",
+      "label": "Circle Color (CSS Variable)",
+      "info": "eg. --color-white"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home - Crowdfunding"
+    }
+  ]
+}
+{% endschema %}

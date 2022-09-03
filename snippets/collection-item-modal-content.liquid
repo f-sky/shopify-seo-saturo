@@ -1,0 +1,208 @@
+{%- liquid            
+  assign price = product.variants.first.price
+  assign compare_at_price = product.variants.first.compare_at_price
+  assign product_details = product.metafields.product
+
+  assign has_subscription = false
+  if product.selling_plan_groups.size > 0
+      assign has_subscription = true
+  endif
+
+  assign selling_plan_group = product.selling_plan_groups[0]
+  assign discount_percentage = 0
+  for selling_plan in selling_plan_group.selling_plans
+      if selling_plan.price_adjustments[0].value > discount_percentage
+          assign discount_percentage = selling_plan.price_adjustments[0].value
+      endif
+  endfor
+
+  assign price_times_discount = price | times: discount_percentage | divided_by: 100.0
+  assign discount_price = price | minus: price_times_discount
+  unless has_subscription
+      assign discount_price = price
+  endunless
+
+  assign shipping_unit_servings = product_details.shipping-unit__servings.value
+  assign unit_type_content = product_details.shipping-unit__type-content
+-%}
+
+<div class="coll-v2__modal--content coll-v2__modal--content-{{ product.id }}" data-coll-modal-content data-mode="subscription">
+  <button class="coll-v2__modal--close" data-close-coll-modal>{% render 'icon-close' %}</button>
+
+  {% assign meta_title = product.metafields.my_fields.product_title %}
+  <h4 class="h2-headline"><strong>
+    {%- if meta_title != blank -%}
+      {{ meta_title }}
+    {%- else -%}
+      {{ product.title }}
+    {%- endif -%}
+  </strong></h4>
+
+  <p class="p coll-v2__modal--content-subtitle">
+    {% if product.type == 'taster-pack' %}
+      {{ product.metafields.product.shipping-unit__unit-special3.value }}<br>Lieferumfang: {{ product.metafields.product.shipping-unit__unit-special2.value }}
+    {% else %}
+      <span data-variant-title></span>{% if shipping_unit_servings != blank and unit_type_content != blank %}, {{ shipping_unit_servings }} {{ unit_type_content }} ({{ product_details.serving-size__size-kcal.value }} kcal) {% endif %}<br>Lieferumfang: {% if product.type == 'powder' %}{{ shipping_unit_servings | times: product_details.serving-size__size.value }}{% else %}{{ shipping_unit_servings }}x<span data-serving-size-size>{{ product.metafields.product.serving-size__size.value }}</span>
+      {% endif %} {{ product.metafields.product.serving-size__unit.value }} {% if product.type == 'powder' %}pro {{ product_details.shipping-unit__type }}{% else %}{{ product.metafields.product.shipping-unit__unit.value }}{% endif %}
+
+    {% endif %}
+  </p>
+
+  <div class="product-form__order-type product__subscription-options">
+        
+    <div class="">
+      <input class="product__subscription-option__input" type="radio" id="product-form__order-type-selector--subscribe" name="option-modal-{{ product.id }}" value="subscription" data-coll-modal-mode checked>
+
+      <label class="btn-large-details" for="product-form__order-type-selector--subscribe">
+        <div class="btn-large-details__row">
+          <h4 class="btn-large-details__text">
+            <strong>Spar-Abo</strong>
+          </h4>
+          <h4 class="btn-large-details__price">
+            <strike class="btn-large-details__price-discount">{{ price | money }}</strike>
+            <strong class="color-turquoise">{{ discount_price | money }}</strong>
+          </h4>
+        </div>
+
+        <div class="btn-large-details__row">
+          <p class="btn-large-details__text-details">{{ discount_percentage }} % Rabatt</p>
+          {% comment %}
+          <p class="btn-large-details__text-details">
+            {% assign discount_price_divided = discount_price | divided_by: product_details.shipping-unit__servings.value | divided_by: 100.00 %}
+          {% assign discount_price_divided_rounded = discount_price_divided | round: 1 %}Nur <span>{{ discount_price_divided_rounded | times: 100 | money }}</span> pro {{ product_details.price-unit__type.value }} - {{ product_details.serving-size__size-kcal.value }} kcal</p>
+          {% endcomment %}
+
+          <p class="btn-large-details__text-details">
+            {% assign discount_price_divided = discount_price | divided_by: product_details.shipping-unit__servings.value | divided_by: 100.00 %}
+          {% assign discount_price_divided_rounded = discount_price_divided | round: 1 %}Nur &euro;<span data-discounted-price-per-meal></span> pro {{ product_details.price-unit__type.value }} - {{ product_details.serving-size__size-kcal.value }} kcal</p>
+
+        </div>
+      </label>
+    </div>
+    
+    <div class="">
+      <input class="product__subscription-option__input" type="radio" id="product-form__order-type-selector--onetime" name="option-modal-{{ product.id }}" value="onetime" data-coll-modal-mode>
+
+      <label class="btn-large-details" for="product-form__order-type-selector--onetime">
+        <div class="btn-large-details__row">
+          <h4 class="btn-large-details__text">
+            <strong>Einzelkauf</strong>
+          </h4>
+          <h4 class="btn-large-details__price"><strong>{{ price | money }}</strong></h4>
+        </div>
+
+        <div class="btn-large-details__row">
+          <p class="btn-large-details__text-details"></p>
+          <p class="btn-large-details__text-details">
+            {% assign price_divided = price | divided_by: product_details.shipping-unit__servings.value | divided_by: 100.00 %}
+            {% assign price_divided_rounded = price_divided | round: 1 %}Nur &euro;<span data-original-price-per-meal>{{ price_divided_rounded | times: 100 | money }}</span> pro {{ product_details.price-unit__type.value }} - {{ product_details.serving-size__size-kcal.value }} kcal
+          </p>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  {% assign shipping_interval_frequency_most = " 4 Wochen" %}
+  {% assign label_shipping_interval_frequency_most = "(am häufigsten)" %}
+  <div class="input-wrapper coll-v2__modal--subs-frequency">
+    <select name="product-form__subscription-frequency" id="product-form__subscription-frequency"
+      class="select" data-selling-plan-group="{{ selling_plan_group.id }}"
+    >
+      <option value="" disabled></option>
+      {% for selling_plan in selling_plan_group.selling_plans %}
+        <option value="{{ selling_plan.id }}" 
+    {% if selling_plan.name == shipping_interval_frequency_most %}selected{% endif %}
+        >
+          {{ selling_plan.name }}{% if selling_plan.name == shipping_interval_frequency_most %} {{ label_shipping_interval_frequency_most }}{% endif %}
+        </option>
+      {% endfor %}
+    </select>
+    <label for="product-form__subscription-frequency" class="label">Lieferintervall wählen</label>
+    <span class="select-chevron">{% render 'icon-chevron' %}</span>
+  </div>
+
+  <button class="btn" type="button" data-coll-modal-submit>
+    <span class="btn__text" data-btn-text=""><strong>Hinzufügen</strong></span>
+    <span class="hidden btn__loader" data-loader="">
+      {% render 'icon-spinner' %}
+    </span>
+  </button>
+</div>
+
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+
+    function calculatePricePerMeal() {
+      const products_meta = [
+        {% for variant in product.variants %}
+          {% assign servings = product_details.shipping-unit__servings.value %}
+          {%- if variant.metafields.product.shipping-unit__servings.value != blank -%}
+            {% assign servings = variant.metafields.product.shipping-unit__servings.value %}
+          {%- endif -%}
+          {% assign size = product_details.serving-size__size %}
+          {%- if variant.metafields.product.serving-size__size != blank -%}
+            {% assign size = variant.metafields.product.serving-size__size %}
+          {%- endif -%}
+          {
+            "price": "{{ price }}",
+            "discount_price": "{{ discount_price }}",
+            "shipping_unit_servings": "{{ servings }}",
+            "serving_size_size": "{{ size }}",
+            "quantity": 1
+          },
+        {% endfor %}
+      ];
+
+      {% assign shipping_unit_servings = product_details.shipping-unit__servings.value %}
+      {% assign product_variants_size = product.variants.size | plus: 0 %}
+      const totalMeals = parseInt( {{ shipping_unit_servings | times: product_variants_size }} , 10);
+
+      let totalQuantity = 1;
+
+      let totalPrice = 0;
+      let totalDiscountedPrice = 0;
+      let totalWeight = 0;
+      products_meta.forEach(item => {
+        const sizeNum = parseInt(item.serving_size_size, 10);
+        const servingsNum = parseInt(item.shipping_unit_servings, 10);
+        const quantityNum = parseInt(item.quantity, 10);
+        const priceNum = parseInt(item.price, 10);
+        const discountedPriceNum = parseInt(item.discount_price, 10);
+        totalWeight += (sizeNum * servingsNum) * quantityNum;
+        totalPrice += priceNum * quantityNum;
+        totalDiscountedPrice += discountedPriceNum * quantityNum;
+      });
+      totalPrice = totalPrice / 100;
+      totalDiscountedPrice = totalDiscountedPrice / 100;
+      
+      const discountedPricePer100 = totalDiscountedPrice === 0 ? 0 : parseFloat((totalDiscountedPrice / totalWeight) * 100);
+      const discountedPricePer100Formatted = discountedPricePer100.toFixed(2).replace(".", ",");
+      const pricePer100 = totalPrice === 0 ? 0 : parseFloat((totalPrice / totalWeight) * 100);
+      const pricePer100Formatted = pricePer100.toFixed(2).replace(".", ",");
+
+
+      console.log('name', "{{ product.title }}");
+      console.log('totalDiscountedPrice', totalDiscountedPrice);
+      console.log('totalWeight', totalWeight);
+
+      const discountedPricePerUnit = totalDiscountedPrice === 0 ? 0 : parseFloat(totalDiscountedPrice / totalMeals);
+      console.log('discountedPricePerUnit', discountedPricePerUnit);
+      const discountedPricePerUnitFormatted = discountedPricePerUnit.toFixed(2).replace(".", ",");
+      console.log('discountedPricePerUnitFormatted', discountedPricePerUnitFormatted);
+      const pricePerUnit = totalPrice === 0 ? 0 : parseFloat(totalPrice / totalMeals);
+      const pricePerUnitFormatted = pricePerUnit.toFixed(2).replace(".", ",");
+
+      $('.coll-v2__modal--content-{{ product.id }} [data-original-price-per-100g]').text( pricePer100Formatted );
+      $('.coll-v2__modal--content-{{ product.id }} [data-discounted-price-per-100g]').text( discountedPricePer100Formatted );
+
+      $('.coll-v2__modal--content-{{ product.id }} [data-original-price-per-meal]').text( pricePerUnitFormatted );
+      $('.coll-v2__modal--content-{{ product.id }} [data-discounted-price-per-meal]').text( discountedPricePerUnitFormatted );
+    };
+
+    $('#product-variant-{{ product.id }}').on('change', calculatePricePerMeal);
+
+    calculatePricePerMeal();
+    
+  });
+</script>

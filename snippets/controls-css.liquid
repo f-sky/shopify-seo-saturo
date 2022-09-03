@@ -1,0 +1,31 @@
+<style>
+    .button {
+        position: relative;
+        height: auto;
+        width: auto;
+        overflow: visible;
+        border-radius: 2.3rem;
+        padding: 0 4rem;
+        background-color: var(--color-white);
+        color: var(--color-black);
+        box-shadow: none;
+        font-size: calc(var(--font-size-button-desktop) * 0.1rem);
+        font-weight: var(--font-weight-button);
+    }
+    
+    .button:not([disabled]):hover {
+        box-shadow: none;
+    }
+    
+    @media only screen and (max-width: 767px) {
+        .button {
+            font-size: calc(var(--font-size-button-mobile) * 0.1rem);
+        }
+    }
+    
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .button {
+            font-size: calc(var(--font-size-button-tablet) * 0.1rem);
+        }
+    }  
+</style>

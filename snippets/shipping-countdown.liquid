@@ -1,0 +1,25 @@
+<div class="product-form__shipping" data-product-form-shipping>
+    <div class="hidden product-form__shipping-item" data-count-down-parent>
+      <p class="p" data-count-down><strong>Bestelle in <span data-count-down-time></span></strong> Stunden <span class="p" data-package-text></span></p>
+    </div>
+  
+    
+  
+    <div class="hidden product-form__shipping-item" data-shipping-time>
+      {% render 'icon-delivery' %}
+      <p class="p"><strong class="color-turquoise">Auf Lager.</strong> Schnellste Lieferung in 2-3 Tagen bei dir*.</p>
+    </div>
+  </div>
+  
+<script>
+var serverTime = {
+  weekday: {{ 'now' | date: '%a' | json }},
+  hour: {{ 'now' | date: '%H' | json }},
+  minute: {{ 'now' | date: '%M' | json }},
+  month: {{ 'now' | date: '%m' | json }},
+  year: {{ 'now' | date: '%Y' | json }},
+  date_string: {{ 'now' | date: '%a, %m/%e/%Y, %T GMT+2' | json }}, 
+  day: {{ 'now' | date: '%d' | json }}
+};
+</script>
+<script src="{{ 'shipping-countdown.js' | asset_url }}" defer="defer"></script>

@@ -1,0 +1,424 @@
+{
+  "sections": {
+    "1643715902997f1db6": {
+      "type": "product-header-2",
+      "settings": {
+        "title": "<span class=\"align-left\">Ausgewogene<\/span> <span class=\"align-right\">Ernährung?<\/span> <span class=\"align-left\">Aber<span class=\"heading-line\"><\/span><\/span> <span class=\"align-center\">schnell.<\/span>",
+        "heading_2": "Neu! Drink Cappuccino",
+        "heading_2_style": "h2-headline bold",
+        "subtitle": "Mit dem extra Kick Koffein",
+        "btn_text": "Jetzt bestellen",
+        "btn_url": "",
+        "btn_style": "btn--primary",
+        "assigned_product": "",
+        "bg_image_wide": "shopify:\/\/shop_images\/Saturo-Cappuccino-hero-3841x2732-v2.jpg",
+        "bg_image_desktop": "shopify:\/\/shop_images\/Saturo-Cappuccino-hero-3841x2732-v2.jpg",
+        "bg_image_tablet": "shopify:\/\/shop_images\/Saturo-Cappuccino-hero-3841x2732-v2.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/Saturo-cappuccino-hero-839x1688px.jpg",
+        "text_color": "--color-black-grey-title",
+        "bg_color": "#d9d8d6",
+        "hide_circle": true,
+        "content_side": "content-left",
+        "mobile_content_position": "content-top__mobile",
+        "title_small_margin": false,
+        "custom_header_color": "--color-black-grey-title",
+        "quiz_button": false
+      }
+    },
+    "main": {
+      "type": "saturo-product",
+      "settings": {
+      }
+    },
+    "164267866719bbc104": {
+      "type": "product-better-food",
+      "settings": {
+        "uppertitle": "Ausgewogene Ernährung leicht gemacht. Im Handumdrehen hast du eine <strong>komplette Mahlzeit<\/strong> parat mit allem, was dein Körper braucht.",
+        "title": "Besser essen, ohne dich zu stressen.",
+        "image": "shopify:\/\/shop_images\/Saturo-balanced-pulver-glas_fa05dede-70c7-46e6-99a4-c7f56a91f889.png",
+        "subtitle": "<strong>17 g Protein,<\/strong> komplexe Kohlenhydrate, alle <strong>26 essentielle Vitamine &amp; Mineralien<\/strong> und sättigt bis zu <strong>3 Stunden<\/strong>. Natürlich <strong>vegan<\/strong>.",
+        "nutriscore_image": "shopify:\/\/shop_images\/Nutri-Score_A.png"
+      }
+    },
+    "powder-form-v2": {
+      "type": "powder-form-v2",
+      "blocks": {
+        "9aaa395f-484b-493b-9a8e-9ef4b87d97ff": {
+          "type": "similar-product",
+          "settings": {
+            "product": "saturo-drink-330ml",
+            "custom_title": "Drink 330 ml",
+            "subtitle": "Sättigt bis zu 3 Stunden"
+          }
+        },
+        "40807593-0fee-48f9-b5c9-15d92c35b5de": {
+          "type": "similar-product",
+          "settings": {
+            "product": "saturo-drink-500ml",
+            "custom_title": "Drink 500 ml",
+            "subtitle": "Sättigt bis zu 5 Stunden"
+          }
+        }
+      },
+      "block_order": [
+        "9aaa395f-484b-493b-9a8e-9ef4b87d97ff",
+        "40807593-0fee-48f9-b5c9-15d92c35b5de"
+      ],
+      "settings": {
+        "s1_title": "Wähle deine Lieblingsgröße",
+        "s2_title": "Wähle deinen Geschmack und die Menge.",
+        "s2_before_product": "",
+        "s2_after_product": "",
+        "btn_text": "In den Warenkorb",
+        "subs_section_text": "<h3 class=\"h2-headline\">Wähle deine Bestellart.<\/h3><p class=\"p\">Du kannst zwischen einem Einzelkauf und einem regelmäßigen Spar-Abo entscheiden.<\/p>",
+        "modal_title": "Deine Abo Vorteile",
+        "modal_text1": "",
+        "modal_text2": "",
+        "modal_text3": "",
+        "modal_details": ""
+      }
+    },
+    "product-for-all": {
+      "type": "product-for-all",
+      "settings": {
+        "s1_image": "shopify:\/\/shop_images\/saturo-trinkmahlzeit-330ml-2.jpg",
+        "s1_title": "<span class=\"align-right\">Für alle,<\/span>\n<span class=\"align-right\"><span class=\"heading-line-left\"><\/span>die<\/span>\n<span class=\"align-right\">alles<\/span>\n<span class=\"align-right\">wollen.<\/span>",
+        "s1_subtitle": "Die Mahlzeit ohne Zeitaufwand.",
+        "s2_image": "shopify:\/\/shop_images\/Saturo-trinkmahlzeit-330-ml-erdbeere-sport.jpg",
+        "s2_title": "<strong>Keine Sorgen beim Versorgen.<\/strong>\n<p>Jederzeit alles, was der Körper braucht<\/p>",
+        "s3_image": "shopify:\/\/shop_images\/Saturo-trinkmahlzeit-330-ml-business.jpg",
+        "s3_title": "<strong>Schieb den Hunger auf die lange Bank<\/strong>\n<p>Sorgt für ein langes Sättigungsgefühl mit komplexen Kohlenhydraten, Ballaststoffen und Proteinen.<\/p>"
+      }
+    },
+    "product-for-vegans": {
+      "type": "product-for-vegans",
+      "disabled": true,
+      "settings": {
+        "title": "<span class=\"align-left\">Für vegane<\/span>\n        <span class=\"align-center\">Ernährung<\/span>\n        <span class=\"align-left\">geeignet.<span class=\"heading-line\"><\/span><\/span>\n        <span class=\"align-right\">Mit besten<\/span>\n        <span class=\"align-left\">Pflanzenproteinen<\/span>",
+        "subtitle": "Wir lassen Zutaten sprechen.",
+        "s1_title": "Sojaprotein",
+        "s1_text": "<p class=\"h2-headline\">Liefert dir alle wichtigen essentiellen Aminosäuren<\/p>\n    <p class=\"h2-headline\">Hohe biologische Wertigkeit und wird von deinem Körper schnell verstoffwechselt—optimal für deinen Muskelaufbau<\/p>",
+        "s1_image": "shopify:\/\/shop_images\/for-vegans-image-1.jpg",
+        "s2_title": "Isomaltulose",
+        "s2_text": "<p class=\"h2-headline\">„Langsam freisetzende“ Kohlenhydrate, d.h. es lässt deinen Blutzucker nur langsam steigen<\/p>\n      <p class=\"h2-headline\">Liefert dir langanhaltende Energie<\/p>",
+        "s2_image": "shopify:\/\/shop_images\/for-vegans-image-2.jpg",
+        "s3_title": "Rapsöl",
+        "s3_text": "<p class=\"h2-headline\">Gute Quelle für Omega-3-Fettsäuren mit optimalem Verhältnis von Omega-6 zu Omega-3<\/p>",
+        "s3_image": "shopify:\/\/shop_images\/for-vegans-image-3.jpg",
+        "s4_title": "Hochwertiger Haferfaser: Der Healthy Held vom Feld",
+        "s4_text": "<p class=\"h2-headline\">Reich an Ballaststoffen<\/p>\n<p class=\"h2-headline\">Fördert eine gesunde Verdauung<\/p>",
+        "s4_image": "shopify:\/\/shop_images\/Saturo-hafer-2.jpg"
+      }
+    },
+    "product-always-clean": {
+      "type": "product-always-clean",
+      "disabled": true,
+      "settings": {
+        "title": "Immer schön clean bleiben.",
+        "subtitle": "<strong>Nur 0,5 g Zucker pro Mahlzeit (400 kcal)*<\/strong>\n    <strong>Ohne Süßstoff und Aroma*<\/strong>\n    <strong>Keine Gentechnik (GMO-free)<\/strong>",
+        "note": "* Angaben beziehen sich auf Geschmackssorte Natur."
+      }
+    },
+    "product-stay-zero": {
+      "type": "product-stay-zero",
+      "settings": {
+        "title": "Und wir müssen leider draußen bleiben...",
+        "list_items": "<li> <h4 class=\"h2-headline\">x raffinierter Zucker<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Farbstoffe<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Palmöl<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Konservierungsstoffe<\/h4> <\/li>",
+        "percentage": "0%"
+      }
+    },
+    "product-tastes-different": {
+      "type": "product-tastes-different",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Saturo-balanced-powder-strawberyy-mega-menu_57b95122-4644-4250-8fca-5ce972f2a2c4.jpg",
+        "title": "<span class=\"align-left\">Geschmäcker<\/span> <span class=\"align-left\">sind <span class=\"heading-line\"><\/span><\/span> <span class=\"align-left\">verschieden.<\/span> <span class=\"align-left\">Aber alle<\/span> <span class=\"align-left\">gleich gut.<\/span>",
+        "subtitle": "<h4 class=\"h2-headline\">Echt lecker dank echten Zutaten.<\/h4><h4 class=\"h2-headline\">Leicht löslich für eine angenehme Textur.<\/h4>",
+        "text": "Wir verwenden nur echtes Fruchtpulver und echten Kakao für den besten Geschmack.",
+        "s1_title": "Wer sich selbst alles abverlangt, muss sich auch alles zuführen: Deshalb versorgt dich Saturo mit allen wichtigen Nährstoffen.",
+        "s1_text": "Saturo ist eine ausgewogene Ernährung ohne viel Aufwand.",
+        "s1_image": "shopify:\/\/shop_images\/taste-different-image-2.png",
+        "s2_title": "Reichhaltig frühstücken im Handumdrehen.",
+        "s2_text": "Mach die wichtigste Mahlzeit am Tag zur einfachsten: Mit Saturo hast du ein gesundes Frühstück jederzeit griffbereit.",
+        "s2_image": "shopify:\/\/shop_images\/taste-different-image-3.png",
+        "s3_title": "Energie wie noch nie.",
+        "s3_text": "Natürliche Energie, 30 g Protein und länger satt durch komplexe Kohlenhydrate.",
+        "s3_image": "shopify:\/\/shop_images\/taste-different-image-4.png",
+        "s4_title": "Bring vegan auf den Speiseplan.",
+        "s4_text": "<p class=\"p\">Die einfachste Art, sich vegan zu ernähren.<\/p><p class=\"p\">Saturo Balanced Pulver ist zu 100% vegan.<\/p><p class=\"p\">Gesund für dich und für die Umwelt.<\/p>",
+        "s4_image": "shopify:\/\/shop_images\/taste-different-image-5.png"
+      }
+    },
+    "product-macrosplit": {
+      "type": "product-macrosplit",
+      "blocks": {
+        "8260bfce-3c7c-4917-b5a0-599d844522f2": {
+          "type": "stat",
+          "settings": {
+            "number": "33 %",
+            "text": "Kohlenhydrate"
+          }
+        },
+        "5c1306eb-94f8-4643-ad60-489ef3a8c3e5": {
+          "type": "stat",
+          "settings": {
+            "number": "20 %",
+            "text": "Protein"
+          }
+        },
+        "814d4c87-7937-445a-80f9-6f7b1afd779a": {
+          "type": "stat",
+          "settings": {
+            "number": "44 %",
+            "text": "Fett"
+          }
+        },
+        "2fee5c12-d0f5-4dc9-8b15-a4945b6c5e28": {
+          "type": "stat",
+          "settings": {
+            "number": "2 %",
+            "text": "Ballaststoffe"
+          }
+        }
+      },
+      "block_order": [
+        "8260bfce-3c7c-4917-b5a0-599d844522f2",
+        "5c1306eb-94f8-4643-ad60-489ef3a8c3e5",
+        "814d4c87-7937-445a-80f9-6f7b1afd779a",
+        "2fee5c12-d0f5-4dc9-8b15-a4945b6c5e28"
+      ],
+      "settings": {
+        "title": "Makrosplit",
+        "subtitle": "Unsere Drinks liefern dir ein ausgewogenes Makronährstoffverhältnis (33 % der Energie stammen aus Kohlenhydraten, 20 % aus Proteinen, 44 % aus Fett, 2 % aus Ballaststoffen) und zudem alle 26 essentielle Vitamine und Mineralstoffe. Alles drin, was du brauchst.",
+        "image": "shopify:\/\/shop_images\/macrosplit_image1.png",
+        "tables_title": "Nährwerttabelle und Zutaten",
+        "meta_name": "id4699385593993"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    },
+    "product-nutri-ingre": {
+      "type": "product-nutri-ingre",
+      "disabled": true,
+      "blocks": {
+        "b3f5017e-5245-46dd-8b58-c78488165249": {
+          "type": "ingredient",
+          "settings": {
+            "title": "30 g pflanzliches Protein",
+            "desc": "Der wichtigste Baustein für deine Muskeln. Saturo enthält eine Kombination aus Erbsen- und Reisprotein."
+          }
+        },
+        "996c3c14-c75d-4358-889f-c1d2befe1978": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Alle 26 essentielle Vitamine und Mineralien",
+            "desc": "Weil dein Körper Vitamine und Mineralien braucht, um richtig zu funktionieren und zur Stärkung deines Immunsystems."
+          }
+        },
+        "10899912-e797-4625-a7a2-4bd0a9e736d9": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Zuckerfrei - nur 0,5 g Zucker",
+            "desc": "Weil es auch ohne Zucker lecker schmeckt. (Angabe bezieht sich auf die Sorte Natur und auf 500 ml\/ 400 kcal)"
+          }
+        },
+        "d46c7dbf-0932-4e6b-a52a-ff4e97a66343": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Reich an Omega-3",
+            "desc": "Omega-3 ist ein lebenswichtiger Baustein für deinen Organismus."
+          }
+        },
+        "aa3e44d6-2248-4527-ace3-036c3ef557c9": {
+          "type": "ingredient",
+          "settings": {
+            "title": "7,3 g Ballaststoffe",
+            "desc": "Für eine langanhaltende Sättigung und zur Unterstützung deiner Verdauung."
+          }
+        },
+        "83e4234e-3f54-48a4-8ad0-3d6ceb825792": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Probiotika (Bacillus Coagulans)",
+            "desc": "Können sich positiv für deine Darmgesundheit auswirken."
+          }
+        },
+        "10f68772-d043-49a8-a619-805d4d07b0ae": {
+          "type": "ingredient",
+          "settings": {
+            "title": "39 g komplexe Kohlenhydrate",
+            "desc": "Natürliche Energie, damit du gut jeden Tag dein Bestes geben kannst."
+          }
+        },
+        "f1eb817a-fd80-4c2e-83d9-6699adc13bc0": {
+          "type": "ingredient",
+          "settings": {
+            "title": "",
+            "image": "shopify:\/\/shop_images\/Nutri-Score_A.png",
+            "desc": "Nutri-Score A bestätigt das optimale Nährwertprofil von Saturo."
+          }
+        }
+      },
+      "block_order": [
+        "b3f5017e-5245-46dd-8b58-c78488165249",
+        "996c3c14-c75d-4358-889f-c1d2befe1978",
+        "10899912-e797-4625-a7a2-4bd0a9e736d9",
+        "d46c7dbf-0932-4e6b-a52a-ff4e97a66343",
+        "aa3e44d6-2248-4527-ace3-036c3ef557c9",
+        "83e4234e-3f54-48a4-8ad0-3d6ceb825792",
+        "10f68772-d043-49a8-a619-805d4d07b0ae",
+        "f1eb817a-fd80-4c2e-83d9-6699adc13bc0"
+      ],
+      "settings": {
+        "title": "Nährwerte und Zutaten",
+        "subtitle": "Damit du das Beste rausholst, geben wir nur das Beste rein.",
+        "image": "shopify:\/\/shop_images\/nutri-ingre_image1.png"
+      }
+    },
+    "product-mix-easier": {
+      "type": "product-mix-easier",
+      "disabled": true,
+      "settings": {
+        "title": "<span class=\"align-left\">Eine Mahlzeit<\/span> <span class=\"align-left\"><span class=\"heading-line\"><\/span>zubereiten?<\/span> <span class=\"align-left\">Mix leichter<\/span> <span class=\"align-center\">als das!<\/span>",
+        "s1_text": "<p class=\"p\">500ml Wasser in den Shaker füllen.<\/p><p class=\"p\">Drei gestrichene Löffel Saturo Balanced Pulver dazugeben.<\/p><p class=\"p\">Gut durchmischen.<\/p>",
+        "s1_image": "shopify:\/\/shop_images\/Saturo-balanced-powder-preparation-water.jpg",
+        "s2_image1": "shopify:\/\/shop_images\/Saturo-balanced-pulver-preparation-pulver-shaker.jpg",
+        "s2_image2": "shopify:\/\/shop_images\/Saturo-balanced-pulver-shaking.jpg",
+        "s2_text": "<p class=\"p\">Ausgewogen ernähren mit allen Nährstoffen, die du brauchst.<\/p><p class=\"p\">Nach Lust und Laune genießen.<\/p>"
+      }
+    },
+    "16445331198bb561af": {
+      "type": "delivery-content",
+      "disabled": true,
+      "settings": {
+        "product_image": "shopify:\/\/shop_images\/20220210_PO5600_2048x2048px.png",
+        "product_title": "Was bekommst du?<br><strong>16 Mahlzeiten à 400 kcal<\/strong>",
+        "product_text": "Gewicht: 1,4 kg<br><br>Abmessung (BxHxT): 234x350x110 mm"
+      }
+    },
+    "1661153802ff24ebce": {
+      "type": "accordion",
+      "blocks": {
+        "4d1b0c01-75a0-413b-94a7-fcc9b6a4e944": {
+          "type": "question",
+          "settings": {
+            "title": "Was ist der Saturo Drink?",
+            "answer": "<p>Unser Saturo Drink ist die perfekte Mahlzeit, wenn es schnell gehen muss und du keine Kompromisse bei den Nährstoffen eingehen willst.<\/p><p>Jede Trinkmahlzeit versorgt dich richtig gut – mit 17 g Protein, komplexen Kohlenhydraten, allen 26 essentiellen Vitaminen und wertvollen Mineralien. Im Saturo Drink steckt alles, was du brauchst. Und das auch noch vegan.<\/p>"
+          }
+        },
+        "0a496b39-eb9c-459f-96b1-3cab0a51366b": {
+          "type": "question",
+          "settings": {
+            "title": "Wie schmeckt der Saturo Drink?",
+            "answer": "<p>Unsere Produktentwickler:innen arbeiten kontinuierlich daran, die Zusammensetzung sowie den Geschmack zu verbessern.<\/p><p>Aktuell gibt es unsere Drinks in folgenden Sorten:<\/p><p><strong>Schokolade<\/strong>: Voller Schokoladengeschmack.<\/p><p><strong>Vanille<\/strong>: Lecker sahniger Vanillegeschmack.<\/p><p><strong>Erdbeere (nur 330ml)<\/strong>: Fruchtig frischer Erdbeergeschmack.<\/p><p><strong>Banane (nur 330ml)<\/strong>: Frischer und natürlicher Bananengeschmack.<\/p><p><strong>Cappuccino (nur 330ml)<\/strong>: Fein aromatischer Cappuccinogeschmack.<\/p><p><strong>Original (nur 500ml):<\/strong> Natürlicher Geschmack.<\/p>"
+          }
+        },
+        "f77526ad-e67b-41a6-a005-0469613c1d36": {
+          "type": "question",
+          "settings": {
+            "title": "Wie verwende ich den Saturo Drink?",
+            "answer": "<p>Mit unserem Saturo Drink bekommst du ganz einfach eine ausgewogene Mahlzeit, ganz egal ob als Frühstück, Snack für Zwischendurch, Mittag- oder Abendessen.<\/p>"
+          }
+        },
+        "ed204fe0-e749-41ec-92f6-b7643591e71f": {
+          "type": "question",
+          "settings": {
+            "title": "Macht der Saturo Drink satt?",
+            "answer": "<p>Bei unseren 330ml Drinks sind die meisten unserer Kunden für ca. 3h gesättigt, bei  unseren 500ml Drinks sogar bis zu 5h und das alles ohne lästiges Völlegefühl.<\/p><p>Unsere Drinks enthalten hochwertige komplexe Kohlenhydrate, die die Energie langsam freisetzen und für ein langanhaltendes Sättigungsgefühl sorgen.<\/p><p>Weiterhin sind die Drinks reich an pflanzlichen Proteinen, die dich zusätzlich sättigen.<\/p>"
+          }
+        },
+        "47e92462-79bb-4fa7-85cd-936b88bbb6c3": {
+          "type": "question",
+          "settings": {
+            "title": "Hat der Saturo Drink einen hohen Proteingehalt?",
+            "answer": "<p>Ja, unsere Drinks haben einen hohen Proteingehalt von 17 g pro Mahlzeit (330ml) bzw. von 25 g pro Mahlzeit (500ml).<\/p>"
+          }
+        },
+        "1b3a44b4-d96e-4467-b831-37586202b727": {
+          "type": "question",
+          "settings": {
+            "title": "Wie viel Kalorien hat der Saturo Drink?",
+            "answer": "<p>Unsere 330ml Trinkmahlzeit hat genau 330kcal.<\/p><p>Die 500ml Version genau 500kcal.<\/p>"
+          }
+        },
+        "8ff2ea6b-dbc4-4d16-ab28-cec4ceb882a3": {
+          "type": "question",
+          "settings": {
+            "title": "Ist der Saturo Drink vegan?",
+            "answer": "<p>Ja, unsere Drinks sind zu 100 % vegan.<\/p>"
+          }
+        },
+        "47f50988-d02d-4b10-b400-da8d229bb2ec": {
+          "type": "question",
+          "settings": {
+            "title": "Ist der Saturo Drink glutenfrei?",
+            "answer": "<p>Ja, unsere Drinks sind glutenfrei.<\/p>"
+          }
+        },
+        "41c045f4-a8f3-46fb-a1bf-7af5397b3abe": {
+          "type": "question",
+          "settings": {
+            "title": "Ist der Saturo Drink laktosefrei?",
+            "answer": "<p>Ja, unsere Drinks sind laktosefrei.<\/p>"
+          }
+        },
+        "76f7f53c-d8e0-4117-92de-5ee0ec0a24b9": {
+          "type": "question",
+          "settings": {
+            "title": "Wie lange sind Saturo Drinks haltbar?",
+            "answer": "<p>Unsere Drinks sind ab Produktion ungeöffnet für 12 Monate haltbar, aber keine Sorge, du findest das Mindesthaltbarkeitsdatum auf der Verpackung.<\/p><p>Wir versuchen, die Produkte so lange wie möglich vor dem Mindesthaltbarkeitsdatum zu verschicken, damit du genügend Zeit hast, dein Saturo zu konsumieren, was jedoch von den Lagerbeständen abhängig ist.<\/p><p>Solltest du Produkte unter 3 Monaten Haltbarkeit bekommen, gib uns einfach Bescheid unter support@saturo.com.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4d1b0c01-75a0-413b-94a7-fcc9b6a4e944",
+        "0a496b39-eb9c-459f-96b1-3cab0a51366b",
+        "f77526ad-e67b-41a6-a005-0469613c1d36",
+        "ed204fe0-e749-41ec-92f6-b7643591e71f",
+        "47e92462-79bb-4fa7-85cd-936b88bbb6c3",
+        "1b3a44b4-d96e-4467-b831-37586202b727",
+        "8ff2ea6b-dbc4-4d16-ab28-cec4ceb882a3",
+        "47f50988-d02d-4b10-b400-da8d229bb2ec",
+        "41c045f4-a8f3-46fb-a1bf-7af5397b3abe",
+        "76f7f53c-d8e0-4117-92de-5ee0ec0a24b9"
+      ],
+      "settings": {
+        "bg_color_variable": "",
+        "html_heading": "<h3 class=\"h2-headline\" style=\"grid-column: 1\/13; margin-bottom: 3rem;\">\nFalls du dich das jetzt auch fragst:\n    <\/h3>",
+        "description": "",
+        "id": "",
+        "google_structured_data": true,
+        "padding_top": true,
+        "padding_bottom": true
+      }
+    },
+    "1648816617e3753b96": {
+      "type": "cta-bar-mobile",
+      "settings": {
+        "btn_text": "Jetzt bestellen",
+        "btn_style": "btn--primary"
+      }
+    }
+  },
+  "order": [
+    "1643715902997f1db6",
+    "main",
+    "164267866719bbc104",
+    "powder-form-v2",
+    "product-for-all",
+    "product-for-vegans",
+    "product-always-clean",
+    "product-stay-zero",
+    "product-tastes-different",
+    "product-macrosplit",
+    "product-reviews",
+    "product-nutri-ingre",
+    "product-mix-easier",
+    "16445331198bb561af",
+    "1661153802ff24ebce",
+    "1648816617e3753b96"
+  ]
+}

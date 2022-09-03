@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "title": ""
+      }
+    },
+    "16444457561f64cfad": {
+      "type": "image-banner",
+      "blocks": {
+        "1644445756855f0552-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Erfahrungen & Bewertungen",
+            "heading_size": "medium"
+          }
+        },
+        "1644445756855f0552-1": {
+          "type": "text",
+          "settings": {
+            "text": "Hinter jeder Bewertung steckt eine Erfahrung, die zählt."
+          }
+        }
+      },
+      "block_order": [
+        "1644445756855f0552-0",
+        "1644445756855f0552-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Saturo-people-happy_3841px.jpg",
+        "image_height": "small",
+        "adapt_height_first_image": false,
+        "desktop_text_box_position": "center",
+        "show_text_box": false,
+        "image_overlay_opacity": 0,
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "1644445488784c544d": {
+      "type": "normal-text-section",
+      "settings": {
+        "content": "<script src=\"https:\/\/widget.reviews.io\/polaris\/build.js\"><\/script>\n<div id=\"ReviewsWidget\"><\/div>\n<script>\nnew ReviewsWidget('#ReviewsWidget', {\n\/\/Your REVIEWS.io Store ID and widget type:\nstore: 'saturo.com',\nwidget: 'polaris',\n\n\/\/Content settings (store_review,product_review,third_party_review,questions). Choose what to display in this widget:\noptions: {\n    types: 'store_review,product_review,third_party_review',\n    lang: 'de',\n    \/\/Possible layout options: bordered, large and reverse.\n    layout: '',\n    \/\/How many reviews & questions to show per page?\n    per_page: 15,\n    store_review:{\n      hide_if_no_results: false,\n    },\n    third_party_review:{\n      hide_if_no_results: false,\n    },\n    \/\/Product specific settings. Provide product SKU for which reviews should be displayed:\n    product_review:{\n        \/\/Display product reviews - include multiple product SKUs seperated by Semi-Colons (Main Indentifer in your product catalog )\n        sku: '',\n        hide_if_no_results: false,\n    },\n    \/\/Questions settings:\n    questions:{\n        hide_if_no_results: false,\n        enable_ask_question: true,\n        show_dates: true,\n        \/\/Display group questions by providing a grouping variable, new questions will be assigned to this group.\n        grouping:'[Group questions by providing a grouping variable here or a specific product SKU]'\n    },\n    \/\/Header settings:\n    header:{\n        enable_summary: true, \/\/Show overall rating & review count\n        enable_ratings: true,\n        enable_attributes: true,\n        enable_image_gallery: true, \/\/Show photo & video gallery\n        enable_percent_recommended: false, \/\/Show what percentage of reviewers recommend it\n        enable_write_review: true, \/\/Show \"Write Review\" button\n        enable_ask_question: true, \/\/Show \"Ask Question\" button\n        enable_sub_header: true, \/\/Show subheader\n        rating_decimal_places: 2,\n    },\n\n    \/\/Filtering settings:\n    filtering:{\n        enable: true, \/\/Show filtering options\n        enable_text_search: true, \/\/Show search field\n        enable_sorting: true, \/\/Show sorting options (most recent, most popular)\n        enable_overall_rating_filter: true, \/\/Show overall rating breakdown filter\n        enable_ratings_filters: true, \/\/Show product attributes filter\n        enable_attributes_filters: true, \/\/Show author attributes filter\n    },\n\n    \/\/Review settings:\n    reviews:{\n        enable_avatar: true, \/\/Show author avatar\n        enable_reviewer_name:  true, \/\/Show author name\n        enable_reviewer_address:  true, \/\/Show author location\n        reviewer_address_format: 'city, country', \/\/Author location display format\n        enable_verified_badge: true, \/\/Show \"Verified Customer\" badge\n        review_content_filter: 'undefined', \/\/Filter content\n        enable_reviewer_recommends: true, \/\/Show \"I recommend it\" badge\n        enable_attributes: true, \/\/Show author attributes\n        enable_product_name: true, \/\/Show display product name\n        enable_review_title: undefined, \/\/Show review title\n        enable_replies: undefined, \/\/Show review replies\n        enable_images: true, \/\/Show display review photos\n        enable_ratings: true, \/\/Show product attributes (additional ratings)\n        enable_share: true, \/\/Show share buttons\n        enable_helpful_vote: true, \/\/Show \"was this helpful?\" section\n        enable_helpful_display: true, \/\/Show how many times times review upvoted\n        enable_report: true, \/\/Show report button\n        enable_date: true, \/\/Show when review was published\n    },\n},\n\/\/Translation settings\ntranslations: {\n    'Verified Customer': 'Verified Customer'\n},\n\/\/Style settings:\nstyles: {\n    \/\/Base font size is a reference size for all text elements. When base value gets changed, all TextHeading and TexBody elements get proportionally adjusted.\n    '--base-font-size': '16px',\n\n    \/\/Button styles (shared between buttons):\n    '--common-button-font-family': 'inherit',\n    '--common-button-font-size':'16px',\n    '--common-button-font-weight':'500',\n    '--common-button-letter-spacing':'0',\n    '--common-button-text-transform':'none',\n    '--common-button-vertical-padding':'10px',\n    '--common-button-horizontal-padding':'20px',\n    '--common-button-border-width':'2px',\n    '--common-button-border-radius':'0px',\n\n    \/\/Primary button styles:\n    '--primary-button-bg-color': '#0E1311',\n    '--primary-button-border-color': '#0E1311',\n    '--primary-button-text-color': '#ffffff',\n\n    \/\/Secondary button styles:\n    '--secondary-button-bg-color': 'transparent',\n    '--secondary-button-border-color': '#0E1311',\n    '--secondary-button-text-color': '#0E1311',\n\n    \/\/Star styles:\n    '--common-star-color': '#0E1311',\n    '--common-star-disabled-color': 'rgba(0,0,0,0.25)',\n    '--medium-star-size': '22px',\n    '--small-star-size': '19px',\n\n    \/\/Heading styles:\n    '--heading-text-color': '#0E1311',\n    '--heading-text-font-weight': '600',\n    '--heading-text-font-family': 'inherit',\n    '--heading-text-line-height': '1.4',\n    '--heading-text-letter-spacing': '0',\n    '--heading-text-transform': 'none',\n\n    \/\/Body text styles:\n    '--body-text-color': '#0E1311',\n    '--body-text-font-weight': '400',\n    '--body-text-font-family': 'inherit',\n    '--body-text-line-height': '1.4',\n    '--body-text-letter-spacing': '0',\n    '--body-text-transform': 'none',\n\n    \/\/Input field styles:\n    '--inputfield-text-font-family': 'inherit',\n    '--input-text-font-size': '14px',\n    '--inputfield-text-font-weight': '400',\n    '--inputfield-text-color': '#0E1311',\n    '--inputfield-border-color': 'rgba(0,0,0,0.2)',\n    '--inputfield-background-color': 'transparent',\n    '--inputfield-border-width': '1px',\n    '--inputfield-border-radius': '0px',\n\n    '--common-border-color': 'rgba(0,0,0,0.15)',\n    '--common-border-width': '1px',\n    '--common-sidebar-width': '190px',\n\n    \/\/Slider indicator (for attributes) styles:\n    '--slider-indicator-bg-color': 'rgba(0,0,0,0.1)',\n    '--slider-indicator-button-color': '#0E1311',\n    '--slider-indicator-width': '190px',\n\n    \/\/Badge styles:\n    '--badge-icon-color': '#0E1311',\n    '--badge-icon-font-size': 'inherit',\n    '--badge-text-color': '#0E1311',\n    '--badge-text-font-size': 'inherit',\n    '--badge-text-letter-spacing': 'inherit',\n    '--badge-text-transform': 'inherit',\n\n    \/\/Author styles:\n    '--author-font-size': 'inherit',\n    '--author-text-transform': 'none',\n\n    \/\/Author avatar styles:\n    '--avatar-thumbnail-size': '60px',\n    '--avatar-thumbnail-border-radius': '100px',\n    '--avatar-thumbnail-text-color': '#0E1311',\n    '--avatar-thumbnail-bg-color': 'rgba(0,0,0,0.1)',\n\n    \/\/Product photo or review photo styles:\n    '--photo-video-thumbnail-size': '80px',\n    '--photo-video-thumbnail-border-radius': '0px',\n\n    \/\/Media (photo & video) slider styles:\n    '--mediaslider-scroll-button-icon-color': '#0E1311',\n    '--mediaslider-scroll-button-bg-color': 'rgba(255, 255, 255, 0.85)',\n    '--mediaslider-overlay-text-color': '#ffffff',\n    '--mediaslider-overlay-bg-color': 'rgba(0, 0, 0, 0.8))',\n    '--mediaslider-item-size': '110px',\n\n    \/\/Pagination & tabs styles (normal):\n    '--pagination-tab-text-color': '#0E1311',\n    '--pagination-tab-text-transform': 'none',\n    '--pagination-tab-text-letter-spacing': '0',\n    '--pagination-tab-text-font-size': '16px',\n    '--pagination-tab-text-font-weight': '600',\n\n    \/\/Pagination & tabs styles (active):\n    '--pagination-tab-active-text-color': '#0E1311',\n    '--pagination-tab-active-text-font-weight': '600',\n    '--pagination-tab-active-border-color': '#0E1311',\n    '--pagination-tab-border-width': '3px',\n},\n});\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n$('#ReviewsWidget .subheader__group.u-textRight--all .R-TabControls .R-TabControls__item:first-child').click();\n});\n<\/script>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16444457561f64cfad",
+    "1644445488784c544d"
+  ]
+}

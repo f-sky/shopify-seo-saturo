@@ -1,0 +1,196 @@
+{{ 'product-tastes-different.css' | asset_url | stylesheet_tag }}
+
+<section class="tastes-different__wrapper page-width">
+  {% assign image = section.settings.image %}
+  {% if image != blank %}
+    <img src="{{ image | img_url: '2000x'}}" alt="{{ image.alt }}" class="tastes-different__row1-image" loading="lazy" />
+  {% endif %}
+
+  <h3 class="tastes-different__row2-title h1-headline span-align-heading">
+    {{ section.settings.title }}
+  </h3>
+
+  <div class="tastes-different__row2-text">
+    {{ section.settings.subtitle }}
+    
+    <p class="p">{{ section.settings.text }}</p>
+  </div>
+
+  {% assign s1_title = section.settings.s1_title %}
+  {% assign s1_text = section.settings.s1_text %}
+  {% assign s1_image = section.settings.s1_image %}
+  <div class="tastes-different__row3-text1">
+    <h4 class="h2-headline">
+      <strong>{{ s1_title }}</strong>
+    </h4>
+    <p class="p">{{ s1_text }}</p>
+    {% if s1_image != blank %}
+      <img src="{{ s1_image | img_url: '1100x' }}" alt="{{ s1_image.alt }}" class="tastes-different__row-image" loading="lazy" />
+    {% endif %}
+  </div>
+
+  {% assign s2_title = section.settings.s2_title %}
+  {% assign s2_text = section.settings.s2_text %}
+  {% assign s2_image = section.settings.s2_image %}
+  <div class="tastes-different__row3-text2">
+    <h4 class="h2-headline">
+      <strong>{{ s2_title }}</strong>
+    </h4>
+    <p class="p">{{ s2_text }}</p>
+    {% if s2_image != blank %}
+      <img src="{{ s2_image | img_url: '1100x' }}" alt="{{ s2_image.alt }}" class="tastes-different__row-image" loading="lazy" />
+    {% endif %}
+
+  </div>
+
+  {% assign s3_title = section.settings.s3_title %}
+  {% assign s3_text = section.settings.s3_text %}
+  {% assign s3_image = section.settings.s3_image %}
+  {% if s3_image != blank %}
+    <img src="{{ s3_image | img_url: '1500x' }}" alt="{{ s3_image.alt }}" class="tastes-different__row4-image" loading="lazy" />
+  {% endif %}
+  <div class="tastes-different__row4-text">
+    <h4 class="h2-headline">
+      <strong>{{ s3_title }}</strong>
+    </h4>
+    <p class="p">{{ s3_text }}</p>
+  </div>
+
+  {% assign s4_title = section.settings.s4_title %}
+  {% assign s4_text = section.settings.s4_text %}
+  {% assign s4_image = section.settings.s4_image %}
+
+  {% if s4_image != blank %}
+    <img src="{{ s4_image | img_url: '1100x'}}" alt="{{ s4_image.alt }}" class="tastes-different__row5-image" loading="lazy" />
+  {% endif %}
+  
+  <h4 class="tastes-different__row6-title h2-headline">
+    <strong>{{ s4_title }}</strong>
+  </h4>
+  <h4 class="tastes-different__row6-text">
+    {{ s4_text }}
+  </h4>
+
+</section>
+
+{% schema %}
+{
+    "name": "Product - Tastes Diff",
+    "tag": "section",
+    "class": "tastes-different",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "html",
+        "id": "title",
+        "label": "Title HTML",
+        "default": "<span class=\"align-left\">Geschmäcker<\/span> <span class=\"align-left\">sind <span class=\"heading-line\"><\/span><\/span> <span class=\"align-left\">verschieden.<\/span> <span class=\"align-left\">Aber alle<\/span> <span class=\"align-left\">gleich gut.<\/span>"
+      },
+      {
+        "type": "html",
+        "id": "subtitle",
+        "label": "Subtitle HTML",
+        "default": "<h4 class=\"h2-headline\">Echt lecker dank echten Zutaten.<\/h4><h4 class=\"h2-headline\">Leicht löslich für eine angenehme Textur.<\/h4>"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "Wir verwenden nur echtes Fruchtpulver und echten Kakao für den besten Geschmack."
+      },
+      {
+        "type": "header",
+        "content": "Section 1"
+      },
+      {
+        "type": "text",
+        "id": "s1_title",
+        "label": "Title",
+        "default": "Wer sich selbst alles abverlangt, muss sich auch alles zuführen: Deshalb versorgt dich Saturo mit allen wichtigen Nährstoffen."
+      },
+      {
+        "type": "text",
+        "id": "s1_text",
+        "label": "Text",
+        "default": "Saturo ist eine ausgewogene Ernährung ohne viel Aufwand."
+      },
+      {
+        "type": "image_picker",
+        "id": "s1_image",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Section 2"
+      },
+      {
+        "type": "text",
+        "id": "s2_title",
+        "label": "Title",
+        "default": "Reichhaltig frühstücken im Handumdrehen."
+      },
+      {
+        "type": "text",
+        "id": "s2_text",
+        "label": "Text",
+        "default": "Mach die wichtigste Mahlzeit am Tag zur einfachsten: Mit Saturo hast du ein gesundes Frühstück jederzeit griffbereit."
+      },
+      {
+        "type": "image_picker",
+        "id": "s2_image",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Section 3"
+      },
+      {
+        "type": "text",
+        "id": "s3_title",
+        "label": "Title",
+        "default": "Energie wie noch nie."
+      },
+      {
+        "type": "text",
+        "id": "s3_text",
+        "label": "Text",
+        "default": "Natürliche Energie, 30 g Protein und länger satt durch komplexe Kohlenhydrate."
+      },
+      {
+        "type": "image_picker",
+        "id": "s3_image",
+        "label": "Image"
+      },
+      {
+        "type": "header",
+        "content": "Section 4"
+      },
+      {
+        "type": "text",
+        "id": "s4_title",
+        "label": "Title",
+        "default": "Bring vegan auf den Speiseplan."
+      },
+      {
+        "type": "html",
+        "id": "s4_text",
+        "label": "Text",
+        "default": "<p class=\"p\">Die einfachste Art, sich vegan zu ernähren.<\/p><p class=\"p\">Saturo Balanced Pulver ist zu 100% vegan.<\/p><p class=\"p\">Gesund für dich und für die Umwelt.<\/p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "s4_image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product - Tastes Different"
+      }
+    ]
+}
+{% endschema %}

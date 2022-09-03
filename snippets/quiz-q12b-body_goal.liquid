@@ -1,0 +1,28 @@
+<!-- q12b: body_goal -->
+<div class="quiz-item quiz-q12b is-hidden" data-quiz-item="q12b" data-quiz-item-handle="bodyGoal">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.body_goal.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q12b">{% render 'icon-quiz-info' %}</a></h2>
+    <div class="quiz-options">
+      <div class="quiz-option quiz-option--range" data-range>
+        <input type="range" name="body_goal" data-quiz-answer min="1" max="6" step="1" value="3" data-orientation="horizontal" 
+        data-range-enum="{{ "personalized_quiz.body_current.option_very_slim" | t }}, {{ "personalized_quiz.body_current.option_slim" | t }}, {{ "personalized_quiz.body_current.option_average" | t }}, {{ "personalized_quiz.body_current.option_athletic" | t }}, {{ "personalized_quiz.body_current.option_muscular" | t }}, {{ "personalized_quiz.body_current.option_very_muscular" | t }}">
+        <div class="range-label mt-4"><span class="mx-auto" data-range-value></span></div>
+      </div>
+    </div>
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn">{{ "personalized_quiz.body_goal.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q12b">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.body_goal.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.body_goal.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q12b -->

@@ -1,0 +1,48 @@
+.personalized-variants__section {
+  background-color: rgb(248, 238, 230);
+  width: 100%;
+  height: 100%;
+  min-height: 115rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  display: none;  
+}
+
+.personalized-variants__section.show {
+  display: flex;
+}
+
+.personalized-variants__section .btn-large-details__text-details,
+.personalized-variants__section .product-form__shipping-tax-notes,
+.personalized-variants__section .product-form__shipping-tax-notes a,
+.personalized-variants__section .btn-large-details__text-details.product-form__shipping-tax-notes {
+  color: var(--color-grey-light);
+}
+
+.personalized-variants__section .product-form-powder .product__price-wrapper .product__price-text {
+  opacity: 1!important;
+}
+
+.personalized-variants__section .btn__back-quiz-results {
+  margin-top: 2rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .personalized-variants__section .product-form-powder .product__price-wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .personalized-variants__section .product__price-content {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .personalized-variants__section {
+    padding: 8rem 0 5rem;
+  }
+}

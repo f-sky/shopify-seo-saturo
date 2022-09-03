@@ -1,0 +1,8 @@
+{%- comment -%} Variables set by Weglot's preferences panel {%- endcomment -%}
+
+{%- unless request.path contains "/pages/introducing-saturo-powdered-complete-food" or request.path contains "/pages/releasing-chocolate-v2-0" or request.path contains "/pages/saturo-stories-meet-armin" or request.path contains "/pages/the-essential-vitamins-in-saturo" or request.path contains "/pages/tropical-vibes-only" or request.path contains "/pages/we-re-bringing-back-the-500-ml" or request.path contains "/pages/merkur" or request.path contains "/recaptcha/api2/anchor" -%}
+<link rel="alternate" hreflang="de" href="{{ canonical_url }}">
+{%- assign main_domain = canonical_url | split: '://' | last | split: '/' | first | split: 'www.' | last -%}
+{% assign canonical_path = canonical_url | split: main_domain | last -%}
+<link rel="alternate" hreflang="{{ "en" }}" href="https://{{ request.host }}/a/l/en{{ canonical_path }}">
+{%- endunless -%}

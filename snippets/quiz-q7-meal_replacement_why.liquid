@@ -1,0 +1,122 @@
+<!-- q7: meal_replacement_why -->
+<div class="quiz-item quiz-q7 is-hidden" data-meal-replacement-why-question data-quiz-item="q7"  data-quiz-item-handle="mealReplacementWhy">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.meal_replacement_why.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q7">{% render 'icon-quiz-info' %}</a></h2>
+    <p class="quiz-item__subtitle p">{{ "personalized_quiz.meal_replacement_why.subtitle" | t }}</p>
+    <div class="quiz-options quiz-options--inline">
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Abnehmen" type="checkbox" name="meal_replacement_why" value="Abnehmen" data-quiz-answer data-quiz-answer-id="lose_weight">
+        <label for="quiz-Abnehmen">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-abnehmen.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_lose_weight" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Zunehmen" type="checkbox" name="meal_replacement_why" value="Zunehmen" data-quiz-answer data-quiz-answer-id="gain_weight">
+        <label for="quiz-Zunehmen">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-zunehmen.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_gain_weight" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Muskelaufbauen" type="checkbox" name="meal_replacement_why" value="Muskelaufbauen" data-quiz-answer data-quiz-answer-id="gain_muscle">
+        <label for="quiz-Muskelaufbauen">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-muskelaufbauen.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_build_muscle" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Muskelnerhalten" type="checkbox" name="meal_replacement_why" value="Muskelnerhalten" data-quiz-answer data-quiz-answer-id="keep_muscle">
+        <label for="quiz-Muskelnerhalten">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-muskelnerhalten.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_preserve_muscle" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-recovery" type="checkbox" name="meal_replacement_why" value="Recovery nach dem Workout" data-quiz-answer data-quiz-answer-id="recovery_workout">
+        <label for="quiz-recovery">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-recovery.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_post_workout_recovery" | t }}</span>
+        </label>
+      </div>
+      
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Sportliche" type="checkbox" name="meal_replacement_why" value="Sportliche Leistung" data-quiz-answer data-quiz-answer-id="power_sport">
+        <label for="quiz-Sportliche">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-sportliche.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_athletic_performance_html" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Kalorienaufnahme" type="checkbox" name="meal_replacement_why" value="Kalorienaufnahme erhöhen" data-quiz-answer data-quiz-answer-id="kcal_intake_increase">
+        <label for="quiz-Kalorienaufnahme">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-kalorienaufnahme.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_increase_calorie_intake" | t }}</span>
+        </label>
+      </div>
+      
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Vitamine" type="checkbox" name="meal_replacement_why" value="Alle Vitamine & Mineralien aufnehmen" data-quiz-answer data-quiz-answer-id="all_vitamins_minerals">
+        <label for="quiz-Vitamine">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-vitamine.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_absord_vitamins_minerals" | t }}</span>
+        </label>
+      </div>
+      
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Andere3" type="checkbox" name="meal_replacement_why" value="Andere" data-quiz-answer data-quiz-answer-id="other">
+        <label for="quiz-Andere3">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-andereDots.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_why.option_other" | t }}</span>
+        </label>
+      </div>
+      <div class="quiz-option input-wrapper">
+        <input id="quiz-q7-meal-replacement-why" type="text" class="input m-underline" name="meal_replacement_why_input" placeholder="Sonstige" data-quiz-answer data-quiz-answer-andere>
+        <label for="quiz-q7-meal-replacement-why" class="label">{{ "personalized_quiz.meal_replacement_why.option_other" | t }}</label>
+      </div>
+
+    </div>
+
+    <div data-quiz-errors>
+    </div>
+
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.meal_replacement_why.button_next_text" | t }}</button>
+    </div> 
+  </div>
+  <div class="popup quiz-popup is-hidden" data-popup="q7">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.meal_replacement_why.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.meal_replacement_why.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q7 -->

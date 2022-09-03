@@ -1,0 +1,162 @@
+{{ 'product-macrosplit.css' | asset_url | stylesheet_tag }}
+{{ 'glider.min.css' | asset_url | stylesheet_tag }}
+{{ 'glider.min.js' | asset_url | script_tag }}
+
+<section class="page-width macrosplit-section__wrapper">
+  
+  {% assign image = section.settings.image %}
+
+  {% if image != blank %}
+  <img src="{{ image | img_url: '1200x'}}" alt="{{ image.alt }}" class="macrosplit__row1-image" loading="lazy" />
+  {% endif %}
+
+  <div class="macrosplit__row1">
+    <h3 class="h5-headline">{{ section.settings.title }}</h3>
+    <p class="p">{{ section.settings.subtitle }}</p>
+    
+    {% if image != blank %}
+      <img src="{{ image | img_url: '1200x'}}" alt="{{ image.alt }}" class="macrosplit__row1-image macrosplit__row1-image--mobile" loading="lazy" />
+    {% endif %}
+
+    <div class="macrosplit__row2">
+      {% for block in section.blocks %}
+        <div class="macrosplit__stats">
+          <h4 class="h1-headline"><strong>{{ block.settings.number }}</strong></h4>
+          <p class="p">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <h3  class="h5-headline macro-tables__title">{{ section.settings.tables_title }}</h3>
+  {% assign meta_name = section.settings.meta_name %}
+  {% if meta_name != blank %}
+    <div class="macro-tables__wrapper">
+      <div class="macro-tables js-macro-tables">
+        {% assign macro_tables = shop.metafields.macro_table[meta_name].value.content  %}
+        {% if macro_tables != blank %}
+          {{ macro_tables }}
+        {% endif %}
+      </div>
+      <button class="macro-tables__glider-prev glider-prev">{% render 'icon-chevron' %}</button>
+      <button class="macro-tables__glider-next glider-next">{% render 'icon-chevron' %}</button>
+      <div class="macro-tables__dots"></div>
+    </div>
+  {% endif %}
+  
+</section>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const $macroTables = document.querySelector('.js-macro-tables');
+    if ($macroTables) {
+      new Glider(document.querySelector('.js-macro-tables'), {
+        slidesToShow: 'auto',
+        itemWidth: 480,
+        slidesToScroll: 1,
+        draggable: true,
+        dots: '.macro-tables__dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        },
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              dots: false
+            }
+          }
+        ]
+      });
+    }
+
+    const $buttons = document.querySelectorAll('.macro-table__accordion-btn');
+    if ($buttons) {
+      $buttons.forEach(button => {
+        button.addEventListener('click', function(){
+          var id = button.dataset.buttonId;
+          var $content = document.querySelector('[data-content-id="' + id + '"]');	
+          
+          if ($content.classList.contains('show')) {
+            $content.classList.remove('show');
+            button.classList.remove('active');
+          } else {
+            $content.classList.add('show');
+            button.classList.add('active');
+          }
+        });
+      });
+    }
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product - Macrosplit",
+  "tag": "section",
+  "class": "macrosplit-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Makrosplit"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Unsere Pulver liefert dir ein ausgewogenes Makronährstoffverhältnis (XX% der Energie stammen aus Kohlenhydraten, XX% aus Proteinen, X% aus Fett, X% aus Ballaststoffe) und zudem alle 26 essentielle Vitamine und Mineralstoffe. Alles drin, was du brauchst."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tables_title",
+      "label": "Tables Title",
+      "default": "Nährwerttabelle und Zutaten"
+    },
+    {
+      "type": "text",
+      "id": "meta_name",
+      "label": "Macro Table Metafield Name",
+      "info": "Metafields > Shop > macro_table: id[Products ID]"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Statistic",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product - Macrosplit"
+    }
+  ]
+}
+{% endschema %}

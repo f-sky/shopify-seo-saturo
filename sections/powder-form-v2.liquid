@@ -1,0 +1,620 @@
+{%- liquid
+    assign price = product.variants.first.price
+    assign compare_at_price = product.variants.first.compare_at_price
+    assign product_details = product.metafields.product
+
+    assign has_subscription = false
+    if product.selling_plan_groups.size > 0
+        assign has_subscription = true
+    endif
+
+    assign selling_plan_group = product.selling_plan_groups[0]
+    assign discount_percentage = 0
+    for selling_plan in selling_plan_group.selling_plans
+        if selling_plan.price_adjustments[0].value > discount_percentage
+            assign discount_percentage = selling_plan.price_adjustments[0].value
+        endif
+    endfor
+
+    assign price_times_discount = price | times: discount_percentage | divided_by: 100.0
+    assign discount_price = price | minus: price_times_discount
+    unless has_subscription
+        assign discount_price = price
+    endunless
+    
+    assign shipping_unit_servings = product_details.shipping-unit__servings.value
+    assign unit_type_content = product_details.shipping-unit__type-content
+-%}
+
+<div class="product-form__anchor" id="product-form" data-scroll-product></div>
+<div class="product-form product-form-powder page-width pgfly-product-form-class" data-has-sub="{%- if has_subscription -%}true{%- else -%}false{%- endif -%}"  data-mode="{%- unless has_subscription -%}onetime{%- endunless -%}" data-subs-value=" " data-variants-quantity="0">
+  <div class="product-form__image">
+    {% render 'product-media', media: product.featured_media %}
+  </div>
+  <div class="product-form__section-wrapper">
+    {% if section.settings.s1_title != blank %}
+      <h3 class="h2-headline product-form__section-title">
+        {{ section.settings.s1_title }}
+      </h3>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+      <div class="product-form__products">
+        {% for block in section.blocks %}
+          {%- liquid
+            assign block_product = all_products[block.settings.product]
+
+            assign item_price = block_product.variants.first.price
+            assign item_compare_at_price = block_product.variants.first.compare_at_price
+        
+            assign item_has_subscription = false
+            if block_product.selling_plan_groups.size > 0
+                assign item_has_subscription = true
+            endif
+        
+            assign item_selling_plan_group = block_product.selling_plan_groups[0]
+            assign item_discount_percentage = 0
+            for item_selling_plan in item_selling_plan_group.selling_plans
+                if item_selling_plan.price_adjustments[0].value > item_discount_percentage
+                    assign item_discount_percentage = item_selling_plan.price_adjustments[0].value
+                endif
+            endfor
+        
+            assign item_price_times_discount = item_price | times: item_discount_percentage | divided_by: 100.0
+            assign item_discount_price = item_price | minus: item_price_times_discount
+            unless item_has_subscription
+                assign item_discount_price = item_price
+            endunless
+          -%}
+
+          <a href="{{ block_product.url }}#product-form" class="btn-large-details{% if block_product.handle == product.handle %} selected{% endif %}">
+            <div class="btn-large-details__row">
+              <h4 class="btn-large-details__text">
+                <strong>
+                  {%- if block.settings.custom_title != blank -%}
+                    {{ block.settings.custom_title }}
+                  {%- else -%}
+                    {{ block_product.title }}
+                  {%- endif -%}
+                </strong>
+              </h4>
+              <h4 class="btn-large-details__text">Ab {{ item_discount_price | money }}</h4>
+            </div>
+            
+            {% assign item_price_divided = item_price | divided_by: block_product.metafields.product.shipping-unit__servings.value | divided_by: 100.00 %}
+            {% if item_has_subscription %}
+              {% assign item_price_divided = item_discount_price | divided_by: block_product.metafields.product.shipping-unit__servings.value | divided_by: 100.00 %}
+            {% endif %}
+            {% assign item_price_divided_rounded = item_price_divided | round: 2 %}
+
+            <div class="btn-large-details__row">
+              <p class="btn-large-details__text-details">{{ block.settings.subtitle }}</p>
+              <p class="btn-large-details__text-details">{{ block_product.metafields.product.shipping-unit__servings.value }} Mahlzeiten à {{ item_price_divided_rounded | times: 100 | money }} pro Mahlzeit</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <h3 class="h2-headline product__taste-title">{{ section.settings.s2_title }}</h3>
+    {% if section.settings.s2_before_product != blank %}
+      <p class="p">{{ section.settings.s2_before_product }}</p>
+    {% else %}
+      {% if product_details.serving-size__size-kcal.value != blank %}
+        <p class="p">{% if product_details.shipping-unit__type-prefix != blank %}{{ product_details.shipping-unit__type-prefix }}{% else %}Jeder{% endif %} {{ product_details.shipping-unit__type }} enthält {{ product_details.shipping-unit__servings }} {% if product_details.shipping-unit__type-content != blank %}{{ product_details.shipping-unit__type-content }}{% else %}Mahlzeiten{% endif %} à {{ product_details.serving-size__size-kcal.value }} kcal.</p>
+      {% endif %}
+      
+      {% if product.type == 'taster-pack' %}
+        <p class="p">{{ product.metafields.product.shipping-unit__unit-special }}</p>
+      {% endif %}
+    {% endif %}
+
+    <div class="product-form__section-variants">
+      
+      <div class="product__variants-wrapper">
+        <div class="product__variants">
+        {% for variant in product.variants %}
+
+          {% assign defaultQuantity = 0 %}
+          {% for item in cart.items %}
+            {% if item.variant_id == variant.id and item.selling_plan_allocation != blank %}
+              {% assign defaultQuantity = item.quantity %}
+            {% endif %}
+          {% endfor %}
+          
+          <div class="product__variant-wrapper{% if defaultQuantity != 0%} has-quantity{% endif %}{% unless variant.available %} not-available{% endunless %}" data-variant-wrapper>
+            <div class="product__variant-item" data-variant-id="{{ variant.id }}" data-selling-plan>
+
+              <em class="product__variant-item--sold-out details">Ausverkauft</em>
+              {% if variant.featured_image != blank %}
+                <img class="product__variant-item--image" src="{{ variant.featured_image | img_url: '200x' }}" alt="" loading="lazy" />
+              {% endif %}
+
+              {% assign variant_title = variant.title %}
+              {% if variant_title == 'Default Title' %}
+                {% assign variant_title = product.title %}
+              {% endif %}
+              <h3 class="btn-large-details__text"><strong>{{ variant_title }}</strong></h3>
+              {% assign flavor_desc = variant.metafields.global.flavor_description %}
+              <p class="btn-large-details__text-details btn-large-details__text-details-2">{{ flavor_desc }}</p>
+              
+              <button class="product__variant__plus" type="button"></button>
+
+              <div class="qty-variant" data-qty>
+                <button class="qty-variant__btn qty-variant__minus" type="button" data-qty-minus>
+                  {% render 'icon-quantity-minus' %}
+                </button>
+                <input class="qty-variant__input submenu" value="{{defaultQuantity}}" disabled data-qty-input="{{ variant.id }}">
+                <button class="qty-variant__btn qty-variant__plus" type="button" data-qty-plus data-ucd="0">
+                  {% render 'icon-quantity-plus' %}
+                </button>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+      
+      {% if section.settings.s2_after_product != blank %}
+        <div class="product-form__facts-wrapper details">{{ section.settings.s2_after_product }}</div>
+      {% else %}
+        {% if product.type == 'powder' or product.type == 'drink' %}
+          <div class="product-form__facts-wrapper details">
+            {% if product_details.shipping-unit__type-prefix != blank %}{{ product_details.shipping-unit__type-prefix }}{% else %}Jeder{% endif %} {{ product_details.shipping-unit__type }} beinhaltet {% if product.type == 'powder' %}{{ shipping_unit_servings | times: product_details.serving-size__size.value }}{% else %}{{ shipping_unit_servings }}x<span data-serving-size-size>{{ product.metafields.product.serving-size__size.value }}</span>
+            {% endif %} {{ product.metafields.product.serving-size__unit.value }} {% unless product.type == 'powder' %}{{ product.metafields.product.shipping-unit__unit.value }}{% endunless%}</div>
+        {% endif %}
+
+        {% if product.type == 'taster-pack' %}
+          {{ product.metafields.product.shipping-unit__unit-special2 }}
+        {% endif %}
+      {% endif %}
+    </div>
+    
+    <div class="product-form__section-plan">
+      {%- if has_subscription -%}
+      <div class="product-form__section-variants--text">
+        {{ section.settings.subs_section_text }}
+        <button class="btn btn--text" data-show-product-modal>Warum wir dir ein Spar-Abo empfehlen?</button>
+        <div class="coll-v2__modal--content" data-coll-modal-content>
+          <button class="coll-v2__modal--close" data-close-coll-modal>{% render 'icon-close' %}</button>
+          {% if section.settings.modal_title != blank %}
+            <h4 class="h2-headline">{{ section.settings.modal_title }}</h4>
+          {% endif %}
+
+          {% assign modal_image1 = section.settings.modal_image1 %}
+          {% assign modal_text1 = section.settings.modal_text1 %}
+          {% if modal_text1 != blank %}
+            <div class="p coll-v2__modal--content-text {% if modal_image1 != blank %}with-image{% endif %}">
+            {% if modal_image1 != blank %}<img class="coll-v2__modal--content-image" src="{{ modal_image1 | img_url: '200x'}}" alt="" />{% endif %}{{ modal_text1 }}</div>
+          {% endif %}
+
+          {% assign modal_image2 = section.settings.modal_image2 %}
+          {% assign modal_text2 = section.settings.modal_text2 %}
+          {% if modal_text2 != blank %}
+            <div class="p coll-v2__modal--content-text {% if modal_image2 != blank %}with-image{% endif %}">
+            {% if modal_image2 != blank %}<img class="coll-v2__modal--content-image" src="{{ modal_image2 | img_url: '200x'}}" alt="" />{% endif %}{{ modal_text2 }}</div>
+          {% endif %}
+
+          {% assign modal_image3 = section.settings.modal_image3 %}
+          {% assign modal_text3 = section.settings.modal_text3 %}
+          {% if modal_text3 != blank %}
+            <div class="p coll-v2__modal--content-text {% if modal_image3 != blank %}with-image{% endif %}">
+              {% if modal_image3 != blank %}<img class="coll-v2__modal--content-image" src="{{ modal_image3 | img_url: '200x'}}" alt="" />{% endif %}{{ modal_text3 }}</div>
+          {% endif %}
+
+          {% if section.settings.modal_details != blank %}
+            <p class="details coll-v2__modal--content-details">{{ section.settings.modal_details }}</p>
+          {% endif %}
+        </div>
+        
+      </div>
+        
+        <div class="product-form__order-type product__subscription-options">
+          
+          <div>
+            <input class="product__subscription-option__input" type="radio" id="product-form__order-type-selector--subscribe" name="option" value="subscription">
+
+            <label class="btn-large-details" for="product-form__order-type-selector--subscribe">
+              <div class="btn-large-details__row">
+                <h4 class="btn-large-details__text">
+                  <strong>Spar-Abo</strong>
+                </h4>
+                <h4 class="btn-large-details__price">
+                  <strike class="btn-large-details__price-discount">{{ price | money }}</strike>
+                  <strong class="color-turquoise">{{ discount_price | money }}</strong>
+                </h4>
+              </div>
+    
+              <div class="btn-large-details__row">
+                <p class="btn-large-details__text-details">{{ discount_percentage }} % Rabatt</p>
+                <p class="btn-large-details__text-details">
+                  {% assign discount_price_divided = discount_price | divided_by: product_details.shipping-unit__servings.value | divided_by: 100.00 %}
+                {% assign discount_price_divided_rounded = discount_price_divided | round: 1 %}Nur &euro;<span data-discounted-price-per-meal></span> pro {{ product_details.price-unit__type.value }} - {{ product_details.serving-size__size-kcal.value }} kcal</p>
+              </div>
+            </label>
+          </div>
+          
+          <div>
+            <input class="product__subscription-option__input" type="radio" id="product-form__order-type-selector--onetime" name="option" value="onetime">
+
+            <label class="btn-large-details" for="product-form__order-type-selector--onetime">
+              <div class="btn-large-details__row">
+                <h4 class="btn-large-details__text">
+                  <strong>Einzelkauf</strong>
+                </h4>
+                <h4 class="btn-large-details__price"><strong>{{ price | money }}</strong></h4>
+              </div>
+    
+              <div class="btn-large-details__row">
+                <p class="btn-large-details__text-details"></p>
+                <p class="btn-large-details__text-details">
+                  {% assign price_divided = price | divided_by: product_details.shipping-unit__servings.value | divided_by: 100.00 %}
+                  {% assign price_divided_rounded = price_divided | round: 1 %}Nur &euro;<span data-original-price-per-meal></span> pro {{ product_details.price-unit__type.value }} - {{ product_details.serving-size__size-kcal.value }} kcal
+                </p>
+              </div>
+            </label>
+          </div>
+        </div>
+      {%- endif -%}
+        
+      <div class="product__subscription-section">
+        <p class="p">Gute Wahl! Hier sind deine Spar-Abo Vorteile:</p>
+        <div class="product__subscription-benefit">
+          <div class="product__subscription-benefit__icon">{% render 'icon-checkmark' %}</div>
+          <p class="p">
+            <strong>{{ discount_percentage }} % Rabatt</strong>
+          </p>
+          <p class="p">
+            
+            Erhalte {{ discount_percentage }} % Rabatt auf jede Bestellung
+          </p>
+        </div>
+        <div class="product__subscription-benefit">
+          <div class="product__subscription-benefit__icon">{% render 'icon-checkmark' %}</div>
+          <p class="p">
+            <strong>Jederzeit kostenlos kündbar</strong>
+          </p>
+          <p class="p">
+            Keine Mindestlaufzeit auf dein Spar-Abo
+          </p>
+        </div>
+        <div class="product__subscription-benefit">
+          <div class="product__subscription-benefit__icon">{% render 'icon-checkmark' %}</div>
+          <p class="p">
+            <strong>Passt sich an dich an</strong>
+          </p>
+          <p class="p">
+            Lieferintervall, Sorten &amp; Menge stets anpassbar
+          </p>
+        </div>
+        {% assign shipping_interval_frequency_most = " 4 Wochen" %}
+        {% assign label_shipping_interval_frequency_most = "(am häufigsten)" %}
+        <div class="input-wrapper">
+          <select name="product-form__subscription-frequency" id="product-form__subscription-frequency"
+            class="select" data-selling-plan-group="{{ selling_plan_group.id }}"
+          >
+            <option value="" disabled></option>
+            {% for selling_plan in selling_plan_group.selling_plans %}
+              <option value="{{ selling_plan.id }}" 
+          {% if selling_plan.name == shipping_interval_frequency_most %}selected{% endif %}
+              >
+                {{ selling_plan.name }}{% if selling_plan.name == shipping_interval_frequency_most %} {{ label_shipping_interval_frequency_most }}{% endif %}
+              </option>
+            {% endfor %}
+          </select>
+          <label for="product-form__subscription-frequency" class="label">Lieferintervall wählen</label>
+          <span class="select-chevron">{% render 'icon-chevron' %}</span>
+        </div>
+      </div>
+      
+      {% if has_subscription %}
+      <div class="product__onetime-section">
+        <p class="p"><strong>10 % sparen? Abo sicher doch!</strong></p>
+        <p class="p">Sei smart und spare 10 %. Du hast einen einmaligen Kauf ausgewählt. Warum nicht zu einem flexiblen <strong>Abo</strong> wechseln und <strong>10 % sparen</strong>? Keine Mindestlaufzeit, <strong>jederzeit kündbar</strong> oder anpassbar.</p>
+      </div>
+      {% endif %}
+      
+      <div class="product__details-before-selection">
+        <p class="product__free-shipping p">
+          {% render 'icon-discount' %}<strong>Gratis Lieferung</strong><span data-product-free-shipping-amount-wrapper data-product-handle="{{ product.handle }}"> ab €<span class="product__free-shipping__amount" data-product-free-shipping-total-amount>50</span></span> nach <img class="product__free-shipping__flag" src="https://flagcdn.com/24x18/at.png" alt="" data-product-free-shipping-flag="" loading="lazy" />
+        </p>
+
+        {% render 'shipping-countdown' %}
+
+        <div class="product__price-wrapper" data-price-wrapper-selection>
+          <div class="product__price-text">
+            {% render 'icon-thumbs-up' %}
+            {% assign shipping_unit_servings = product_details.shipping-unit__servings.value %}
+            {% assign product_variants_size = product.variants.size | plus: 0 %}
+            <p class="p" data-shipping-unit-servings="{{ product_details.shipping-unit__servings }}">
+              Gute Wahl! {% if shipping_unit_servings != blank %}Du hast 
+              <span data-price-text-qty>{{ shipping_unit_servings | times: product_variants_size }}</span> ausgewogene {% if product_details.shipping-unit__type-content != blank %}{{ product_details.shipping-unit__type-content }}{% else %}Mahlzeiten{% endif %} für &euro;<span data-discounted-price-per-meal></span><span data-original-price-per-meal></span> pro {{ product_details.price-unit__type.value }} ausgewählt.{% endif %}</p>
+          </div>
+          <div class="product__price-content">
+            <input type="hidden" id="product-form__product-details-meta"
+                data-serving-size="{{ product_details.serving-size__size }}"
+                data-comparisonunit="{{ product_details.comparison__unit }}"
+                data-shipping-unit-servings="{{ product_details.shipping-unit__servings }}">
+
+            <div class="text-right product__price">
+                {% if discount_price != 0 and has_subscription %}
+                    <del class="btn-large-details__text" data-price-before="{{ price | money }}" data-wg-notranslate="manual">{{ price | times: 3 | money }}</del>
+                    <ins class="h2-headline color-turquoise" data-price-actual="{{ discount_price | money }}" data-discounted-price="{{ discount_price | times: 3 | money }}" data-wg-notranslate="manual">
+                      {{ discount_price | times: 3 | money }}
+                    </ins>
+                {% else %}
+                    {%- if compare_at_price != blank -%}
+                        <del class="btn-large-details__text" data-price-before="{{ price | money }}" data-wg-notranslate="manual">{{ compare_at_price | times: 3 | money }}</del>
+                    {%- endif -%}
+                    <ins class="h2-headline color-turquoise" data-price-actual="{{ discount_price | money }}" data-wg-notranslate="manual">
+                      {{ 0 | money }}
+                    </ins>
+                {% endif %}
+            </div>
+            <div class="btn-large-details__text-details product-form__shipping-tax-notes">inkl. MwSt., zzgl. {{ 'Versandkosten' | link_to: '/pages/versand-und-bezahlung' }}
+                {% if product_details.comparison__unit.value != blank %}
+                <div class="product-form__product-comparison-facts" data-fact="subscription">
+                  &euro;<span data-discounted-price-per-100g></span>/ 100 {{ product_details.comparison__unit.value -}}</span>
+                </div>
+                <div class="product-form__product-comparison-facts" data-fact="onetime">
+                  &euro;<span data-original-price-per-100g></span>/ 100 {{ product_details.comparison__unit.value -}}</span>
+                </div>
+                {% endif %}
+            </div>
+          </div>
+        </div>
+        
+        <div class="product__price-wrapper" data-price-wrapper-no-selection>
+          <div class="product__price-text">
+            {% render 'icon-thumbs-up' %}
+            {% assign shipping_unit_servings = product_details.shipping-unit__servings.value %}
+            {% assign product_variants_size = product.variants.size | plus: 0 %}
+            <p data-shipping-unit-servings="{{ product_details.shipping-unit__servings }}">
+              Gute Wahl! {% if shipping_unit_servings != blank %}Du hast 
+              <span data-price-text-qty>{{ shipping_unit_servings | times: product_variants_size }}</span> ausgewogene {% if product_details.shipping-unit__type-content != blank %}{{ product_details.shipping-unit__type-content }}{% else %}Mahlzeiten{% endif %} für &euro;<span data-discounted-price-per-meal></span> pro {{ product_details.price-unit__type.value }} ausgewählt.{% endif %}
+            </p>
+          </div>
+          <div class="product__price-content">
+            <div class="text-right product__price">
+              <ins class="h2-headline color-turquoise">{{ 0 | money }}</ins>
+            </div>
+            <div class="btn-large-details__text-details product-form__shipping-tax-notes">inkl. MwSt., zzgl. {{ 'Versandkosten' | link_to: '/pages/versand-und-bezahlung' }}
+          </div>
+          </div>
+        </div>
+        
+        <div class="product-form__controls-group product-form__controls-group--submit">
+          <button type="button" class="btn powder-form__cart-submit" data-powder-add-to-cart>
+            <span class="product-form__cart-submit__text" data-btn-text=""><strong>{{ section.settings.btn_text }}</strong></span>
+            <span class="hidden product-form__cart-submit__loader" data-loader="">
+              {% render 'icon-spinner' %}
+            </span>
+          </button>
+        </div>
+      </div>
+      
+      {% unless enabled_payment_types == empty %}
+        <div class="product-form__controls-group product-form__trust-icon">
+          {% for type in shop.enabled_payment_types %} {{ type | payment_type_svg_tag: class:'payment-icon' }} {% endfor %}
+        </div>
+      {% endunless %}
+      
+    </div>
+  </div>
+</div>
+  
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    $('.product__floating-buy-btn, .product__subscription-option').on('click', function() {
+      $('html').animate({
+        scrollTop: $(".product__subscription-area").offset().top
+      }, 700);
+    });
+
+    function calculatePricePerMeal() {
+      const products_meta = [
+        {% for variant in product.variants %}
+          {% assign servings = product_details.shipping-unit__servings.value %}
+          {%- if variant.metafields.product.shipping-unit__servings.value != blank -%}
+            {% assign servings = variant.metafields.product.shipping-unit__servings.value %}
+          {%- endif -%}
+          {% assign size = product_details.serving-size__size %}
+          {%- if variant.metafields.product.serving-size__size != blank -%}
+            {% assign size = variant.metafields.product.serving-size__size %}
+          {%- endif -%}
+          {
+            "price": "{{ price }}",
+            "discount_price": "{{ discount_price }}",
+            "shipping_unit_servings": "{{ servings }}",
+            "serving_size_size": "{{ size }}",
+            "quantity": $('[data-qty-input={{ variant.id }}]').val()
+          },
+        {% endfor %}
+      ];
+      
+      let totalMeals = 0;
+      if ($('[data-price-text-qty]').length > 0) {
+        totalMeals = parseInt($('[data-price-text-qty]').eq(1).text(), 10);
+      }
+
+      let totalQuantity = 0;
+      $('[data-qty-input]').each((index, item) => {
+        const value = parseInt($(item).val(), 10);
+        totalQuantity += value;
+      });
+
+      let totalPrice = 0;
+      let totalDiscountedPrice = 0;
+      let totalWeight = 0;
+      products_meta.forEach(item => {
+        const sizeNum = item.serving_size_size === '' ? 0 : parseInt(item.serving_size_size, 10);
+        const servingsNum = item.shipping_unit_servings === '' ? 0 : parseInt(item.shipping_unit_servings, 10);
+        const quantityNum = parseInt(item.quantity, 10);
+        const priceNum = parseInt(item.price, 10);
+        const discountedPriceNum = parseInt(item.discount_price, 10);
+        
+        totalWeight += (sizeNum * servingsNum) * quantityNum;
+        totalPrice += priceNum * quantityNum;
+        totalDiscountedPrice += discountedPriceNum * quantityNum;
+      });
+      totalPrice = totalPrice / 100;
+      totalDiscountedPrice = totalDiscountedPrice / 100;
+      
+      function toFixed(num, fixed) {
+        var re = new RegExp('^-?\\d+(?:\.\\d{0,' + (fixed || -1) + '})?');
+        return num.toString().match(re)[0];
+      }
+
+      const discountedPricePer100 = totalDiscountedPrice === 0 || totalWeight === 0 ? 0 : parseFloat((totalDiscountedPrice / totalWeight) * 100);
+
+      const discountedPricePer100Formatted = toFixed(discountedPricePer100, 2).replace(".", ",");
+      
+      const pricePer100 = totalPrice === 0 || totalWeight === 0 ? 0 : parseFloat((totalPrice / totalWeight) * 100);
+      const pricePer100Formatted = toFixed(pricePer100, 2).replace(".", ",");
+
+      const discountedPricePerUnit = totalDiscountedPrice === 0 || totalMeals === 0 ? 0 : parseFloat(totalDiscountedPrice / totalMeals);
+      const discountedPricePerUnitFormatted = toFixed(discountedPricePerUnit, 2).replace(".", ",");
+      const pricePerUnit = totalPrice === 0 || totalMeals === 0 ? 0 : parseFloat(totalPrice / totalMeals);
+      const pricePerUnitFormatted = toFixed(pricePerUnit, 2).replace(".", ",");
+
+      if ($('[data-original-price-per-100g]').length > 0 && $('[data-discounted-price-per-100g]').length > 0 && $('[data-original-price-per-meal]').length > 0 && $('[data-discounted-price-per-meal]').length > 0) {
+        $('[data-original-price-per-100g]').text( pricePer100Formatted );
+        $('[data-discounted-price-per-100g]').text( discountedPricePer100Formatted );
+        
+        $('[data-original-price-per-meal]').text( pricePerUnitFormatted );
+        $('[data-discounted-price-per-meal]').text( discountedPricePerUnitFormatted );
+      }
+
+      $('[data-mode]').attr('data-variants-quantity', totalQuantity);
+      if (totalQuantity === 0 && $('[data-has-sub]').attr('data-has-sub') === 'true') {
+        $('[data-mode]').attr('data-mode', '');
+        if ($('.product__subscription-options input').length > 0) {
+          $('.product__subscription-options input').prop('checked', false);
+        }
+      }
+    };
+
+    $('[data-qty-plus], [data-qty-minus]').each((i, item) => {
+      $(item).on('click', calculatePricePerMeal);
+    });
+
+    calculatePricePerMeal();
+    
+    const variantsLength = $('[data-variant-wrapper] [data-variant-id]').length;
+    if (variantsLength === 1) {
+      $('[data-variant-wrapper] [data-variant-id] button.product__variant__plus').click();
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Powder Form v2",
+  "tag": "section",
+  "class": "powder-form-v2__section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "s1_title",
+      "label": "Title - Section 1",
+      "default": "Wähle deine Lieblingsproteinquelle<br><strong>Wir empfehlen dir unsere vegane Variante mit Erbsen- und Reisprotein.<\/strong>"
+    },
+    {
+      "type": "html",
+      "id": "s2_title",
+      "label": "Title - Section 2",
+      "default": "Wähle deinen Geschmack und die Menge."
+    },
+    {
+      "type": "html",
+      "id": "s2_before_product",
+      "label": "Before Product Selection - Section 2"
+    },
+    {
+      "type": "html",
+      "id": "s2_after_product",
+      "label": "After Product Selection - Section 2"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Add to cart Button Text",
+      "default": "Hinzufügen"
+    },
+    {
+      "type": "html",
+      "id": "subs_section_text",
+      "label": "Subscription Section Text",
+	  "default": "<h3 class=\"h2-headline\">Wähle deine Bestellart.<\/h3><p class=\"p\">Du kannst zwischen einem Einzelkauf und einem regelmäßigen Spar-Abo entscheiden.<\/p>"
+    },
+    {
+      "type": "header",
+      "content": "Modal"
+    },
+    {
+      "type": "text",
+      "id": "modal_title",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "modal_image1",
+      "label": "Image - Section 1"
+    },
+    {
+      "type": "richtext",
+      "id": "modal_text1",
+      "label": "Text - Section 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "modal_image2",
+      "label": "Image - Section 2"
+    },
+    {
+      "type": "richtext",
+      "id": "modal_text2",
+      "label": "Text - Section 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "modal_image3",
+      "label": "Image - Section 3"
+    },
+    {
+      "type": "richtext",
+      "id": "modal_text3",
+      "label": "Text - Section 3"
+    },
+    {
+      "type": "text",
+      "id": "modal_details",
+      "label": "Details"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "similar-product",
+      "name": "Similar Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Product - Custom Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Product - Subtitle",
+          "info": "eg. Sojaprotein"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,239 @@
+
+{%- liquid
+    assign price = product.variants.first.price
+    assign compare_at_price = product.variants.first.compare_at_price
+    assign product_details = product.metafields.product
+
+    assign has_subscription = false
+    if product.selling_plan_groups.size > 0
+        assign has_subscription = true
+    endif
+
+    assign selling_plan_group = product.selling_plan_groups[0]
+    assign discount_percentage = 0
+    for selling_plan in selling_plan_group.selling_plans
+        if selling_plan.price_adjustments[0].value > discount_percentage
+            assign discount_percentage = selling_plan.price_adjustments[0].value
+        endif
+    endfor
+
+    assign price_times_discount = price | times: discount_percentage | divided_by: 100.0
+    assign discount_price = price | minus: price_times_discount
+    unless has_subscription
+        assign discount_price = price
+    endunless
+-%}
+
+<div class="product-form" data-mode="" data-subs-value="">
+  <div class="product-form__section">
+    
+    {%- if has_subscription -%}
+      <div class="product-form__order-type product__subscription-options">
+        <input class="product__subscription-option__input" type="radio" id="product-form__order-type-selector--subscribe" name="option" value="subscription">
+        <label for="product-form__order-type-selector--subscribe" class="product__subscription-option">
+          <h3>
+            Spar-Abo
+            <div class="product__subscription-option__discount">{{ discount_percentage }} % Rabatt</div>
+          </h3>
+          <div class="product__subscription-option__price">
+            <span class="product__subscription-option__price-discount">{{ price | money }}</span>
+            <span class="product__subscription-option__price-total">{{ discount_price | money }}</span>
+          </div>
+        </label>
+        
+        <input class="product__subscription-option__input" type="radio" id="product-form__order-type-selector--onetime" name="option" value="onetime">
+        <label for="product-form__order-type-selector--onetime" class="product__subscription-option">
+          <h3>Einzelkauf</h3>
+          <div class="product__subscription-option__price">
+            <span></span>
+            <span class="product__subscription-option__price-total">{{ price | money }}</span>
+          </div>
+        </label>
+      </div>
+    {%- endif -%}
+        
+    <div class="product__subscription-section">
+      <p>Gute Wahl! Hier sind deine Spar-Abo Vorteile:</p>
+      <div class="product__subscription-benefit">
+      	<div class="product__subscription-benefit__icon">{% render 'icon-check' %}</div>
+        <strong>{{ discount_percentage }} % Rabatt</strong><br>
+        Erhalte {{ discount_percentage }} % Rabatt auf jede Bestellung
+      </div>
+      <div class="product__subscription-benefit">
+      	<div class="product__subscription-benefit__icon">{% render 'icon-check' %}</div>
+        <strong>Jederzeit kostenlos kündbar</strong><br>
+        Keine Mindestlaufzeit auf dein Spar-Abo
+      </div>
+      <div class="product__subscription-benefit">
+      	<div class="product__subscription-benefit__icon">{% render 'icon-check' %}</div>
+        <strong>Passt sich an dich an</strong><br>
+        Lieferintervall, Sorten &amp; Menge stets anpassbar
+      </div>
+      {% assign shipping_interval_frequency_most = " 4 Wochen" %}
+      {% assign label_shipping_interval_frequency_most = "(am häufigsten)" %}
+      <div class="product__subscription-select-wrapper">
+        <select name="product-form__subscription-frequency" id="product-form__subscription-frequency"
+          class="product__subscription-select pf-variant-select" data-selling-plan-group="{{ selling_plan_group.id }}"
+          onchange="document.querySelector('[data-mode]').dataset.subsValue = this.value"
+        >
+          <option value="" disabled selected></option>
+          {% for selling_plan in selling_plan_group.selling_plans %}
+            <option value="{{ selling_plan.id }}">
+              {{ selling_plan.name }}{% if selling_plan.name == shipping_interval_frequency_most %} {{ label_shipping_interval_frequency_most }}{% endif %}
+            </option>
+          {% endfor %}
+        </select>
+        <label for="product-form__subscription-frequency" class="product__subscription-select__label">Lieferintervall wählen</label>
+      </div>
+    </div>
+    
+    <div class="product__onetime-section">
+      <p><strong>10 % sparen? Abo sicher doch!</strong></p>
+      <p>Sei smart und spare 10 %. Du hast einen einmaligen Kauf ausgewählt. Warum nicht zu einem flexiblen <strong>Abo</strong> wechseln und <strong>10 % sparen</strong>? Keine Mindestlaufzeit, <strong>jederzeit kündbar</strong> oder anpassbar.</p>
+    </div>
+  </div>
+  
+  <div class="product-form__section product-form__section-variants">
+    <h2 class="h3">Wähle deinen Geschmack und die Menge.</h2>
+    <div class="product__variants-wrapper">
+      
+      <div class="product__variants product__variants__subs">
+      {% for variant in product.variants %}
+
+        {% assign defaultQuantity = 0 %}
+        {% for item in cart.items %}
+          {% if item.variant_id == variant.id and item.selling_plan_allocation != blank %}
+          	{% assign defaultQuantity = item.quantity %}
+          {% endif %}
+        {% endfor %}
+        
+        <div class="product__variant-wrapper {% if defaultQuantity > 0 %}has-quantity{% endif %}" data-variant-wrapper>
+          <div class="product__variant" data-variant-id="{{ variant.id }}" data-selling-plan>
+            <h3>{{ variant.title }}</h3>
+            {% assign flavor_desc = variant.metafields.global.flavor_description %}
+              {% if flavor_desc != blank %}
+                  <em class="product__variant__desc">{{ flavor_desc }}</em>
+              {% endif %}
+            
+            <button class="product__variant__plus" type="button"></button>
+
+            <button class="product__variant-button btn" tabindex="-1" type="button" data-variant-btn>In den Warenkorb</button>
+            <div class="qty-variant" data-variant-qty>
+              <button class="qty-variant__btn qty-variant__minus" type="button" data-variant-qty-minus>-</button>
+              <input class="qty-variant__input" value="{{defaultQuantity}}" disabled data-variant-qty-input>
+              <button class="qty-variant__btn qty-variant__plus" type="button" data-variant-qty-plus data-ucd="0">+</button>
+            </div>
+          </div>
+          <div class="product-form__facts-wrapper">
+            <div class="product-form__product-comparison-facts">{{- product_details.shipping-unit__servings.value }} {{ product_details.shipping-unit__unit.value }} pro {{ product_details.shipping-unit__type.value -}} {% if product_details.shipping-unit__tot-amount-unit.value %} ({{ product_details.shipping-unit__servings.value | times: product_details.serving-size__size.value | divided_by: 1000 | round: 2 }} {{ product_details.shipping-unit__tot-amount-unit.value }}) {% endif %}</div>
+            <div class="product-form__product-comparison-facts"><span class="product-form__comparison-price">{{- discount_price | times: 100 | divided_by: product_details.serving-size__size.value | divided_by: product_details.shipping-unit__servings.value | money }}</span>/ 100 {{ product_details.comparison__unit.value -}}</span></div>
+            <div class="product-form__product-comparison-facts">Nur <span class="product-form__product-price-serving">{{ discount_price | divided_by: product_details.shipping-unit__servings.value | money }}</span> pro {{ product_details.price-unit__type.value }} ({{ product_details.serving-size__size-kcal.value }} kcal)</div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+      
+      
+      <div class="product__variants product__variants__one-time">
+        {% for variant in product.variants %}
+
+        {% assign defaultQuantity = 0 %}
+        {% for item in cart.items %}
+          {% if item.variant_id == variant.id and item.selling_plan_allocation == blank %}
+        	{% assign defaultQuantity = item.quantity %}
+          {% endif %}
+        {% endfor %}
+        
+        <div class="product__variant-wrapper {% if defaultQuantity > 0 %}has-quantity{% endif %}" data-variant-wrapper data-v="{{vId}}">
+            <div class="product__variant product__variant__onetime" data-variant-id="{{ variant.id }}">
+              <h3>{{ variant.title }}</h3>
+              {% assign flavor_desc = variant.metafields.global.flavor_description %}
+                {% if flavor_desc != blank %}
+                    <em class="product__variant__desc">{{ flavor_desc }}</em>
+                {% endif %}
+
+              <button class="product__variant__plus" type="button"></button>
+              
+              <button class="product__variant-button btn" tabindex="-1" type="button" data-variant-btn>In den Warenkorb</button>
+              <div class="qty-variant" data-variant-qty>
+                <button class="qty-variant__btn qty-variant__minus" type="button" data-variant-qty-minus>-</button>
+                <input class="qty-variant__input" value="{{defaultQuantity}}" disabled data-variant-qty-input>
+                <button class="qty-variant__btn qty-variant__plus" type="button" data-variant-qty-plus data-ucd="0">+</button>
+              </div>
+            </div>
+            <div class="product-form__facts-wrapper">
+              <div class="product-form__product-comparison-facts">{{- product_details.shipping-unit__servings.value }} {{ product_details.shipping-unit__unit.value }} pro {{ product_details.shipping-unit__type.value -}} {% if product_details.shipping-unit__tot-amount-unit.value %} ({{ product_details.shipping-unit__servings.value | times: product_details.serving-size__size.value | divided_by: 1000 | round: 2 }} {{ product_details.shipping-unit__tot-amount-unit.value }}) {% endif %}</div>
+              <div class="product-form__product-comparison-facts"><span class="product-form__comparison-price">{{- discount_price | times: 100 | divided_by: product_details.serving-size__size.value | divided_by: product_details.shipping-unit__servings.value | money }}</span>/ 100 {{ product_details.comparison__unit.value -}}</span></div>
+              <div class="product-form__product-comparison-facts">Nur <span class="product-form__product-price-serving">{{ discount_price | divided_by: product_details.shipping-unit__servings.value | money }}</span> pro {{ product_details.price-unit__type.value }} ({{ product_details.serving-size__size-kcal.value }} kcal)</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+    
+    <p class="product__free-shipping">
+      Gratis Lieferung ab €<span class="product__free-shipping__amount" data-product-free-shipping-total-amount>50</span> nach <img class="product__free-shipping__flag" src="https://flagcdn.com/24x18/at.png" alt="" data-product-free-shipping-flag="">
+    </p>
+    
+    {% render 'shipping-countdown' %}
+
+    <div class="product__price-wrapper">
+        <input type="hidden" id="product-form__product-details-meta"
+            data-serving-size="{{ product_details.serving-size__size }}"
+            data-comparisonunit="{{ product_details.comparison__unit }}"
+            data-shipping-unit-servings="{{ product_details.shipping-unit__servings }}">
+
+        <div class="text-right product__price">
+            {% if discount_price != 0 and has_subscription %}
+                <del class="product__price-before h5" data-price-before data-wg-notranslate="manual">{{ price | money }}</del>
+          		<ins class="product__price-actual h3" data-price-actual data-discounted-price="{{ discount_price | money }}" data-wg-notranslate="manual">{{ discount_price | money }}</ins>
+            {% else %}
+          		{%- if compare_at_price != blank -%}
+          			<del class="product__price-before h5" data-price-before data-wg-notranslate="manual">{{ compare_at_price | money }}</del>
+                {%- endif -%}
+          		<ins class="product__price-actual h3" data-price-actual data-wg-notranslate="manual">{{ discount_price | money }}</ins>
+            {% endif %}
+        </div>
+        <div class="text-right product-form__shipping-tax-notes">inkl. MwSt., zzgl. {{ 'Versandkosten' | link_to: '/pages/versand-und-bezahlung' }}</div>
+    </div>
+    
+    {% comment %}
+    <div class="product__shipping-section" data-product-form-shipping>
+      <div class="product-form__shipping-item hide" data-count-down-parent>
+        {% render 'saturo-icons', type: 'clock' %}
+        <span class="product-form__shipping-item__text" data-count-down>Bestelle in <span data-count-down-time></span> Stunden</span>
+      </div>
+
+      <div class="product-form__shipping-item hide" data-shipping-time>
+        {% render 'saturo-icons', type: 'shipping-truck' %}
+        <span class="product-form__shipping-item__text" data-package-text>Sofort lieferbar</span>
+        <span class="product-form__shipping-item__text">Bei dir in 2 Tagen</span>
+      </div>
+    </div>
+    {% endcomment %}
+    
+    <div class="product-form__controls-group product-form__controls-group--submit">
+      <a href="#" class="btn btn--secondary btn--full-width open-drawer">Zum Warenkorb</a>
+    </div>
+    
+    {% unless enabled_payment_types == empty %}
+    	<div class="product-form__controls-group product-form__trust-icon icon-grey100">
+          <ul>
+              {% for type in shop.enabled_payment_types %} {{ type | payment_type_svg_tag: class:'payment-icon' }} {% endfor %}
+          </ul>
+    	</div>
+    {% endunless %}
+    
+  </div>
+</div>
+  
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    $('.product__floating-buy-btn, .product__subscription-option').on('click', function() {
+      $('html').animate({
+        scrollTop: $(".product__subscription-area").offset().top
+      }, 700);
+    });    
+  });
+</script>

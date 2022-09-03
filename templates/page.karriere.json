@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-versand",
+      "settings": {
+        "title": "<span class=\"align-center\">Bist du bereit<\/span>\n<span class=\"align-center\">für eine<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-center\">neue Heraus-<\/span>\n<span class=\"align-center\">forderung?<\/span>",
+        "desc": "<p>Saturo ist die perfekte Kombination aus Convenience-Food und ausgewogener Ernährung. Saturo versorgt dich mit allem, was dein Körper braucht: Proteine, Kohlenhydrate, Lipide, Ballaststoffe, Vitamine und Mineralstoffe. Wir wurden außerdem zum besten neuen Getränk für Sport und Aktive Ernährung gekürt, waren in Fernsehen und Radio und zeigen seit dem Markteintritt kontinuierlich Wachstum.<\/p>",
+        "image": "shopify:\/\/shop_images\/Saturo-people-happy.jpg"
+      }
+    },
+    "164435197606bdab29": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"page-width\"><script src=\"https:\/\/saturo.bamboohr.com\/js\/jobs2.php\" type=\"text\/javascript\"><\/script><\/section>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164435197606bdab29"
+  ]
+}

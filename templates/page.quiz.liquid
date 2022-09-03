@@ -1,0 +1,179 @@
+<script>
+  document.querySelector('meta[name="viewport"]').setAttribute("content", "width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0");
+</script>
+<link rel="stylesheet" href="{{ 'quiz.css' | asset_url }}">
+<script type="module" src="{{ 'quiz-firebase.js' | asset_url }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{% assign quiz_products = collections['personalized'].products %}
+<script>
+  window.shopMeta = {
+    "rate_lose_weight_kg_week": "{{ shop.metafields.personalized.rate_lose_weight_kg_week.value }}",
+    "rate_weight_gain_kg_week": "{{ shop.metafields.personalized.rate_weight_gain_kg_week.value }}",
+    "bmi_female_underweight": "{{ shop.metafields.personalized.bmi_female_underweight.value }}",
+    "bmi_male_underweight": "{{ shop.metafields.personalized.bmi_male_underweight.value }}",
+    "rate_lose_weight_kg_week_limit": "{{ shop.metafields.personalized.rate_lose_weight_kg_week_limit.value }}",
+    "rate_weight_gain_kg_week_limit": "{{ shop.metafields.personalized.rate_weight_gain_kg_week_limit.value }}",
+    "rate_weight_gain_kg_week_msg": "{{ shop.metafields.personalized.rate_weight_gain_kg_week_msg.value }}",
+    "rate_lose_weight_kg_week_msg": "{{ shop.metafields.personalized.rate_lose_weight_kg_week_msg.value }}",
+    "select_meal_replace_why_max": "{{ shop.metafields.personalized.select_meal_replace_why_max.value }}",
+    "select_sport_type_max": "{{ shop.metafields.personalized.select_sport_type_max.value }}",
+    "personalized_adjust_factor_breakfast_saturo": "{{ shop.metafields.personalized.adj_factor_breakfast_sat }}",
+    "personalized_adjust_factor_lunch_saturo": "{{ shop.metafields.personalized.adj_factor_lunch_sat }}",
+    "personalized_adjust_factor_dinner_saturo": "{{ shop.metafields.personalized.adj_factor_dinner_sat }}",
+    "personalized_adjust_factor_other_main_meal_saturo": "{{ shop.metafields.personalized.adj_factor_other_m_meal_sat }}",
+    "personalized_adjust_factor_snack_saturo": "{{ shop.metafields.personalized.adj_factor_snack_sat }}",
+    "personalized_adjust_factor_other_meal_saturo": "{{ shop.metafields.personalized.adj_factor_other_sat }}",
+    "personalized_hydration_max_limit": "{{ shop.metafields.personalized.hydration_max_limit }}",
+    "personalized_kcal_l_other": "{{ shop.metafields.personalized.kcal_l_other.value }}",
+    "personalized_kcal_l_softdrink_fruit": "{{ shop.metafields.personalized.kcal_l_softdrink_fruit.value }}",
+    "personalized_kcal_l_kcal_reduced": "{{ shop.metafields.personalized.kcal_l_kcal_reduced.value }}",
+    "personalized_hydration_max_limit_kcal": "{{ shop.metafields.personalized.hydration_max_limit_kcal.value }}"
+  }
+
+  window.quizProducts = [
+    {% for product in quiz_products %}
+      {
+        "ProductName": "{{product.title}}",
+        "ProductId": {{product.id}},
+        "ProductHandle": "{{product.handle}}",
+        "ProductPrice": "{{product.price | money}}",
+        "ProductPriceMetafield": [
+          {% for price in product.metafields.personalized.ab_testing_prices.value.prices %}
+            {{ price }},
+          {% endfor %}
+        ],
+        "ProductMetafields": {
+          "product_benefits": "{{ product.metafields.personalized.product_benefits.value }}",
+          "shipping_unit_servings": "{{ product.metafields.product.shipping-unit__servings.value }}",
+          "makrosplit_desc": "{{ product.metafields.personalized.makrosplit_desc }}",
+          "makrosplit_fat": "{{ product.metafields.personalized.makrosplit_fat }}",
+          "makrosplit_fibre": "{{ product.metafields.personalized.makrosplit_fibre }}",
+          "makrosplit_protein": "{{ product.metafields.personalized.makrosplit_protein }}",
+          "makrosplit_carbohydrate": "{{ product.metafields.personalized.makrosplit_carbohydrate }}",
+          "makrosplit_img": "{{ product.metafields.personalized.makrosplit_img | img_url: 'master' }}",
+          "ingredients_1_img": "{{ product.metafields.personalized.ingredients_1_img | img_url: 'master' }}",
+          "ingredients_2_img": "{{ product.metafields.personalized.ingredients_2_img | img_url: 'master' }}",
+          "ingredients_3_img": "{{ product.metafields.personalized.ingredients_3_img | img_url: 'master' }}",
+          "ingredients_4_img": "{{ product.metafields.personalized.ingredients_4_img | img_url: 'master' }}",
+          "ingredients_1_desc": '{{ product.metafields.personalized.ingredients_1_desc }}',
+          "ingredients_2_desc": '{{ product.metafields.personalized.ingredients_2_desc }}',
+          "ingredients_3_desc": '{{ product.metafields.personalized.ingredients_3_desc }}',
+          "ingredients_4_desc": '{{ product.metafields.personalized.ingredients_4_desc }}',
+          "personalized_ingredients_headline": '{{ product.metafields.personalized.ingredients_headline }}',
+          "milk": '{{ product.metafields.global.milk }}',
+          "personalized_prod_type_weight_gain": '{{ product.metafields.personalized.prod_type_weight_gain }}'.toUpperCase(),
+          "personalized_prod_type_weight_loss": '{{ product.metafields.personalized.prod_type_weight_loss }}'.toUpperCase(),
+          "personalized_prod_type_high_protein": '{{ product.metafields.personalized.prod_type_high_protein }}'.toUpperCase(),
+          "personalized_prod_type_sport": '{{ product.metafields.personalized.prod_type_sport }}'.toUpperCase(),
+          "personalized_por_breakfast_sat_max_kcal": "{% if product.metafields.personalized.por_breakfast_sat_max_kcal != blank %}{{ product.metafields.personalized.por_breakfast_sat_max_kcal }}{% else %}99999{% endif %}",
+        "personalized_por_lunch_sat_max_kcal": "{% if product.metafields.personalized.por_lunch_sat_max_kcal != blank %}{{ product.metafields.personalized.por_lunch_sat_max_kcal }}{% else %}99999{% endif %}",
+          "personalized_por_dinner_sat_max_kcal": "{% if product.metafields.personalized.por_dinner_sat_max_kcal != blank %}{{ product.metafields.personalized.por_dinner_sat_max_kcal }}{% else %}99999{% endif %}",
+          "personalized_por_other_m_meal_sat_max_kcal": "{% if product.metafields.personalized.por_other_m_meal_sat_max_kcal != blank %}{{ product.metafields.personalized.por_other_m_meal_sat_max_kcal }}{% else %}99999{% endif %}",
+          "personalized_por_snack_sat_max_kcal": "{% if product.metafields.personalized.por_snack_sat_max_kcal != blank %}{{ product.metafields.personalized.por_snack_sat_max_kcal }}{% else %}99999{% endif %}",
+          "personalized_por_other_sat_max_kcal": "{% if product.metafields.personalized.por_other_sat_max_kcal != blank %}{{ product.metafields.personalized.por_other_sat_max_kcal }}{% else %}99999{% endif %}",
+          "personalized_portion_max_kcal_min": "{% if product.metafields.personalized.portion_max_kcal_min != blank %}{{ product.metafields.personalized.portion_max_kcal_min }}{% else %}0{% endif %}",
+          "personalized_portion_max_kcal_max": "{% if product.metafields.personalized.portion_max_kcal_max != blank %}{{ product.metafields.personalized.portion_max_kcal_max }}{% else %}0{% endif %}",
+          "personalized_usp_1": "{{ product.metafields.personalized.usp_1 }}",
+          "personalized_usp_2": "{{ product.metafields.personalized.usp_2 }}",
+          "personalized_usp_3": "{{ product.metafields.personalized.usp_3 }}",
+          "personalized_usp_header": "{{ product.metafields.personalized.usp_header }}",
+          "portion_water_ml": "{{ variant.metafields.personalized.portion_water_ml.value }}"
+        },
+        "ab_testing_price": {{ product.metafields.personalized.ab_testing_prices.value.prices[0] }},
+        "ProductVariants": [
+        {% for variant in product.variants %}
+          {% assign ingredients_1_img = '' %}
+          {% if variant.metafields.personalized.ingredients_1_img != blank %}
+            {% assign ingredients_1_img = variant.metafields.personalized.ingredients_1_img | img_url: 'master' %}
+          {% endif %}
+
+          {% assign ingredients_2_img = '' %}
+          {% if variant.metafields.personalized.ingredients_2_img != blank %}
+            {% assign ingredients_2_img = variant.metafields.personalized.ingredients_2_img | img_url: 'master' %}
+          {% endif %}
+
+          {% assign ingredients_3_img = '' %}
+          {% if variant.metafields.personalized.ingredients_3_img != blank %}
+            {% assign ingredients_3_img = variant.metafields.personalized.ingredients_3_img | img_url: 'master' %}
+          {% endif %}
+
+          {% assign ingredients_4_img = '' %}
+          {% if variant.metafields.personalized.ingredients_4_img != blank %}
+            {% assign ingredients_4_img = variant.metafields.personalized.ingredients_4_img | img_url: 'master' %}
+          {% endif %}
+
+          {
+            "variantId": {{variant.id}},
+            "metafields": {
+              "product_benefits": "{{ variant.metafields.personalized.product_benefits.value }}",
+              "bg_color": "{{ variant.metafields.quiz.bg_color }}",
+              "text_color": "{{ variant.metafields.quiz.text_color }}",
+              "flavor_icon": "{{ variant.metafields.quiz.flavor_icon | img_url: 'master' }}",
+              "circle_color": "{{ variant.metafields.quiz.circle_color }}",
+              "makrosplit_img": "{{ variant.metafields.personalized.makrosplit_img | img_url: 'master' }}",
+              "ingredients_1_img": "{{ ingredients_1_img }}",
+              "ingredients_2_img": "{{ ingredients_2_img }}",
+              "ingredients_3_img": "{{ ingredients_3_img }}",
+              "ingredients_4_img": "{{ ingredients_4_img }}",
+              "ingredients_1_desc": '{{ variant.metafields.personalized.ingredients_1_desc }}',
+              "ingredients_2_desc": '{{ variant.metafields.personalized.ingredients_2_desc }}',
+              "ingredients_3_desc": '{{ variant.metafields.personalized.ingredients_3_desc }}',
+              "ingredients_4_desc": '{{ variant.metafields.personalized.ingredients_4_desc }}',
+              "personalized_ingredients_headline": '{{ variant.metafields.personalized.ingredients_headline }}',
+              "nutrition_details": '{{ variant.metafields.variant.quiz_nutrition_details }}',
+              "personalized_ingredients": '{{ variant.metafields.personalized.ingredients }}',
+              "filling_size": '{{ variant.metafields.personalized.filling_size_kcal.value }}',
+              "filling_size_g": '{{ variant.metafields.personalized.filling_size_g.value }}',
+              "portion_water_ml": '{{ variant.metafields.personalized.portion_water_ml }}',
+              "portion_g": '{{ variant.metafields.personalized.portion_g }}',
+              "flavorDesc": '{{ variant.metafields.global.flavor_description }}',
+              "ingredients": "{{ variant.metafields.personalized.ingredients }}",
+              "personalized_usp_1": "{{ variant.metafields.personalized.usp_1 }}",
+              "personalized_usp_2": "{{ variant.metafields.personalized.usp_2 }}",
+              "personalized_usp_3": "{{ variant.metafields.personalized.usp_3 }}",
+              "personalized_usp_header": "{{ variant.metafields.personalized.usp_header }}",
+              "details_best_before_date": "{% if variant.metafields.details.best_before_date != blank %}{{ variant.metafields.details.best_before_date }}{% else %}12-12-9999{% endif %}",
+              "details_product_charge": "{{ variant.metafields.details.product_charge }}",
+              "scoop_size_g": "{{ variant.metafields.details.scoop_size_g.value }}",
+              "scoop_size_g_unit": "{{ variant.metafields.details.scoop_size_g_unit.value }}"
+              },
+            "variantTitle": "{{variant.title}}",
+            "variantImg": "{{variant.image.src | img_url: '650x1000', crop: 'center'}}"
+          },
+        {% endfor %}
+      ],
+      "Carbs": {{product.metafields.global.carbs}},
+      "Protein": {{product.metafields.global.protein}},
+      "Fat": {{product.metafields.global.fat}},
+      "Fibre": {{product.metafields.global.fibre}},
+      "Soy": "{{product.metafields.global.soy}}",
+      "Gluten": "{{product.metafields.global.gluten}}",
+      "Lactose": "{{product.metafields.global.lactose}}",
+      "Milk": "{{product.metafields.global.milk}}",
+      "Peanut": "{{product.metafields.global.peanut}}",
+      "Vegan": "{{product.metafields.global.vegan}}",
+      "Vegetarian": "{{product.metafields.global.vegetarian}}",
+      "Sugarfree": "{{product.metafields.global.sugarfree}}",
+      "Keto": "{{product.metafields.global.keto}}",
+      "Nutritionalvalues": `{{product.metafields.global.nutritionalvalues}}`,
+      "Faq": {{product.metafields.global.faq}}
+    },
+  {% endfor %}
+  ]
+</script>
+
+{% section 'quiz-header' %}
+
+<div class="pb-5 quiz">
+  <div class="quiz-items">
+    {% section 'quiz-questions' %}
+  </div>
+</div>
+<!-- / quiz questions -->
+
+
+<!-- / quiz result -->
+
+<script src="{{ 'quiz.js' | asset_url }}" defer></script>

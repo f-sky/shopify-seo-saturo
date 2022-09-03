@@ -1,0 +1,277 @@
+{
+  "sections": {
+    "16442392061eebd952": {
+      "type": "product-header-2",
+      "settings": {
+        "title": "<span class=\"align-left\">Saturo<\/span>\n<span class=\"align-center\">Personalized.<\/span> <span class=\"align-center\">Für dich<span class=\"heading-line\"><\/span><\/span>\n<span class=\"align-left\">personalisiert.<\/span>",
+        "heading_2": "",
+        "heading_2_style": "h2-headline",
+        "subtitle": "Entfalte dein volles Potential mit<br>personalisierter Ernährung—<br>nur für dich gemacht.",
+        "btn_text": "Jetzt probieren",
+        "btn_url": "shopify:\/\/pages\/quiz",
+        "btn_style": "",
+        "assigned_product": "",
+        "bg_image_wide": "shopify:\/\/shop_images\/20220530-satuor-personalized-hero_3841x2732px.jpg",
+        "bg_image_desktop": "shopify:\/\/shop_images\/202200601-saturo-personalized-hero_desktop_3841x2732px.jpg",
+        "bg_image_tablet": "shopify:\/\/shop_images\/202200601-saturo-personalized-hero_desktop_3841x2732px.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/20220530-Hero-Header-mobile_25.jpg",
+        "text_color": "--color-grey-title",
+        "bg_color": "",
+        "hide_circle": true,
+        "content_side": "content-left",
+        "mobile_content_position": "content-top__mobile",
+        "title_small_margin": false,
+        "custom_header_color": "--color-grey-title",
+        "quiz_button": true
+      }
+    },
+    "165027749818138fef": {
+      "type": "home-navi-icon-bar",
+      "blocks": {
+        "3f19eef8-f2f8-4c1e-b950-cd569371a5ba": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Saturo-Eat-Complete-330ml-glas_dc831273-5b7e-42ab-ad83-83c4afde558c.jpg",
+            "text": "Trinkmahlzeit",
+            "url": "shopify:\/\/products\/saturo-drink-330ml"
+          }
+        },
+        "f64808c0-564d-44b2-8aac-a3a8d948375f": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Taster5b_1.png",
+            "text": "Probierpaket",
+            "url": "shopify:\/\/products\/saturo-probierpaket"
+          }
+        },
+        "e98c9f38-e7d0-4511-a991-dec20297d98b": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Saturo-balanced-powder-strawberyy-mega-menu_57b95122-4644-4250-8fca-5ce972f2a2c4.jpg",
+            "text": "Pulver",
+            "url": "shopify:\/\/products\/saturo-balanced-pulver-vegan"
+          }
+        },
+        "75ce979d-dae8-48a6-9ad6-8f4ed2e00acf": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Saturo-complete-bar-lemon-cheesecake-with-lemon_mega-menu.jpg",
+            "text": "Riegel",
+            "url": "shopify:\/\/products\/saturo-riegel"
+          }
+        }
+      },
+      "block_order": [
+        "3f19eef8-f2f8-4c1e-b950-cd569371a5ba",
+        "f64808c0-564d-44b2-8aac-a3a8d948375f",
+        "e98c9f38-e7d0-4511-a991-dec20297d98b",
+        "75ce979d-dae8-48a6-9ad6-8f4ed2e00acf"
+      ],
+      "settings": {
+        "bg_color_variable": "--color-general-pastel",
+        "color_variable": "--color-black",
+        "hide_products_below": true
+      }
+    },
+    "164186191308d2ea78": {
+      "type": "home-body-needs",
+      "blocks": {
+        "9b90e173-3683-47ee-8234-4184a0103e69": {
+          "type": "reference",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/handelsblatt-logo.png",
+            "text": "„Nach einem Schnitzel ist man eben zwei Stunden müde“ […] Mit Saturo soll der hungrige Konsument Zeit und Geld sparen und sich dennoch gesund ernähren.",
+            "url": "#"
+          }
+        },
+        "7a220b24-44c6-4d3e-8373-c1b12f5263f8": {
+          "type": "reference",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gmx-logo.png",
+            "text": "\"Die Shakes von Saturo sind einfach besonders praktisch, da man sie gleich fertig zubereitet bekommt. [….] Schokoladen-Geschmack war sehr lecker, fast wie ein klassischer Milchshake.\"",
+            "url": "#"
+          }
+        },
+        "461a4ffb-22c8-44cd-8e61-e2da903f4f25": {
+          "type": "reference",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gruenderszene-logo.png",
+            "text": "\"Eine Flasche deckt ein Viertel des täglichen Kalorienbedarfs ab. Die Gründer konzentrieren sich auf Personen, die aus Zeitgründen zum flüssigen Mahlzeitenersatz greifen.\"",
+            "url": ""
+          }
+        },
+        "76ef5933-5813-4866-b530-eedb6d1a5799": {
+          "type": "reference",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/der-standard-logo.png",
+            "text": "\"Von Eiweiß über Kohlenhydrate und Fett, Vitamine, Mineralstoffe – alles ist exakt auf 100 Prozent ausbalanciert. <br>Saturo erinnert an einen wenig gezuckerten Kakao.\"",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "9b90e173-3683-47ee-8234-4184a0103e69",
+        "7a220b24-44c6-4d3e-8373-c1b12f5263f8",
+        "461a4ffb-22c8-44cd-8e61-e2da903f4f25",
+        "76ef5933-5813-4866-b530-eedb6d1a5799"
+      ],
+      "settings": {
+        "title": "<span class=\"align-left\">Alles was<\/span>\n    <span class=\"align-right\"><span class=\"heading-line-left\"><\/span>dein<\/span>\n    <span class=\"align-left\">Körper<\/span>\n    <span class=\"align-center\">braucht<\/span>",
+        "desc": "<p>Saturo bietet dir die Möglichkeit, dich auf einfachstem Wege <strong>ausgewogen <\/strong>zu <strong>ernähren <\/strong>und deinem Körper alles zu geben was er braucht. <strong>Egal wann, egal wo.<\/strong><\/p>",
+        "feat_image": "shopify:\/\/shop_images\/Saturo-Drink-330ml-Vanilla.jpg",
+        "text_1": "Ausgewogene Mahlzeit",
+        "text_2": "Alle 26 Vitamine & Mineralien",
+        "text_3": "Sättigend bis zu 5 Stunden",
+        "text_4": "Bis zu 30 g Protein pro Mahlzeit"
+      }
+    },
+    "16419089845ed9056d": {
+      "type": "home-end-hunger",
+      "settings": {
+        "desc": "<p>Saturo ist die perfekte Quelle für alles, was du an Nährstoffen brauchst, um <strong>fit und leistungsfähig<\/strong> zu bleiben. Beste Zutaten und alle 26 Vitamine und Mineralstoffe helfen dir dabei, <strong>bis zu 5 Stunden satt und voller Energie<\/strong> zu bleiben.<\/p>",
+        "title": "<span class=\"align-center\">Saturo<\/span>\n    <span class=\"align-right\"><span class=\"heading-line-left\"><\/span>setzt<\/span>\n    <span class=\"align-center\">deinem<\/span>\n    <span class=\"align-left\">Hunger<\/span>\n    <span class=\"align-center\">ein Ende<\/span>",
+        "row1_image": "shopify:\/\/shop_images\/Saturo-Trinkmahlzeit-Schokolade-330ml.jpg",
+        "row1_title": "Die Saturo Trinkmahlzeit",
+        "row1_subtitle": "Deine schnelle & ausgewogene Mahlzeit",
+        "row1_collection": "trinkmahlzeit",
+        "row1_product": "",
+        "row1_btn_style": "",
+        "row1_btn_text": "Zur Trinkmahlzeit",
+        "row1_btn_more_text": "",
+        "row2_image": "shopify:\/\/shop_images\/Saturo-Mahlzeitersatz-Erdbeere-Balanced-Pulver.jpg",
+        "row2_title": "Das Saturo Pulver",
+        "row2_subtitle": "Der Shake zum selbst Mixen",
+        "row2_collection": "pulver",
+        "row2_product": "",
+        "row2_btn_style": "",
+        "row2_btn_text": "Zum Pulver",
+        "row2_btn_more_text": "",
+        "row3_image": "shopify:\/\/shop_images\/Saturo-Complete-Bar-Energieriegel_ee97f2c3-f192-4773-8151-e4916e4c890e.jpg",
+        "row3_title": "Der Saturo Riegel",
+        "row3_subtitle": "Der ideale Snack für Zwischendurch",
+        "row3_collection": "",
+        "row3_product": "saturo-riegel",
+        "row3_btn_style": "",
+        "row3_btn_text": "Zum Riegel",
+        "row3_btn_more_text": ""
+      }
+    },
+    "1641911228b41ed651": {
+      "type": "home-trust-reviews",
+      "settings": {
+        "title": "<span class=\"align-left\"> Vertraue<\/span>\n    <span class=\"align-right\">auf über <\/span>\n    <span class=\"align-left\">3+ mio.<span class=\"heading-line\"><\/span><\/span>\n    <span class=\"align-left\"> verkaufte<\/span>\n    <span class=\"align-left\">Mahlzeiten<\/span>",
+        "row1_name": "Robert Gardos (42)",
+        "row1_title": "Tischtennis-Europameister im Doppel",
+        "row1_desc": "\"Da ich als Leistungssportler viel unterwegs bin, spielt eine schnelle, aber auch ausgewogene Ernährung eine große Rolle für mich. Saturo bietet mir die Möglichkeit überall meinem Körper alle Nährstoffe zu geben, die er braucht. Somit bin ich auch während den Sätzen  perfekt versorgt und kann mich, ohne lästiges Völlegefühl, auf das Spiel konzentrieren.\"",
+        "row1_image1": "shopify:\/\/shop_images\/trust_reviews_s1_image1.jpg",
+        "row1_image2": "shopify:\/\/shop_images\/221477967_157124796490576_5495842649953444585_n_900_x_900px.jpg",
+        "row2_name": "Janine Flock (32)",
+        "row2_title": "Mehrfach mit Gold ausgezeichnete <br> Skeletonpilotin",
+        "row2_desc": "\"Es ist schwierig, sich in den Trainingslagern sowie in den Weltcupwochen ausgewogen zu ernähren, da oft die Zeit dazu fehlt. Zudem decken die Mahlzeiten in manchen Unterkünften nicht den ganzen Nährstoffbedarf. Da ich hohen Wert auf Qualität und Nachhaltigkeit lege, habe ich mich für Saturo entschieden, um ernährungstechnisch immer gut vorbereitet zu sein.\"",
+        "row2_image1": "shopify:\/\/shop_images\/trust_reviews_s2_image1.jpg",
+        "row2_image2": "shopify:\/\/shop_images\/J_Flock_MirjaGeh_115_Kopie_2_4000_x_2564px.jpg",
+        "images_as_bg": true
+      }
+    },
+    "1641905943b0d3571a": {
+      "type": "home-its-saturo",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Saturo-Founder-Joerg-Hauke-Hannes-Feistenauer_c5cd48b6-9fab-46d9-b21a-f82b32964714.jpg",
+        "title": "<span class=\"align-center\">Das<\/span>\n      <span class=\"align-center\"><span class=\"heading-line-left\"><\/span>ist<\/span>\n      <span class=\"align-center\">Saturo<\/span>",
+        "desc": "<p>Leute sagen »du bist, was du isst«. Aber wer sind wir? Wir sind vieles. Am wichtigsten: verschieden.<\/p><p>Mit einzigartigem Charakter, individuellen Zielen und Bedürfnissen. Jeder von uns hat etwas in sich, das ihn antreibt. Ernährung kann dieser Treibstoff sein. Aber sie ist komplex. Genauso wie wir.<\/p><p>Aus diesem Grund schlüsseln wir die komplexe Wissenschaft der Ernährung auf. Wir vereinfachen sie radikal für dich. Damit du stets dein Bestes geben kannst.<\/p><p>Das ist <strong>»Complete Food«.<\/strong><\/p><p>Das ist Saturo.<\/p>",
+        "signatures_image": "shopify:\/\/shop_images\/saturo-unterschrift.png",
+        "full_width_title": false
+      }
+    },
+    "16419275399cef7f57": {
+      "type": "home-photo-grid",
+      "blocks": {
+        "00a39114-6514-47ff-99c7-897a51f69ec0": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/grid_image1.jpg"
+          }
+        },
+        "16ed7b7d-4c25-4d1b-be8b-3c3ed814952b": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/grid_image2.jpg"
+          }
+        },
+        "326da7bc-1e4f-4b75-a8ff-2d522fda0935": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/grid_image5.jpg"
+          }
+        },
+        "5a986075-6fbd-4ca7-9912-5625c17d0a4d": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/grid_image6.jpg"
+          }
+        },
+        "ba875bcc-dde7-4120-af7f-431df1d860a9": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/grid_image3.jpg"
+          }
+        },
+        "f0198803-35a0-485f-be36-92a26eb5c1fe": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/grid_image4.jpg"
+          }
+        },
+        "2f737feb-fa6f-4b0e-ac17-dd52045bf67a": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/grid_image7.jpg"
+          }
+        },
+        "be8fa8e6-3599-4091-b967-1c574fdb6d1c": {
+          "type": "photo",
+          "settings": {
+            "photo": "shopify:\/\/shop_images\/grid_image8.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "00a39114-6514-47ff-99c7-897a51f69ec0",
+        "16ed7b7d-4c25-4d1b-be8b-3c3ed814952b",
+        "326da7bc-1e4f-4b75-a8ff-2d522fda0935",
+        "5a986075-6fbd-4ca7-9912-5625c17d0a4d",
+        "ba875bcc-dde7-4120-af7f-431df1d860a9",
+        "f0198803-35a0-485f-be36-92a26eb5c1fe",
+        "2f737feb-fa6f-4b0e-ac17-dd52045bf67a",
+        "be8fa8e6-3599-4091-b967-1c574fdb6d1c"
+      ],
+      "settings": {
+        "title": "Werde teil der Saturo Community!",
+        "social_link_text": "@saturofoods",
+        "social_link_url": "https:\/\/www.instagram.com\/saturofoods\/"
+      }
+    },
+    "16399523920a4baa19": {
+      "type": "newsletter-signup",
+      "settings": {
+        "title": "€5 sparen",
+        "subtitle": "und Newsletter abonnieren!*",
+        "details_text": "<p>Unser Newsletter ist kostenfrei und gibt dir exklusive Einblicke und einen €5 Rabatt auf deinen nächsten Einkauf.  Unsere Datenschutzerklärung kannst du <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">hier<\/a> einsehen.<\/p>",
+        "btn_text": "senden",
+        "input_placeholder": "name@mail.com",
+        "custom_form_html": "",
+        "custom_id": ""
+      }
+    }
+  },
+  "order": [
+    "16442392061eebd952",
+    "165027749818138fef",
+    "164186191308d2ea78",
+    "16419089845ed9056d",
+    "1641911228b41ed651",
+    "1641905943b0d3571a",
+    "16419275399cef7f57",
+    "16399523920a4baa19"
+  ]
+}

@@ -1,0 +1,77 @@
+{{ 'section-author.css' | asset_url | stylesheet_tag }}
+
+{% assign written_by_image = section.settings.written_by_image %}
+{% if written_by_image != blank or ection.settings.written_by_name != blank %}
+<div class="author__editor-details {% unless section.settings.padding_top %}pt-0{% endunless %} {% unless section.settings.padding_bottom %}pb-0{% endunless %}">
+  {% if written_by_image != blank %}
+    <img class="author__editor-photo" src="{{ written_by_image | img_url: '1100x' }}" alt="{{ written_by_image.alt }}" loading="lazy" />
+  {% endif %}
+  <div class="author__editor-text">
+    {% if section.settings.written_by_name != blank %}
+      <p class="p">{{ section.settings.written_by_text }}</p>
+      <p class="p"><strong>{{ section.settings.written_by_name }}</strong></p>
+    {% endif %}
+    {% if section.settings.written_by_title != blank %}
+      <p class="p">{{ section.settings.written_by_title }}</p>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Author",
+    "class": "page-width",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Written By"
+      },
+      {
+        "type": "image_picker",
+        "id": "written_by_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "written_by_text",
+        "label": "Written by text",
+        "default": "Geschrieben von:"
+      },
+      {
+        "type": "text",
+        "id": "written_by_name",
+        "label": "Name"
+      },
+      {
+        "type": "text",
+        "id": "written_by_title",
+        "label": "Title",
+        "info": "eg. Coach für Integrative Ernährung"
+      },
+      {
+        "type": "checkbox",
+        "id": "padding_top",
+        "label": "Padding-top",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "padding_bottom",
+        "label": "Padding-bottom",
+        "default": true
+      }
+    ],
+    "presets": [
+      {
+        "name": "Author"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

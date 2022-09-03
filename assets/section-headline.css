@@ -1,0 +1,16 @@
+.headline__title {
+  margin: 0 auto; 
+  padding: 6rem 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .headline__title {
+    padding: 6rem 7rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .headline__title  {
+    padding: 6rem 3rem;
+  }
+}

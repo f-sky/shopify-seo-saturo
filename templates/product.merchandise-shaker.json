@@ -1,0 +1,338 @@
+{
+  "sections": {
+    "1643715902997f1db6": {
+      "type": "product-header-2",
+      "settings": {
+        "title": "<span class=\"align-left\">Damit<\/span> <span class=\"align-left\">gelingt dir<span class=\"heading-line\"><\/span><\/span> <span class=\"align-center\">jeder Shake<\/span>",
+        "heading_2": "",
+        "heading_2_style": "h2-headline bold",
+        "subtitle": "",
+        "btn_text": "Jetzt bestellen",
+        "btn_url": "",
+        "btn_style": "btn--primary",
+        "assigned_product": "",
+        "bg_image_wide": "shopify:\/\/shop_images\/shaker_96452616-439e-462c-ad4b-e6a818be4c6e.jpg",
+        "bg_image_desktop": "shopify:\/\/shop_images\/shaker_96452616-439e-462c-ad4b-e6a818be4c6e.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/shaker-mobile.jpg",
+        "text_color": "--color-white",
+        "bg_color": "#ffffff",
+        "hide_circle": true,
+        "content_side": "content-left",
+        "mobile_content_position": "content-top__mobile",
+        "title_small_margin": false,
+        "custom_header_color": "",
+        "quiz_button": false
+      }
+    },
+    "main": {
+      "type": "saturo-product",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "164267866719bbc104": {
+      "type": "product-better-food",
+      "disabled": true,
+      "settings": {
+        "uppertitle": "Ausgewogene Ernährung leicht gemacht. Im Handumdrehen hast du eine <strong>komplette Mahlzeit<\/strong> parat mit allem, was dein Körper braucht.",
+        "title": "Besser essen, ohne dich zu stressen.",
+        "image": "shopify:\/\/shop_images\/besser_essen_image.png",
+        "subtitle": "<strong>30g Protein,<\/strong> komplexe Kohlenhydrate, alle <strong>26 essentielle Vitamine &amp; Mineralien<\/strong> und sättigt bis zu <strong>5 Stunden<\/strong>. Natürlich <strong>vegan<\/strong>.",
+        "nutriscore_image": "shopify:\/\/shop_images\/Nutri-Score_A.png"
+      }
+    },
+    "powder-form-v2": {
+      "type": "powder-form-v2",
+      "settings": {
+        "s1_title": "Mischt dir den perfekten Shake durch das Einsatzsieb und vermeidet Klumpenbildung.",
+        "s2_title": "<br>Bitte wähle aus:",
+        "s2_before_product": "",
+        "s2_after_product": "",
+        "btn_text": "In den Warenkorb",
+        "subs_section_text": "<h3 class=\"h2-headline\">Wähle deine Bestellart.<\/h3><p class=\"p\">Du kannst zwischen einem Einzelkauf und einem regelmäßigen Spar-Abo entscheiden.<\/p>",
+        "modal_title": "Deine Abo Vorteile",
+        "modal_text1": "",
+        "modal_text2": "",
+        "modal_text3": "",
+        "modal_details": ""
+      }
+    },
+    "product-for-all": {
+      "type": "product-for-all",
+      "disabled": true,
+      "settings": {
+        "s1_image": "shopify:\/\/shop_images\/product_s1_image.jpg",
+        "s1_title": "<span class=\"align-right\">Für alle,<\/span>\n<span class=\"align-right\"><span class=\"heading-line-left\"><\/span>die<\/span>\n<span class=\"align-right\">alles<\/span>\n<span class=\"align-right\">wollen.<\/span>",
+        "s1_subtitle": "Die Mahlzeit ohne Zeitaufwand.",
+        "s2_title": "<strong>Locker, lecker,  schoko-schmecker<\/strong>\n<p>Voller Schokogeschmack Bissige Textur für ein unschlagbares Snack-Erlebnis<\/p>",
+        "s3_image": "shopify:\/\/shop_images\/Saturo-Riegel-vegan.jpg",
+        "s3_title": "<strong>Locker, lecker,  schoko-schmecker<\/strong>\n<p>Voller Schokogeschmack Bissige Textur für ein unschlagbares Snack-Erlebnis<\/p>"
+      }
+    },
+    "product-for-vegans": {
+      "type": "product-for-vegans",
+      "disabled": true,
+      "settings": {
+        "title": "<span class=\"align-left\">Für vegane<\/span>\n        <span class=\"align-center\">Ernährung<\/span>\n        <span class=\"align-left\">geeignet.<span class=\"heading-line\"><\/span><\/span>\n        <span class=\"align-right\">Mit besten<\/span>\n        <span class=\"align-left\">Pflanzenproteinen<\/span>",
+        "subtitle": "Wir lassen Zutaten sprechen.",
+        "s1_title": "Hochwertiger Hafer: Der Healthy Held vom Feld.",
+        "s1_text": "<p class=\"h2-headline\">Reich an Ballaststoffen<\/p>\n    <p class=\"h2-headline\">Fördert eine gesunde Verdauung<\/p>",
+        "s1_image": "shopify:\/\/shop_images\/for-vegans-image-1.jpg",
+        "s2_title": "Erbsenprotein: Das All-In-One-Protein.",
+        "s2_text": "<p class=\"h2-headline\">Reich an BCAA (Branched Chain Amino Acids)<\/p>\n      <p class=\"h2-headline\">Enthält essentielle Amionsäuren<\/p>",
+        "s2_image": "shopify:\/\/shop_images\/for-vegans-image-2.jpg",
+        "s3_title": "Reisprotein: Ein echtes Muskel-Have.",
+        "s3_text": "<p class=\"h2-headline\">Hoher Anteil an essentiellen Aminosäuren<\/p>\n      <p class=\"h2-headline\">Reich an wertvollen Vitaminen und Mineralstoffen<\/p>",
+        "s3_image": "shopify:\/\/shop_images\/for-vegans-image-3.jpg",
+        "s4_title": "Leinsamen: Die Saat, die mehr als satt macht.",
+        "s4_text": "<p class=\"h2-headline\">Reich an gesunden Omega-3-Fettsäuren<\/p>\n    <p class=\"h2-headline\">Wirken sättigend und fördert die Verdauung<\/p>",
+        "s4_image": "shopify:\/\/shop_images\/image.jpg"
+      }
+    },
+    "product-always-clean": {
+      "type": "product-always-clean",
+      "disabled": true,
+      "settings": {
+        "title": "Immer schön clean bleiben.",
+        "subtitle": "<strong>Nur 0,5 g Zucker pro Mahlzeit (400 kcal)*<\/strong>\n    <strong>Ohne Süßstoff und Aroma*<\/strong>\n    <strong>Keine Gentechnik (GMO-free)<\/strong>",
+        "note": "* Angaben beziehen sich auf Geschmackssorte Natur."
+      }
+    },
+    "product-stay-zero": {
+      "type": "product-stay-zero",
+      "disabled": true,
+      "settings": {
+        "title": "Und wir müssen leider draußen bleiben...",
+        "list_items": "<li> <h4 class=\"h2-headline\">x raffinierter Zucker<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Farbstoffe<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Palmöl<\/h4> <\/li> <li> <h4 class=\"h2-headline\">x Konservierungsstoffe<\/h4> <\/li>",
+        "percentage": "0%"
+      }
+    },
+    "product-tastes-different": {
+      "type": "product-tastes-different",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/taste-different-image-1.png",
+        "title": "<span class=\"align-left\">Geschmäcker<\/span> <span class=\"align-left\">sind <span class=\"heading-line\"><\/span><\/span> <span class=\"align-left\">verschieden.<\/span> <span class=\"align-left\">Aber alle<\/span> <span class=\"align-left\">gleich gut.<\/span>",
+        "subtitle": "<h4 class=\"h2-headline\">Echt lecker dank echten Zutaten.<\/h4><h4 class=\"h2-headline\">Leicht löslich für eine angenehme Textur.<\/h4>",
+        "text": "Wir verwenden nur echtes Fruchtpulver und echten Kakao für den besten Geschmack.",
+        "s1_title": "Wer sich selbst alles abverlangt, muss sich auch alles zuführen: Deshalb versorgt dich Saturo mit allen wichtigen Nährstoffen.",
+        "s1_text": "Saturo ist eine ausgewogene Ernährung ohne viel Aufwand.",
+        "s1_image": "shopify:\/\/shop_images\/taste-different-image-2.png",
+        "s2_title": "Reichhaltig frühstücken im Handumdrehen.",
+        "s2_text": "Mach die wichtigste Mahlzeit am Tag zur einfachsten: Mit Saturo hast du ein gesundes Frühstück jederzeit griffbereit.",
+        "s2_image": "shopify:\/\/shop_images\/taste-different-image-3.png",
+        "s3_title": "Energie wie noch nie.",
+        "s3_text": "Natürliche Energie, 30 g Protein und länger satt durch komplexe Kohlenhydrate.",
+        "s3_image": "shopify:\/\/shop_images\/taste-different-image-4.png",
+        "s4_title": "Bring vegan auf den Speiseplan.",
+        "s4_text": "<p class=\"p\">Die einfachste Art, sich vegan zu ernähren.<\/p><p class=\"p\">Saturo Balanced Pulver ist zu 100% vegan.<\/p><p class=\"p\">Gesund für dich und für die Umwelt.<\/p>",
+        "s4_image": "shopify:\/\/shop_images\/taste-different-image-5.png"
+      }
+    },
+    "product-reviews": {
+      "type": "product-reviews",
+      "settings": {
+      }
+    },
+    "product-nutri-ingre": {
+      "type": "product-nutri-ingre",
+      "disabled": true,
+      "blocks": {
+        "b3f5017e-5245-46dd-8b58-c78488165249": {
+          "type": "ingredient",
+          "settings": {
+            "title": "30 g pflanzliches Protein",
+            "desc": "Der wichtigste Baustein für deine Muskeln. Saturo enthält eine Kombination aus Erbsen- und Reisprotein."
+          }
+        },
+        "996c3c14-c75d-4358-889f-c1d2befe1978": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Alle 26 essentielle Vitamine und Mineralien",
+            "desc": "Weil dein Körper Vitamine und Mineralien braucht, um richtig zu funktionieren und zur Stärkung deines Immunsystems."
+          }
+        },
+        "10899912-e797-4625-a7a2-4bd0a9e736d9": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Zuckerfrei - nur 0,5 g Zucker",
+            "desc": "Weil es auch ohne Zucker lecker schmeckt. (Angabe bezieht sich auf die Sorte Natur und auf 500 ml\/ 400 kcal)"
+          }
+        },
+        "d46c7dbf-0932-4e6b-a52a-ff4e97a66343": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Reich an Omega-3",
+            "desc": "Omega-3 ist ein lebenswichtiger Baustein für deinen Organismus."
+          }
+        },
+        "aa3e44d6-2248-4527-ace3-036c3ef557c9": {
+          "type": "ingredient",
+          "settings": {
+            "title": "7,3 g Ballaststoffe",
+            "desc": "Für eine langanhaltende Sättigung und zur Unterstützung deiner Verdauung."
+          }
+        },
+        "83e4234e-3f54-48a4-8ad0-3d6ceb825792": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Probiotika (Bacillus Coagulans)",
+            "desc": "Können sich positiv für deine Darmgesundheit auswirken."
+          }
+        },
+        "10f68772-d043-49a8-a619-805d4d07b0ae": {
+          "type": "ingredient",
+          "settings": {
+            "title": "39 g komplexe Kohlenhydrate",
+            "desc": "Natürliche Energie, damit du gut jeden Tag dein Bestes geben kannst."
+          }
+        },
+        "f1eb817a-fd80-4c2e-83d9-6699adc13bc0": {
+          "type": "ingredient",
+          "settings": {
+            "title": "",
+            "image": "shopify:\/\/shop_images\/Nutri-Score_A.png",
+            "desc": "Nutri-Score A bestätigt das optimale Nährwertprofil von Saturo."
+          }
+        }
+      },
+      "block_order": [
+        "b3f5017e-5245-46dd-8b58-c78488165249",
+        "996c3c14-c75d-4358-889f-c1d2befe1978",
+        "10899912-e797-4625-a7a2-4bd0a9e736d9",
+        "d46c7dbf-0932-4e6b-a52a-ff4e97a66343",
+        "aa3e44d6-2248-4527-ace3-036c3ef557c9",
+        "83e4234e-3f54-48a4-8ad0-3d6ceb825792",
+        "10f68772-d043-49a8-a619-805d4d07b0ae",
+        "f1eb817a-fd80-4c2e-83d9-6699adc13bc0"
+      ],
+      "settings": {
+        "title": "Nährwerte und Zutaten",
+        "subtitle": "Damit du das Beste rausholst, geben wir nur das Beste rein.",
+        "image": "shopify:\/\/shop_images\/nutri-ingre_image1.png"
+      }
+    },
+    "product-macrosplit": {
+      "type": "product-macrosplit",
+      "disabled": true,
+      "blocks": {
+        "8260bfce-3c7c-4917-b5a0-599d844522f2": {
+          "type": "stat",
+          "settings": {
+            "number": "45%",
+            "text": "Kohlenhydrate"
+          }
+        },
+        "5c1306eb-94f8-4643-ad60-489ef3a8c3e5": {
+          "type": "stat",
+          "settings": {
+            "number": "27%",
+            "text": "Protein"
+          }
+        },
+        "814d4c87-7937-445a-80f9-6f7b1afd779a": {
+          "type": "stat",
+          "settings": {
+            "number": "8%",
+            "text": "8%"
+          }
+        },
+        "2fee5c12-d0f5-4dc9-8b15-a4945b6c5e28": {
+          "type": "stat",
+          "settings": {
+            "number": "20%",
+            "text": "Fett"
+          }
+        }
+      },
+      "block_order": [
+        "8260bfce-3c7c-4917-b5a0-599d844522f2",
+        "5c1306eb-94f8-4643-ad60-489ef3a8c3e5",
+        "814d4c87-7937-445a-80f9-6f7b1afd779a",
+        "2fee5c12-d0f5-4dc9-8b15-a4945b6c5e28"
+      ],
+      "settings": {
+        "title": "Makrosplit",
+        "subtitle": "Unsere Pulver liefert dir ein ausgewogenes Makronährstoffverhältnis (XX% der Energie stammen aus Kohlenhydraten, XX% aus Proteinen, X% aus Fett, X% aus Ballaststoffe) und zudem alle 26 essentielle Vitamine und Mineralstoffe. Alles drin, was du brauchst.",
+        "image": "shopify:\/\/shop_images\/macrosplit_image1.png",
+        "tables_title": "Nährwerttabelle und Zutaten",
+        "meta_name": "id7137301889178"
+      }
+    },
+    "product-mix-easier": {
+      "type": "product-mix-easier",
+      "disabled": true,
+      "settings": {
+        "title": "<span class=\"align-left\">Eine Mahlzeit<\/span> <span class=\"align-left\"><span class=\"heading-line\"><\/span>zubereiten?<\/span> <span class=\"align-left\">Mix leichter<\/span> <span class=\"align-center\">als das!<\/span>",
+        "s1_text": "<p class=\"p\">500ml Wasser in den Shaker füllen<\/p><p class=\"p\">Drei gestrichene Löffel Saturo Balanced Pulver dazugeben<\/p><p class=\"p\">Gut durchmischen<\/p>",
+        "s1_image": "shopify:\/\/shop_images\/mix-easier_image1.png",
+        "s2_image1": "shopify:\/\/shop_images\/mix-easier_image2.png",
+        "s2_image2": "shopify:\/\/shop_images\/mix-easier_image3.png",
+        "s2_text": "<p class=\"p\">Ausgewogen ernähren mit allen Nährstoffen, die du brauchst.<\/p><p class=\"p\">Nach Lust und Laune genießen.<\/p>"
+      }
+    },
+    "1644502018a5038f7e": {
+      "type": "delivery-content",
+      "disabled": true,
+      "settings": {
+        "product_title": "Was bekommst du?<br><strong>16 Mahlzeiten à 400 kcal<\/strong>",
+        "product_text": "Gewicht: 1,4 kg<br><br>Abmessung (BxHxT): X cm x Y cm x Z cm"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "disabled": true,
+      "blocks": {
+        "448c1cb8-c0b6-4b8e-8eb8-0f7d637b8d19": {
+          "type": "question",
+          "settings": {
+            "question": "Was ist neu am Saturo Balanced Pulver v5.0?",
+            "answer": "<p>Unsere Produktentwickler:innen arbeiten kontinuierlich daran die Zusammensetzung sowie den Geschmack zu verbessern.<br\/>Aktuell gibt es das Pulver in folgenden Sorten:<br\/>Natur: Das natürlichste Saturo. Ohne jegliches Aroma oder Süßstoff. Rein wie die Natur.<br\/><br\/>Schokolade: Voller Schokoladengeschmack.<br\/>Banane: Frischer und natürlicher Bananengeschmack dank echtem Fruchtpulver.<\/p>"
+          }
+        },
+        "1ee99785-07a2-4616-ad1c-3d40c46fe952": {
+          "type": "question",
+          "settings": {
+            "question": "Was ist das Saturo Balanced Pulver?",
+            "answer": "<p>Unsere Produktentwickler:innen arbeiten kontinuierlich daran die Zusammensetzung sowie den Geschmack zu verbessern.<br\/>Aktuell gibt es das Pulver in folgenden Sorten:<br\/>Natur: Das natürlichste Saturo. Ohne jegliches Aroma oder Süßstoff. Rein wie die Natur.<br\/><br\/>Schokolade: Voller Schokoladengeschmack.<br\/>Banane: Frischer und natürlicher Bananengeschmack dank echtem Fruchtpulver.<\/p>"
+          }
+        },
+        "ffe6b0ca-bb15-4d3d-8127-d93bb06c1828": {
+          "type": "question",
+          "settings": {
+            "question": "Wie schmeckt das Saturo Balanced Pulver?",
+            "answer": "<p>Unsere Produktentwickler:innen arbeiten kontinuierlich daran die Zusammensetzung sowie den Geschmack zu verbessern.<br\/>Aktuell gibt es das Pulver in folgenden Sorten:<br\/>Natur: Das natürlichste Saturo. Ohne jegliches Aroma oder Süßstoff. Rein wie die Natur.<br\/><br\/>Schokolade: Voller Schokoladengeschmack.<br\/>Banane: Frischer und natürlicher Bananengeschmack dank echtem Fruchtpulver.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "448c1cb8-c0b6-4b8e-8eb8-0f7d637b8d19",
+        "1ee99785-07a2-4616-ad1c-3d40c46fe952",
+        "ffe6b0ca-bb15-4d3d-8127-d93bb06c1828"
+      ],
+      "settings": {
+        "bg_color_variable": "",
+        "html_heading": "",
+        "description": "",
+        "section_id": ""
+      }
+    }
+  },
+  "order": [
+    "1643715902997f1db6",
+    "main",
+    "164267866719bbc104",
+    "powder-form-v2",
+    "product-for-all",
+    "product-for-vegans",
+    "product-always-clean",
+    "product-stay-zero",
+    "product-tastes-different",
+    "product-reviews",
+    "product-nutri-ingre",
+    "product-macrosplit",
+    "product-mix-easier",
+    "1644502018a5038f7e",
+    "faq"
+  ]
+}

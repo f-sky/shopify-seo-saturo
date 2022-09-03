@@ -1,0 +1,228 @@
+.for-vegans {
+  padding: 11.5rem 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-vanilla-light);
+}
+
+.for-vegans__wrapper {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0 1.5rem;
+  grid-template-areas: 
+    '. . row1 row1 row1 row1 row1 row1 row1 row1 . .' 
+    'row2-text row2-text row2-text row2-text row2-text row2-image row2-image row2-image row2-image row2-image row2-image row2-image' 
+    'row3-image row3-image row3-image row3-image row3-image row3-text row3-text row3-text row3-text row3-text row3-text row3-text'
+    '. . . . row4-image row4-image row4-image row4-image row4-image row4-image row4-image row4-image'
+    'row5-image row5-image row5-image row5-image row5-image row5-image row5-text row5-text row5-text row5-text row5-text row5-text';
+}
+
+.for-vegans__title {
+  line-height: 1;
+  color: var(--color-black-grey-title);
+  margin-bottom: 3rem;
+  font-family: var(--font-family-two);
+}
+
+.for-vegans__row1 {
+  grid-area: row1;
+  margin-bottom: 5rem;
+}
+
+.for-vegans__row1 .h2-headline {
+  text-align: right;
+}
+
+.for-vegans__row2-text {
+  color: var(--color-black-grey-title);
+  grid-area: row2-text;
+  margin-top: 25.5rem;
+}
+
+.for-vegans__row2-image {
+  grid-area: row2-image;
+  width: 100%;
+}
+
+.for-vegans__row3-image {
+  grid-area: row3-image;
+  width: 100%;
+  width: calc(100% + 11.5rem);
+  transform: translateX(-11.5rem);
+  margin-top: -8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.for-vegans__row3 {
+  grid-area: row3-text;
+  margin-top: -8rem;
+  color: var(--color-black-grey-title);
+}
+
+.for-vegans__row3-text1 {
+  margin-top: 11rem;
+}
+
+.for-vegans__row3-text2 {
+  margin-top: 9.5rem;
+  text-align: right;
+}
+
+.for-vegans__row4-image {
+  grid-area: row4-image;
+  width: 100%;
+  width: calc(100% + 13rem);
+  transform: translateX(-1.5rem);
+  margin-top: -14rem;
+  position: relative;
+  z-index: 2;
+}
+
+.for-vegans__row5-text {
+  grid-area: row5-text;
+  margin-top: 10rem;
+  color: var(--color-black-grey-title);
+}
+
+.for-vegans__row2-text .h2-headline,
+.for-vegans__row3-text1 .h2-headline,
+.for-vegans__row3-text2 .h2-headline,
+.for-vegans__row5-text .h2-headline {
+  margin-bottom: 1.5rem;
+  line-height: 1.06;
+}
+
+.for-vegans__row5-image {
+  grid-area: row5-image;
+  width: 100%;
+  margin-top: -3.5rem;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 1024px) { 
+  .for-vegans {
+    padding: 10rem 0;
+  }
+
+  .for-vegans__wrapper {
+    padding: 0 7rem;
+    grid-template-areas: 'row1 row1 row1 row1 row1 row1 row1 row1 row1 row1 row1 row1'
+    'row2-text row2-text row2-text row2-text row2-text row2-text row2-image row2-image row2-image row2-image row2-image row2-image'
+    'row3-image row3-image row3-image row3-image row3-image row3-image row3-text row3-text row3-text row3-text row3-text row3-text'
+    '. . . . row4-image row4-image row4-image row4-image row4-image row4-image row4-image row4-image'
+    'row5-image row5-image row5-image row5-image row5-image row5-image row5-text row5-text row5-text row5-text row5-text row5-text';
+  }
+
+  .for-vegans__row1 {
+    padding: 0 2rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .for-vegans__row2-text {
+    margin-top: 9rem;
+  }
+
+  .for-vegans__row3-image {
+    margin-top: -5rem;
+  }
+
+  .for-vegans__row3-text1 {
+    margin-top: 14rem;
+  }
+
+  .for-vegans__row3-text2 {
+    margin-top: 6.5rem;
+  }
+
+  .for-vegans__row4-image {
+    margin-top: 2.5rem;
+  }
+
+  .for-vegans__row5-text {
+    margin-top: 5.5rem;
+  }
+
+  .for-vegans__row5-image {
+    width: calc(100% + 7rem);
+    transform: translateX(-7rem);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .for-vegans {
+    padding: 6rem 0;
+  }
+
+  .for-vegans__wrapper {
+    padding: 0 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'row1 row1 row1 row1'
+    'row2-text row2-text row2-text .'
+    'row2-image row2-image row2-image .'
+    '. row3-image row3-image row3-image'
+    '. row3-text row3-text row3-text'
+    'row4-text row4-text row4-text row4-text'
+    'row4-image row4-image row4-image row4-image'
+    'row5-image row5-image row5-image .'
+    'row5-text row5-text row5-text .';
+  }
+
+  .for-vegans__row1 {
+    padding: 0;
+  }
+
+  .for-vegans__row3-image {
+    width: calc(100% + 2rem);
+    transform: none;
+    margin-top: -10.5rem;
+  }
+
+  .for-vegans__row3-text1 {
+    margin-top: 10rem;
+  }
+
+  .for-vegans__row3-text1 .h2-headline {
+    text-align: right;
+  }
+
+  .for-vegans__row3-text2 {
+    margin-top: 6rem;
+    width: calc(100% + 9rem);
+    transform: translateX(-9rem);
+    text-align: center;
+  }
+
+  .for-vegans__row2-text {
+    margin-top: 0;
+  }
+
+  .for-vegans__row2-image {
+    width: calc(100% + 2rem);
+    transform: translateX(-2rem);
+    position: relative;
+    z-index: 2;
+  }
+
+  .for-vegans__row4-image {
+    width: calc(100% + 4rem);
+    transform: translateX(-2rem);
+  }
+
+  .for-vegans__row5-image {
+    width: 100%;
+    transform: none;
+  }
+
+  .for-vegans__row5-text {
+    margin-top: 2.5rem;
+  }
+
+  .for-vegans__row5-text .h2-headline:last-child {
+    margin-bottom: 0;
+  }
+
+}

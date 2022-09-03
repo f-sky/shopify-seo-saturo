@@ -1,0 +1,82 @@
+{{ 'product-nutri-ingre.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width nutri-ingre__wrapper">
+    <div class="nutri-ingre__content">
+        <h3 class="nutri-ingre__content-title h2-headline">
+            {{ section.settings.title }}<br>
+            <strong>{{ section.settings.subtitle }}</strong>
+        </h3>
+
+        {% for block in section.blocks %}
+          <div class="nutri-ingre__content-row">
+              <h4 class="h2-headline">{{ block.settings.title }}</h4>
+
+              {% assign image = block.settings.image %}
+              {% if image != blank %}
+                <img class="nutri-ingre__content--nutri" src="{{ image | img_url: 'medium'}}" alt="{{ image.alt }}" loading="lazy" />
+              {% endif %}
+              <p class="p">{{ block.settings.desc }}</p>
+          </div>
+        {% endfor %}
+    </div>
+
+    {% assign image = section.settings.image %}
+    {% if image != blank %}
+      <img src="{{ image | img_url: '1800x'}}" alt="{{ image.alt }}" class="nutri-ingre__image" loading="lazy" />
+    {% endif %}
+</section>
+
+{% schema %}
+{
+    "name": "Product - Ingredients",
+    "tag": "section",
+    "class": "nutri-ingre side-circle side-circle__large side-circle__top-right",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Nährwerte und Zutaten"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Damit du das Beste rausholst, geben wir nur das Beste rein."
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product - Ingredients"
+    }
+  ]
+}
+{% endschema %}

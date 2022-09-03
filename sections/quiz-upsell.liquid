@@ -1,0 +1,128 @@
+{% assign upsell_collection_products = collections['saturo-quiz-upsell'].products %}
+{% if upsell_collection_products.size > 0 %}
+  {% assign product = upsell_collection_products.first %}
+{% else %}
+  {% assign product = all_products['saturo-riegel'] %}
+{% endif %}
+
+{% assign upsell_product = product.variants.first %}
+
+<div class="quiz-product quiz-upsell">
+  <div class="bg-image">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 1920 396.949" class="hide--mobile">
+      <defs>
+        <radialGradient id="radial-gradient-upsell" cx="0.5" cy="0.5" r="0.5" gradientTransform="matrix(-1, 0, 0, 1, 1, 0)" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="#70463b"/>
+          <stop offset="1" stop-color="#39241e"/>
+        </radialGradient>
+      </defs>
+      <path id="Path_125" data-name="Path 125" d="M1920,0H0V356.863s456.788,83.734,992.23,9.165S1920,356.863,1920,356.863Z" fill="url(#radial-gradient-upsell)"/>
+    </svg>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="none" viewBox="0 0 375 613.217" class="hide--desktop">
+      <defs>
+        <radialGradient id="radial-gradient-mobile-upsell" cx="0.5" cy="0.5" r="0.5" gradientTransform="matrix(-1, 0, 0, 1, 1, 0)" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="#70463b"/>
+          <stop offset="1" stop-color="#39241e"/>
+        </radialGradient>
+      </defs>
+      <path id="Path_114" data-name="Path 114" d="M375,0H0V592s81.031-4.465,193.795,15.2S375,592,375,592Z" fill="url(#radial-gradient-mobile-upsell)"/>
+    </svg>
+      
+  </div>
+  <div class="container">
+    <div class="quiz-product__image hide--mobile">
+      <img src="{{ product.images[0] | img_url: '500x' }}" alt="">
+      <div class="price">
+        <div><s data-price-compare class="was-price">{{ upsell_product.compare_at_price | money }}</s></div>
+        <div data-price>
+          {{ upsell_product.price | money }}
+        </div>
+      </div>
+    </div>
+    <div class="quiz-product__info pl-md-4" data-quiz-result-product-info>
+      <h1 class="title"><span data-product-username></span>, wir haben noch etwas für dich! </h1>
+      <h3 class="subtitle">Zu deinem personalisierten Shake, passt ein {{product.title}} perfekt als Snack für Zwischendurch.</h3>
+      <div class="quiz-product__image hide--desktop">
+        <img src="{{ product.images[0] | img_url: '500x' }}" alt="">
+        <div class="price">
+          <div><s data-price-compare class="was-price">{{ upsell_product.compare_at_price | money }}</s></div>
+          <div data-price>
+            {{ upsell_product.price | money }}
+          </div>
+        </div>
+      </div>
+    </div> <!-- /.quiz-product__info -->
+  </div>
+</div> <!-- /.quiz-upsell -->
+
+<div class="quiz-upsell-select">
+  <div class="container">
+    <div class="radio">
+      <input id="upsell-yes" name="upsell" type="radio" value="{{upsell_product.id}}" checked>
+      <label class="label" for="upsell-yes">
+        Ja, {{product.title}} {{ upsell_product.metafields.global.units_per_sku }} für {{ upsell_product.price | money }} probieren
+      </label>
+    </div>
+    <div class="radio">
+      <input id="upsell-no" name="upsell" type="radio" value="{{upsell_product.id}}">
+      <label class="label" for="upsell-no">Nein, ich möchte nicht die leckeren Saturo Riegel probieren</label>
+    </div>
+    <div class="button-wrap quiz-item__buttons" data-upsell-btnwrapper>
+      <button type="button" data-quiz-prev class="d-none btn m-icon-only quiz-item__btn--prev"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" class="btn m-primary m-rounded" data-quiz-result-buy-perfect-product>BESTELLE JETZT DEINEN SHAKE!</button>
+    </div>
+  </div>
+</div>
+<!-- /.quiz-upsell-select -->
+
+<div class="quiz-product-benefits">
+  <div class="bg-image" style="background-image: url('https://cdn.shopify.com/s/files/1/0328/1826/6249/files/upsell_accent.png?v=1610709544');top:-100%;"></div>
+  <div class="container">
+    <div class="panel">
+      <div class="text">
+        <h3 class="title">SATURO RIEGEL</h3>
+        <ul class="list list--ico">
+          <li class="list__item">
+            <img class="list__icon" src="{{ 'icon-quiz-ok-circle.svg' | asset_url }}" alt="">
+            <p>Hoher Proteingehalt</p>
+          </li>
+          <li class="list__item">
+            <img class="list__icon" src="{{ 'icon-quiz-ok-circle.svg' | asset_url }}" alt="">
+            <p>250 kcal pro Riegel sättigt dich 2 Stunden</p>
+          </li>
+          <li class="list__item">
+            <img class="list__icon" src="{{ 'icon-quiz-ok-circle.svg' | asset_url }}" alt="">
+            <p>Alle 26 Vitamine & Mineralien</p>
+          </li>
+        </ul>
+        <div class="row icons">
+          <div class="col-4 px-0">
+            <i class="icon-quality"></i> <br>
+            <p>Hochwertige <br> Zutaten</p>
+          </div>
+          <div class="col-4 px-0">
+            <i class="icon-food"></i> <br>
+            <p>Vollwertige <br> Mahlzeit</p>
+          </div>
+          <div class="col-4 px-0">
+            <i class="icon-natural"></i> <br>
+            <p>Umwelt- <br> freundlich</p>
+          </div>
+          
+        </div>
+      </div> <!-- /.text -->
+      <div class="image m-big">
+        <img src="{{ 'upsell-benefit.png' | asset_url }}" alt="">
+      </div>
+    </div> <!-- /.panel -->
+  </div>
+</div> <!-- /.quiz-product-benefits -->
+
+{% schema %}
+{ 
+  "name": "Quiz Upsell",
+  "class": "section",
+  "tag": "section"
+}
+{% endschema %}

@@ -1,0 +1,1868 @@
+<section class="quiz-result__checklist" data-product-bg-color>
+  <section class="page-width quiz-result__checklist-wrapper">
+    <h3 class="h1-headline quiz-result__checklist-title">DEIN SHAKE UNTERSTÜTZT DICH OPTIMAL, UM DEIN ZIEL ZU ERREICHEN.</h3>
+
+    <div class="quiz-result__checklist-box">
+      <ul class="quiz-result__checklist-text">
+        <li class="quiz-result__checklist-text--item h2-headline">{%- include 'icon-checkmark' -%}<p>Jede Mahlzeit ist perfekt auf deine Ziele abgestimmt.</p></li>
+        <li class="quiz-result__checklist-text--item h2-headline">{%- include 'icon-checkmark' -%}<p data-product-benefits></p></li>
+        <li class="quiz-result__checklist-text--item h2-headline">{%- include 'icon-checkmark' -%}<p>Optimal abgestimmt auf: <span data-meal-to-be-replaced></span></p></li>
+        <li class="quiz-result__checklist-text--item h2-headline">{%- include 'icon-checkmark' -%}<p><strong>Gratis Shaker</strong> mit deiner ersten Bestellung </p></li>
+      </ul>
+
+      {% comment %}
+      <ul class="quiz-result__checklist-icons">
+        <li class="quiz-result__checklist-icons--item">
+          <img src="{{ 'icon-quiz-product-spoon.svg' | asset_url }}" alt=""/>
+          <p class="p">Personalisierte Mahlzeit</p>
+        </li>
+
+        <li class="quiz-result__checklist-icons--item">
+          <img src="{{ 'icon-quiz-product-scale.svg' | asset_url }}" alt=""/>
+          <p class="p">Hochwertige Zutaten</p>
+        </li>
+
+        <li class="quiz-result__checklist-icons--item">
+          <img src="{{ 'icon-quiz-product-recycle.svg' | asset_url }}" alt=""/>
+          <p class="p">Umweltfreundlich</p>
+        </li>
+      </ul>
+      {% endcomment %}
+    </div>
+  </section>
+</section>
+
+
+
+
+
+
+{{ 'single-high.css' | asset_url | stylesheet_tag }}
+
+<section class="single-high">
+  <div class="single-high__wrapper page-width">
+    <h3 class="single-high__title h2-headline">{{ section.settings.single_high_title }}</h3>
+    
+    <div class="single-high__section1-items">
+        {% if section.settings.s1_a_text != blank or section.settings.s1_a_highlight != blank %}
+            <div class="single-high__section-item" data-s1-item>
+                {% if section.settings.s1_a_icon != blank %}
+                    <img src="{{ section.settings.s1_a_icon }}" alt="">
+                {% elsif section.settings.s1_a_highlight != blank %}
+                    <h4 class="h1-headline" data-single-high-body-height>{{ section.settings.s1_a_highlight }}</h4>
+                {% endif %}
+                {% if section.settings.s1_a_text != blank %}
+                    <div class="p">
+                        {{ section.settings.s1_a_text }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {% if section.settings.s1_b_text != blank or section.settings.s1_b_highlight != blank %}
+            <div class="single-high__section-item" data-s1-item>
+                {% if section.settings.s1_b_icon != blank %}
+                    <img src="{{ section.settings.s1_b_icon }}" alt="">
+                {% elsif section.settings.s1_b_highlight != blank %}
+                    <h4 class="h1-headline" data-single-high-current-weight>{{ section.settings.s1_b_highlight }}</h4>
+                {% endif %}
+                {% if section.settings.s1_b_text != blank %}
+                    <div class="p">
+                        {{ section.settings.s1_b_text }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+
+    <h3 class="single-high__subtitle h2-headline">{{ section.settings.single_high_subtitle }}</h3>
+    
+    <div class="single-high__section2-items" data-single-high-s2-items>
+      <div class="single-high__section-item" data-s2-item data-value="Training mit Gewichten/ Krafttraining">
+        {% render 'icon-quiz-muscule' %}
+        <div class="p">Krafttraining</div>
+      </div>
+
+      <div class="single-high__section-item" data-s2-item data-value="Laufen">
+        {% render 'icon-quiz-ausdauersport' %}
+        <div class="p">Laufen</div>
+      </div>
+
+      <div class="single-high__section-item" data-s2-item data-value="Fußball">
+        {% render 'icon-quiz-football' %}
+        <div class="p">Fußball</div>
+      </div>
+
+      <div class="single-high__section-item" data-s2-item data-value="Schwimmen">
+        {% render 'icon-quiz-schwimmen' %}
+        <div class="p">Schwimmen</div>
+      </div>
+
+      <div class="single-high__section-item" data-s2-item data-value="Walking">
+        {% render 'icon-quiz-walking' %}
+        <div class="p">Walking</div>
+      </div>
+
+      <div class="single-high__section-item" data-s2-item data-value="Radfahren">
+        {% render 'icon-quiz-radfahren' %}
+        <div class="p">Radfahren</div>
+      </div>
+
+      <div class="single-high__section-item" data-s2-item data-value="Cross-Fit">
+        {% render 'icon-quiz-crossfit' %}
+        <div class="p">Cross-Fit</div>
+      </div>
+
+      <div class="single-high__section-item" data-s2-item data-value="Yoga">
+        {% render 'icon-quiz-yoga' %}
+        <div class="p">Yoga</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const s1DesktopGrid = Number("{{ section.settings.s1_desktop_grid }}");
+        const s1TabletGrid = Number("{{ section.settings.s1_tablet_grid }}");
+        const s1MobileGrid = Number("{{ section.settings.s1_mobile_grid }}");
+        const s1DesktopWidth = (100 / s1DesktopGrid).toFixed(2);
+        const s1TabletWidth = (100 / s1TabletGrid).toFixed(2);
+        const s1MobileWidth = (100 / s1MobileGrid).toFixed(2);
+        
+        const s2DesktopGrid = Number("{{ section.settings.s2_desktop_grid }}");
+        const s2TabletGrid = Number("{{ section.settings.s2_tablet_grid }}");
+        const s2MobileGrid = Number("{{ section.settings.s2_mobile_grid }}");
+        const s2DesktopWidth = (100 / s2DesktopGrid).toFixed(2);
+        const s2TabletWidth = (100 / s2TabletGrid).toFixed(2);
+        const s2MobileWidth = (100 / s2MobileGrid).toFixed(2);
+
+        const styles = `
+        <style>
+            [data-s1-item] { width: ${s1DesktopWidth}%; }
+            [data-s2-item] { width: ${s2DesktopWidth}%; }
+
+            @media only screen and (max-width: 1024px) {
+                [data-s1-item] { width: ${s1TabletWidth}%; }
+                [data-s2-item] { width: ${s2TabletWidth}%; }
+            }
+
+            @media only screen and (max-width: 767px) {
+                [data-s1-item] { width: ${s1MobileWidth}%; }
+                [data-s2-item] { width: ${s2MobileWidth}%; }
+            }
+        </style>`
+        document.head.insertAdjacentHTML("beforeend", styles);
+  
+    });
+  </script>
+
+
+
+
+
+
+{{ 'card.css' | asset_url | stylesheet_tag }}
+
+<section class="card">
+  <div class="card__wrapper page-width">
+    <h3 class="card__title h2-headline">{{ section.settings.card_title }}</h3>
+    
+    <div class="card__section1-items">
+        <div class="card__section-item" >
+            {% if section.settings.card_s1_a_icon != blank %}
+                <img src="{{ section.settings.card_s1_a_icon }}" alt="">
+            {% elsif section.settings.card_s1_a_highlight != blank %}
+                <h4 class="h1-headline" data-card-weight-goal>{{ section.settings.card_s1_a_highlight }}</h4>
+            {% endif %}
+            {% if section.settings.card_s1_a_text != blank %}
+                <div class="p">
+                    {{ section.settings.card_s1_a_text }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="card__section-item">
+            {% if section.settings.card_s1_b_icon != blank %}
+                <img src="{{ section.settings.card_s1_b_icon }}" alt="">
+            {% elsif section.settings.card_s1_b_highlight != blank %}
+                <h4 class="h1-headline" data-card-weight-goal-week>{{ section.settings.card_s1_b_highlight }}</h4>
+            {% endif %}
+            {% if section.settings.card_s1_b_text != blank %}
+                <div class="p">
+                    {{ section.settings.card_s1_b_text }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="card__s2-titles">
+        <h3 class="card__subtitle h2-headline" data-card-body-goal><strong>{{ section.settings.card_subtitle }}</strong></h3>
+        <p class="card__subtext p" data-card-your-sports-text>{{ section.settings.subtext }}</p>
+    </div>
+
+    <div class="card__cards js-card__cards">
+        {% if section.settings.card1_bg_image != blank or section.settings.card1_text != blank %}
+            <div class="card__card card__card1" data-card-id="{{ section.settings.card1_id }}">
+                <h4 class="card__card-title h5-headline">{{ section.settings.card1_title }}</h4>
+                <div class="card__card-text p">{{ section.settings.card1_text }}</div>
+                <style>
+                  .card__card1 {
+                    background-image: url('{{ section.settings.card1_bg_image | img_url: '1000x' }}');
+                  }
+                  .card__card1.women {
+                    background-image: url('{{ section.settings.card1_bg_image_women | img_url: '1000x' }}');
+                  }
+                </style>
+            </div>
+        {% endif %}
+
+        {% if section.settings.card2_bg_image != blank or section.settings.card2_text != blank %}
+            <div class="card__card card__card2" data-card-id="{{ section.settings.card2_id }}">
+                <h4 class="card__card-title h5-headline">{{ section.settings.card2_title }}</h4>
+                <div class="card__card-text p">{{ section.settings.card2_text }}</div>
+                <style>
+                  .card__card2 {
+                    background-image: url('{{ section.settings.card2_bg_image | img_url: '1000x' }}');
+                  }
+                  .card__card2.women {
+                    background-image: url('{{ section.settings.card2_bg_image_women | img_url: '1000x' }}');
+                  }
+                </style>
+            </div>
+        {% endif %}
+
+        {% if section.settings.card3_bg_image != blank or section.settings.card3_text != blank %}
+            <div class="card__card card__card3" data-card-id="{{ section.settings.card3_id }}">
+                <h4 class="card__card-title h5-headline">{{ section.settings.card3_title }}</h4>
+                <div class="card__card-text p">{{ section.settings.card3_text }}</div>
+                <style>
+                  .card__card3 {
+                    background-image: url('{{ section.settings.card3_bg_image | img_url: '1000x' }}');
+                  }
+                  .card__card3.women {
+                    background-image: url('{{ section.settings.card3_bg_image_women | img_url: '1000x' }}');
+                  }
+                </style>
+            </div>
+        {% endif %}
+
+        {% if section.settings.card4_bg_image != blank or section.settings.card4_text != blank %}
+            <div class="card__card card__card4" data-card-id="{{ section.settings.card4_id }}">
+                <h4 class="card__card-title h5-headline">{{ section.settings.card4_title }}</h4>
+                <div class="card__card-text p">{{ section.settings.card4_text }}</div>
+                <style>
+                  .card__card4 {
+                    background-image: url('{{ section.settings.card4_bg_image | img_url: '1000x' }}');
+                  }
+                  .card__card4.women {
+                    background-image: url('{{ section.settings.card4_bg_image_women | img_url: '1000x' }}');
+                  }
+                </style>
+            </div>
+        {% endif %}
+
+        {% if section.settings.card5_bg_image != blank or section.settings.card5_text != blank %}
+            <div class="card__card card__card5" data-card-id="{{ section.settings.card5_id }}">
+                <h4 class="card__card-title h5-headline">{{ section.settings.card5_title }}</h4>
+                <div class="card__card-text p">{{ section.settings.card5_text }}</div>
+                <style>
+                  .card__card5 {
+                    background-image: url('{{ section.settings.card5_bg_image | img_url: '1000x' }}');
+                  }
+                  .card__card5.women {
+                    background-image: url('{{ section.settings.card5_bg_image_women | img_url: '1000x' }}');
+                  }
+                </style>
+            </div>
+        {% endif %}
+
+        {% if section.settings.card6_bg_image != blank or section.settings.card6_text != blank %}
+            <div class="card__card card__card6" data-card-id="{{ section.settings.card6_id }}">
+                <h4 class="card__card-title h5-headline">{{ section.settings.card6_title }}</h4>
+                <div class="card__card-text p">{{ section.settings.card6_text }}</div>
+                <style>
+                  .card__card6 {
+                    background-image: url('{{ section.settings.card6_bg_image | img_url: '1000x' }}');
+                  }
+                  .card__card6.women {
+                    background-image: url('{{ section.settings.card6_bg_image_women | img_url: '1000x' }}');
+                  }
+                </style>
+            </div>
+        {% endif %}
+
+        {% if section.settings.card7_bg_image != blank or section.settings.card7_text != blank %}
+            <div class="card__card card__card7" data-card-id="{{ section.settings.card7_id }}">
+                <h4 class="card__card-title h5-headline">{{ section.settings.card7_title }}</h4>
+                <div class="card__card-text p">{{ section.settings.card7_text }}</div>
+                <style>
+                  .card__card7 {
+                    background-image: url('{{ section.settings.card7_bg_image | img_url: '1000x' }}');
+                  }
+                  .card__card7.women {
+                    background-image: url('{{ section.settings.card7_bg_image_women | img_url: '1000x' }}');
+                  }
+                </style>
+            </div>
+        {% endif %}
+
+        {% if section.settings.card8_bg_image != blank or section.settings.card8_text != blank %}
+            <div class="card__card card__card8" data-card-id="{{ section.settings.card8_id }}">
+                <h4 class="card__card-title h5-headline">{{ section.settings.card8_title }}</h4>
+                <div class="card__card-text p">{{ section.settings.card8_text }}</div>
+                <style>
+                  .card__card8 {
+                    background-image: url('{{ section.settings.card8_bg_image | img_url: '1000x' }}');
+                  }
+                  .card__card8.women {
+                    background-image: url('{{ section.settings.card8_bg_image_women | img_url: '1000x' }}');
+                  }
+                </style>
+            </div>
+        {% endif %}
+    </div>
+  </div>
+</section>
+
+  {% if section.settings.card_bg_color != blank %}
+    <style>
+        .card {
+            background-color: var({{ section.settings.card_bg_color }});
+        }
+    </style>
+  {% endif %}
+
+
+
+  {{ 'card-square.css' | asset_url | stylesheet_tag }}
+
+  <section class="card-square">
+    <div class="card-square__wrapper page-width">
+      <h3 class="card-square__title h2-headline">{{ section.settings.card_square_title }}</h3>
+  
+      <div class="card-square__table">
+          
+          <div class="card-square__table-row">
+              <p class="p">Empfohlene Kalorienzufuhr pro Tag (kcal)</p>
+              <p class="p" data-card-square-req-cal>2800</p>
+  
+              <dl class="faq__items">
+                <dt>
+                  <button class="btn btn--text" type="button" aria-controls="panel-Berechnung" data-button-id="Berechnung" aria-expanded="true">Berechnung</button>
+                </dt>
+                <dd class="faq__item-content p" data-content-id="Berechnung" aria-hidden="true">
+                  <div class="card-square__inner-table">
+                    <div class="card-square__inner-table-row">
+                      <div class="details">Grundumsatz</div>
+                      <div class="details" data-card-square-base-rate>2500</div>
+                    </div>
+                    <div class="card-square__inner-table-row">
+                      <div class="details">Leistungsumsatz</div>
+                      <div class="details" data-card-square-performance-rate>+500</div>
+                    </div>
+                    <div class="card-square__inner-table-row">
+                      <div class="details">-Defizit/ +Überschuss</div>
+                      <div class="details" data-card-square-req-cal-defizit>-200</div>
+                    </div>
+                    <div class="card-square__inner-table-row">
+                      <div class="details"><strong>Empfohlene Kalorienzufuhr pro Tag (kcal)</strong></div>
+                      <div class="details" data-card-square-req-cal><strong>2800</strong></div>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+
+          </div>
+      </div>
+  
+      <h3 class="card-square__cards-title h5-headline">
+        <strong>{{ section.settings.card_square_subtitle }}</strong>
+      </h3>
+  
+      <div class="card-square__cards js-card-square__cards">
+          <div class="card__square" data-card-square-portion-breakfast-saturo>
+              <h4 class="card__square-title h5-headline">{{ section.settings.card_square_card1_title }}</h4>
+              {% render 'icon-breakfast' %}
+              <div class="card__square-text p" data-card-square-value>{{ section.settings.card_square_card1_text }}</div>
+              {% if section.settings.card_square_card1_btn_text != blank %}
+                <a class="btn {{ section.settings.card_square_card1_btn_style }}" href="{{ section.settings.card_square_card1_btn_url }}" data-go-macro-table>{{ section.settings.card_square_card1_btn_text }}</a>
+              {% endif %}
+          </div>
+  
+          <div class="card__square" data-card-square-portion-lunch-saturo>
+              <h4 class="card__square-title h5-headline">{{ section.settings.card_square_card2_title }}</h4>
+              {% render 'icon-lunch' %}
+              <div class="card__square-text p" data-card-square-value>{{ section.settings.card_square_card2_text }}</div>
+              {% if section.settings.card_square_card2_btn_text != blank %}
+                <a class="btn {{ section.settings.card_square_card2_btn_style }}" href="{{ section.settings.card_square_card2_btn_url }}" data-go-macro-table>{{ section.settings.card_square_card2_btn_text }}</a>
+              {% endif %}
+          </div>
+  
+          <div class="card__square" data-card-square-portion-dinner-saturo>
+              <h4 class="card__square-title h5-headline">{{ section.settings.card_square_card3_title }}</h4>
+              {% render 'icon-dinner' %}
+              <div class="card__square-text p" data-card-square-value>{{ section.settings.card_square_card3_text }}</div>
+              {% if section.settings.card_square_card3_btn_text != blank %}
+                <a class="btn {{ section.settings.card_square_card3_btn_style }}" href="{{ section.settings.card_square_card3_btn_url }}" data-go-macro-table>{{ section.settings.card_square_card3_btn_text }}</a>
+              {% endif %}
+          </div>
+  
+          <div class="card__square" data-card-square-portion-snack-saturo>
+            <h4 class="card__square-title h5-headline">{{ section.settings.card_square_card4_title }}</h4>
+            {% render 'icon-snack' %}
+            <div class="card__square-text p" data-card-square-value>{{ section.settings.card_square_card4_text }}</div>
+            {% if section.settings.card_square_card4_btn_text != blank %}
+              <a class="btn {{ section.settings.card_square_card4_btn_style }}" href="{{ section.settings.card_square_card4_btn_url }}" data-go-macro-table>{{ section.settings.card_square_card4_btn_text }}</a>
+            {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    {% if section.settings.card_square_bg_color != blank %}
+      <style>
+          .card-square {
+              background-color: var({{ section.settings.card_square_bg_color }});
+          }
+      </style>
+    {% endif %}
+
+
+
+
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const ariaControls = document.querySelectorAll('.card-square button[aria-controls]');
+    
+        ariaControls.forEach(item => {
+          item.addEventListener('click', function() {
+            var id = item.dataset.buttonId;
+            var $content = document.querySelector('[data-content-id="' + id + '"]');
+            
+            if ($content.classList.contains('show')) {
+              
+            } else {
+              setTimeout(() => {
+                $content.classList.add('show');
+                item.classList.add('active');
+                $content.setAttribute('aria-hidden', 'false');
+              }, 0);
+            }
+          });
+        });
+      });
+    </script>
+
+
+
+
+{{ 'product-for-vegans.css' | asset_url | stylesheet_tag }}
+
+<section class="for-vegans">
+  <section class="page-width for-vegans__wrapper">
+    <div class="for-vegans__row for-vegans__row1">
+
+        {% assign title_html = section.settings.for_vegans_title %}
+        <h3 class="h1-headline for-vegans__title span-align-heading" data-personalized-ingredients-headline>
+          {{ title_html }}
+        </h3>
+        {% assign subtitle = section.settings.for_vegans_subtitle %}
+        <h4 class="h2-headline">{{ subtitle }}</h4>
+    </div>
+
+    <div class="for-vegans__row2-text" data-meta-macro-ingre-desc1>
+    </div>
+    <img src="" alt="" class="for-vegans__row2-image" loading="lazy" data-meta-macro-ingre-img1 />
+
+    <img src="" alt="" class="for-vegans__row3-image" loading="lazy" data-meta-macro-ingre-img2 />
+
+    <div class="for-vegans__row3">
+      <div class="for-vegans__row3-text1" data-meta-macro-ingre-desc2>
+      </div>
+
+      <div class="for-vegans__row3-text2" data-meta-macro-ingre-desc3>
+      </div>
+    </div>
+    <img src="" alt="" class="for-vegans__row4-image" loading="lazy" data-meta-macro-ingre-img3 />
+
+    <div class="for-vegans__row5-text" data-meta-macro-ingre-desc4>
+    </div>
+    
+    <img src="" alt="" class="for-vegans__row5-image" loading="lazy" data-meta-macro-ingre-img4 />
+  </section>
+</section>
+
+{{ 'product-macrosplit.css' | asset_url | stylesheet_tag }}
+
+<section class="macrosplit-section">
+  <section class="page-width macrosplit-section__wrapper">
+    <img src="" alt="{{ image.alt }}" class="macrosplit__row1-image" loading="lazy" data-meta-macro-img />
+
+    <div class="macrosplit__row1">
+      <h3 class="h5-headline">{{ section.settings.macrosplit_title }}</h3>
+      <p class="p" data-meta-macro-desk>{{ section.settings.macrosplit_subtitle }}</p>
+      
+      <img src="" alt="{{ image.alt }}" class="macrosplit__row1-image macrosplit__row1-image--mobile" loading="lazy" data-meta-macro-img />
+
+      <div class="macrosplit__row2">
+        <div class="macrosplit__stats">
+          <h4 class="h1-headline"><strong data-meta-macro-carbs>%</strong>%</h4>
+          <p class="p">Kohlenhydrate</p>
+        </div>
+        <div class="macrosplit__stats">
+          <h4 class="h1-headline"><strong data-meta-macro-protein>%</strong>%</h4>
+          <p class="p">Protein</p>
+        </div>
+        <div class="macrosplit__stats">
+          <h4 class="h1-headline"><strong data-meta-macro-fibre>%</strong>%</h4>
+          <p class="p">Ballaststoffe</p>
+        </div>
+        <div class="macrosplit__stats">
+          <h4 class="h1-headline"><strong data-meta-macro-fat>%</strong>%</h4>
+          <p class="p">Fett</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="h2-headline macro-tables__title" id="macrotables">{{ section.settings.tables_title }}</h3>
+    <div class="macro-tables__wrapper">
+
+      <div class="macro-tables js-macro-tables">
+        <div class="macro-table" data-product-bg-color style="height: auto; width: 490px;" data-table-saturo-breakfast>     
+          <h3 class="h2-headline">
+            <span data-quiz-user-name></span>'s Personalized Saturo<br><strong>{{ section.settings.table_breakfast_title }}</strong><br><em data-quiz-variant-name></em>
+          </h3>
+          <div>
+            <table class="js-quiz-macro-table">
+              <thead>
+                <tr>
+                  <th style="width: 235px;">Durchschnittliche Nährwerte</th>
+                  <th style="width: 45px;">Per 100g</th>
+                  <th style="width: 45px;">Per Portion*</th>
+                  <th style="width: 45px;">% RI/ NRV**</th>
+                </tr>
+              </thead>
+
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <p class="details">* per Portion <span data-per-portion></span>. <span data-personalized-ingredients></span></p>
+        </div>
+
+        <div class="macro-table" data-product-bg-color style="height: auto; width: 490px;" data-table-saturo-lunch>     
+          <h3 class="h2-headline">
+            <span data-quiz-user-name></span>'s Personalized Saturo<br><strong>{{ section.settings.table_lunch_title }}</strong><br><em data-quiz-variant-name></em>
+          </h3>
+          <div>
+            <table class="js-quiz-macro-table">
+              <thead>
+                <tr>
+                  <th style="width: 235px;">Durchschnittliche Nährwerte</th>
+                  <th style="width: 45px;">Per 100g</th>
+                  <th style="width: 45px;">Per Portion*</th>
+                  <th style="width: 45px;">% RI/ NRV**</th>
+                </tr>
+              </thead>
+
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <p class="details">* per Portion <span data-per-portion></span>. <span data-personalized-ingredients></span></p>
+        </div>
+
+        <div class="macro-table" data-product-bg-color style="height: auto; width: 490px;"  data-table-saturo-dinner>     
+          <h3 class="h2-headline">
+            <span data-quiz-user-name></span>'s Personalized Saturo<br><strong>{{ section.settings.table_dinner_title }}</strong><br><em data-quiz-variant-name></em>
+          </h3>
+          <div>
+            <table class="js-quiz-macro-table">
+              <thead>
+                <tr>
+                  <th style="width: 235px;">Durchschnittliche Nährwerte</th>
+                  <th style="width: 45px;">Per 100g</th>
+                  <th style="width: 45px;">Per Portion*</th>
+                  <th style="width: 45px;">% RI/ NRV**</th>
+                </tr>
+              </thead>
+
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <p class="details">* per Portion <span data-per-portion></span>. <span data-personalized-ingredients></span></p>
+        </div>
+
+        <div class="macro-table" data-product-bg-color style="height: auto; width: 490px;"  data-table-saturo-snack>     
+          <h3 class="h2-headline">
+            <span data-quiz-user-name></span>'s Personalized Saturo<br><strong>{{ section.settings.table_snack_title }}</strong><br><em data-quiz-variant-name></em>
+          </h3>
+          <div>
+            <table class="js-quiz-macro-table">
+              <thead>
+                <tr>
+                  <th style="width: 235px;">Durchschnittliche Nährwerte</th>
+                  <th style="width: 45px;">Per 100g</th>
+                  <th style="width: 45px;">Per Portion*</th>
+                  <th style="width: 45px;">% RI/ NRV**</th>
+                </tr>
+              </thead>
+
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <p class="details">* per Portion <span data-per-portion></span>. <span data-personalized-ingredients></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+{% comment %}
+{{ 'product-mix-easier.css' | asset_url | stylesheet_tag }}
+{% assign s2_image1 = section.settings.s2_image1 %}
+{% assign s2_image2 = section.settings.s2_image2 %}
+{% assign s2_image3 = section.settings.s2_image3 %}
+
+<section class="mix-easier">
+  <section class="page-width mix-easier__wrapper">
+    <h3 class="h1-headline span-align-heading mix-easier__title">
+      {{ section.settings.mix_easier_title }}
+    </h3>
+
+    {% if s2_image3 != blank %}
+      <img src="{{ s2_image3 | img_url: '1500x' }}" alt="{{ s2_image3.alt }}" class="mix-easier__row2-image" loading="lazy" />
+    {% endif %}
+
+    <div class="mix-easier__row1-text">
+      {{ section.settings.s2_text }}
+    </div>
+
+    {% if s2_image1 != blank %}
+      <img src="{{ s2_image1 | img_url: '1500x' }}" alt="{{ s2_image1.alt }}" class="mix-easier__row1-image" loading="lazy" />
+    {% endif %}
+
+    <div class="mix-easier__row2-content">
+
+      {% if s2_image2 != blank %}
+        <img src="{{ s2_image2 | img_url: '1500x' }}" alt="{{ s2_image2.alt }}" class="mix-easier__image" loading="lazy" />
+      {% endif %}
+
+      {% if s2_image2 != blank %}
+        <img src="{{ s2_image2 | img_url: '1500x' }}" alt="{{ s2_image2.alt }}" class="mix-easier__row2-image mix-easier__row2-image--mobile" loading="lazy" />
+      {% endif %}
+
+      {{ section.settings.s2_text2 }}
+    </div>
+  </section>
+</section>
+{% endcomment %}
+
+{% comment %}
+<script src="https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2022040618"></script>
+<link rel="stylesheet" href="https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2022040618">
+<link rel="stylesheet" href="https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2022040618">
+<section class="quiz-product-review page-width">
+  <h3 class="quiz-product-review__title h2-headline"><strong>Was andere sagen</strong></h3>
+  <div id="reviewsio-carousel-widget">&nbsp;</div>
+</section>
+<script>
+new carouselInlineWidget('reviewsio-carousel-widget',
+  {
+      /*Your REVIEWS.io account ID:*/
+      store: 'saturo.com',
+      sku: '',
+      lang: 'en',
+      carousel_type: 'default',
+      styles_carousel: 'CarouselWidget--sideHeader--withcards',
+
+      /*Widget settings:*/
+      options:{
+        general:{
+          /*What reviews should the widget display? Available options: company, product, third_party. You can choose one type or multiple separated by comma.*/
+          review_type: 'company, product',
+          /*Minimum number of reviews required for widget to be displayed*/
+          min_reviews: '1',
+          /*Maximum number of reviews to include in the carousel widget.*/
+          max_reviews: '20',
+          address_format: 'CITY, COUNTRY',
+          /*Carousel auto-scrolling speed. 3000 = 3 seconds. If you want to disable auto-scroll, set this value to false.*/
+          enable_auto_scroll: 10000,
+        },
+        header:{
+          /*Show overall rating stars*/
+          enable_overall_stars: true,
+          rating_decimal_places: 2,
+        },
+        reviews: {
+          /*Show customer name*/
+          enable_customer_name: true,
+          /*Show customer location*/
+          enable_customer_location: true,
+          /*Show "verified review" badge*/
+          enable_verified_badge: true,
+          /*Show "I recommend this product" badge (Only for product reviews)*/
+          enable_recommends_badge: true,
+          /*Show photos attached to reviews*/
+          enable_photos: true,
+          /*Show videos attached to reviews*/
+          enable_videos: true,
+          /*Show when review was written*/
+          enable_review_date: true,
+          /*Hide reviews written by the same customer (This may occur when customer reviews multiple products)*/
+          disable_same_customer: true,
+          /*Minimum star rating*/
+          min_review_percent: 4,
+          /*Show 3rd party review source*/
+          third_party_source: true,
+          /*Hide reviews without comments (still shows if review has a photo)*/
+          hide_empty_reviews: true,
+          /*Show product name*/
+          enable_product_name: true,
+          /*Show only reviews which have specific tags (multiple semicolon separated tags allowed i.e tag1;tag2)*/
+          tags: "",
+          /*Show branch, only one input*/
+          branch: "",
+          enable_branch_name: false,
+        },
+        popups: {
+          /*Make review items clickable (When they are clicked, a popup appears with more information about a customer and review)*/
+          enable_review_popups:  true,
+          /*Show "was this review helpful" buttons*/
+          enable_helpful_buttons: true,
+          /*Show how many times review was upvoted as helpful*/
+          enable_helpful_count: true,
+          /*Show share buttons*/
+          enable_share_buttons: true,
+        },
+      },
+    translations: {
+      verified_customer: 'Verified Customer',
+    },
+    styles: {
+      /*Base font size is a reference size for all text elements. When base value gets changed, all TextHeading and TexBody elements get proportionally adjusted.*/
+      '--base-font-size': '16px',
+      '--base-maxwidth':'100%',
+
+      /*Logo styles:*/
+      '--reviewsio-logo-style':'var(--logo-inverted)',
+
+      /*Star styles:*/
+      '--common-star-color':' #0E1311',
+      '--common-star-disabled-color':' rgba(0,0,0,0.25)',
+      '--medium-star-size':' 22px',
+      '--small-star-size':'19px', /*Modal*/
+      '--x-small-star-size':'16px',
+      '--x-small-star-display':'inline-flex',
+
+      /*Header styles:*/
+      '--header-order':'1',
+      '--header-width':'280px',
+      '--header-bg-start-color':'#0E1311',
+      '--header-bg-end-color':'#0E1311',
+      '--header-gradient-direction':'135deg',
+      '--header-padding':'1.5em',
+      '--header-border-width':'0px',
+      '--header-border-color':'rgba(0,0,0,0.1)',
+      '--header-border-radius':'0px',
+      '--header-shadow-size':'10px',
+      '--header-shadow-color':'rgba(0, 0, 0, 0.05)',
+
+      /*Header content styles:*/
+      '--header-star-color':'#ffffff',
+      '--header-disabled-star-color':'inherit',
+      '--header-heading-text-color':'#ffffff',
+      '--header-heading-font-size':'inherit',
+      '--header-heading-font-weight':'inherit',
+      '--header-heading-line-height':'inherit',
+      '--header-heading-text-transform':'inherit',
+      '--header-subheading-text-color':'#ffffff',
+      '--header-subheading-font-size':'inherit',
+      '--header-subheading-font-weight':'300',
+      '--header-subheading-line-height':'inherit',
+      '--header-subheading-text-transform':'inherit',
+
+      /*Review item styles:*/
+      '--item-maximum-columns':'5',/*Must be 3 or larger*/
+      '--item-background-start-color':'#ffffff',
+      '--item-background-end-color':'#ffffff',
+      '--item-gradient-direction':'135deg',
+      '--item-padding':'1.5em',
+      '--item-border-width':'0px',
+      '--item-border-color':'rgba(0,0,0,0.1)',
+      '--item-border-radius':'0px',
+      '--item-shadow-size':'10px',
+      '--item-shadow-color':'rgba(0,0,0,0.05)',
+
+      /*Heading styles:*/
+      '--heading-text-color':' #0E1311',
+      '--heading-text-font-weight':' 600',
+      '--heading-text-font-family':' inherit',
+      '--heading-text-line-height':' 1.4',
+      '--heading-text-letter-spacing':'0',
+      '--heading-text-transform':'none',
+
+      /*Body text styles:*/
+      '--body-text-color':' #0E1311',
+      '--body-text-font-weight':'400',
+      '--body-text-font-family':' inherit',
+      '--body-text-line-height':' 1.4',
+      '--body-text-letter-spacing':'0',
+      '--body-text-transform':'none',
+
+      /*Scroll button styles:*/
+      '--scroll-button-icon-color':'#0E1311',
+      '--scroll-button-icon-size':'24px',
+      '--scroll-button-bg-color':'transparent',
+
+      '--scroll-button-border-width':'0px',
+      '--scroll-button-border-color':'rgba(0,0,0,0.1)',
+
+      '--scroll-button-border-radius':'60px',
+      '--scroll-button-shadow-size':'0px',
+      '--scroll-button-shadow-color':'rgba(0,0,0,0.1)',
+      '--scroll-button-horizontal-position':'3px',
+      '--scroll-button-vertical-position':'0px',
+
+      /*Badge styles:*/
+      '--badge-icon-color':'#0E1311',
+      '--badge-icon-font-size':'15px',
+      '--badge-text-color':'#0E1311',
+      '--badge-text-font-size':'inherit',
+      '--badge-text-letter-spacing':'inherit',
+      '--badge-text-transform':'inherit',
+
+      /*Author styles:*/
+      '--author-font-size':'inherit',
+      '--author-font-weight':'inherit',
+      '--author-text-transform':'inherit',
+
+      /*Product photo or review photo styles:*/
+      '--photo-video-thumbnail-size':'60px',
+      '--photo-video-thumbnail-border-radius':'0px',
+
+      /*Popup styles:*/
+      '--popup-backdrop-color':'rgba(0,0,0,0.75)',
+      '--popup-color':'#ffffff',
+      '--popup-star-color':'inherit',
+      '--popup-disabled-star-color':'inherit',
+      '--popup-heading-text-color':'inherit',
+      '--popup-body-text-color':'inherit',
+      '--popup-badge-icon-color':'inherit',
+      '--popup-badge-icon-font-size':'19px',
+      '--popup-badge-text-color':'inherit',
+      '--popup-badge-text-font-size':'14px',
+      '--popup-border-width':'0px',
+      '--popup-border-color':'rgba(0,0,0,0.1)',
+      '--popup-border-radius':'0px',
+      '--popup-shadow-size':'0px',
+      '--popup-shadow-color':'rgba(0,0,0,0.1)',
+      '--popup-icon-color':'#0E1311',
+
+      /*Tooltip styles:*/
+      '--tooltip-bg-color':'#0E1311',
+      '--tooltip-text-color':'#ffffff',
+    },
+  }
+);
+</script>
+{% endcomment %}
+
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+
+<section class="faq-section is-active">
+  <section class="page-width faq-section__wrapper">
+    {% assign html_heading = section.settings.html_heading %}
+
+    {%- if html_heading != blank -%}
+      {{ html_heading }}
+    {%- else -%}
+      <h3 class="h2-headline">
+        <strong>Falls du dich das jetzt auch fragst:</strong>
+      </h3>
+    {%- endif -%}
+    
+    <dl class="faq__items js-faq-items">
+    </dl>
+
+  </section>  
+</section>
+
+{% if section.settings.bg_color_variable != blank %}
+<style>
+  .faq-section {
+    background-color: var({{ section.settings.bg_color_variable }});
+  }
+</style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Quiz Product Sections",
+  "tag": "section",
+  "class": "quiz-product-sections",
+  "settings": [
+    {
+        "type": "header",
+        "content": "🔥 Single Highlight - Section"
+    },
+    {
+        "type": "text",
+        "id": "single_high_title",
+        "label": "Title"
+    },
+    {
+      "type": "range",
+      "id": "s1_desktop_grid",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Items per row",
+      "info": "Section 1 - Desktop"
+    },
+    {
+      "type": "range",
+      "id": "s1_tablet_grid",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Items per row",
+      "info": "Section 1 - Tablet"
+    },
+    {
+      "type": "range",
+      "id": "s1_mobile_grid",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Items per row",
+      "info": "Section 1 - Mobile"
+    },
+    {
+        "type": "header",
+        "content": "1st Item"
+    },
+    {
+        "type": "text",
+        "id": "s1_a_icon",
+        "label": "Icon - File Url"
+    },
+    {
+        "type": "text",
+        "id": "s1_a_highlight",
+        "label": "Highlight"
+    },
+    {
+        "type": "richtext",
+        "id": "s1_a_text",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "2nd Item"
+    },
+    {
+        "type": "text",
+        "id": "s1_b_icon",
+        "label": "Icon - File Url"
+    },
+    {
+        "type": "text",
+        "id": "s1_b_highlight",
+        "label": "Highlight"
+    },
+    {
+        "type": "richtext",
+        "id": "s1_b_text",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "Section 2"
+    },
+    {
+        "type": "text",
+        "id": "single_high_subtitle",
+        "label": "Subtitle"
+    },
+    {
+      "type": "range",
+      "id": "s2_desktop_grid",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Items per row",
+      "info": "Section 2 - Desktop"
+    },
+    {
+      "type": "range",
+      "id": "s2_tablet_grid",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Items per row",
+      "info": "Section 2 - Tablet"
+    },
+    {
+      "type": "range",
+      "id": "s2_mobile_grid",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3,
+      "label": "Items per row",
+      "info": "Section 2 - Mobile"
+    },
+    {
+        "type": "header",
+        "content": "1st Item"
+    },
+    {
+        "type": "text",
+        "id": "s2_a_icon",
+        "label": "Icon - File Url"
+    },
+    {
+        "type": "text",
+        "id": "s2_a_highlight",
+        "label": "Highlight"
+    },
+    {
+        "type": "richtext",
+        "id": "s2_a_text",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "2nd Item"
+    },
+    {
+        "type": "text",
+        "id": "s2_b_icon",
+        "label": "Icon - File Url"
+    },
+    {
+        "type": "text",
+        "id": "s2_b_highlight",
+        "label": "Highlight"
+    },
+    {
+        "type": "richtext",
+        "id": "s2_b_text",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "3rd Item"
+    },
+    {
+        "type": "text",
+        "id": "s2_c_icon",
+        "label": "Icon - File Url"
+    },
+    {
+        "type": "text",
+        "id": "s2_c_highlight",
+        "label": "Highlight"
+    },
+    {
+        "type": "richtext",
+        "id": "s2_c_text",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "🔥 Card - Section"
+    },
+    {
+        "type": "text",
+        "id": "card_bg_color",
+        "label": "Background Color",
+        "info": "CSS Variable name eg. --color-white"
+    },
+    {
+        "type": "header",
+        "content": "Section 1"
+    },
+    {
+        "type": "text",
+        "id": "card_title",
+        "label": "Title"
+    },
+    {
+        "type": "header",
+        "content": "1st Item"
+    },
+    {
+        "type": "text",
+        "id": "card_s1_a_icon",
+        "label": "Icon - File Url"
+    },
+    {
+        "type": "text",
+        "id": "card_s1_a_highlight",
+        "label": "Highlight"
+    },
+    {
+        "type": "richtext",
+        "id": "card_s1_a_text",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "2nd Item"
+    },
+    {
+        "type": "text",
+        "id": "card_s1_b_icon",
+        "label": "Icon - File Url"
+    },
+    {
+        "type": "text",
+        "id": "card_s1_b_highlight",
+        "label": "Highlight"
+    },
+    {
+        "type": "richtext",
+        "id": "card_s1_b_text",
+        "label": "Text"
+    },
+    {
+        "type": "header",
+        "content": "Section 2"
+    },
+    {
+        "type": "text",
+        "id": "card_subtitle",
+        "label": "Subtitle"
+    },
+    {
+        "type": "text",
+        "id": "subtext",
+        "label": "Subtext"
+    },
+    {
+        "type": "header",
+        "content": "Card 1"
+    },
+    {
+        "type": "text",
+        "id": "card1_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card1_text",
+        "label": "Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "card1_bg_image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "card1_bg_image_women",
+        "label": "Background Image - Women"
+    },
+    {
+        "type": "text",
+        "id": "card1_id",
+        "label": "ID - Quiz Value"
+    },
+    {
+        "type": "header",
+        "content": "Card 2"
+    },
+    {
+        "type": "text",
+        "id": "card2_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card2_text",
+        "label": "Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "card2_bg_image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "card2_bg_image_women",
+        "label": "Background Image - Women"
+    },
+    {
+        "type": "text",
+        "id": "card2_id",
+        "label": "ID - Quiz Value"
+    },
+    {
+        "type": "header",
+        "content": "Card 3"
+    },
+    {
+        "type": "text",
+        "id": "card3_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card3_text",
+        "label": "Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "card3_bg_image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "card3_bg_image_women",
+        "label": "Background Image - Women"
+    },
+    {
+        "type": "text",
+        "id": "card3_id",
+        "label": "ID - Quiz Value"
+    },
+    {
+        "type": "header",
+        "content": "Card 4"
+    },
+    {
+        "type": "text",
+        "id": "card4_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card4_text",
+        "label": "Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "card4_bg_image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "card4_bg_image_women",
+        "label": "Background Image - Women"
+    },
+    {
+        "type": "text",
+        "id": "card4_id",
+        "label": "ID - Quiz Value"
+    },
+    {
+        "type": "header",
+        "content": "Card 5"
+    },
+    {
+        "type": "text",
+        "id": "card5_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card5_text",
+        "label": "Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "card5_bg_image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "card5_bg_image_women",
+        "label": "Background Image - Women"
+    },
+    {
+        "type": "text",
+        "id": "card5_id",
+        "label": "ID - Quiz Value"
+    },
+    {
+        "type": "header",
+        "content": "Card 6"
+    },
+    {
+        "type": "text",
+        "id": "card6_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card6_text",
+        "label": "Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "card6_bg_image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "card6_bg_image_women",
+        "label": "Background Image - Women"
+    },
+    {
+        "type": "text",
+        "id": "card6_id",
+        "label": "ID - Quiz Value"
+    },
+    {
+        "type": "header",
+        "content": "Card 7"
+    },
+    {
+        "type": "text",
+        "id": "card7_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card7_text",
+        "label": "Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "card7_bg_image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "card7_bg_image_women",
+        "label": "Background Image - Women"
+    },
+    {
+        "type": "text",
+        "id": "card7_id",
+        "label": "ID - Quiz Value"
+    },
+    {
+        "type": "header",
+        "content": "Card 8"
+    },
+    {
+        "type": "text",
+        "id": "card8_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card8_text",
+        "label": "Text"
+    },
+    {
+        "type": "image_picker",
+        "id": "card8_bg_image",
+        "label": "Background Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "card8_bg_image_women",
+        "label": "Background Image - Women"
+    },
+    {
+        "type": "text",
+        "id": "card8_id",
+        "label": "ID - Quiz Value"
+    },
+    {
+      "type": "header",
+      "content": "🔥 Card Square"
+    },
+    {
+        "type": "text",
+        "id": "card_square_bg_color",
+        "label": "Background Color",
+        "info": "CSS Variable name eg. --color-white"
+    },
+    {
+        "type": "header",
+        "content": "Section 1"
+    },
+    {
+        "type": "text",
+        "id": "card_square_title",
+        "label": "Title"
+    },
+    {
+        "type": "header",
+        "content": "Section 2"
+    },
+    {
+        "type": "text",
+        "id": "card_square_subtitle",
+        "label": "Subtitle"
+    },
+    {
+        "type": "header",
+        "content": "Card 1"
+    },
+    {
+        "type": "text",
+        "id": "card_square_card1_title",
+        "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "card_square_card1_text",
+        "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "card_square_card1_btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "card_square_card1_btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "card_square_card1_btn_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "",
+          "label": "Default"
+        },
+        {
+          "value": "btn--primary",
+          "label": "Primary"
+        },
+        {
+          "value": "btn--secondary",
+          "label": "Secondary"
+        },
+        {
+          "value": "btn--tertiary",
+          "label": "Tertiary"
+        },
+        {
+          "value": "btn--text",
+          "label": "Text"
+        }
+      ],
+      "default": "btn--text"
+    },
+  {
+      "type": "header",
+      "content": "Card 2"
+  },
+  {
+      "type": "text",
+      "id": "card_square_card2_title",
+      "label": "Title"
+  },
+  {
+      "type": "richtext",
+      "id": "card_square_card2_text",
+      "label": "Text"
+  },
+  {
+    "type": "text",
+    "id": "card_square_card2_btn_text",
+    "label": "Button Text"
+  },
+  {
+    "type": "url",
+    "id": "card_square_card2_btn_url",
+    "label": "Button Link"
+  },
+  {
+    "type": "select",
+    "id": "card_square_card2_btn_style",
+    "label": "Button Style",
+    "options": [
+      {
+        "value": "",
+        "label": "Default"
+      },
+      {
+        "value": "btn--primary",
+        "label": "Primary"
+      },
+      {
+        "value": "btn--secondary",
+        "label": "Secondary"
+      },
+      {
+        "value": "btn--tertiary",
+        "label": "Tertiary"
+      },
+      {
+        "value": "btn--text",
+        "label": "Text"
+      }
+    ],
+    "default": "btn--text"
+  },
+  {
+    "type": "header",
+    "content": "Card 3"
+  },
+  {
+    "type": "text",
+    "id": "card_square_card3_title",
+    "label": "Title"
+  },
+  {
+    "type": "richtext",
+    "id": "card_square_card3_text",
+    "label": "Text"
+  },
+  {
+  "type": "text",
+  "id": "card_square_card3_btn_text",
+  "label": "Button Text"
+  },
+  {
+  "type": "url",
+  "id": "card_square_card3_btn_url",
+  "label": "Button Link"
+  },
+  {
+  "type": "select",
+  "id": "card_square_card3_btn_style",
+  "label": "Button Style",
+  "options": [
+    {
+      "value": "",
+      "label": "Default"
+    },
+    {
+      "value": "btn--primary",
+      "label": "Primary"
+    },
+    {
+      "value": "btn--secondary",
+      "label": "Secondary"
+    },
+    {
+      "value": "btn--tertiary",
+      "label": "Tertiary"
+    },
+    {
+      "value": "btn--text",
+      "label": "Text"
+    }
+  ],
+  "default": "btn--text"
+  },
+  {
+  "type": "header",
+  "content": "Card 4"
+  },
+  {
+  "type": "text",
+  "id": "card_square_card4_title",
+  "label": "Title"
+  },
+  {
+  "type": "richtext",
+  "id": "card_square_card4_text",
+  "label": "Text"
+  },
+  {
+  "type": "text",
+  "id": "card_square_card4_btn_text",
+  "label": "Button Text"
+  },
+  {
+  "type": "url",
+  "id": "card_square_card4_btn_url",
+  "label": "Button Link"
+  },
+  {
+  "type": "select",
+  "id": "card_square_card4_btn_style",
+  "label": "Button Style",
+  "options": [
+  {
+    "value": "",
+    "label": "Default"
+  },
+  {
+    "value": "btn--primary",
+    "label": "Primary"
+  },
+  {
+    "value": "btn--secondary",
+    "label": "Secondary"
+  },
+  {
+    "value": "btn--tertiary",
+    "label": "Tertiary"
+  },
+  {
+    "value": "btn--text",
+    "label": "Text"
+  }
+  ],
+  "default": "btn--text"
+  },
+    {
+      "type": "header",
+      "content": "🔥 For Vegans - Section"
+    },
+    {
+      "type": "html",
+      "id": "for_vegans_title",
+      "label": "Title HTML",
+      "default": "<span class=\"align-left\">Für vegane<\/span>\n        <span class=\"align-center\">Ernährung<\/span>\n        <span class=\"align-left\">geeignet.<span class=\"heading-line\"><\/span><\/span>\n        <span class=\"align-right\">Mit besten<\/span>\n        <span class=\"align-left\">Pflanzenproteinen<\/span>"
+    },
+    {
+      "type": "text",
+      "id": "for_vegans_subtitle",
+      "label": "Subtitle",
+      "default": "Wir lassen Zutaten sprechen."
+    },
+    {
+      "type": "header",
+      "content": "Section 1"
+    },
+    {
+      "type": "text",
+      "id": "s1_title",
+      "label": "Title",
+      "default": "Hochwertiger Hafer: Der Healthy Held vom Feld."
+    },
+    {
+      "type": "html",
+      "id": "for_vegans_s1_text",
+      "label": "Text",
+      "default": "<p class=\"h2-headline\">Reich an Ballaststoffen<\/p>\n    <p class=\"h2-headline\">Fördert eine gesunde Verdauung<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "for_vegans_s1_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 2"
+    },
+    {
+      "type": "text",
+      "id": "for_vegans_s2_title",
+      "label": "Title",
+      "default": "Erbsenprotein: Das All-In-One-Protein."
+    },
+    {
+      "type": "html",
+      "id": "for_vegans_s2_text",
+      "label": "Text",
+      "default": "<p class=\"h2-headline\">Reich an BCAA (Branched Chain Amino Acids)<\/p>\n      <p class=\"h2-headline\">Enthält essentielle Amionsäuren<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "for_vegans_s2_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 3"
+    },
+    {
+      "type": "text",
+      "id": "for_vegans_s3_title",
+      "label": "Title",
+      "default": "Reisprotein: Ein echtes Muskel-Have."
+    },
+    {
+      "type": "html",
+      "id": "for_vegans_s3_text",
+      "label": "Text",
+      "default": "<p class=\"h2-headline\">Hoher Anteil an essentiellen Aminosäuren<\/p>\n      <p class=\"h2-headline\">Reich an wertvollen Vitaminen und Mineralstoffen<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "for_vegans_s3_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 4"
+    },
+    {
+      "type": "text",
+      "id": "for_vegans_s4_title",
+      "label": "Title",
+      "default": "Leinsamen: Die Saat, die mehr als satt macht."
+    },
+    {
+      "type": "html",
+      "id": "for_vegans_s4_text",
+      "label": "Text",
+      "default": "<p class=\"h2-headline\">Reich an gesunden Omega-3-Fettsäuren<\/p>\n    <p class=\"h2-headline\">Wirken sättigend und fördert die Verdauung<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "for_vegans_s4_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "🔥 Macrosplit - Section"
+    },
+    {
+      "type": "text",
+      "id": "table_breakfast_title",
+      "label": "Breakfast Table Title",
+      "default": "Frühstück"
+    },
+    {
+      "type": "text",
+      "id": "table_lunch_title",
+      "label": "Lunch Table Title",
+      "default": "Mittagessen"
+    },
+    {
+      "type": "text",
+      "id": "table_dinner_title",
+      "label": "Dinner Table Title",
+      "default": "Abendessen"
+    },
+    {
+      "type": "text",
+      "id": "table_snack_title",
+      "label": "Snack Table Title",
+      "default": "Snack"
+    },
+    {
+      "type": "text",
+      "id": "macrosplit_title",
+      "label": "Title",
+      "default": "Makrosplit"
+    },
+    {
+      "type": "text",
+      "id": "macrosplit_subtitle",
+      "label": "Subtitle",
+      "default": "Unsere Pulver liefert dir ein ausgewogenes Makronährstoffverhältnis (XX% der Energie stammen aus Kohlenhydraten, XX% aus Proteinen, X% aus Fett, X% aus Ballaststoffe) und zudem alle 26 essentielle Vitamine und Mineralstoffe. Alles drin, was du brauchst."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "tables_title",
+      "label": "Tables Title",
+      "default": "Nährwerttabelle und Zutaten"
+    },
+    {
+      "type": "text",
+      "id": "meta_name",
+      "label": "Macro Table Metafield Name",
+      "info": "Metafields > Shop > macro_table: id[Products ID]"
+    },
+    {
+      "type": "header",
+      "content": "🔥 Mix Easier - Section"
+    },
+    {
+      "type": "html",
+      "id": "mix_easier_title",
+      "label": "Title HTML",
+      "default": "<span class=\"align-left\">Eine Mahlzeit<\/span> <span class=\"align-left\"><span class=\"heading-line\"><\/span>zubereiten?<\/span> <span class=\"align-left\">Mix leichter<\/span> <span class=\"align-center\">als das!<\/span>"
+    },
+    {
+      "type": "header",
+      "content": "Section 1"
+    },
+    {
+      "type": "html",
+      "id": "s1_text",
+      "label": "Text HTML",
+      "default": "<p class=\"p\">500ml Wasser in den Shaker füllen<\/p><p class=\"p\">Drei gestrichene Löffel Saturo Balanced Pulver dazugeben<\/p><p class=\"p\">Gut durchmischen<\/p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "s1_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Section 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "s2_image1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "s2_image2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "s2_image3",
+      "label": "Image 3"
+    },
+    {
+      "type": "html",
+      "id": "s2_text",
+      "label": "Text HTML",
+      "default": "<p class=\"p\">Schritt 1: <span data-water-ml>500ml</span> Wasser in den Shaker füllen<\/p><p class=\"p\">Schritt 2: <span data-spoons-number>1</span> Löffel Saturo Personalized dazugeben<\/p><p class=\"p\">Schritt 3: Kräftig schütteln bis sich das Pulver vollständig auflöst.<\/p>"
+    },
+    {
+      "type": "html",
+      "id": "s2_text2",
+      "label": "Text HTML 2",
+      "default": "<p class=\"p\">Ausgewogen ernähren mit allen Nährstoffen, die du brauchst.<\/p><p class=\"p\">Nach Lust und Laune genießen.<\/p>"
+    },
+    {
+      "type": "header",
+      "content": "🔥 FAQ - Section"
+    },
+    {
+      "type": "text",
+      "id": "bg_color_variable",
+      "label": "Background Color CSS Variable Name"
+    },
+    {
+      "type": "html",
+      "id": "html_heading",
+      "label": "Heading Html"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Question",
+      "type": "question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

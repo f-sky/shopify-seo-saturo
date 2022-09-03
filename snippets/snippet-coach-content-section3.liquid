@@ -1,0 +1,41 @@
+{{ 'template-coll-v2.css' | asset_url | stylesheet_tag }}
+
+<section class="coach-content__section coach-content__section3 side-circle side-circle__large side-circle__top-right" data-scroll-section="{{ block.id }}">
+  <div class="page-width coach-content__section-wrapper">
+
+    {% assign image = block.settings.image %}
+    {% if image != blank %}
+      <img src="{{ image | img_url: '1100x' }}" alt="{{ image.alt }}" class="coach-content__section3-image" loading="lazy" />
+    {% endif %}
+
+    <h3 class="h1-headline span-align-heading coach-content__section-title">{{ block.settings.title }}</h3>
+
+    <div class="p coach-content__section3-richtext">
+      {{ block.settings.richtext }}
+    </div>
+
+    <div class="coach-content__section3-row1--content">
+      <h3 class="h2-headline">
+        <strong>{{ block.settings.row1_title }}</strong>
+      </h3>
+      <div class="p">{{ block.settings.row1_desc }}</div>
+    </div>
+
+    {% assign row1_image = block.settings.row1_image %}
+    {% if row1_image != blank %}
+      <img src="{{ row1_image | img_url: '1100x' }}" alt="{{ row1_image.alt }}" class="coach-content__section3-row1--image" loading="lazy" />
+    {% endif %}
+
+    {% if block.settings.row2_product != blank %}
+      {% render 'collection-item-saturo-single-product', product: all_products[block.settings.row2_product.handle], extra_class: 'image-left' %}
+    {% endif %}
+  </div>
+</section>
+
+{% if block.settings.bg_color_variable != blank %}
+  <style>
+    .coach-content__section3 {
+      background-color: var({{ block.settings.bg_color_variable }});
+    }
+  </style>
+{% endif %}

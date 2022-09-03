@@ -1,0 +1,32 @@
+{% assign product = collections['personalized'].products.first %}
+<div class="quiz-flavours">
+  <div class="container">
+    <h2 class="title">Wähle deinen <br> Lieblingsgeschmack</h2>
+    <h3 class="subtitle">Pro Beutel kannst du einen Geschmack wählen.</h3>
+    <div class="row">
+      {% for variant in product.variants %}
+        <div class="col-md-4">
+          <div class="quiz-flavour m-{{ variant.title | handle }}" data-quiz-result-flavour="{{variant.title}}">
+            <div class="image"><img src="{{ variant.image | img_url: '1000x' }}" alt="" data-flavour-image="{{ variant.title | handle }}"></div>
+            <div class="text">
+              <h3 class="title">{{ variant.title }}</h3>
+              {% include 'qty-selector', type: 'product', item: variant, currentQty: 0 %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="button-wrap quiz-item__buttons">
+      <button type="button" data-quiz-prev class="test d-none btn m-icon-only quiz-item__btn--prev"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" class="btn m-primary m-rounded" data-quiz-next>BESTELLE JETZT DEINEN SHAKE!</button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{ 
+  "name": "Quiz Flavours",
+  "class": "section",
+  "tag": "section"
+}
+{% endschema %}

@@ -1,0 +1,142 @@
+
+
+/* Collection Modal */
+
+.coll-v2__modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.coll-modal-opened .coll-v2__modal {
+  display: flex;
+}
+
+.coll-modal-opened #richSnippetReviewsWidget-defaultContainer {
+  display: none;
+}
+
+.coll-v2__modal--bg {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+  display: block!important;
+  background-color: var(--color-cocoa-illustration);
+}
+
+.coll-v2__modal--content {
+  position: relative;
+  z-index: 2;
+  border-radius: 2.3rem;
+  width: 65rem;
+  min-height: 20rem;
+  padding: 3rem 3.2rem;
+  background-color: var(--color-white);
+}
+
+.coll-v2__modal .h2-headline {
+  margin-bottom: 2rem;
+  padding-right: 2rem;
+}
+
+.coll-v2__modal .product__subscription-options {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.coll-v2__modal--subs-frequency {
+  margin-bottom: 4.5rem;
+}
+
+.coll-v2__modal .btn {
+  width: 100%;
+  height: 4.6rem;
+  line-height: 1;
+}
+
+.coll-v2__modal--content-subtitle {
+  margin-bottom: 2rem;
+}
+
+.coll-v2__modal--content-text {
+  margin-bottom: 2rem;
+}
+
+.coll-v2__modal--content-text.with-image {
+  display: flex;
+  align-items: center;
+  min-height: 9rem;
+}
+
+.coll-v2__modal--content-image {
+  max-width: 10rem;
+  object-fit: contain;
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.coll-v2__modal .product__subscription-option__input:checked + label {
+  border: 0.1rem solid var(--color-turquoise);
+  box-shadow: 0 0 0 0.1rem var(--color-turquoise);
+}
+
+.coll-v2__modal--close {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  width: 1.7rem;
+  height: 1.7rem;
+  top: 3.2rem;
+  right: 3.2rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .coll-v2__modal--content {
+    width: 32.7rem;
+    min-height: 47rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .coll-v2__modal--close {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .coll-v2__modal .h2-headline,
+  .coll-v2__modal--content-subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+  .coll-v2__modal .product__subscription-options {
+    grid-template-columns: 1fr;
+    margin-bottom: 1.5rem;
+  }
+
+  .coll-v2__modal .product__subscription-options .btn-large-details {
+    margin-bottom: 0;
+  }
+
+  .coll-v2__modal--subs-frequency {
+    margin-bottom: 3rem;
+  }
+}

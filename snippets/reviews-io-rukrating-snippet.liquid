@@ -1,0 +1,46 @@
+{% assign data_sku = '' %}
+{% if collection != blank %}
+	{% if collection.metafields.reviews.show_sku != blank %}
+		{% assign data_sku = collection.metafields.reviews.show_sku %}
+	{% else %}
+		{% assign product = collection.products | first %}
+		
+		{% if product.metafields.reviews.show_sku != blank %}
+			{% assign data_sku = product.metafields.reviews.show_sku %}
+		{% elsif product.variants.size > 1 %}
+			{% assign data_sku = '' %}
+			{% for variant in product.variants %}
+              {% if forloop.first %}
+                  {% assign data_sku = variant.sku %}
+              {% else %}
+                  {% assign data_sku = data_sku | append: ";" | append: variant.sku %}
+              {% endif %}
+			{% endfor %}
+		{% else %}
+			{% assign data_sku = product.selected_or_first_available_variant.sku %}
+		{% endif %}
+
+	{% endif %}
+{% endif %}
+
+{% if collection == blank and product != blank %}
+	{% if product.metafields.reviews.show_sku != blank %}
+		{% assign data_sku = product.metafields.reviews.show_sku %}
+	{% elsif product.variants.size > 1 %}
+		{% assign data_sku = '' %}
+		{% for variant in product.variants %}
+			{% if forloop.first %}
+				{% assign data_sku = variant.sku %}
+			{% else %}
+				{% assign data_sku = data_sku | append: ";" | append: variant.sku %}
+			{% endif %}			
+
+		{% endfor %}
+	{% else %}
+		{% assign data_sku = product.selected_or_first_available_variant.sku %}
+	{% endif %}
+{% endif %}
+
+{%- if template.name == 'product' -%}
+	<div class="ruk_rating_snippet" data-sku="{{ data_sku }}" style="min-height: 19px; display:block; margin-bottom: 0px;"></div>
+{%- endif -%}

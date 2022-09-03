@@ -1,0 +1,84 @@
+<!-- q15: meal_replacement_use_day -->
+<div class="quiz-item quiz-q15 is-hidden" data-meal-replacement-day-question data-quiz-item="q15" data-quiz-item-handle="mealsToBeReplaced">
+  <div class="quiz-item__inner">
+    <h2 class="h2-headline">{{ "personalized_quiz.meal_replacement_use_day.headline" | t }} <a href="#" class="btn btn--text quiz-info__btn" data-popup-open="q15">{% render 'icon-quiz-info' %}</a></h2>
+    <p class="quiz-item__subtitle">{{ "personalized_quiz.meal_replacement_use_day.subtitle" | t }}</p>
+    <div class="quiz-options quiz-options--inline justify-content-center">
+
+      <div class="quiz-option quiz-option--icon" data-breakfast-answer>
+        <input id="quiz-Frühstück" type="checkbox" name="meal_replacement_use_day" value="Frühstück" data-quiz-answer data-quiz-answer-id="breakfast">
+        <label for="quiz-Frühstück">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-fruhstuck.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_use_day.option_breakfast" | t }}</span>
+        </label>
+      </div>
+      
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Mittagessen" type="checkbox" name="meal_replacement_use_day" value="Mittagessen" data-quiz-answer data-quiz-answer-id="lunch">
+        <label for="quiz-Mittagessen">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-mittagessen.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_use_day.option_lunch" | t }}</span>
+        </label>
+      </div>
+      
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Abendessen" type="checkbox" name="meal_replacement_use_day" value="Abendessen" data-quiz-answer data-quiz-answer-id="dinner">
+        <label for="quiz-Abendessen">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-abendessen.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_use_day.option_dinner" | t }}</span>
+        </label>
+      </div>
+
+      <div class="quiz-option quiz-option--icon" data-snack-answer>
+        <input id="quiz-Snack" type="checkbox" name="meal_replacement_use_day" value="Snack" data-quiz-answer data-quiz-answer-id="snack">
+        <label for="quiz-Snack">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-snack.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_use_day.option_snack" | t }}</span>
+        </label>
+      </div>
+      
+      <div class="quiz-option quiz-option--icon">
+        <input id="quiz-Andere4" type="checkbox" name="meal_replacement_use_day" value="Andere" data-quiz-answer  data-quiz-answer-id="other_meal">
+        <label for="quiz-Andere4">
+          <div class="quiz-option__circle">
+            <img src="{{ 'icon-quiz-andereDots.svg' | asset_url }}" class="quiz-option__img" alt="">
+          </div>
+          <span class="details">{{ "personalized_quiz.meal_replacement_use_day.option_other" | t }}</span>
+        </label>
+      </div>
+      <div class="quiz-option input-wrapper">
+        <input id="quiz-q15-meal-replacement-use-day" type="text" class="input m-underline" name="meal_replacement_use_day_input" placeholder="Sonstige" data-quiz-answer data-quiz-answer-andere>
+        <label for="quiz-q15-meal-replacement-use-day" class="label">{{ "personalized_quiz.meal_replacement_use_day.option_other" | t }}</label>
+      </div>
+  
+  
+    </div>
+
+    <div data-quiz-errors>
+    </div>
+
+    <div class="quiz-item__buttons quiz-item__buttons-floating">
+      <button type="button" data-quiz-prev class="btn btn--tertiary"><img src="{{ 'icon-quiz-back.svg' | asset_url }}" class="quiz-option__img" alt=""></button>
+      <button type="button" data-quiz-next class="btn" disabled>{{ "personalized_quiz.meal_replacement_use_day.button_next_text" | t }}</button>
+    </div>
+  </div> 
+  <div class="popup quiz-popup is-hidden" data-popup="q15">
+    <div class="popup-window">
+      <button class="close" type="button" data-popup-close>{% render 'icon-quiz-close' %}</button>
+      <div class="quiz-extra-info">
+        <h4 class="h5-headline">{{ "personalized_quiz.meal_replacement_use_day.popup_headline" | t }}</h4>
+        <p>{{ "personalized_quiz.meal_replacement_use_day.popup_subtitle" | t }}</p>
+      </div>
+    </div>
+    <div class="popup-bg" data-popup-close> </div>
+  </div>
+</div>
+<!-- / q15 -->

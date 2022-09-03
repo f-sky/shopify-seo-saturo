@@ -1,0 +1,198 @@
+{{ 'section-page-blog-overview.css' | asset_url | stylesheet_tag }}
+
+{{ 'masonry.pkgd.min.js' | asset_url | script_tag }}
+
+<section class="page-width page-blog-overview__wrapper">
+  <h1 class="h1-headline page-blog-overview__title span-align-heading">
+    {% assign title_html = section.settings.title %}
+    {% if title_html != blank %}
+      {{ title_html }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+  </h1>
+  <p class="h2-headline page-blog-overview__desc">{{ section.settings.desc }}</p>
+
+  {% assign sections = 0 %}
+  {% for block in section.blocks %}
+    {% if block.type == 'section' %}
+      {% assign sections = 1 %}
+    {% endif %}
+  {% endfor %}
+  {% if sections == 1 %}
+    <nav class="page-blog-overview__nav">
+      <ul>
+        {% for block in section.blocks %}
+          {% if block.type == 'section' %}
+            <li>
+              <button data-scroll-id="{{ block.settings.id }}" class="btn">{{ block.settings.title }}</button>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <div class="input-wrapper">
+        <select class="select" name="sections" id="sections-to-scroll" data-scroll-select>
+          {% for block in section.blocks %}
+          {% if block.type == 'section' %}
+            <option value="{{ block.settings.id }}">{{ block.settings.title }}</option>
+          {% endif %}
+          {% endfor %}
+        </select>
+        <label for="sections-to-scroll" class="label">Springe zu ...</label>
+        <span class="select-chevron">{% render 'icon-chevron' %}</span>
+      </div>
+    </nav>
+  {% endif %}
+
+  <div class="page-blog-overview__grid">
+    {% for block in section.blocks %}
+      {% if block.type == 'section' %}
+        {% assign section_id = block.settings.id %}
+        {% assign child_blocks = 0 %}
+        {% for child_block in section.blocks %}
+          {% if child_block.settings.section_id == section_id and child_block.type != 'section' %}
+            {% assign child_blocks = 1 %}
+          {% endif %}
+        {% endfor %}
+        {% if child_blocks == 1 %}
+          <div class="page-blog-overview__grid-section" data-scroll-section="{{ section_id }}">
+            
+            <div class="page-blog-overview__grid-meta">
+              <h2 class="h2-headline"><strong>{{ block.settings.title }}</strong></h2>
+              <p class="p">{{ block.settings.subtitle }}</p>
+            </div>
+            <div class="page-blog-overview__grid-inner" data-page-blog-overview-grid="{{ section_id }}">
+              {% for child_block in section.blocks %}
+                {% if child_block.settings.section_id == section_id and child_block.type != 'section' %}
+                  {% render 'snippet-page-blog-overview-item', block: child_block %}
+                {% endif %}
+              {% endfor %}
+            </div>
+  
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="page-blog-overview__grid page-blog-overview__grid-no-section" data-page-blog-overview-grid>
+    {% for block in section.blocks %}
+      {% if block.settings.section_id == blank and block.type != 'section' %}
+        {% render 'snippet-page-blog-overview-item', block: block %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+
+  const $grids = document.querySelectorAll('[data-page-blog-overview-grid]');
+
+  setTimeout(function() {
+    $grids.forEach(grid => {
+      var msnry = new Masonry( grid, {
+        itemSelector: '[data-page-blog-overview-item]',
+        percentPosition: true,
+        gutter: 15
+      });
+    });
+  }, 400);
+
+  function animateToSectionId(sectionId) {
+    $('html').animate({
+      scrollTop: $(`[data-scroll-section="${sectionId}"]`).offset().top
+    }, 700);
+  }
+
+  $('[data-scroll-id]').on('click', function() {
+    const sectionId = $(this).attr('data-scroll-id');
+    animateToSectionId(sectionId);
+  });
+
+  $('[data-scroll-select]').on('change', function() {
+    animateToSectionId( $(this).val() );
+  });
+
+});
+</script>
+
+{% schema %}
+{
+  "name": "Page/Blog Overview",
+  "tag": "section",
+  "class": "page-blog-overview",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "html",
+      "id": "desc",
+      "label": "Description HTML"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Page",
+      "type": "page",
+      "settings": [
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page"
+        },
+        {
+          "type": "text",
+          "id": "section_id",
+          "label": "Section ID"
+        }
+      ]
+    },
+    {
+      "name": "Article",
+      "type": "article",
+      "settings": [
+        {
+          "type": "article",
+          "id": "article",
+          "label": "Article"
+        },
+        {
+          "type": "text",
+          "id": "section_id",
+          "label": "Section ID"
+        }
+      ]
+    },
+    {
+      "name": "Inner Section",
+      "type": "section",
+      "settings": [
+        {
+          "type": "text",
+          "id": "id",
+          "label": "Section ID"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page/Blog Overview"
+    }
+  ]
+}
+{% endschema %}

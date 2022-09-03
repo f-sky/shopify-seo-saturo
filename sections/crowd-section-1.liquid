@@ -1,0 +1,87 @@
+{{ 'crowd-section-1.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width crowd-s1__wrapper">
+
+  {% assign title_html = section.settings.title %}
+  {% if title_html != blank %}
+    <h2 class="h1-headline crowd-s1__title span-align-heading">
+      {{ title_html }}
+    </h2>
+  {% endif %}
+
+  {% assign desc = section.settings.desc %}
+  {% assign button_text = section.settings.button_text %}
+  {% assign button_url = section.settings.button_url %}
+  {% assign button_color = section.settings.button_color %}
+  {% assign button_bg_color = section.settings.button_bg_color %}
+  
+  {% capture button_style %}
+  	{%- if button_color != blank -%}
+  		color: var({{ button_color }});
+  	{%- endif -%}
+  	{%- if button_bg_color != blank -%}
+  		background-color: var({{ button_bg_color }});
+  		border-color: var({{ button_bg_color }});
+  	{%- endif -%}
+  {% endcapture %}
+  
+  <div class="crowd-s1__content">
+    <div class="h2-headline">
+      {{ desc }}
+    </div>
+
+    {% if button_text != blank and button_url != blank %}
+    	<a class="btn" href="{{ button_url }}" style="{{ button_style }}">{{ button_text }}</a>
+    {% endif %}
+  </div>
+  
+
+</section>
+
+
+{% schema %}
+{
+  "name": "Crowd - Section 1",
+  "tag": "section",
+  "class": "crowd-s1",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "info": "CSS Variable name eg. --color-white"
+    },
+    {
+      "type": "text",
+      "id": "button_color",
+      "label": "Button Color",
+      "info": "CSS Variable name eg. --color-white"
+    }
+  ],
+  "presets": [
+    {
+  	  "name": "Crowd - Section 1"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,115 @@
+{{ 'section-product.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width product-wrapper {% unless section.settings.padding_top %}pt-0{% endunless %} {% unless section.settings.padding_bottom %}pb-0{% endunless %}" id="{{ section.settings.section_id }}">   
+  {% if section.settings.product != blank %}
+    {%- liquid  
+      assign btn_style = section.settings.btn_style
+      assign btn_modal_text = section.settings.btn_modal_text
+      assign btn_buy_text = section.settings.btn_buy_text
+      assign btn_more_text = section.settings.btn_more_text
+    -%}
+    {% render 'collection-item-saturo-single-product', product: all_products[section.settings.product.handle], btn_buy_text: btn_buy_text, btn_modal_text: btn_modal_text, btn_buy_text: btn_buy_text, btn_more_text: btn_more_text, extra_class: 'image-left' %}
+  {% endif %}
+</div>
+
+{% if section.settings.bg_color != blank %}
+  <style>
+      #shopify-section-{{ section.id }}.product-section {
+        background-color: var({{ section.settings.bg_color }});
+      }
+  </style>
+{% endif %}
+    
+{% schema %}
+  {
+    "name": "Product",
+  "class": "product-section",
+    "settings": [  
+      {
+          "type": "text",
+          "id": "bg_color",
+          "label": "Background Color",
+          "info": "CSS Variable name eg. --color-white"
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+      },     
+      {
+        "type": "select",
+        "id": "btn_style",
+        "label": "Button Style",
+        "options": [
+          {
+            "value": "",
+            "label": "Default"
+          },
+          {
+            "value": "btn--primary",
+            "label": "Primary"
+          },
+          {
+            "value": "btn--secondary",
+            "label": "Secondary"
+          },
+          {
+            "value": "btn--tertiary",
+            "label": "Tertiary"
+          },
+          {
+            "value": "btn--text",
+            "label": "Text"
+          }
+        ],
+        "default": ""
+      },
+      {
+        "type": "text",
+        "id": "btn_modal_text",
+        "label": "Button Text - Show Modal",
+        "default": "Auswählen"
+      },
+      {
+        "type": "text",
+        "id": "btn_buy_text",
+        "label": "Button Text - Buy",
+        "default": "Hinzufügen"
+      },
+      {
+        "type": "text",
+        "id": "btn_more_text",
+        "label": "Button Text - More Info",
+        "default": "Weitere Infos"
+      },
+      {
+        "type": "checkbox",
+        "id": "padding_top",
+        "label": "Padding-top",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "padding_bottom",
+        "label": "Padding-bottom",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "section_id",
+        "label": "Section ID"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,68 @@
+{{ 'home-photo-grid.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width photo-grid__wrapper">
+  <h2 class="h2-headline photo-grid__title"><strong>{{ section.settings.title }}</strong></h2>
+
+  <a href="{{ section.settings.social_link_url }}" class="photo-grid__social-link h2-headline">{{ section.settings.social_link_text }}</a>
+
+  <div class="photo-grid__grids">
+    <div class="photo-grid__grid">
+      {% for block in section.blocks %}
+        {% if forloop.index < 5 %}
+          <div class="photo-grid__grid--item lazy-bg" style="background-image: url('{{ block.settings.photo | img_url: '500x' }}');"></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="photo-grid__grid">
+      {% for block in section.blocks %}
+        {% if forloop.index >= 5 %}
+          <div class="photo-grid__grid--item lazy-bg" style="background-image: url('{{ block.settings.photo | img_url: '500x' }}');"></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home - Photo Grid",
+  "tag": "section",
+  "class": "photo-grid",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "social_link_text",
+      "label": "Social Link - Text"
+    },
+    {
+      "type": "url",
+      "id": "social_link_url",
+      "label": "Social Link - Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Photo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Photo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home - Photo Grid"
+    }
+  ]
+}
+{% endschema %}

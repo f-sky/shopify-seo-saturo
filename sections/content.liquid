@@ -1,0 +1,563 @@
+{{ 'section-content.css' | asset_url | stylesheet_tag }}
+
+<section id="{{ section.settings.section_id }}" class="content__wrapper page-width {% unless section.settings.padding_top %}pt-0{% endunless %} {% unless section.settings.padding_bottom %}pb-0{% endunless %}">
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'header' %}
+        <div class="column__header-grid {{ block.settings.desktop_layout }} {{ block.settings.mobile_layout }}">
+          {% assign heading_tag = block.settings.heading_tag %}
+          <{{ heading_tag }} class="column__header-heading span-align-heading {{ block.settings.heading_style }} {{ block.settings.text_align }}" {{ block.shopify_attributes }}>
+            {{ block.settings.title }}
+          </{{ heading_tag }}>
+
+          {% assign block_image = block.settings.image %}
+          {% if block.settings.description != blank and block_image == blank %}
+            <div class="column__header-description {{ block.settings.description_style }}">{{ block.settings.description }}</div>
+          {% endif %}
+
+          {% if block_image != blank %}
+            <img class="column__header-image" src="{{ block_image | img_url: "800x" }}" alt="{{ block_image.alt }}" loading="lazy"/>
+          {% endif %}
+        </div>
+  
+      {% when 'image' %}
+        <div class="column__image-grid {{ block.settings.image_align }}">
+          {% assign block_image = block.settings.image %}
+          {% if block_image != blank %}
+            <img src="{{ block_image | img_url: "800x" }}" alt="{{ block_image.alt }}" loading="lazy"/>
+          {% endif %}
+        </div>
+  
+      {% when 'text' %}
+        <div class="column__text-grid {% if block.settings.text_2 != blank %}half-grid{% endif %}">
+          <div class="{{ block.settings.text_style }}">{{ block.settings.text }}</div>
+          {% if block.settings.text_2 != blank %}
+            <div class="{{ block.settings.text_2_style }}">{{ block.settings.text_2 }}</div>
+          {% endif %}
+        </div>
+      
+      {% when 'image_with_text' %}
+        <div class="column__image-with-text-grid">
+          <div class="content__left-column">
+            
+            {% assign left_c_image_1 = block.settings.left_c_image_1 %}
+            {% if left_c_image_1 != blank %}
+              <img class="content__left-column--image content__left-column--image-1 {{ block.settings.left_c_image_1_style }}" src="{{ left_c_image_1 | img_url: "800x" }}" alt="" loading="lazy" />
+            {% endif %}
+  
+            {% if block.settings.left_c_title != blank %}
+              <div class="content__left-column--title {{ block.settings.left_c_title_style }} {{ block.settings.left_c_title_position }}">{{ block.settings.left_c_title }}</div>
+            {% endif %}
+  
+            {% if block.settings.left_c_description_html != blank %}
+              <div class="content__left-column--description">{{ block.settings.left_c_description_html }}</div>
+            {% elsif block.settings.left_c_description != blank %}
+              <div class="content__left-column--description">{{ block.settings.left_c_description }}</div>
+            {% endif %}
+        
+          </div>
+          <div class="content__right-column">
+            
+            {% assign right_c_image_1 = block.settings.right_c_image_1 %}
+            {% if right_c_image_1 != blank %}
+              <img class="content__right-column--image content__right-column--image-1 {{ block.settings.right_c_image_1_style }}" src="{{ right_c_image_1 | img_url: "800x" }}" alt="" loading="lazy" />
+            {% endif %}
+  
+            {% if block.settings.right_c_title != blank %}
+              <div class="content__left-column--title {{ block.settings.right_c_title_style }} {{ block.settings.right_c_title_position }}">{{ block.settings.right_c_title }}</div>
+            {% endif %}
+  
+            {% if block.settings.right_c_description != blank %}
+              <div class="content__left-column--description">{{ block.settings.right_c_description }}</div>
+            {% endif %}
+            
+          </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+
+</section>
+
+{% if section.settings.bg_color != blank %}
+  <style>
+      #shopify-section-{{ section.id }}.content-section {
+        background-color: var({{ section.settings.bg_color }});
+      }
+  </style>
+{% endif %}
+
+{% if section.settings.circle_bg_color != blank %}
+  <style>
+      #shopify-section-{{ section.id }}.content-section:before {
+        background-color: var({{ section.settings.circle_bg_color }});
+      }
+  </style>
+{% endif %}
+
+{% if section.settings.hide_circle != blank %}
+  <style>
+      #shopify-section-{{ section.id }}.content-section:before {
+        content: none;
+      }
+  </style>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Content",
+    "class": "content-section side-circle side-circle__large side-circle__top-right",
+    "settings": [
+        {
+          "type": "text",
+          "id": "bg_color",
+          "label": "Background Color",
+          "info": "CSS Variable name eg. --color-white"
+        },
+        {
+          "type": "text",
+          "id": "circle_bg_color",
+          "label": "Circle Color",
+          "info": "CSS Variable name eg. --color-white"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_circle",
+          "label": "Hide Circle"
+        },
+        {
+          "type": "checkbox",
+          "id": "padding_top",
+          "label": "Padding-top",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "padding_bottom",
+          "label": "Padding-bottom",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "section_id",
+          "label": "ID"
+        }
+    ],
+    "blocks": [
+      {
+        "type": "header",
+        "name": "Header",
+        "settings": [
+          {
+            "type": "select",
+            "id": "desktop_layout",
+            "label": "Desktop Layout",
+            "options": [
+              {
+                "value": "title_left",
+                "label": "Title left, Description right"
+              },
+              {
+                "value": "title_right",
+                "label": "Title right, Description left"
+              },
+              {
+                "value": "title_only",
+                "label": "Only show title (centered)"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "mobile_layout",
+            "label": "Mobile Layout",
+            "options": [
+              {
+                "value": "image_first",
+                "label": "Image first"
+              },
+              {
+                "value": "text_first",
+                "label": "Text first"
+              }
+            ]
+          },
+          {
+            "type": "html",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "select",
+            "id": "heading_style",
+            "label": "Style",
+            "info": "Define what class this element should get",
+            "options": [
+              {
+                "value": "",
+                "label": "None"
+              },
+              {
+                "value": "h1-headline",
+                "label": "H1"
+              },
+              {
+                "value": "h2-headline",
+                "label": "H2"
+              },
+              {
+                "value": "h2-headline bold",
+                "label": "H2 bold"
+              }
+            ]
+          },
+          {
+            "type": "select",
+            "id": "heading_tag",
+            "label": "HTML-Tag",
+            "info": "Decide which HTML tag this Element should get",
+            "options": [
+              {
+                "value": "h2",
+                "label": "H2"
+              },
+              {
+                "value": "h3",
+                "label": "H3"
+              },
+              {
+                "value": "h4",
+                "label": "H4"
+              },
+              {
+                "value": "h5",
+                "label": "H5"
+              },
+              {
+                "value": "h6",
+                "label": "H6"
+              }
+            ]
+          },
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description"
+          },
+          {
+            "type": "select",
+            "id": "description_style",
+            "label": "Style",
+            "info": "Define what class this element should get",
+            "options": [
+              {
+                "value": "",
+                "label": "None"
+              },
+              {
+                "value": "h2-headline",
+                "label": "H2"
+              },
+              {
+                "value": "h2-headline bold",
+                "label": "H2 bold"
+              },
+              {
+                "value": "p",
+                "label": "p"
+              }
+            ]
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "image_with_text",
+        "name": "Image with text",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Left Column"
+          },
+          {
+            "type": "image_picker",
+            "id": "left_c_image_1",
+            "label": "Image 1"
+          },
+          {
+            "type": "select",
+            "id": "left_c_image_1_style",
+            "label": "Image 1 Style",
+            "options": [
+              {
+                "value": "style-1",
+                "label": "Style 1"
+              },
+              {
+                "value": "style-2",
+                "label": "Style 2"
+              },
+              {
+                "value": "style-3",
+                "label": "Style 3"
+              },
+              {
+                "value": "style-4",
+                "label": "Style 4"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "left_c_title",
+            "label": "Title"
+          },
+          {
+            "type": "select",
+            "id": "left_c_title_style",
+            "label": "Style",
+            "info": "Define what class this element should get",
+            "options": [
+              {
+                "value": "",
+                "label": "None"
+              },
+              {
+                "value": "h1-headline",
+                "label": "H1"
+              },
+              {
+                "value": "h2-headline",
+                "label": "H2"
+              },
+              {
+                "value": "h2-headline bold",
+                "label": "H2 bold"
+              }
+            ]
+          },
+          {
+            "type": "richtext",
+            "id": "left_c_description",
+            "label": "Description"
+          },
+          {
+            "type": "html",
+            "id": "left_c_description_html",
+            "label": "Description (HTML Format)",
+            "info": "This value will overwrite the Description field"
+          },
+          {
+            "type": "select",
+            "id": "left_c_title_position",
+            "label": "Title Position",
+            "options": [
+              {
+                "value": "",
+                "label": "Above Image"
+              },
+              {
+                "value": "below-image",
+                "label": "Below Image"
+              }
+            ],
+            "default": "below-image"
+          },
+          {
+            "type": "header",
+            "content": "Right Column"
+          },
+          {
+            "type": "image_picker",
+            "id": "right_c_image_1",
+            "label": "Image 1"
+          },
+          {
+            "type": "select",
+            "id": "right_c_image_1_style",
+            "label": "Image 1 Style",
+            "options": [
+              {
+                "value": "style-1",
+                "label": "Style 1"
+              },
+              {
+                "value": "style-2",
+                "label": "Style 2"
+              },
+              {
+                "value": "style-3",
+                "label": "Style 3"
+              },
+              {
+                "value": "style-4",
+                "label": "Style 4"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "right_c_title",
+            "label": "Title"
+          },
+          {
+            "type": "select",
+            "id": "right_c_title_style",
+            "label": "Style",
+            "info": "Define what class this element should get",
+            "options": [
+              {
+                "value": "",
+                "label": "None"
+              },
+              {
+                "value": "h1-headline",
+                "label": "H1"
+              },
+              {
+                "value": "h2-headline",
+                "label": "H2"
+              },
+              {
+                "value": "h2-headline bold",
+                "label": "H2 bold"
+              }
+            ]
+          },
+          {
+            "type": "richtext",
+            "id": "right_c_description",
+            "label": "Description"
+          },
+          {
+            "type": "select",
+            "id": "right_c_title_position",
+            "label": "Title Position",
+            "options": [
+              {
+                "value": "",
+                "label": "Above Image"
+              },
+              {
+                "value": "below-image",
+                "label": "Below Image"
+              }
+            ],
+            "default": "below-image"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "select",
+            "id": "text_style",
+            "label": "Style",
+            "info": "Define what class this element should get",
+            "options": [
+              {
+                "value": "p",
+                "label": "p"
+              },
+              {
+                "value": "h1-headline",
+                "label": "H1"
+              },
+              {
+                "value": "h2-headline",
+                "label": "H2"
+              },
+              {
+                "value": "h2-headline bold",
+                "label": "H2 bold"
+              }
+            ]
+          },
+          {
+            "type": "richtext",
+            "id": "text_2",
+            "label": "2nd Text",
+            "info": "Will split the design in 2 columns"
+          },
+          {
+            "type": "select",
+            "id": "text_2_style",
+            "label": "Style",
+            "info": "Define what class this element should get",
+            "options": [
+              {
+                "value": "p",
+                "label": "p"
+              },
+              {
+                "value": "h1-headline",
+                "label": "H1"
+              },
+              {
+                "value": "h2-headline",
+                "label": "H2"
+              },
+              {
+                "value": "h2-headline bold",
+                "label": "H2 bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "select",
+            "id": "image_align",
+            "label": "Image Alignment",
+            "options": [
+              {
+                "value": "",
+                "label": "Left"
+              },
+              {
+                "value": "justify-center",
+                "label": "Center"
+              },
+              {
+                "value": "justify-end",
+                "label": "Right"
+              }
+            ],
+            "default": ""
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Content"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

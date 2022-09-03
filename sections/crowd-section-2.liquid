@@ -1,0 +1,114 @@
+{{ 'crowd-section-2.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width crowd-s2__wrapper">
+  
+  {% assign title_html = section.settings.title %}
+  {% if title_html != blank %}
+    <h2 class="h1-headline crowd-s2__title span-align-heading">
+      {{ title_html }}
+    </h2>
+  {% endif %}
+  
+  <div class="crowd-s2__viewport h2-headline">
+    {{ section.settings.desc }}
+  </div>
+  
+  {% assign row1_text = section.settings.row1_text %}
+  {% assign button_text = section.settings.button_text %}
+  {% assign button_url = section.settings.button_url %}
+  {% assign button_color = section.settings.button_color %}
+  {% assign button_bg_color = section.settings.button_bg_color %}
+  
+  {% capture button_style %}
+  	{%- if button_color != blank -%}
+  		color: var({{ button_color }});
+  	{%- endif -%}
+  	{%- if button_bg_color != blank -%}
+  		background-color: var({{ button_bg_color }});
+  		border-color: var({{ button_bg_color }});
+  	{%- endif -%}
+  {% endcapture %}
+  
+  
+  <div class="crowd-s2__row1">
+    
+ 	{% assign row1_image = section.settings.row1_image %}
+    {% if row1_image != blank %}
+  		<img src="{{ row1_image | img_url: '1200x' }}" alt="" class="crowd-s2__row1--image" loading="lazy" />
+    {% endif %}
+    <div class="crowd-s2__row1--content">
+      <div class="h2-headline">
+        {{ row1_text }}
+      </div>
+
+      {% if button_text != blank and button_url != blank %}
+          <a class="btn" href="{{ button_url }}" style="{{ button_style }}">{{ button_text }}</a>
+      {% endif %}
+
+      
+    </div>
+  </div>
+  
+  
+</section>
+
+{% schema %}
+{
+  "name": "Crowd - Section 2",
+  "tag": "section",
+  "class": "crowd-s2 side-circle side-circle__large side-circle__top-right",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Row 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "row1_image",
+      "label": "Image"
+    },
+    {
+      "type": "richtext",
+      "id": "row1_text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "info": "CSS Variable name eg. --color-white"
+    },
+    {
+      "type": "text",
+      "id": "button_color",
+      "label": "Button Color",
+      "info": "CSS Variable name eg. --color-white"
+    }
+  ],
+  "presets": [
+    {
+  	  "name": "Crowd - Section 2"
+    }
+  ]
+}
+{% endschema %}

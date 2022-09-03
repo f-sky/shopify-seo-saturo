@@ -1,0 +1,97 @@
+{{ 'section-page-contact.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width page-contact__wrapper">
+  <h1 class="h1-headline page-contact__title span-align-heading">
+    {% assign title_html = section.settings.title %}
+    {% if title_html != blank %}
+      {{ title_html }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+  </h1>
+
+  <div class="page-contact__desc">
+    <div class="p">{{ section.settings.desc }}</div>
+
+    {% assign image = section.settings.image %}
+    {% if image != blank %}
+      <img src="{{ image | img_url: '1100x' }}" alt="{{ image.alt }}" class="page-contact__desc-image" />
+    {% endif %}
+  </div>
+
+  <div class="page-contact__info">
+    {% for block in section.blocks %}
+      <div class="page-contact__info-item">
+        {% assign image = block.settings.image %}
+        {% if image != blank %}
+          <img class="page-blog-overview__item-image" src="{{ image | img_url: '700x'}}" alt="" />
+        {% endif %}
+        <h2 class="h2-headline">
+          <strong>{{ block.settings.title }}</strong>
+        </h2>
+        <div class="p page-contact__info-item--desc">{{ block.settings.desc }}</div>
+        {% if block.settings.url != blank %}
+          <a class="btn btn--text" href="{{ block.settings.url }}">{{ block.settings.url_text }}{% render 'icon-chevron' %}</a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Contact Page",
+  "tag": "section",
+  "class": "page-contact side-circle side-circle__medium side-circle__top-left",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title HTML"
+    },
+    {
+      "type": "richtext",
+      "id": "desc",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Grid Item",
+      "type": "grid_item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "desc",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "url_text",
+          "label": "Link's text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

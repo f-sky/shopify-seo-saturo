@@ -1,0 +1,107 @@
+{{ 'section-custom-footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="custom-footer">
+  <div class="page-width">
+    <div class="custom-footer__menus">
+        <div class="custom-footer__menus--info">
+            {%- if section.settings.title != blank -%}
+              <h3 class="h2-headline"><strong>{{ section.settings.title }}</strong></h3>
+            {%- endif -%}
+            {%- if section.settings.contact_text != blank -%}
+              <div class="custom-footer__menus--info-text p">
+                {{ section.settings.contact_text }}
+              </div>
+            {%- endif -%}
+            <div class="custom-footer__menus--info-social">
+              {%- if settings.social_instagram_link != blank -%}
+                <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
+                  {%- render 'icon-instagram' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                </a>
+              {%- endif -%}
+              {%- if settings.social_facebook_link != blank -%}
+                <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+                  {%- render 'icon-facebook-footer' -%}
+                  <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                </a>
+              {%- endif -%}
+            </div>
+        </div>
+        <div class="custom-footer__menus--wrapper">
+          {%- for block in section.blocks -%}
+              {%- if block.settings.menu != blank -%}
+                  <div class="custom-footer__menus--menu" style="grid-area: block{{ forloop.index }}">
+                      <ul class="custom-footer__menu-list list-unstyled">
+                          {%- for link in block.settings.menu.links -%}
+                          <li class="menu-li">
+                              <a href="{{ link.url }}" class="menu{% if link.active %} list-menu__item--active{% endif %}">
+                              {{ link.title }}
+                              </a>
+                          </li>
+                          {%- endfor -%}
+                      </ul>
+                  </div>
+              {%- endif -%}
+          {%- endfor -%}
+        </div>
+    </div>
+    <div class="custom-footer__brands">
+      {% unless enabled_payment_types == empty %}
+        {% for type in shop.enabled_payment_types %} {{ type | payment_type_svg_tag: class:'payment-icon' }} {% endfor %}
+      {% endunless %}
+    </div>
+    {%- if section.settings.legal_menu != blank -%}
+      <div class="custom-footer__legal">
+        <ul class="custom-footer__legal-list list-unstyled">
+          {%- for link in section.settings.legal_menu.links -%}
+            <li class="p-link-li">
+              <a href="{{ link.url }}" class="p-link{% if link.active %} list-menu__item--active{% endif %}">
+                {{ link.title }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Footer - Title"
+    },
+    {
+      "type": "html",
+      "id": "contact_text",
+      "label": "Footer - Contact Text"
+    },
+    {
+      "type": "link_list",
+      "id": "legal_menu",
+      "default": "footer",
+      "label": "Footer - Legal Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "t:sections.footer.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

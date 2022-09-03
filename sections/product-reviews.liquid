@@ -1,0 +1,56 @@
+{{ 'product-reviews.css' | asset_url | stylesheet_tag }}
+
+{% assign data_sku = '' %}
+{% if collection != blank %}
+	{% if collection.metafields.reviews.show_sku != blank %}
+		{% assign data_sku = collection.metafields.reviews.show_sku %}
+	{% else %}
+		{% assign product = collection.products | first %}
+		
+		{% if product.metafields.reviews.show_sku != blank %}
+			{% assign data_sku = product.metafields.reviews.show_sku %}
+		{% elsif product.variants.size > 1 %}
+			{% assign data_sku = '' %}
+			{% for variant in product.variants %}
+				{% assign data_sku = sku | append: ";" | append: variant.sku %}
+			{% endfor %}
+		{% else %}
+			{% assign data_sku = product.selected_or_first_available_variant.sku %}
+		{% endif %}
+
+	{% endif %}
+{% endif %}
+
+{% if collection == blank and product != blank %}
+	{% if product.metafields.reviews.show_sku != blank %}
+		{% assign data_sku = product.metafields.reviews.show_sku %}
+	{% elsif product.variants.size > 1 %}
+		{% assign data_sku = '' %}
+		{% for variant in product.variants %}
+			{% assign data_sku = sku | append: ";" | append: variant.sku %}
+		{% endfor %}
+	{% else %}
+		{% assign data_sku = product.selected_or_first_available_variant.sku %}
+	{% endif %}
+{% endif %}
+
+<div class="reviews__anchor" id="product-reviews"></div>
+<section class="page-width product-reviews__wrapper">
+  <h3 class="h2-headline"><strong>Okay okay, wir können dir viel erzählen, aber am besten können das unsere Fans</strong></h3>
+  {% render 'reviews-io-product-review-polaris', sku: data_sku %}
+</section>
+
+{% schema %}
+{
+    "name": "Product - Reviews",
+    "tag": "section",
+    "class": "reviews-section",
+    "settings": [
+    ],
+		"presets": [
+			{
+				"name": "Product - Reviews"
+			}
+		]
+}
+{% endschema %}

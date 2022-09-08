@@ -288,3 +288,40 @@
     }
   </script>
 {% endif %}
+
+{% comment %}CollectionPage{% endcomment %}
+{% if template.name == 'collection' %}
+  <script type="application/ld+json">
+    {%- if collection.metafields.seo.struc_data_name != blank -%}
+      {%- assign name = collection.metafields.seo.struc_data_name.value -%}
+    {%- else -%}
+      {%- assign name = collection.title -%}
+    {%- endif -%}
+    {%- if collection.metafields.seo.struc_data_description != blank -%}
+      {%- assign description = collection.metafields.seo.struc_data_description.value -%}
+    {%- else -%}
+      {%- assign description = collection.description -%}
+    {%- endif -%}
+    {
+      "@context": "http://schema.org",
+      "@type": "ItemList",
+      "name": {{ name | json }},
+      "description": {{ description | json }},
+      "image": {{ collection.image | img_url: 'medium' | split:'?' | first | prepend: "https:" | json }},
+      "url": {{ shop.url | append: collection_url | json }},
+      "mainEntityOfPage": {
+        "@type": "CollectionPage",
+        "@id": {{ shop.url | append: collection_url | json }}
+      },
+      "itemListElement": [
+        {%- for product in collection.products -%}
+          {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "url": {{ shop.url | append: product.url | json }}
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{% endif %}

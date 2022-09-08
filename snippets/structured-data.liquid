@@ -1,0 +1,158 @@
+{% comment %}
+  Breadcrumbs
+  https://developers.google.com/search/docs/advanced/structured-data/breadcrumb
+{% endcomment %}
+
+{% if collection.url == blank %}
+  {% assign collection_url = '/collections/all' %}
+{% else %}
+  {% assign collection_url = collection.url %}
+{% endif %}
+
+{% if template.name == 'product' 
+    or template.name == 'list-collections' 
+    or template.name == 'collection' 
+    or template.name == 'blog' 
+    or template.name == 'article' 
+    or template.name == 'search' 
+    or template.name == 'cart' 
+    or template.name == 'page'
+%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {% case template.name %}
+          {% when 'product' %}
+            {%- if product.collections.size >= 1 -%}
+              {%- assign product_handles = "" | split: ',' -%}
+              {%- assign collection_handles = "" | split: ',' -%}
+              
+              {%- assign product_collection_handles_array = settings.product_collection_handles | newline_to_br | strip_newlines | split: '<br />' -%}
+              {%- for product_collection_handles in product_collection_handles_array -%}
+                {%- assign handles = product_collection_handles | split: ':' -%}
+                {%- assign product_handle = handles[0] | strip | split: ',' -%}
+                {%- assign collection_handle = handles[1] | strip | split: ',' -%}
+              
+                {%- assign product_handles = product_handles | concat: product_handle -%}
+                {%- assign collection_handles = collection_handles | concat: collection_handle -%}
+              {%- endfor -%}
+
+              {%- assign product_handle = product.handle -%}
+              {%- assign position = -1 -%}
+              {%- for handle in product_handles -%}
+                {%- if handle == product_handle -%}
+                  {%- assign position = forloop.index0 -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if position > -1 -%}
+                {%- assign collection_handle = collection_handles[position] -%}
+                {% if collections[collection_handle] != blank %}
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": "{{ shop.url }}/collections/{{ collection_handle }}",
+                    "name": {{ collections[collection_handle].title | json }}
+                  },
+                {% endif %}
+              {%- endif -%}
+            {%- endif -%}
+            
+            {%- if product.metafields.seo.struc_data_title != blank -%}
+              {%- assign name = product.metafields.seo.struc_data_title.value -%}
+            {%- else -%}
+              {%- assign name = product.title -%}
+            {%- endif -%}
+            {
+              "@type": "ListItem",
+              "position": {% if product.collections.size >= 1 and position > -1 and collections[collection_handle] != blank %}2{% else %}1{% endif %},
+              "item": "{{ shop.url }}{{ product.url | within: collection }}",
+              "name": {{ name | json }}
+            }
+          {% when 'list-collections' %}
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": "{{ shop.url }}/collections",
+              "name": {{ 'structured_data.breadcrumbs.collections' | t | json }}
+            }
+          {% when 'collection' %}
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": "{{ shop.url }}{{ collection_url }}",
+              "name": {{ collection.title | json }}
+            }
+          {% when 'blog' or 'article' %}
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": "{{ shop.url }}{{ blog.url }}",
+              "name": {{ blog.title | json }}
+            }
+            {% if template.name == 'article' %}
+              ,
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": "{{ shop.url }}{{ article.url }}",
+                "name": {{ article.title | json }}
+              }
+            {% endif %}
+          {% when 'search' %}
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": "{{ shop.url }}/search",
+              "name": {{ 'structured_data.breadcrumbs.search' | t | json }}
+            }
+            {% if search.performed %}
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": "{{ shop.url }}/search?q={{ search.terms }}",
+                "name": {{ search.terms | json }}
+              }
+              {% if current_page != 1 %}
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": "{{ shop.url }}/search?page={{ current_page }}&q={{ search.terms }}",
+                  "name": {{ 'structured_data.breadcrumbs.page' | t: page: current_page | json }}
+                }
+              {% endif %}
+            {% endif %}
+          {% when 'cart' %}
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": "{{ shop.url }}/cart",
+              "name": {{ 'structured_data.breadcrumbs.cart' | t | json }}
+            }
+          {% when 'page' %}
+            {%- if page.metafields.seo.struc_data_breadcrumb_prev_page != blank -%}
+              {%- assign page_handles = "" | split: ',' -%}
+              {%- assign handle = page.handle | split: ',' -%}
+              {%- assign page_handles = page_handles | concat: handle -%}
+              {%- render 'page-struc-data-breadcrumb', page_handles: page_handles, pg: page -%}
+            {%- else -%}
+              {%- if page.metafields.seo.struc_data_breadcrumb_name != blank -%}
+                {%- assign name = page.metafields.seo.struc_data_breadcrumb_name.value -%}
+              {%- else -%}
+                {%- assign name = page.title -%}
+              {%- endif -%}
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item":"{{ shop.url }}{{ page.url }}",
+                "name": {{ name | json }}
+              }
+            {%- endif -%}
+          {% else %}
+        {% endcase %}
+      ]
+    }
+  </script>
+{% endif %}

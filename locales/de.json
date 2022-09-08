@@ -757,15 +757,25 @@
     "portion_water_size_text_html": "ml"
   },
   "structured_data": {
-    "street": "Mariahilfer Str. 101\/3\/45",
-    "zip": "1060",
-    "city": "Wien",
-    "country": "Österreich",
-    "telephone": "+43 1 395 079 400",
-    "email": "support@saturo.com",
-    "founder": "Joerg Hauke, Hannes Feistenauer",
-    "founding_date": "2017-03-23",
-    "legal_name": "Saturo Foods GmbH",
-    "slogan": "Eat Complete"
+    "breadcrumbs": {
+      "cart": "Warenkorb anzeigen",
+      "collections": "Sammlungen",
+      "page": "Seite {{ page }}",
+      "products": "Produkte",
+      "search": "Suchen",
+      "tags_html": "Markiert \"{{ tags }}\""
+    },
+    "organization": {
+      "street": "Mariahilfer Str. 101\/3\/45",
+      "zip": "1060",
+      "city": "Wien",
+      "country": "Österreich",
+      "telephone": "+43 1 395 079 400",
+      "email": "support@saturo.com",
+      "founder": "Joerg Hauke, Hannes Feistenauer",
+      "founding_date": "2017-03-23",
+      "legal_name": "Saturo Foods GmbH",
+      "slogan": "Eat Complete"
+    }
   }
 }

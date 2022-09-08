@@ -1,0 +1,20 @@
+{%- assign previous_page = pg.metafields.seo.struc_data_breadcrumb_prev_page.value -%}
+{%- assign handle = previous_page.handle | split: ',' -%}
+{%- assign page_handles = page_handles | concat: handle -%}
+{%- if previous_page.metafields.seo.struc_data_breadcrumb_prev_page != blank -%}
+  {%- render 'page-struc-data-breadcrumb', page_handles: page_handles, pg: previous_page -%}
+{%- else -%}
+  {%- for page_handle in page_handles reversed -%}
+    {%- if pages[page_handle].metafields.seo.struc_data_breadcrumb_name != blank -%}
+      {%- assign name = pages[page_handle].metafields.seo.struc_data_breadcrumb_name.value -%}
+    {%- else -%}
+      {%- assign name = pages[page_handle].title -%}
+    {%- endif -%}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "item": "{{ shop.url }}{{ pages[page_handle].url }}",
+          "name": {{ name | json }}
+        }{%- unless forloop.last -%},{%- endunless -%}
+  {%- endfor -%}
+{%- endif -%}

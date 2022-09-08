@@ -73,6 +73,28 @@
     "total_reviews": "total reviews",
     "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars"
   },
+  "structured_data": {
+    "breadcrumbs": {
+      "cart": "Cart",
+      "collections": "Collections",
+      "page": "Page {{ page }}",
+      "products": "Products",
+      "search": "Search",
+      "tags_html": "Tagged \"{{ tags }}\""
+    },
+    "organization": {
+      "street": "",
+      "zip": "",
+      "city": "",
+      "country": "",
+      "telephone": "",
+      "email": "",
+      "founder": "",
+      "founding_date": "",
+      "legal_name": "",
+      "slogan": ""
+    }
+  },
   "blogs": {
     "article": {
       "blog": "Blog",

@@ -750,16 +750,83 @@
     ]
   },
   {
-    "name": "Structured Data",
+    "name": "t:settings_schema.structured_data.name",
     "settings": [
       {
         "type": "header",
-        "content": "BreadCrumb"
+        "content": "t:settings_schema.structured_data.settings.header__1.content"
       },
       {
         "type": "textarea",
         "id": "product_collection_handles",
-        "label": "Product(handle) : Listitem1(Collection handle)"
+        "label": "t:settings_schema.structured_data.settings.product_collection_handles.label",
+        "info": "t:settings_schema.structured_data.settings.product_collection_handles.info"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.structured_data.settings.header__2.content"
+      },
+      {
+        "type": "image_picker",
+        "id": "struc_data_orga_logo",
+        "label": "t:settings_schema.structured_data.settings.struc_data_orga_logo.label"
+      },
+      {
+        "type": "text",
+        "id": "struc_data_founding_date",
+        "label": "t:settings_schema.structured_data.settings.struc_data_founding_date.label",
+        "info": "t:settings_schema.structured_data.settings.struc_data_founding_date.info"
+      },
+      {
+        "type": "text",
+        "id": "struc_data_founder_1",
+        "label": "t:settings_schema.structured_data.settings.struc_data_founder_1.label"
+      },
+      {
+        "type": "text",
+        "id": "struc_data_founder_2",
+        "label": "t:settings_schema.structured_data.settings.struc_data_founder_2.label"
+      },
+      {
+        "type": "text",
+        "id": "struc_data_postal_code",
+        "label": "t:settings_schema.structured_data.settings.struc_data_postal_code.label"
+      },
+      {
+        "type": "text",
+        "id": "struc_data_address_country",
+        "label": "t:settings_schema.structured_data.settings.struc_data_address_country.label",
+        "info": "t:settings_schema.structured_data.settings.struc_data_address_country.info"
+      },
+      {
+        "type": "text",
+        "id": "struc_data_email",
+        "label": "t:settings_schema.structured_data.settings.struc_data_email.label"
+      },
+      {
+        "type": "text",
+        "id": "struc_data_telephone",
+        "label": "t:settings_schema.structured_data.settings.struc_data_telephone.label",
+        "info": "t:settings_schema.structured_data.settings.struc_data_telephone.info"
+      },
+      {
+        "type": "image_picker",
+        "id": "struc_data_orga_image",
+        "label": "t:settings_schema.structured_data.settings.struc_data_orga_image.label"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.structured_data.settings.header__3.content"
+      },
+      {
+        "type": "image_picker",
+        "id": "struc_data_brand_logo",
+        "label": "t:settings_schema.structured_data.settings.struc_data_brand_logo.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "struc_data_brand_image",
+        "label": "t:settings_schema.structured_data.settings.struc_data_brand_image.label"
       }
     ]
   },

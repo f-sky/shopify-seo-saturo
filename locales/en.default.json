@@ -83,16 +83,17 @@
       "tags_html": "Tagged \"{{ tags }}\""
     },
     "organization": {
+      "name": "Saturo",
+      "description": "",
       "street": "",
-      "zip": "",
       "city": "",
-      "country": "",
-      "telephone": "",
-      "email": "",
-      "founder": "",
-      "founding_date": "",
-      "legal_name": "",
-      "slogan": ""
+      "slogan": "",
+      "knows_about": ""
+    },
+    "brand": {
+      "name": "Saturo",
+      "slogan": "",
+      "description": ""
     }
   },
   "blogs": {

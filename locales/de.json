@@ -766,16 +766,17 @@
       "tags_html": "Markiert \"{{ tags }}\""
     },
     "organization": {
+      "name": "Saturo",
+      "description": "Trinkmahlzeiten, die alles enthalten, was der Körper braucht.",
       "street": "Mariahilfer Str. 101\/3\/45",
-      "zip": "1060",
       "city": "Wien",
-      "country": "Österreich",
-      "telephone": "+43 1 395 079 400",
-      "email": "support@saturo.com",
-      "founder": "Joerg Hauke, Hannes Feistenauer",
-      "founding_date": "2017-03-23",
-      "legal_name": "Saturo Foods GmbH",
-      "slogan": "Eat Complete"
+      "slogan": "Eat Complete",
+      "knows_about": "Trinkmahlzeit, Mahlzeitersatz, Complete Food"
+    },
+    "brand": {
+      "name": "Saturo",
+      "slogan": "Complete Food. Tailored to you.",
+      "description": "Trinkmahlzeiten, die alles enthalten, was der Körper braucht."
     }
   }
 }

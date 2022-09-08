@@ -192,6 +192,60 @@
         }
       }
     },
+    "structured_data": {
+      "name": "Structured Data",
+      "settings": {
+        "header__1": {
+          "content": "BreadCrumb"
+        },
+        "header__2": {
+          "content": "Organization"
+        },
+        "header__3": {
+          "content": "Brand"
+        },
+        "product_collection_handles": {
+          "label": "Product(handle) : Listitem1(Collection handle)",
+          "info": "This is shown in the breadcrumb"
+        },
+        "struc_data_orga_logo": {
+          "label": "Logo"
+        },
+        "struc_data_founding_date": {
+          "label": "Founding date",
+          "info": "YYYY-MM-DD"
+        },
+        "struc_data_founder_1": {
+          "label": "Founder 1"
+        },
+        "struc_data_founder_2": {
+          "label": "Founder 2"
+        },
+        "struc_data_postal_code": {
+          "label": "Postal code"
+        },
+        "struc_data_address_country": {
+          "label": "Country",
+          "info": "ISO-Code 2"
+        },
+        "struc_data_email": {
+          "label": "Email"
+        },
+        "struc_data_telephone": {
+          "label": "Telephone",
+          "info": "+43 0000 0000"
+        },
+        "struc_data_orga_image": {
+          "label": "Image"
+        },
+        "struc_data_brand_logo": {
+          "label": "Logo"
+        },
+        "struc_data_brand_image": {
+          "label": "Image"
+        }
+      }
+    },
     "currency_format": {
       "name": "Currency format",
       "settings": {

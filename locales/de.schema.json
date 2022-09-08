@@ -1983,6 +1983,17 @@
       "presets": {
         "name": "Banner für E-Mail-Anmeldung"
       }
+    },
+    "structured_data": {
+      "name": "Structured Data",
+      "settings": {
+        "header__1": {
+          "content": "BreadCrumb"
+        },
+        "header__2": {
+          "content": "Orga"
+        }
+      }
     }
   }
 }

@@ -1,3 +1,135 @@
+{% comment %}Organization{% endcomment %}
+{%- if request.page_type == 'index' -%}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      {%- assign organization_name = 'structured_data.organization.name' | t %}
+      "name": {% if organization_name != "" %}{{ organization_name | json}}{% else %}{{ shop.name | json }}{% endif %},
+      "url": {{ shop.url | append: page.url | json }},
+      {% if 'structured_data.organization.slogan' %}"slogan": {{ 'structured_data.organization.slogan' | t | json}},{% endif %}
+      {% if settings.struc_data_orga_logo -%}
+        "logo": {
+          "@type": "ImageObject",
+          "url" : {{ settings.struc_data_orga_logo | split:'?' | first | prepend: "https:" | json }},
+          "contentUrl": {{ settings.struc_data_orga_logo | split:'?' | first | prepend: "https:" | json }},
+          "width": {{ settings.struc_data_orga_logo.width | json }},
+          "height": {{ settings.struc_data_orga_logo.height | json }}
+          {%- if settings.struc_data_orga_logo.alt -%}, "caption": {{ settings.struc_data_orga_logo.alt | json }}{% endif %}
+        },  
+      {% elsif section.settings.logo %}
+        {% assign image_size = section.settings.logo.width | append: 'x' %}
+        "logo": {{ section.settings.logo | img_url: image_size | prepend: "https:" | json }},
+      {% endif %}
+      "sameAs": [
+        {%- if settings.social_facebook_link != ""  %} {{ settings.social_facebook_link | json }},{% endif %}
+        {%- if settings.social_twitter_link != "" %} {{ settings.social_twitter_link | json }},{% endif %}
+        {%- if settings.social_pinterest_link != ""  %} {{ settings.social_pinterest_link | json }},{% endif %}
+        {%- if settings.social_tiktok_link != ""  %} {{ settings.social_tiktok_link | json }},{% endif %}
+        {%- if settings.social_tumblr_link != ""  %} {{ settings.social_tumblr_link | json }},{% endif %}
+        {%- if settings.social_snapchat_link != "" %} {{ settings.social_snapchat_link | json }},{% endif %}
+        {%- if settings.social_youtube_link != "" %} {{ settings.social_youtube_link | json }},{% endif %}
+        {%- if settings.social_vimeo_link != "" %} {{ settings.social_vimeo_link | json }},{% endif %}
+        {%- if settings.social_instagram_link != "" %} {{ settings.social_instagram_link | json }}{% endif %}
+      ],
+      {% if settings.struc_data_founding_date != ""  %}"foundingDate": {{ settings.struc_data_founding_date | json }},{% endif %}
+      "founders":[
+        {
+          "@type": "Person",
+          "name": {{ settings.struc_data_founder_1 | json }}
+        },
+        {
+          "@type": "Person",
+          "name": {{ settings.struc_data_founder_2 | json }}
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ 'structured_data.organization.street' | t | json }},
+        "postalCode": {{ settings.struc_data_postal_code | json }},
+        "addressLocality": {{ 'structured_data.organization.city' | t | json }},   
+        "addressCountry": {
+          "@type": "Country",
+          "name": {{ settings.struc_data_address_country | json }}
+        }
+      },
+      "brand": {
+        "@type": "Brand",
+        "logo": {
+          "@type": "ImageObject",
+          "url" : {{ settings.struc_data_brand_logo | split:'?' | first | prepend: "https:" | json }},
+          "contentUrl": {{ settings.struc_data_brand_logo | split:'?' | first | prepend: "https:" | json }},
+          "width": {{ settings.struc_data_brand_logo.width | json }},
+          "height": {{ settings.struc_data_brand_logo.height | json }}
+          {%- if settings.struc_data_brand_logo.alt -%}, "caption": {{ settings.struc_data_brand_logo.alt | json }}{% endif %}
+        },
+        {% if 'structured_data.brand.name' %}"name": {{ 'structured_data.brand.name' | t | json}},{% endif %}
+        {% if 'structured_data.brand.slogan' %}"slogan": {{ 'structured_data.brand.slogan' | t | json}},{% endif %}
+        {% if 'structured_data.brand.description' %}"description": {{ 'structured_data.brand.description' | t | json}},{% endif %}
+
+
+        {% if settings.struc_data_brand_image -%}
+          , "image": {
+            "@type": "ImageObject",
+            "url" : {{ settings.struc_data_brand_image | split:'?' | first | prepend: "https:" | json }},
+            "contentUrl": {{ settings.struc_data_brand_image | split:'?' | first | prepend: "https:" | json }},
+            "width": {{ settings.struc_data_brand_image.width | json }},
+            "height": {{ settings.struc_data_brand_image.height | json }}
+            {%- if settings.struc_data_brand_image.alt != "" -%}, "caption": {{ settings.struc_data_brand_image.alt | json }}{% endif %}
+          }
+        {% endif %}
+        "sameAs": [
+          {%- if settings.social_facebook_link != ""  %} {{ settings.social_facebook_link | json }},{% endif %}
+          {%- if settings.social_twitter_link != "" %} {{ settings.social_twitter_link | json }},{% endif %}
+          {%- if settings.social_pinterest_link != ""  %} {{ settings.social_pinterest_link | json }},{% endif %}
+          {%- if settings.social_tiktok_link != ""  %} {{ settings.social_tiktok_link | json }},{% endif %}
+          {%- if settings.social_tumblr_link != ""  %} {{ settings.social_tumblr_link | json }},{% endif %}
+          {%- if settings.social_snapchat_link != "" %} {{ settings.social_snapchat_link | json }},{% endif %}
+          {%- if settings.social_youtube_link != "" %} {{ settings.social_youtube_link | json }},{% endif %}
+          {%- if settings.social_vimeo_link != "" %} {{ settings.social_vimeo_link | json }},{% endif %}
+          {%- if settings.social_instagram_link != "" %} {{ settings.social_instagram_link | json }}{% endif %}
+        ],
+        "url": {{ shop.url | append: page.url | json }}
+      },
+      {%- if settings.struc_data_email != ""  %}"email": {{ settings.struc_data_email | json }},{% endif %}
+      {%- if shop.address.company != ""  %}"legalName": {{ shop.address.company | json }},{% endif %}
+      {%- if settings.struc_data_telephone != ""  %}"telephone": {{ settings.struc_data_telephone | json }},{% endif %}
+      {%- assign organization_description = 'structured_data.organization.description' | t %}
+      "description": {% if organization_description != "" %}{{ organization_description | json}}{% else %}{{ shop.description | json }}{% endif %},
+      {%- assign organization_knows_about = 'structured_data.organization.knows_about' | t %}
+      {% if organization_knows_about != "" %}"knowsAbout": {{ organization_description | json}}{% endif %}
+      {% if settings.struc_data_orga_image -%}
+        , "image": {
+          "@type": "ImageObject",
+          "url" : {{ settings.struc_data_orga_image | split:'?' | first | prepend: "https:" | json }},
+          "contentUrl": {{ settings.struc_data_orga_image | split:'?' | first | prepend: "https:" | json }},
+          "width": {{ settings.struc_data_orga_image.width | json }},
+          "height": {{ settings.struc_data_orga_image.height | json }}
+          {%- if settings.struc_data_orga_image.alt != "" -%}, "caption": {{ settings.struc_data_orga_image.alt | json }}{% endif %}
+        }
+      {% endif %}   
+    }   
+  </script>
+{%- endif -%}
+
+{% comment %}WebSite{% endcomment %}
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ shop.url | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
 {% comment %}
   Breadcrumbs
   https://developers.google.com/search/docs/advanced/structured-data/breadcrumb

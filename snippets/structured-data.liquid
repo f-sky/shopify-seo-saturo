@@ -6,7 +6,6 @@
       "@type": "Organization",
       {%- assign organization_name = 'structured_data.organization.name' | t %}
       "name": {% if organization_name != "" %}{{ organization_name | json}}{% else %}{{ shop.name | json }}{% endif %},
-      "url": {{ shop.url | append: page.url | json }},
       {% if 'structured_data.organization.slogan' %}"slogan": {{ 'structured_data.organization.slogan' | t | json}},{% endif %}
       {% if settings.struc_data_orga_logo -%}
         "logo": {
@@ -97,17 +96,18 @@
       {%- assign organization_description = 'structured_data.organization.description' | t %}
       "description": {% if organization_description != "" %}{{ organization_description | json}}{% else %}{{ shop.description | json }}{% endif %},
       {%- assign organization_knows_about = 'structured_data.organization.knows_about' | t %}
-      {% if organization_knows_about != "" %}"knowsAbout": {{ organization_description | json}}{% endif %}
+      {% if organization_knows_about != "" %}"knowsAbout": {{ organization_description | json}},{% endif %}
       {% if settings.struc_data_orga_image %}
-        , "image": {
+        "image": {
           "@type": "ImageObject",
           "url" : {{ settings.struc_data_orga_image | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
           "contentUrl": {{ settings.struc_data_orga_image | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
           "width": {{ settings.struc_data_orga_image.width | json }},
           "height": {{ settings.struc_data_orga_image.height | json }}
           {%- if settings.struc_data_orga_image.alt != "" -%}, "caption": {{ settings.struc_data_orga_image.alt | json }}{% endif %}
-        }
-      {% endif %}   
+        },
+      {% endif %}
+      "url": {{ shop.url | append: page.url | json }}
     }   
   </script>
 {%- endif -%}
@@ -369,13 +369,12 @@
         "@type": "Organization",
         {%- assign organization_name = 'structured_data.organization.name' | t %}
         "name": {% if organization_name != "" %}{{ organization_name | json}}{% else %}{{ shop.name | json }}{% endif %},
-        "url": {{ shop.url | append: page.url | json }},
         {% if 'structured_data.organization.slogan' %}"slogan": {{ 'structured_data.organization.slogan' | t | json}},{% endif %}
         {% if settings.struc_data_orga_logo -%}
           "logo": {
             "@type": "ImageObject",
-            "url" : {{ settings.struc_data_orga_logo | split:'?' | first | prepend: "https:" | json }},
-            "contentUrl": {{ settings.struc_data_orga_logo | split:'?' | first | prepend: "https:" | json }},
+            "url" : {{ settings.struc_data_orga_logo | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
+            "contentUrl": {{ settings.struc_data_orga_logo | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
             "width": {{ settings.struc_data_orga_logo.width | json }},
             "height": {{ settings.struc_data_orga_logo.height | json }}
             {%- if settings.struc_data_orga_logo.alt -%}, "caption": {{ settings.struc_data_orga_logo.alt | json }}{% endif %}
@@ -418,28 +417,28 @@
         },
         "brand": {
           "@type": "Brand",
-          "logo": {
-            "@type": "ImageObject",
-            "url" : {{ settings.struc_data_brand_logo | split:'?' | first | prepend: "https:" | json }},
-            "contentUrl": {{ settings.struc_data_brand_logo | split:'?' | first | prepend: "https:" | json }},
-            "width": {{ settings.struc_data_brand_logo.width | json }},
-            "height": {{ settings.struc_data_brand_logo.height | json }}
-            {%- if settings.struc_data_brand_logo.alt -%}, "caption": {{ settings.struc_data_brand_logo.alt | json }}{% endif %}
-          },
+          {% if settings.struc_data_brand_logo -%}
+            "logo": {
+              "@type": "ImageObject",
+              "url" : {{ settings.struc_data_brand_logo | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
+              "contentUrl": {{ settings.struc_data_brand_logo | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
+              "width": {{ settings.struc_data_brand_logo.width | json }},
+              "height": {{ settings.struc_data_brand_logo.height | json }}
+              {%- if settings.struc_data_brand_logo.alt -%}, "caption": {{ settings.struc_data_brand_logo.alt | json }}{% endif %}
+            },
+          {% endif %}
           {% if 'structured_data.brand.name' %}"name": {{ 'structured_data.brand.name' | t | json}},{% endif %}
           {% if 'structured_data.brand.slogan' %}"slogan": {{ 'structured_data.brand.slogan' | t | json}},{% endif %}
           {% if 'structured_data.brand.description' %}"description": {{ 'structured_data.brand.description' | t | json}},{% endif %}
-
-
           {% if settings.struc_data_brand_image -%}
-            , "image": {
+            "image": {
               "@type": "ImageObject",
-              "url" : {{ settings.struc_data_brand_image | split:'?' | first | prepend: "https:" | json }},
-              "contentUrl": {{ settings.struc_data_brand_image | split:'?' | first | prepend: "https:" | json }},
+              "url" : {{ settings.struc_data_brand_image | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
+              "contentUrl": {{ settings.struc_data_brand_image | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
               "width": {{ settings.struc_data_brand_image.width | json }},
               "height": {{ settings.struc_data_brand_image.height | json }}
               {%- if settings.struc_data_brand_image.alt != "" -%}, "caption": {{ settings.struc_data_brand_image.alt | json }}{% endif %}
-            }
+            },
           {% endif %}
           "sameAs": [
             {%- if settings.social_facebook_link != ""  %} {{ settings.social_facebook_link | json }},{% endif %}
@@ -460,17 +459,18 @@
         {%- assign organization_description = 'structured_data.organization.description' | t %}
         "description": {% if organization_description != "" %}{{ organization_description | json}}{% else %}{{ shop.description | json }}{% endif %},
         {%- assign organization_knows_about = 'structured_data.organization.knows_about' | t %}
-        {% if organization_knows_about != "" %}"knowsAbout": {{ organization_description | json}}{% endif %}
+        {% if organization_knows_about != "" %}"knowsAbout": {{ organization_description | json}},{% endif %}
         {% if settings.struc_data_orga_image %}
-          , "image": {
+          "image": {
             "@type": "ImageObject",
-            "url" : {{ settings.struc_data_orga_image | split:'?' | first | prepend: "https:" | json }},
-            "contentUrl": {{ settings.struc_data_orga_image | split:'?' | first | prepend: "https:" | json }},
+            "url" : {{ settings.struc_data_orga_image | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
+            "contentUrl": {{ settings.struc_data_orga_image | img_url: 'master' | split:'?' | first | prepend: "https:" | json }},
             "width": {{ settings.struc_data_orga_image.width | json }},
             "height": {{ settings.struc_data_orga_image.height | json }}
             {%- if settings.struc_data_orga_image.alt != "" -%}, "caption": {{ settings.struc_data_orga_image.alt | json }}{% endif %}
-          }
+          },
         {% endif %}
+        "url": {{ shop.url | append: page.url | json }}
       },
       "image": [
         {% if page.metafields.seo.struc_data_img %}

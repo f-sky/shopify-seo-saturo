@@ -1,7 +1,11 @@
 {%- assign previous_page = pg.metafields.seo.struc_data_breadcrumb_prev_page.value -%}
 {%- assign handle = previous_page.handle | split: ',' -%}
-{%- assign page_handles = page_handles | concat: handle -%}
-{%- if previous_page.metafields.seo.struc_data_breadcrumb_prev_page != blank -%}
+
+{%- if  pg.handle != previous_page.handle -%}
+  {%- assign page_handles = page_handles | concat: handle -%}
+{%- endif -%}
+
+{%- if previous_page.metafields.seo.struc_data_breadcrumb_prev_page != blank and pg.handle != previous_page.handle -%}
   {%- render 'page-struc-data-breadcrumb', page_handles: page_handles, pg: previous_page -%}
 {%- else -%}
   {%- for page_handle in page_handles reversed -%}
